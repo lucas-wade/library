@@ -1,0 +1,75 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+/* $base-link-color: rgb(45, 125, 17); */
+
+/* universal */
+
+body {
+  padding-top: 60px;
+  font: 100% $font-stack;
+  color: $primary-color;
+
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/*
+a {
+  color: $base-link-color;
+}
+
+a:visited {
+  // This reduces the lightness of the color (in HSL terms)
+  // by 50%, leaving hue and saturation alone
+  color: #ffa7a7;
+//darken($base-link-color, 20%)
+}
+*/
+
+.button {
+  background-color: rgb(118, 149, 153);
+  display: block;
+  border: none;
+  font-size: 1.5em;
+  padding: .5em;
+}
+

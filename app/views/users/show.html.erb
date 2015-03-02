@@ -10,8 +10,9 @@
   <%= @user.email %>
 </p>
 
+<h4>MicroPosts by <%= @user.name%></h4>
 <% @user.microposts.each do |post| %>
-    <h4>MicroPosts by <%= post.user.name%></h4>
+
     <%= post.content %> <br>
    <% end %>
 
