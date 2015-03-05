@@ -1,15 +1,30 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+
+
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
-/* $base-link-color: rgb(45, 125, 17); */
 
-/* universal */
 
+
+
+body {
+  padding-top: 60px;
+ 
+}
+
+/*
 body {
   padding-top: 60px;
   font: 100% $font-stack;
   color: $primary-color;
 
 }
+
 
 section {
   overflow: auto;
@@ -52,18 +67,6 @@ p {
   line-height: 1.7em;
 }
 
-/*
-a {
-  color: $base-link-color;
-}
-
-a:visited {
-  // This reduces the lightness of the color (in HSL terms)
-  // by 50%, leaving hue and saturation alone
-  color: #ffa7a7;
-//darken($base-link-color, 20%)
-}
-*/
 
 .button {
   background-color: rgb(118, 149, 153);
@@ -73,3 +76,4 @@ a:visited {
   padding: .5em;
 }
 
+*/
