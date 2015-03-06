@@ -1,8 +1,10 @@
 <% provide(:title,"Users") %>
 <p id="notice"><%= notice %></p>
 
-<h1 class="text-left">Users</h1>
-
+<h1>Users</h1>
+<h1>
+<%= link_to 'Sign Up', signup_path,class:"btn btn-primary btn-lg" %>
+</h1>
 <table width="70%" class="table-striped table-responsive">
   <thead>
     <tr>
@@ -29,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path,class:"btn btn-primary btn-lg" %>
+
