@@ -1,19 +1,18 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
 
-  get 'static_pages/about'
+  #root             'static_pages#home'
+  root    'microposts#index'
+  get     'home'    => 'static_pages#home'
+  get     'about'   => 'static_pages#about'
+  get     'signup'  => 'users#new'
+  get     'login'   => 'sessions#new'
+  post    'login'   => 'sessions#create'
+  delete  'logout'  => 'sessions#destroy'
+
 
   resources :microposts
 
   resources :users
-
-  #root             'static_pages#home'
-  root  'users#index'
-  get 'home'    => 'static_pages#home'
-  get 'about'   => 'static_pages#about'
-
-  get 'signup'  => 'users#new'
-
 
 
 
