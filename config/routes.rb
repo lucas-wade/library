@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :microposts
 
   resources :users
-
+  resources :account_activations, only: [:edit]
 
 
 

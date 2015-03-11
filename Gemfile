@@ -20,6 +20,13 @@ gem 'autoprefixer-rails'
 
 gem 'font-awesome-sass', '~> 4.3.1'
 
+#fake names and such
+gem 'faker',                '1.4.2'
+
+#pages
+gem 'will_paginate',           '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
+
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
