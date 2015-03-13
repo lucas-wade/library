@@ -1,10 +1,18 @@
 <h1>Welcome to the <strong>Grow BioIntensive</strong> Web</h1>
-<!--
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=FPeAvYrfKkU" frameborder="0" allowfullscreen>
 
 
-</iframe>
--->
+<% if logged_in? %>
+    <div class="row">
+      <aside class="col-md-4">
+        <section class="user_info">
+          <%= render 'shared/user_info' %>
+        </section>
+        <section class="micropost_form">
+          <%= render 'shared/micropost_form' %>
+        </section>
+      </aside>
+    </div>
+<% else %>
 
 <div class="center">
 <iframe width="560" height="315"
@@ -12,3 +20,6 @@
         frameborder="0" allowfullscreen></iframe>
 
 </div>
+    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    
+<% end %>

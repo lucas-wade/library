@@ -9,6 +9,7 @@
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
 $gray-medium-light: #eaeaea;
+$primary-bg-color: rgb(242,209,148);
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -21,8 +22,12 @@ $gray-medium-light: #eaeaea;
 body {
   padding-top: 60px;
   font: $font-stack;
+  background-color: $primary-bg-color;
 }
 
+.jumbotron {
+  background-color: lighten($primary-bg-color,17%);
+}
 
 section {
   overflow: auto;
@@ -81,7 +86,7 @@ p {
   margin-right: 10px;
   font-size: 1.7em;
   color: #333;
-  text-transform: uppercase;
+  //text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
 //  font-weight: bold;
@@ -217,5 +222,53 @@ input {
     overflow: auto;
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+
+/* microposts */
+
+.microposts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
   }
 }

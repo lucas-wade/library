@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
  # get 'password_resets/edit'
 
-  #root             'static_pages#home'
-  root    'microposts#index'
+  root             'static_pages#home'
+  #root    'microposts#index'
   get     'home'    => 'static_pages#home'
   get     'about'   => 'static_pages#about'
   get     'signup'  => 'users#new'
@@ -14,8 +14,7 @@ Rails.application.routes.draw do
   delete  'logout'  => 'sessions#destroy'
 
 
-  resources :microposts
-
+  resources :microposts,          only: [:create, :destroy]
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
