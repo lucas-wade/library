@@ -48,7 +48,7 @@ Rails.application.configure do
       address:              'smtp.gmail.com',
       port:                 587,
       domain:               'vectorclaw.com',
-      #user_name:            'lukeallen@gmail.com',
+
       :user_name      => ENV['SMTP_USERNAME'],
       :password       => ENV['SMTP_PASSWORD'],
       authentication:       'plain',
