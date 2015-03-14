@@ -23,6 +23,12 @@ gem 'font-awesome-sass', '~> 4.3.1'
 #fake names and such
 gem 'faker',                '1.4.2'
 
+#
+gem 'fog', '~> 1.28.0'
+gem 'mini_magick', '~> 4.1.0'
+gem 'carrierwave', '~> 0.10.0'
+
+
 #pages
 gem 'will_paginate',           '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'

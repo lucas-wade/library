@@ -17,8 +17,6 @@ $primary-bg-color: rgb(242,209,148);
   box-sizing:         border-box;
 }
 
-
-
 body {
   padding-top: 60px;
   font: $font-stack;
@@ -27,7 +25,9 @@ body {
 
 .jumbotron {
   background-color: lighten($primary-bg-color,17%);
+  padding-top: 10px;
 }
+
 
 section {
   overflow: auto;
@@ -80,6 +80,14 @@ p {
 }
 
 /* header */
+
+.navbar-special-color {
+
+  background-color: lighten($primary-bg-color,8%);
+
+
+}
+
 
 #logo {
   float: left;
