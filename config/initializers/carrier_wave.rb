@@ -13,3 +13,9 @@ if Rails.env.production?
 end
 
 =end
+
+CarrierWave.configure do |config|
+  config.permissions = 0644
+  config.directory_permissions = 0700
+  config.storage = :file
+end
