@@ -18,5 +18,5 @@ CarrierWave.configure do |config|
   config.permissions = 0644
   config.directory_permissions = 0700
   config.storage = :file
-  config.root = Rails.root
+  #config.root = Rails.root
 end
