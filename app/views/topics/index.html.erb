@@ -1,0 +1,18 @@
+<% provide(:title, 'All topics') %>
+<h1>All Topics</h1>
+
+
+
+<% @topics.each do |t| %>
+    <ul class="users">
+      <%= link_to t.name, t %>
+      <%= link_to "edit", edit_topic_path(t) %>
+
+
+    </ul>
+<% end %>
+
+
+
+
+<%= link_to 'New Topic', new_topic_path, class:"btn btn-primary btn-lg"%>

@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150316131948) do
+ActiveRecord::Schema.define(version: 20150322003805) do
+
+  create_table "families", force: :cascade do |t|
+    t.integer  "parent_id"
+    t.integer  "kid_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "families", ["kid_id"], name: "index_families_on_kid_id"
+  add_index "families", ["parent_id", "kid_id"], name: "index_families_on_parent_id_and_kid_id", unique: true
+  add_index "families", ["parent_id"], name: "index_families_on_parent_id"
 
   create_table "microposts", force: :cascade do |t|
     t.text     "content"
@@ -34,6 +45,15 @@ ActiveRecord::Schema.define(version: 20150316131948) do
   add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id"
   add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
+
+  create_table "topics", force: :cascade do |t|
+    t.string   "name"
+    t.string   "language"
+    t.text     "main_content"
+    t.integer  "skill"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

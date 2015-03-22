@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-4">
+    <% @topics.each do |t| %>
+        <ul class="users">
+          <%= link_to t.name, t %>
+        </ul>
+    <% end %>
+  </div>
+  <div class="col-md-8">
+    <h2>Main content</h2>
+    <%= @topic.main_content %>
+    <h2>parents</h2>
+    <% @topic.parents.each do |b| %>
+    <%= b.name %>
+    <% end %>
+
+    <h2>kids <%= @topic.kids.count %></h2>
+    <% @topic.kids.each do |c| %>
+        <%= c.name %>
+    <% end %>
+  </div>
+
+
+
+</div>

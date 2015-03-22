@@ -22,9 +22,9 @@ User.create!(name:  "matt",
              activated: true,
              activated_at: Time.zone.now)
 
+=begin
 
-
-99.times do |n|
+50.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
   password = "password"
@@ -50,3 +50,31 @@ following = users[2..50]
 followers = users[3..40]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
+
+=end
+
+Topic.create!(name:  "Information",
+             language: 'english',)
+
+Topic.create!(name:  "Action",
+              language: 'english',)
+
+Topic.create!(name:  "Join",
+              language: 'english',)
+
+
+Topic.create!(name:  "All Information",
+              language: 'english',
+              main_content: "All this info",
+              )
+
+Topic.create!(name:  "Basic Needs",
+              language: 'english',
+              main_content: "the basic needs are here",
+              )
+
+topics = Topic.all
+info = Topic.first
+t=topics[3]
+t.make_parent(info)
+
