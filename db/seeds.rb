@@ -14,7 +14,7 @@ User.create!(name:  "admin",
              activated: true,
              activated_at: Time.zone.now)
 
-User.create!(name:  "matt",
+User.create!(name:  "Jason",
              email: 'mattb@willitscharter.net',
              password:              "foobar",
              password_confirmation: "foobar",
