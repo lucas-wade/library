@@ -19,7 +19,7 @@
 
 
     <script type="text/javascript">
-        window.location.href="/topics"  // put your correct path in a string here
+        window.location.href="/topics"
     </script>
 
 
@@ -45,12 +45,12 @@
 
 <% else %>
 
-<div class="center">
-<iframe width="100%"
+<div class="video">
+<iframe  width="100%" height="100%"
         src="https://www.youtube.com/embed/FPeAvYrfKkU?autoplay=1"
         frameborder="0" allowfullscreen></iframe>
-
 </div>
+
     <p>New user? <%= link_to "Sign up now!", signup_path %></p>
 
 <% end %>

@@ -37,12 +37,22 @@ body {
   background-image: image_url("garden_footer.png");
   background-repeat: repeat-x;
   //margin-bottom: 100px;
-  padding-bottom: 70%;
+  padding-bottom: 30%;
 }
 .jimbo {
   padding-left: 10%;
 
 }
+
+.video {
+  position:fixed !important;
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+}
+
 
 .filled-container {
   background-color: rgba(255,255,255,.4);
