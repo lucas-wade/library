@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get     'login'   => 'sessions#new'
   post    'login'   => 'sessions#create'
   delete  'logout'  => 'sessions#destroy'
+  post    'admin/edit_toggle' =>'admin#edit_toggle'
 
   resources :users do
     member do

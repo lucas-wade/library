@@ -1,18 +1,38 @@
-<% provide(:title, 'All topics') %>
-<h1>All Topics</h1>
+<% provide(:title, 'Classroom') %>
+
+<div class="row">
+  <div class="col-lg-3">
+    <h5> <i class="fa fa-book fa-2x"></i> </h5>
+    <% @temp_topic=0 %>
+    <%= render 'column' %>
+  </div>
+
+  <div class="col-lg-1">
+  </div>
+
+  <div class="col-lg-3">
+    <h5> <i class="fa fa-child fa-2x"></i> </h5>
+    <% @temp_topic=1 %>
+    <%= render 'column' %>
+  </div>
+
+  <div class="col-lg-1">
+  </div>
+
+  <div class="col-lg-3">
+    <h5> <i class="fa fa-users fa-2x"></i> </h5>
+    <% @temp_topic=2 %>
+    <%= render 'column' %>
+  </div>
+
+</div>
 
 
 
-<% @topics.each do |t| %>
-    <ul class="users">
-      <%= link_to t.name, t %>
-      <%= link_to "edit", edit_topic_path(t) %>
 
 
-    </ul>
+<% if !current_user.admin %>
+    <hr><h2>Admin Area</h2>
+
+<%= link_to 'New Topic', new_topic_path, class:"btn btn-primary"%>
 <% end %>
-
-
-
-
-<%= link_to 'New Topic', new_topic_path, class:"btn btn-primary btn-lg"%>
