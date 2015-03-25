@@ -71,7 +71,7 @@ join = Topic.third
 
 Topic.create!(name:  "Library",
               language: 'english',
-              main_content: "All this info"
+              main_content: "All this info is real cool"
               )
 Topic.last.make_parent(info)
 
@@ -81,6 +81,7 @@ Topic.create!(name:  "Dig Deeper Basic Needs",
               )
 last_topic = Topic.last
 last_topic.make_parent(info)
+
   Topic.create!(name:  "Water",
               language: 'english',
               main_content: "the basic needs are here"
