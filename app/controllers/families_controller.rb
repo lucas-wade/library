@@ -5,10 +5,10 @@ class FamiliesController < ApplicationController
     @parent_topic = Topic.find(params[:id])
     #@user = User.find(params[:followed_id])
     #current_user.follow(@user)
+
     current_topic.make_parent(@parent_topic)
 
-
-#    @family = current_topic.build(:parent_id => params[:parent_id])
+    #@family = current_topic.build(:parent_id => params[:parent_id])
     if @family.save
       flash[:notice] = "Added friend."
       redirect_to root_url

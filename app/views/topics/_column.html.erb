@@ -1,15 +1,16 @@
 <% @topics[@temp_topic].kids.each do |t| %>
-    <ul class="main-menu">
+    <div class="main-menu">
       <li class="btn btn-main-menu">
+      <!-- <a class="list-group-item"> -->
         <% if $edit_mode==1 %>
             <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_topic_path(t) %>
         <% end %>
-    <%= link_to t.name, t %>
-    <br>
-    <% t.kids.each do |tt| %>
+        <%= link_to t.name, t %>
+        <br>
+        <% t.kids.each do |tt| %>
         <sb><%= link_to tt.name, tt %>, </sb>
-    <% end %>
+        <% end %>
 
-  </li>
-</ul>
+      </li>
+    </div>
 <% end %>

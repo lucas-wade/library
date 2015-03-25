@@ -22,7 +22,7 @@ class Topic < ActiveRecord::Base
 
   # Become child of topic.
   def make_parent(parent_topic)
-    parent_families.build(parent_id: parent_topic.id)
+    parent_families.create(parent_id: parent_topic.id)
   end
 
   def remove_parent(parent_topic)
