@@ -11,8 +11,15 @@
   </div>
 
   <div class="col-lg-8 filled-container">
-    <h2>Main content</h2>
+    <h2>
+      <% if $edit_mode==1 %>
+          <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_topic_path(@topic) %>
+      <% end %>
+      <%= @topic.name %><small> Main Content</small>
+    </h2>
+    <h2><small>Skill Level <%= @topic.skill %></small></h2>
     <%= @topic.main_content %>
+
   </div>
 
 </div>

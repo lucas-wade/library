@@ -20,7 +20,21 @@
         <%= f.text_area :main_content %>
     </div>
 
-    <div>
+    <div class="field">
+      <%= f.label :skill_level %><br>
+      <%= f.select(:skill, [[1,1],[2,2],[3,3]] ) %>
+    </div>
+
+    <% f.fields_for :parents, @topic.parents do |t| %>
+        <%=t.collection_select :parents, Topic.all, :id, :name %>
+        <% end %>
+
+
+
+    <div class="field">
+      <%= f.label :parents %><br>
+      <%= f.collection_select(:parents, Topic.all, :id, :name) %>
+
 
 
     </div>

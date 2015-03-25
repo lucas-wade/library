@@ -9,11 +9,14 @@ class MicropostsController < ApplicationController
 
   def create
     @micropost = current_user.microposts.build(micropost_params)
+    store_location
     if @micropost.save
       flash[:success] = "Micropost created!"
-      redirect_to root_url
+      #redirect_back_or(user_url)
+      redirect_to @current_user
     else
       @feed_items = []
+      #redirect_back_or(home_path)
       render 'static_pages/home'
     end
   end

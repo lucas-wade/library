@@ -6,10 +6,10 @@
         <b class="caret"></b>
       </a>
       <ul class="dropdown-menu">
-        <li><%= button_to "edit mode", admin_edit_toggle_path, :method=> :post %></li>
-        <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+        <li><%= link_to "edit mode", admin_edit_toggle_path, :method=> :post %></li>
+        <li><%# link_to "Settings", edit_user_path(current_user) %></li>
         <li class="divider"></li>
-        <li><%= link_to "All Users", users_path %></li>
+        <li><%# link_to "All Users", users_path %></li>
         <li class="divider"></li>
         <li>
           <%= link_to "Log out", logout_path, method: "delete" %>

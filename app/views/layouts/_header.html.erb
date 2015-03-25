@@ -3,7 +3,7 @@
     <%= link_to "BioIntensive Classroom", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to '<i class="fa fa-home fa-2x"></i>'.html_safe, root_path %></li>
+        <li><%= link_to '<i class="fa fa-home"></i>'.html_safe, root_path %></li>
         <% if logged_in? %>
             <%= render 'admin/dropdown' %>
 

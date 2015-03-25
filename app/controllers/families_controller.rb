@@ -1,6 +1,14 @@
 class FamiliesController < ApplicationController
+  before_action :logged_in_user
+
   def create
-    @family = current_topic.build(:parent_id => params[:parent_id])
+    @parent_topic = Topic.find(params[:id])
+    #@user = User.find(params[:followed_id])
+    #current_user.follow(@user)
+    current_topic.make_parent(@parent_topic)
+
+
+#    @family = current_topic.build(:parent_id => params[:parent_id])
     if @family.save
       flash[:notice] = "Added friend."
       redirect_to root_url
@@ -11,15 +19,34 @@ class FamiliesController < ApplicationController
   end
 
 
-
-=begin
-  def destroy
-    @friendship = current_user.friendships.find(params[:id])
-    @friendship.destroy
-    flash[:notice] = "Removed friendship."
-    redirect_to current_user
+  def edit
+    @family = current_topic.parent_families.find(params[:id])
   end
-end
-=end
+
+
+  def destroy
+
+    #active_relationships.find_by(:parent_id => params[:parent_id]).destroy
+    @family = Family.find(params[:id])
+    @topic = Topic.find(@family.kid_id)
+        #@topic.remove_parent(@family)
+    @family.destroy
+
+    #@fam = Family.find(params[:parent_id]).parent_id.destroy
+    #@fam.destroy
+
+    #remove_parent(@fam)
+    flash[:notice] = "Removed parent."
+    redirect_to root_path
+  end
+
+  def donkey
+    @user = Relationship.find(params[:id]).followed
+    current_user.unfollow(@user)
+    respond_to do |format|
+      format.html { redirect_to @user }
+      format.js
+    end
+  end
 
 end

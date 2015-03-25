@@ -3,3 +3,19 @@
 
 <%= render 'form' %>
 
+
+
+<% @topic.parents.each do |t| %>
+    name <%= t.name %> id <%= t.id %>
+    <%= current_topic.parent_families.find_by(parent_id: t).parent_id %>
+    <%= form_for(current_topic.parent_families.find_by(parent_id: t),
+                 html: { method: :delete }) do |f| %>
+    <%= f.submit "Remove Parent", class: "btn" %>
+    <% end %>
+    <br>
+    Add a parent
+    <%= form_for(current_topic.parent_families.build) do |f| %>
+        <div><%= f.number_field :parent_id %></div>
+        <%= f.submit "Parent id #", class: "btn btn-primary" %>
+    <% end %>
+<% end %>

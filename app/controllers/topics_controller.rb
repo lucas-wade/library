@@ -1,6 +1,9 @@
 class TopicsController < ApplicationController
+  before_action :set_topic, only: [:show, :edit, :update, :destroy]
+
   def index
     @topics = Topic.all
+    #@homeless_topics = Topic.find_by_parents(nil)
 
   end
 
@@ -42,9 +45,12 @@ class TopicsController < ApplicationController
   private
 
   def topic_params
-    params.require(:topic).permit(:name, :language, :main_content, :parent_id, :kid_id)
+    params.require(:topic).permit(:name, :language, :main_content, :parent_id, :kid_id, :skill)
   end
 
+  def set_topic
+    @topic = Topic.find(params[:id])
+  end
 
 
 end
