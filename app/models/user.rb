@@ -53,6 +53,15 @@ class User < ActiveRecord::Base
     update_attribute(:remember_digest, nil)
   end
 
+  def make_admin
+    if self.admin
+    update_attribute(:admin,    false)
+    else
+      update_attribute(:admin, true)
+    end
+
+  end
+
   # Activates an account.
   def activate
     update_attribute(:activated,    true)
@@ -105,6 +114,8 @@ class User < ActiveRecord::Base
   def following?(other_user)
     following.include?(other_user)
   end
+
+
 
   private
 

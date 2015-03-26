@@ -13,15 +13,15 @@ Rails.application.routes.draw do
   post    'login'   => 'sessions#create'
   delete  'logout'  => 'sessions#destroy'
   post    'admin/edit_toggle' =>'admin#edit_toggle'
-  #get     'media' =>
+  #post     'users/admin_toggle' => 'users#admin_toggle'
 
 
   resources :users do
     member do
       get :following, :followers
+      post :admin_toggle
     end
   end
-
 
   resources :microposts,          only: [:create, :destroy]
   resources :users

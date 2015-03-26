@@ -18,7 +18,7 @@ User.create!(name:  "Jason",
              email: 'jasonmcnabb@growbiointensive.org',
              password:              "default",
              password_confirmation: "default",
-             admin: false,
+             admin: true,
              activated: true,
              activated_at: Time.zone.now)
 

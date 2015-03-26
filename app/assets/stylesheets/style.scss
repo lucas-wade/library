@@ -196,6 +196,28 @@ p {
   }
 
 }
+.list-inline2 {
+
+  text-decoration: none;
+
+    ul {
+      list-style-type: none;
+      //list-style: none;
+      margin: 0;
+      padding: 0;
+      //float: left;
+    }
+
+    li {
+      display: inline-block;
+      //float: left;
+    }
+
+
+
+}
+
+
 
 #pdf-viewer {
   height: $pre-scrollable-max-height;

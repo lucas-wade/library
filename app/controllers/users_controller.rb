@@ -64,6 +64,13 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
+  def admin_toggle
+    @user = User.find(params[:id])
+    @user.make_admin
+        #make_admin
+
+      redirect_to :back
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -87,4 +94,7 @@ class UsersController < ApplicationController
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
+
+
+
 end
