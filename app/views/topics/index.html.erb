@@ -1,25 +1,21 @@
 <% provide(:title, 'Classroom') %>
 
-<div class="row">
-  <div class="col-md-3">
+<div class="row low-gutter">
+  <div class="col-md-4">
     <h5> <i class="fa fa-book fa-2x"></i> </h5>
     <% @temp_topic=0 %>
     <%= render 'column' %>
   </div>
 
-  <div class="col-md-1">
-  </div>
 
-  <div class="col-md-3">
+  <div class="col-md-4">
     <h5> <i class="fa fa-child fa-2x"></i> </h5>
     <% @temp_topic=1 %>
     <%= render 'column' %>
   </div>
 
-  <div class="col-md-1">
-  </div>
 
-  <div class="col-md-3">
+  <div class="col-md-4">
     <h5> <i class="fa fa-users fa-2x"></i> </h5>
     <% @temp_topic=2 %>
     <%= render 'column' %>
