@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   post    'login'   => 'sessions#create'
   delete  'logout'  => 'sessions#destroy'
   post    'admin/edit_toggle' =>'admin#edit_toggle'
+  #get     'media' =>
+
 
   resources :users do
     member do
