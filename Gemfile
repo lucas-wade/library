@@ -23,11 +23,13 @@ gem 'font-awesome-sass', '~> 4.3.1'
 #fake names and such
 gem 'faker',                '1.4.2'
 
-#
+# files
 gem 'fog', '~> 1.28.0'
 gem 'mini_magick', '~> 4.1.0'
 gem 'carrierwave', '~> 0.10.0'
 
+#pdf
+gem 'pdf-reader', '~> 1.3.3'
 
 #pages
 gem 'will_paginate',           '3.0.7'

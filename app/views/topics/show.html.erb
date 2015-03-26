@@ -13,16 +13,37 @@
 
   <div class="col-md-7 filled-container">
     <div class="content_window">
-        <h2>
+      <h2>
         <% if $edit_mode==1 %>
-              <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_topic_path(@topic) %>
+            <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_topic_path(@topic) %>
         <% end %>
         <%= @topic.name %>
-        </h2>
-
-        </h2>
+      </h2>
+      <h3><sb>
+        <% @topic.kids.each do |tt| %>
+            <sb><%= link_to tt.name, tt %>, </sb>
+        <% end %>
+      </sb>
+      </h3>
         <h2><small>Skill Level <%= @topic.skill %></small></h2>
         <%=@topic.main_content.html_safe %>
+      <%
+         @image = MiniMagick::Image.open("http://www.tracyworley.com/wp-content/uploads/2015/02/DonkeyTeam.jpg")
+         open_pdf = open("public/media/Booklet_20_Final_RGB.pdf")
+         reader = PDF::Reader.new(open('public/media/Booklet_20_Final_RGB.pdf'))
+      %>
+
+      <div id="pdf-viewer">
+        <%
+        # this reader is the pdf-reader gem it gets all the text out of the pdf so i can put that into the meta-data area for searching. whoo hoo
+        %>
+           <%= reader.page(1) %>
+        <iframe frameborder="0" src="http://cloud.bountifulgardens.net/ea_pub/Booklet_20_Final_RGB.pdf" width="100%" height="100%"></iframe>
+
+      <%# image_tag "/media/Booklet_20_Final_RGB.pdf"  %>
+      <%# image_tag "/media/1.jpg" %>
+      </div>
+
     </div>
     <hr>
     <div class="content_window">
@@ -33,21 +54,3 @@
   </div>
 
 </div>
-
-
-
-
-
-
-<hr>
-
-<h3>debuggin'</h3>
-<h3>parents</h3>
-<% @topic.parents.each do |b| %>
-    <%= b.name %>
-<% end %>
-
-<h2>kids <%= @topic.kids.count %></h2>
-<% @topic.kids.each do |c| %>
-    <%= c.name %>
-<% end %>

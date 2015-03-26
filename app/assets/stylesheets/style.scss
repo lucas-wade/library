@@ -197,6 +197,12 @@ p {
 
 }
 
+#pdf-viewer {
+  height: $pre-scrollable-max-height;
+  overflow: auto;
+
+}
+
 .classroom-col {
   border-color: #222222;
   border-style: solid;

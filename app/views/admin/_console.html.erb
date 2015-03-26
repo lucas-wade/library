@@ -1,0 +1,25 @@
+
+
+<h2>Admin Area</h2>
+<div class="main-menu">
+  <%= link_to 'New Topic', new_topic_path, class:"btn btn-primary"%>
+
+  <br><br><br><br><br><br>
+  <br><br><br><br><br><br>
+  <% if @topics
+       @topics.each do |t|
+  %>
+       <%= link_to t.name, t %>
+          <% if t.parents.count < 1 %>
+            <strong>no parents</strong>
+          <% else %>
+            <strong>Parents:</strong> <% t.parents.each do |tt| %> - <%= link_to tt.name, tt %> <% end %>
+              <strong>Kids:</strong> <% t.kids.each do |tt| %> - <%= link_to tt.name, tt %> <% end %>
+          <% end %>
+          <br>
+      <% end %>
+  <% end %>
+
+
+</div>
+
