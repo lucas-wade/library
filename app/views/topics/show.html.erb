@@ -1,24 +1,34 @@
 
 <div class="row">
 
-  <div class="col-lg-3">
+  <div class="col-md-3">
+
     <h5> <i class="fa fa-book fa-2x"></i> </h5>
     <% @temp_topic=0 %>
     <%= render 'column' %>
   </div>
 
-  <div class="col-lg-1">
+  <div class="col-md-1">
   </div>
 
-  <div class="col-lg-8 filled-container">
-    <h2>
-      <% if $edit_mode==1 %>
-          <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_topic_path(@topic) %>
-      <% end %>
-      <%= @topic.name %><small> Main Content</small>
-    </h2>
-    <h2><small>Skill Level <%= @topic.skill %></small></h2>
-    <%= @topic.main_content %>
+  <div class="col-md-7 filled-container">
+    <div class="content_window">
+        <h2>
+        <% if $edit_mode==1 %>
+              <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_topic_path(@topic) %>
+        <% end %>
+        <%= @topic.name %>
+        </h2>
+
+        </h2>
+        <h2><small>Skill Level <%= @topic.skill %></small></h2>
+        <%=@topic.main_content.html_safe %>
+    </div>
+    <hr>
+    <div class="content_window">
+
+      <h2><i class="fa fa-archive fa-2x"></i>Supplemental Files</h2>
+    </div>
 
   </div>
 
@@ -26,7 +36,11 @@
 
 
 
+
+
+
 <hr>
+
 <h3>debuggin'</h3>
 <h3>parents</h3>
 <% @topic.parents.each do |b| %>
