@@ -217,11 +217,16 @@ p {
 
 }
 
-
-
-#pdf-viewer {
+.pdf-viewer {
   height: $pre-scrollable-max-height;
-  overflow: auto;
+  overflow: visible;
+  //frameborder="0"
+
+}
+
+#pdf-viewer1 {
+  height: $pre-scrollable-max-height;
+  overflow: visible;
 
 }
 
