@@ -1,19 +1,14 @@
-
 <div class="row low-gutter">
+  <% @temp_topic = @topic.parents.first.id - 1  %>
 
-  <div class="col-md-3">
+  <% if @temp_topic == 0 %>
+      <%= render 'column' %>
+  <% end %>
 
-    <h5> <i class="fa fa-book fa-2x"></i> </h5>
-    <% @temp_topic=0 %>
-    <%= render 'column' %>
-  </div>
 
-  <div class="col-md-1">
-  </div>
-
-  <div class="col-md-7 filled-container">
+<div class="col-md-8 filled-container">
     <div class="content_window">
-      <h2>
+        <h2>
         <% if $edit_mode==1 %>
             <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_topic_path(@topic) %>
         <% end %>
@@ -52,5 +47,10 @@
     </div>
 
   </div>
+
+
+  <% if @temp_topic == 1 || 2 %>
+      <%= render 'column' %>
+  <% end %>
 
 </div>

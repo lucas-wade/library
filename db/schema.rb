@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150322003805) do
+ActiveRecord::Schema.define(version: 20150330184209) do
 
   create_table "families", force: :cascade do |t|
     t.integer  "parent_id"
@@ -35,6 +35,22 @@ ActiveRecord::Schema.define(version: 20150322003805) do
   add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
   add_index "microposts", ["user_id"], name: "index_microposts_on_user_id"
 
+  create_table "pubs", force: :cascade do |t|
+    t.string   "language"
+    t.boolean  "translated"
+    t.string   "type"
+    t.string   "url"
+    t.string   "media"
+    t.string   "pub_type"
+    t.text     "meta_data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "name"
+  end
+
+  add_index "pubs", ["language"], name: "index_pubs_on_language"
+  add_index "pubs", ["name"], name: "index_pubs_on_name", unique: true
+
   create_table "relationships", force: :cascade do |t|
     t.integer  "follower_id"
     t.integer  "followed_id"
@@ -53,7 +69,10 @@ ActiveRecord::Schema.define(version: 20150322003805) do
     t.integer  "skill"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "category"
   end
+
+  add_index "topics", ["category"], name: "index_topics_on_category"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

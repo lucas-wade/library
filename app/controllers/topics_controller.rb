@@ -18,6 +18,7 @@ class TopicsController < ApplicationController
   def show
     @topic = Topic.find(params[:id])
     @topics = Topic.all
+    @temp_topic = @topic.parents.first.id
   end
 
   def create
@@ -41,6 +42,15 @@ class TopicsController < ApplicationController
       render 'edit'
     end
   end
+
+
+  def destroy
+    Topic.find(params[:id]).destroy
+    flash[:success] = "Topic deleted"
+    redirect_to topics_url
+  end
+
+
 
   private
 

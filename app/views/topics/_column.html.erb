@@ -1,20 +1,46 @@
-<div class="list-group main-menu">
-<% @topics[@temp_topic].kids.each do |t| %>
-
-      <div class="list-group-item btn-main-menu">
-      <!-- <a class="list-group-item"> -->
-        <% if $edit_mode==1 %>
-            <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_topic_path(t) %>
+<% if @temp_topic == 0 %>
+<div class="col-sm-4">
+  <h5> <i class="fa fa-book fa-3x c1"></i> </h5>
+<% else if @temp_topic == 1 %>
+        <div class="col-sm-4">
+          <h5>
+             <i class="fa fa-3x c2"><%= image_tag 'shovel.png', class: "img-hi-responsive" %></i> </h5>
+    <% else if @temp_topic == 2 %>
+            <div class="col-sm-4">
+              <h5> <i class="fa fa-globe fa-3x c3"></i> </h5>
         <% end %>
-        <%= link_to t.name, t %>
-        <br>
-        <% t.kids.each do |tt| %>
-        <sb><%= link_to tt.name, tt %>, </sb>
-        <% end %>
-
-      </div>
-
 <% end %>
+<% end %>
+
+        <div class="list-group main-menu">
+          <% @topics[@temp_topic].kids.each do |t| %>
+
+        <% if @temp_topic == 0 %>
+            <div class="list-group-item btn-main-menu b1">
+
+        <% else if @temp_topic == 1 %>
+                <div class="list-group-item btn-main-menu b2">
+
+            <% else if @temp_topic == 2 %>
+                    <div class="list-group-item btn-main-menu b3">
+                      <% end %>
+                <% end %>
+              <% end %>
+
+
+
+          <% if $edit_mode==1 %>
+              <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_topic_path(t) %>
+          <% end %>
+
+          <%= link_to t.name, t %>
+          <br>
+          <% t.kids.each do |tt| %>
+              <sb><%= link_to tt.name, tt %>, </sb>
+          <% end %>
+                    </div>
+    <% end %>
+    </div>
 </div>
 
 

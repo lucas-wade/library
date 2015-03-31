@@ -1,0 +1,81 @@
+<%# fix to be for a pub
+text_area
+    text_field
+    check_box
+    number_field
+placeholder: "Compose new micropost..."
+
+    render 'shared/pub_form',f: f
+
+
+%>
+
+<%= form_for(@pub, html: { multipart: true }) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :language %>
+      <%= f.text_field :language %>
+    </div>
+
+    <div class="field">
+      <%= f.label :is_it_a_translation %>
+      <%= f.check_box :translated %>
+    </div>
+
+    <div class="field">
+      <%= f.label :Publication_Type %><br>
+      <%= f.select(:pub_type, [['Book','Book'],['Booklet','Booklet'],['Information Sheet','Information Sheet'],['Compilation','Compilation'],['FAQ','FAQ']] ) %>
+    </div>
+
+
+    <!-- media -->
+    <% if @pub.media.url %>
+        <div class="field">
+          <%= f.label :media_type %>
+          <%= @pub.media.content_type %>
+          <br>
+          <%= f.label :media_url %>
+          <%= @pub.media.url %>
+          <br>
+          <%= f.label "Replace document with new File Upload" %>
+          <span class="picture">
+            <%= f.file_field :media, accept: 'image/jpeg,image/gif,image/png,application/pdf' %>
+          </span>
+
+
+    <% else %>
+        Upload a new File
+            <span class="picture">
+                <%= f.file_field :media, accept: 'image/jpeg,image/gif,image/png,application/pdf' %>
+            </span>
+        Or add an Url
+        <div class="field">
+          <%= f.label :url %>
+          <%= f.text_field :url %>
+        </div>
+    <% end %>
+
+
+
+
+
+
+
+    <%= f.submit "Publish", class: "btn btn-primary" %>
+
+<script type="text/javascript">
+    $('#micropost_picture').bind('change', function() {
+        size_in_megabytes = this.files[0].size/1024/1024;
+        if (size_in_megabytes > 256) {
+            alert('Maximum file size is 5MB. Please choose a smaller file.');
+        }
+    });
+</script>
+
+<% end %>

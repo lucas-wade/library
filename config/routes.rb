@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   resources :relationships,       only: [:create, :destroy]
   resources :families,       only: [:create, :destroy]
   resources :topics
+  resources :pubs
 
 
   # Example of regular route:

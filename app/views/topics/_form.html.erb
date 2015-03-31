@@ -1,4 +1,5 @@
 <%= form_for(@topic) do |f| %>
+
     <% if @topic.errors.any? %>
         <div id="error_explanation">
             <h2><%= pluralize(@topic.errors.count, "error") %> prohibited this topic from being saved:</h2>
@@ -25,23 +26,19 @@
       <%= f.select(:skill, [[1,1],[2,2],[3,3]] ) %>
     </div>
 
-    <% f.fields_for :parents, @topic.parents do |t| %>
-        <%=t.collection_select :parents, Topic.all, :id, :name %>
-        <% end %>
-
-
-
     <div class="field">
-      <%= f.label :parents %><br>
-      <%= f.collection_select(:parents, Topic.all, :id, :name) %>
-
-
-
+      <%= f.label :category %><br>
+      <%= f.select(:category, [['Main Topic',0],['Category 1',1],['Category 2',2],['Category 3',3],['Peak',4]] ) %>
     </div>
 
 
+    <div class="field">
+      <%# f.label :parents %><br>
+      <%# f.collection_select(:parents, Topic.all, :id, :name) %>
+    </div>
 
     <div class="actions">
     <%= f.submit %>
-  </div>
+
+
 <% end %>
