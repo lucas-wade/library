@@ -22,6 +22,14 @@ User.create!(name:  "Jason",
              activated: true,
              activated_at: Time.zone.now)
 
+User.create!(name:  "Jonathan",
+             email: 'jasonmcnabb@growbiointensive.org',
+             password:              "default",
+             password_confirmation: "default",
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
+
 =begin
 
 50.times do |n|
