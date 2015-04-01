@@ -1,3 +1,4 @@
+<div class="topic-form">
 <%= form_for(@topic) do |f| %>
 
     <% if @topic.errors.any? %>
@@ -11,19 +12,38 @@
         </div>
     <% end %>
 
+      <!-- #parent topic stuff -->
+    <% if @parent_topic %>
+        <h3>Create translation or subcategory of <strong><%= @parent_topic.name %></strong></h3>
+
+        <%= hidden_field_tag :parent_id, @parent_topic.id %>
+    <% end %>
+
+
     <div class="field">
         <%= f.label :name %><br>
         <%= f.text_area :name %>
     </div>
 
     <div class="field">
+      <%= f.label :language_id %><br>
+      <%= f.select(:language_id, [['English','1'],['Hindi','2'],['Arabic','3'],['Spanish','4'],['Portuguese','5'],['Bengali','6']] ) %>
+    </div>
+
+      <div class="field">
+        <%= f.label :is_it_a_translation %>
+        <%= f.check_box :translation %>
+      </div>
+
+
+    <div class="field">
         <%= f.label :main_content %><br>
-        <%= f.text_area :main_content %>
+        <%= f.text_area :main_content, :size => "2x10" %>
     </div>
 
     <div class="field">
       <%= f.label :skill_level %><br>
-      <%= f.select(:skill, [[1,1],[2,2],[3,3]] ) %>
+      <%= f.select(:skill, [['Basic',1],['Intermediate',2],['Advanced',3]] ) %>
     </div>
 
     <div class="field">
@@ -32,13 +52,28 @@
     </div>
 
 
+
+    <%# form_for(current_topic.parent_families.build) do |f| %>
+
     <div class="field">
-      <%# f.label :parents %><br>
+      <!-- Create New Parent ( Leave blank if no change is desired) -->
+
+      <%# f.label :parent_id %>
+      <%# f.number_field :parent_id %>
+    </div>
+
+    <%# f.number_field :id %>
+    <%# f.submit "Parent id #", class: "btn btn-primary" %>
+    <%# end %>
+
+    <div class="field">
+      <%# f.label :parent %><br>
       <%# f.collection_select(:parents, Topic.all, :id, :name) %>
     </div>
 
     <div class="actions">
-    <%= f.submit %>
-
+      <%= f.submit "Go Live", class: "btn btn-primary" %>
+    </div>
 
 <% end %>
+  </div>

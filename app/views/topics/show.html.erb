@@ -1,5 +1,12 @@
 <div class="row low-gutter">
-  <% @temp_topic = @topic.parents.first.id - 1  %>
+  <% if @topic.parents.first
+        @temp_topic = @topic.parents.first.id - 1
+     else
+       @temp_topic =0
+     end
+
+
+  %>
 
   <% if @temp_topic == 0 %>
       <%= render 'column' %>
@@ -23,17 +30,19 @@
         <h2><small>Skill Level <%= @topic.skill %></small></h2>
         <%=@topic.main_content.html_safe %>
       <%
-         @image = MiniMagick::Image.open("http://www.tracyworley.com/wp-content/uploads/2015/02/DonkeyTeam.jpg")
-         open_pdf = open("public/media/Booklet_20_Final_RGB.pdf")
-         reader = PDF::Reader.new(open('public/media/Booklet_20_Final_RGB.pdf'))
+         #@image = MiniMagick::Image.open("http://www.tracyworley.com/wp-content/uploads/2015/02/DonkeyTeam.jpg")
+         #open_pdf = open("public/media/Booklet_20_Final_RGB.pdf")
+         #reader = PDF::Reader.new(open('public/media/Booklet_20_Final_RGB.pdf'))
       %>
 
       <div id="pdf-viewer">
         <%
         # this reader is the pdf-reader gem it gets all the text out of the pdf so i can put that into the meta-data area for searching. whoo hoo
         %>
-           <%= reader.page(1) %>
-        <iframe frameborder="0" src="http://cloud.bountifulgardens.net/ea_pub/Booklet_20_Final_RGB.pdf" width="100%" height="100%"></iframe>
+           <%# reader.page(1) %>
+        <!-- iframe for pdf
+        <iframe frameborder="0" src="http://cloud.bountifulgardens.net/ea_pub/Booklet_20_Final_RGB.pdf" width="60%" height="100%"></iframe>
+-->
 
       <%# image_tag "/media/Booklet_20_Final_RGB.pdf"  %>
       <%# image_tag "/media/1.jpg" %>
@@ -43,14 +52,18 @@
     <hr>
     <div class="content_window">
 
-      <h2><i class="fa fa-archive fa-2x"></i>Supplemental Files</h2>
+      <h2><i class="fa fa-archive fa-1x"></i> Supplemental Files</h2>
+      <% if @topic.pubs.present? %>
+      <%= link_to @topic.pubs.first.name, @topic.pubs.first %>
+          <% end %>
+
     </div>
 
   </div>
 
 
-  <% if @temp_topic == 1 || 2 %>
-      <%= render 'column' %>
+  <% if @temp_topic == 1 || @temp_topic == 2 %>
+     <%= render 'column' %>
   <% end %>
 
 </div>

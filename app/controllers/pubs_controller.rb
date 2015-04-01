@@ -7,13 +7,17 @@ class PubsController < ApplicationController
 
   def show
     @pub = Pub.find(params[:id])
-    #@microposts = @user.microposts.paginate(page: params[:page])
-    #@micropost = current_user.microposts.build if logged_in?
-    #redirect_to root_url and return unless @user.activated?
+    @pubs = Pub.all
+    #if @pub.topics.present?
+     # @temp_pub = @pub.topics.first.id
+   # end
   end
 
   def new
     @pub = Pub.new
+    if params[:parent_id].present?
+      @parent_topic = Topic.find(params[:parent_id])
+    end
   end
 
   def edit
@@ -22,10 +26,12 @@ class PubsController < ApplicationController
 
   def create
     @pub = Pub.new(pub_params)
+    @parent_topic = Topic.find(params[:parent_id])
     if @pub.save
+      @pub.make_parent(@parent_topic)
       #@user.send_activation_email
       flash[:info] = "New Publication Saved."
-      redirect_to :back
+      redirect_to pubs_path
     else
       render 'new'
     end
@@ -53,12 +59,13 @@ class PubsController < ApplicationController
   def pub_params
     params.require(:pub).permit(:name,
                                 :language,
-                                :translated,
+                                :translation,
                                 :type,
                                 :url,
                                 :media,
                                 :pub_type,
-                                :meta_data)
+                                :meta_data,
+                                :topic_id)
   end
 
 end

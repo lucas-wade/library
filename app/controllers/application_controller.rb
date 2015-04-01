@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include  SessionsHelper
 
+ # $current_lang = 1
+ # $languages[0] = 'universal'
+ # $languages[1] = 'english'
+ # $languages[2] = 'donkey'
 
 
 

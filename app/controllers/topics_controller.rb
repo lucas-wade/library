@@ -9,6 +9,9 @@ class TopicsController < ApplicationController
 
   def new
     @topic = Topic.new
+    if params[:parent_id].present?
+      @parent_topic = Topic.find(params[:parent_id])
+    end
   end
 
   def edit
@@ -18,12 +21,22 @@ class TopicsController < ApplicationController
   def show
     @topic = Topic.find(params[:id])
     @topics = Topic.all
+    if @topic.parents.present?
     @temp_topic = @topic.parents.first.id
+      end
   end
 
   def create
     @topic = Topic.new(topic_params)
+    if params[:parent_id].present?
+      @parent_topic = Topic.find(params[:parent_id])
+    end
+
     if @topic.save
+      if params[:parent_id].present?
+        @topic.make_parent(@parent_topic)
+      end
+
       #@user.send_activation_email
       flash[:info] = "New Topic Created."
       redirect_to root_url
@@ -35,6 +48,9 @@ class TopicsController < ApplicationController
 
   def update
     @topic = Topic.find(params[:id])
+    if params[:parent_id].present?
+      @parent_topic = Topic.find(params[:parent_id])
+    end
     if @topic.update_attributes(topic_params)
       flash[:success] = "topic updated"
       redirect_to @topic
@@ -55,7 +71,7 @@ class TopicsController < ApplicationController
   private
 
   def topic_params
-    params.require(:topic).permit(:name, :language, :main_content, :parent_id, :kid_id, :skill)
+    params.require(:topic).permit(:name, :language, :main_content, :parent_id, :kid_id, :publication_id, :skill)
   end
 
   def set_topic

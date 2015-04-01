@@ -1,35 +1,41 @@
-<% provide(:title, 'Edit topics') %>
-<h1>Edit Topics</h1>
-<div class="filled-container"><div class="filled-container">
+<% provide(:title, 'Edit Topic') %>
+
+<div class="row">
+
+  <h1 class="center">Edit Topic</h1>
+
+  <div class="col-md-6 col-md-offset-3">
 
   <%= render 'form' %>
 
-<%# f.fields_for :parents, @topic.parents do |t| %>
-    <%# t.collection_select :parents, Topic.all, :id, :name %>
-<%# end %>
-
+    <!-- remove a parent -->
 <% @topic.parents.each do |t| %>
-    Parents <br>
+        <div class="topic-form">
+        <h3>Edit parents</h3>
+        Current Parents <br>
       <ul class="list-inline2">
         <li>
-      <%= t.name %> id= <%= t.id %>
-          </li>
-        <li>
-    <% current_topic.parent_families.find_by(parent_id: t).parent_id %>
-    <%= form_for(current_topic.parent_families.find_by(parent_id: t),
-                 html: { method: :delete }) do |f| %>
-    <%= f.submit "Remove Parent", class: "btn btn-primary" %>
-    <% end %>
+            <%= t.name %> id= <%= t.id %>
         </li>
-        </ul>
-    <br>
+        <li>
+            <%= current_topic.parent_families.find_by(parent_id: t).parent_id %>
+            <%= form_for(current_topic.parent_families.find_by(parent_id: t),
+                 html: { method: :delete }) do |f| %>
+            <%= f.submit "Remove Parent", class: "btn btn-primary" %>
+            <% end %>
+        </li>
+      </ul>
+        <br>
+        </div>
 <% end %>
 
-  NOT WORKING Add a parent NOT WORKING
-  <%= form_for(current_topic.parent_families.create) do |f| %>
-      <div><%= f.number_field :parent_id %></div>
-      <%= f.submit "Parent id #", class: "btn btn-primary" %>
-  <% end %>
+    <!-- new parent id -->
+
+  <%# form_for(current_topic.parent_families.build) do |f| %>
+      <%# f.label :parent_id %>
+      <%# f.number_field :id %>
+      <%# f.submit "Parent id #", class: "btn btn-primary" %>
+  <%# end %>
 
 
 

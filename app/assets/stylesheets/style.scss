@@ -163,30 +163,33 @@ p {
 
 
 .button {
-  background-color: rgb(118, 149, 153);
+  //background-color: rgb(118, 149, 153);
   display: block;
-  border: none;
-  font-size: 1.5em;
-  padding: .5em;
+  //border: none;
+  margin: 10px;
+  //font-size: 1.35em;
+  //padding: .1em;
+  //text-align: left;
 }
 
 .btn-main-menu {
   //background-color: rgb(228, 192, 127);
   background-color: rgba(lighten($primary-bg-color,7%),.95);
-  border-color: rgba(darken($primary-bg-color,33%),.2);
+  border-color: rgba(darken($primary-bg-color,93%),1);
 
   font-size: 1.35em;
   padding: 2%;
   //margin: .5%;
-  list-style: none;
+  //list-style: none;
   text-align: left;
 
-  li {
+ // li {
     //padding: 10px 0;
     //border-top: 1px solid #e8e8e8;
-  }
+  //}
 
 }
+
 
 .b1 {
   background-color: darken($btn1,1%);
@@ -196,6 +199,10 @@ p {
 }
 .b3 {
   background-color: darken($btn3,1%);
+}
+
+.c0 {
+  background-color: $primary-bg-color;
 }
 
 .c1 {
@@ -208,13 +215,19 @@ p {
   color: darken($btn3,20%);
 }
 
+.topic-form {
+  background-color: darken(desaturate(adjust-hue($primary-bg-color,172),30),0);
+  padding: 4%;
+
+
+}
 .img-hi-responsive {
   max-width: 100%;
   //height: 100%;
   //max-height: 100%;
 }
 .main-menu {
-  list-style: none;
+ // list-style: none;
   text-align: left;
 
   sb {

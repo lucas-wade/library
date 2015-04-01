@@ -1,5 +1,8 @@
 class AdminController < ApplicationController
 
+  def topics
+    @topics = Topic.all
+  end
 
 
   def edit_toggle

@@ -1,4 +1,4 @@
-<%# fix to be for a pub
+<%#
 text_area
     text_field
     check_box
@@ -13,24 +13,32 @@ placeholder: "Compose new micropost..."
 <%= form_for(@pub, html: { multipart: true }) do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
 
+    <!-- #parent topic stuff -->
+    <% if @parent_topic %>
+        <h3>Create Supplimental Publication of <strong><%= @parent_topic.name %></strong></h3>
+
+        <%= hidden_field_tag :parent_id, @parent_topic.id %>
+    <% end %>
+
     <div class="field">
       <%= f.label :name %>
       <%= f.text_field :name %>
     </div>
 
     <div class="field">
-      <%= f.label :language %>
-      <%= f.text_field :language %>
+      <%= f.label :language_id %><br>
+      <%= f.select(:language_id, [['English','1'],['Hindi','2'],['Arabic','3'],['Spanish','4'],['Portuguese','5'],['Bengali','6']] ) %>
     </div>
+
 
     <div class="field">
       <%= f.label :is_it_a_translation %>
-      <%= f.check_box :translated %>
+      <%= f.check_box :translation %>
     </div>
 
     <div class="field">
       <%= f.label :Publication_Type %><br>
-      <%= f.select(:pub_type, [['Book','Book'],['Booklet','Booklet'],['Information Sheet','Information Sheet'],['Compilation','Compilation'],['FAQ','FAQ']] ) %>
+      <%= f.select(:pub_type, [['Book','1'],['Booklet','2'],['Information Sheet','3'],['Compilation','4'],['FAQ','5'],['Movie','6'],['Animation','7']] ) %>
     </div>
 
 

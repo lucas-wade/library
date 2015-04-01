@@ -1,18 +1,21 @@
-class FamiliesController < ApplicationController
+class PubTopicRelationshipsController < ApplicationController
+
+
+
   before_action :logged_in_user
 
   def create
     #if params[:parent_id].present?
-     # @parent_topic = Topic.find(params[:parent_id])
+    # @parent_topic = Topic.find(params[:parent_id])
     #else
     @parent_topic = Topic.find(params[:id])
-    #end
+    end
     #@user = User.find(params[:followed_id])
     #current_user.follow(@user)
 
-    current_topic.make_parent(@parent_topic)
+    current_pub.make_parent(@parent_topic)
 
-    @family = current_topic.build(:parent_id => params[:parent_id])
+    #@family = current_topic.build(:parent_id => params[:parent_id])
     if @family.save
       flash[:notice] = "Added friend."
       redirect_to root_url
@@ -24,7 +27,7 @@ class FamiliesController < ApplicationController
 
 
   def edit
-    @family = current_topic.parent_families.find(params[:id])
+    #@family = current_topic.parent_families.find(params[:id])
   end
 
 
@@ -33,7 +36,7 @@ class FamiliesController < ApplicationController
     #active_relationships.find_by(:parent_id => params[:parent_id]).destroy
     @family = Family.find(params[:id])
     @topic = Topic.find(@family.kid_id)
-        #@topic.remove_parent(@family)
+    #@topic.remove_parent(@family)
     @family.destroy
 
     #@fam = Family.find(params[:parent_id]).parent_id.destroy
@@ -44,13 +47,21 @@ class FamiliesController < ApplicationController
     redirect_to root_path
   end
 
-  def donkey
-    @user = Relationship.find(params[:id]).followed
-    current_user.unfollow(@user)
+
+
+
+# from relationships
+  before_action :logged_in_user
+
+  def cdogreate
+    @user = User.find(params[:followed_id])
+    current_user.follow(@user)
     respond_to do |format|
       format.html { redirect_to @user }
       format.js
     end
   end
+
+
 
 end

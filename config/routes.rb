@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   post    'login'   => 'sessions#create'
   delete  'logout'  => 'sessions#destroy'
   post    'admin/edit_toggle' =>'admin#edit_toggle'
-  #post     'users/admin_toggle' => 'users#admin_toggle'
+
 
 
   resources :users do
@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   resources :families,       only: [:create, :destroy]
   resources :topics
   resources :pubs
+  resources :pub_topic_relationships,       only: [:create, :destroy]
 
 
   # Example of regular route:

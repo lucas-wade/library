@@ -12,17 +12,40 @@ class Topic < ActiveRecord::Base
 
   has_many :kids, through: :kid_families
 
+
+  has_many :pub_attachmentships, class_name:  'Attachmentship',
+           foreign_key: 'topic_id',
+           dependent:   :destroy
+
+  has_many :pubs, through: :pub_attachmentships
+
+
+
   accepts_nested_attributes_for :kids
   accepts_nested_attributes_for :parents
   accepts_nested_attributes_for :parent_families
   accepts_nested_attributes_for :kid_families
+  accepts_nested_attributes_for :pub_attachmentships
+  accepts_nested_attributes_for :pubs
+
+#for the pub babies
+  def add_pub_child(pub)
+    #pub_pub_topic_relationships.create(publication_id: publication.id)
+  end
+
+  # Unfollows a user.
+  def remove_pub_child(other_user)
+    #pub_pub_topic_relationships.find_by(publication_id: publication.id).destroy
+  end
+
+
 
 
 
 
   # Become child of topic.
-  def make_parent(parent_topic)
-    parent_families.create(parent_id: parent_topic.id)
+  def make_parent(p_topic)
+    parent_families.create(parent_id: p_topic.id)
   end
 
   def remove_parent(parent_topic)

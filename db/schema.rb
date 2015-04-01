@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150330184209) do
+ActiveRecord::Schema.define(version: 20150401205854) do
+
+  create_table "attachmentships", force: :cascade do |t|
+    t.integer  "pub_id"
+    t.integer  "topic_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "attachmentships", ["pub_id", "topic_id"], name: "index_attachmentships_on_pub_id_and_topic_id", unique: true
+  add_index "attachmentships", ["pub_id"], name: "index_attachmentships_on_pub_id"
+  add_index "attachmentships", ["topic_id"], name: "index_attachmentships_on_topic_id"
 
   create_table "families", force: :cascade do |t|
     t.integer  "parent_id"
@@ -41,11 +52,13 @@ ActiveRecord::Schema.define(version: 20150330184209) do
     t.string   "type"
     t.string   "url"
     t.string   "media"
-    t.string   "pub_type"
     t.text     "meta_data"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "name"
+    t.integer  "language_id"
+    t.boolean  "translation"
+    t.integer  "pub_type"
   end
 
   add_index "pubs", ["language"], name: "index_pubs_on_language"
@@ -67,12 +80,16 @@ ActiveRecord::Schema.define(version: 20150330184209) do
     t.string   "language"
     t.text     "main_content"
     t.integer  "skill"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.string   "category"
+    t.boolean  "translation",  default: false
+    t.integer  "language_id"
   end
 
   add_index "topics", ["category"], name: "index_topics_on_category"
+  add_index "topics", ["language_id"], name: "index_topics_on_language_id"
+  add_index "topics", ["translation"], name: "index_topics_on_translation"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
