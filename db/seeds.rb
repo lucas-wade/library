@@ -23,7 +23,7 @@ User.create!(name:  "Jason",
              activated_at: Time.zone.now)
 
 User.create!(name:  "Jonathan",
-             email: 'jasonmcnabb@growbiointensive.org',
+             email: 'jonathan.stroh@gmail.com',
              password:              "default",
              password_confirmation: "default",
              admin: true,
