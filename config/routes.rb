@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   #root    'microposts#index'
   get     'home'    => 'static_pages#home'
   get     'about'   => 'static_pages#about'
+  get     'admin'   => 'static_pages#admin'
   get     'signup'  => 'users#new'
   get     'login'   => 'sessions#new'
   post    'login'   => 'sessions#create'
@@ -31,7 +32,9 @@ Rails.application.routes.draw do
   resources :families,       only: [:create, :destroy]
   resources :topics
   resources :pubs
-  resources :pub_topic_relationships,       only: [:create, :destroy]
+  resources :attachmentships,       only: [:create, :edit, :destroy]
+  resources :translationships,       only: [:create, :edit, :destroy]
+  resources :admin
 
 
   # Example of regular route:

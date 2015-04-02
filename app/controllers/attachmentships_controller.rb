@@ -1,6 +1,4 @@
-class AttachmentsController < ApplicationController
-
-
+class AttachmentshipsController < ApplicationController
   before_action :logged_in_user
 
   def create
@@ -45,22 +43,6 @@ class AttachmentsController < ApplicationController
     flash[:notice] = "Removed parent."
     redirect_to root_path
   end
-
-
-
-
-# from relationships
-  before_action :logged_in_user
-
-  def cdogreate
-    @user = User.find(params[:followed_id])
-    current_user.follow(@user)
-    respond_to do |format|
-      format.html { redirect_to @user }
-      format.js
-    end
-  end
-
 
 
 

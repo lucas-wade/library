@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150401205854) do
+ActiveRecord::Schema.define(version: 20150402203706) do
 
   create_table "attachmentships", force: :cascade do |t|
     t.integer  "pub_id"
@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(version: 20150401205854) do
   add_index "microposts", ["user_id"], name: "index_microposts_on_user_id"
 
   create_table "pubs", force: :cascade do |t|
-    t.string   "language"
     t.boolean  "translated"
     t.string   "type"
     t.string   "url"
@@ -59,9 +58,9 @@ ActiveRecord::Schema.define(version: 20150401205854) do
     t.integer  "language_id"
     t.boolean  "translation"
     t.integer  "pub_type"
+    t.integer  "language"
   end
 
-  add_index "pubs", ["language"], name: "index_pubs_on_language"
   add_index "pubs", ["name"], name: "index_pubs_on_name", unique: true
 
   create_table "relationships", force: :cascade do |t|
@@ -75,20 +74,28 @@ ActiveRecord::Schema.define(version: 20150401205854) do
   add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
 
+  create_table "topic_translationships", force: :cascade do |t|
+    t.integer  "translation_id"
+    t.integer  "original_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "topic_translationships", ["original_id"], name: "index_topic_translationships_on_original_id"
+  add_index "topic_translationships", ["translation_id", "original_id"], name: "index_topic_translationships_on_translation_id_and_original_id", unique: true
+  add_index "topic_translationships", ["translation_id"], name: "index_topic_translationships_on_translation_id"
+
   create_table "topics", force: :cascade do |t|
     t.string   "name"
-    t.string   "language"
     t.text     "main_content"
     t.integer  "skill"
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
-    t.string   "category"
     t.boolean  "translation",  default: false
-    t.integer  "language_id"
+    t.integer  "language"
+    t.integer  "category"
   end
 
-  add_index "topics", ["category"], name: "index_topics_on_category"
-  add_index "topics", ["language_id"], name: "index_topics_on_language_id"
   add_index "topics", ["translation"], name: "index_topics_on_translation"
 
   create_table "users", force: :cascade do |t|

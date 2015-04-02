@@ -62,13 +62,16 @@ followers.each { |follower| follower.follow(user) }
 =end
 
 Topic.create!(name:  "Information",
-             language: 'english',)
+             language: 1)
+
 
 Topic.create!(name:  "Action",
-              language: 'english',)
+              language: 1)
+
 
 Topic.create!(name:  "Join",
-              language: 'english',)
+              language: 1)
+
 
 topics = Topic.all
 info = Topic.first
@@ -78,50 +81,50 @@ join = Topic.third
 #t.make_parent(info)
 
 Topic.create!(name:  "Library",
-              language: 'english',
-              main_content: "All this info is real cool"
+              language: 1,
+              main_content: "All Publications and Classroom Content"
               )
 Topic.last.make_parent(info)
 
 Topic.create!(name:  "Dig Deeper Basic Needs",
-              language: 'english',
+              language: 1,
               main_content: "the basic needs are here"
               )
 last_topic = Topic.last
 last_topic.make_parent(info)
 
   Topic.create!(name:  "Water",
-              language: 'english',
+              language: 1,
               main_content: "the basic needs are here"
   )
   Topic.last.make_parent(last_topic)
   Topic.create!(name:  "Farmable Soil",
-              language: 'english',
+              language: 1,
               main_content: "the basic needs are here"
   )
   Topic.last.make_parent(last_topic)
   Topic.create!(name:  "Food / Nutrients",
-              language: 'english',
+              language: 1,
               main_content: "the basic needs are here"
   )
   Topic.last.make_parent(last_topic)
   Topic.create!(name:  "Energy",
-              language: 'english',
+              language: 1,
               main_content: "the basic needs are here"
   )
   Topic.last.make_parent(last_topic)
   Topic.create!(name:  "Atmosphere",
-              language: 'english',
+              language: 1,
               main_content: "the basic needs are here"
   )
   Topic.last.make_parent(last_topic)
   Topic.create!(name:  "Wild Space",
-              language: 'english',
+              language: 1,
               main_content: "the basic needs are here"
   )
   Topic.last.make_parent(last_topic)
   Topic.create!(name:  "Peace",
-              language: 'english',
+              language: 1,
               main_content: "the basic needs are here"
   )
   Topic.last.make_parent(last_topic)
@@ -129,97 +132,97 @@ last_topic.make_parent(info)
 
 
 Topic.create!(name:  "8 Components of Grow BioIntensive",
-              language: 'english',
+              language: 1,
               main_content: "All this info"
 )
 Topic.last.make_parent(info)
 
 Topic.create!(name:  "Soil & Soil Building",
-              language: 'english',
+              language: 1,
               main_content: "All this info"
 )
 Topic.last.make_parent(info)
 
 Topic.create!(name:  "Food, Diet, & Human Health",
-              language: 'english',
+              language: 1,
               main_content: "All this info"
 )
 Topic.last.make_parent(info)
 
 Topic.create!(name:  "Garden Planning, Economics, & Scalability",
-              language: 'english',
+              language: 1,
               main_content: "All this info"
 )
 Topic.last.make_parent(info)
 
 Topic.create!(name:  "Human Impact and Sustainability",
-              language: 'english',
+              language: 1,
               main_content: "All this info"
 )
 Topic.last.make_parent(info)
 
 Topic.create!(name:  "EcoSystem",
-              language: 'english',
+              language: 1,
               main_content: "All this info"
 )
 Topic.last.make_parent(info)
 
 Topic.create!(name:  "Learn / Train",
-              language: 'english',
+              language: 1,
               main_content: "All this info"
 )
 Topic.last.make_parent(action)
 
 Topic.create!(name:  "Grow",
-              language: 'english',
+              language: 1,
               main_content: "All this info"
 )
 Topic.last.make_parent(action)
 
 Topic.create!(name:  "Teach",
-              language: 'english',
+              language: 1,
               main_content: "All this info"
 )
 Topic.last.make_parent(action)
 
 Topic.create!(name:  "Rate Your Sustainability",
-              language: 'english',
+              language: 1,
               main_content: "All this info"
 )
 Topic.last.make_parent(action)
 
 Topic.create!(name:  "Join Us",
-              language: 'english',
+              language: 1,
               main_content: "All this info"
 )
 Topic.last.make_parent(join)
 
 Topic.create!(name:  "Start a Project",
-              language: 'english',
+              language: 1,
               main_content: "All this info"
 )
 Topic.last.make_parent(join)
 
 Topic.create!(name:  "Volunteer / Translate",
-              language: 'english',
+              language: 1,
               main_content: "All this info"
 )
 Topic.last.make_parent(join)
 
 Topic.create!(name:  "About Ecology Action",
-              language: 'english',
+              language: 1,
               main_content: "All this info"
 )
 Topic.last.make_parent(join)
 
 Topic.create!(name:  "Network",
-              language: 'english',
+              language: 1,
               main_content: "All this info"
 )
 Topic.last.make_parent(join)
 
 Topic.create!(name:  "Kids",
-              language: 'english',
+              language: 1,
               main_content: "All this info"
 )
 Topic.last.make_parent(join)

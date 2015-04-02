@@ -54,6 +54,7 @@ body {
   right:0;
   bottom:0;
   left:0;
+  background-color: #FFFFFF;
 }
 
 .content_window {
@@ -62,7 +63,11 @@ body {
   margin: 2%;
 
   padding-bottom: 3%;
-
+  rs {
+    font-size: .45em;
+    line-height: .1em;
+    color: $gray-medium-light
+  }
 }
 
 .filled-container {
@@ -77,8 +82,18 @@ body {
 }
 
 .low-gutter > [class*='col-'] {
-  padding-right:.8%;
-  padding-left:.8%;
+  padding-right:.6%;
+  padding-left:.6%;
+}
+
+.real-small {
+  font-size: .618em;
+
+}
+
+.trimmed-icon {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 
@@ -236,6 +251,7 @@ p {
     font-size: .55em;
     line-height: .1em;
   }
+
 
 }
 .list-inline2 {

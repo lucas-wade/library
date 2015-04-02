@@ -14,21 +14,36 @@
 
       <!-- #parent topic stuff -->
     <% if @parent_topic %>
-        <h3>Create translation or subcategory of <strong><%= @parent_topic.name %></strong></h3>
+        <h3>Subcategory Topic of <strong><%= @parent_topic.name %></strong></h3>
 
         <%= hidden_field_tag :parent_id, @parent_topic.id %>
     <% end %>
 
+      <!-- #parent topic stuff -->
+      <% if @original_topic %>
+          <h3>Translation of <strong><%= @original_topic.name %></strong></h3>
+          <%= hidden_field_tag :original_id, @original_topic.id %>
+      <% end %>
 
-    <div class="field">
+
+      <div class="field">
         <%= f.label :name %><br>
         <%= f.text_area :name %>
     </div>
 
     <div class="field">
-      <%= f.label :language_id %><br>
-      <%= f.select(:language_id, [['English','1'],['Hindi','2'],['Arabic','3'],['Spanish','4'],['Portuguese','5'],['Bengali','6']] ) %>
+      <%= f.label :language %><br>
+      <%# f.select(:language, [['English',1],['Hindi',2],['Arabic',3],['Spanish',4],['Portuguese',5],['Bengali',6]] ) %>
+      <% count =0 %>
+      <% hash = [] %>
+      <% while count < $available_languages.count do %>
+        <% hash << [$available_languages[count],count] %>
+
+        <% count+=1 %>
+        <% end %>
+      <%= f.select(:language, hash ) %>
     </div>
+
 
       <div class="field">
         <%= f.label :is_it_a_translation %>
@@ -43,13 +58,30 @@
 
     <div class="field">
       <%= f.label :skill_level %><br>
-      <%= f.select(:skill, [['Basic',1],['Intermediate',2],['Advanced',3]] ) %>
+      <%# f.select(:skill, [['Basic',1],['Intermediate',2],['Advanced',3]] ) %>
+      <% count =0 %>
+      <% hash = [] %>
+      <% while count < $available_skills.count do %>
+          <% hash << [$available_skills[count],count] %>
+
+          <% count+=1 %>
+      <% end %>
+      <%= f.select(:skill, hash ) %>
     </div>
 
-    <div class="field">
-      <%= f.label :category %><br>
-      <%= f.select(:category, [['Main Topic',0],['Category 1',1],['Category 2',2],['Category 3',3],['Peak',4]] ) %>
-    </div>
+
+      <div class="field">
+        <%= f.label :Category %><br>
+        <%# f.select(:category, [['Main',0],['Category 1',1],['Category 2',2]] ) %>
+        <% count =0 %>
+        <% hash = [] %>
+        <% while count < $available_categories.count do %>
+            <% hash << [$available_categories[count],count] %>
+
+            <% count+=1 %>
+        <% end %>
+        <%= f.select(:category, hash ) %>
+      </div>
 
 
 

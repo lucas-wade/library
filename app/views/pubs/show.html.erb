@@ -1,16 +1,34 @@
 <% provide(:title, 'Publication Viewer') %>
 
-    <h1><%= @pub.name %></h1>
+
+
+    <h1>
+      <% if $edit_mode==1 %>
+          <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_pub_path(@pub) %>
+          <% end %><%= @pub.name %>
+    </h1>
     <h2><%= @pub.language %></h2>
-<%= @pub.topics.count %>
+
+This publication is linked to by
+<% @pub.topics.each do |t| %>
+<%= link_to t.name, t %>
+    <% end %>
+
+<h3>Create Translation?</h3>
+
 <div id="pub-<%= @pub.id %>">
 
   <span class="content">
-    <%= @pub.media.content_type %>
-    <% if @pub.media? %>
+
+
+    <% if @pub.media.present? %>
+        The Attached file is a
+        <strong><%= @pub.media.content_type %></strong>
+        &amp is
+        <%= number_to_human_size(@pub.media.size) %>
         <% if @pub.media.content_type == "application/pdf" %>
             <div class="pdf-viewer">
-              <iframe src="<%= @pub.media.url %>" width="100%" height="100%"></iframe>
+              <iframe src="<%= @pub.media.url %>" width="62%" height="100%"></iframe>
             </div>
         <% else %>
             <%= image_tag @pub.media.url %>

@@ -1,0 +1,2 @@
+module TranslationshipsHelper
+end

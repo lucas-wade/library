@@ -3,7 +3,10 @@ class TopicsController < ApplicationController
 
   def index
     @topics = Topic.all
+    #@topics = Topic.all.where(language =  '1')
+    #@topics = Topic.where(:language => '1')
     #@homeless_topics = Topic.find_by_parents(nil)
+
 
   end
 
@@ -11,6 +14,9 @@ class TopicsController < ApplicationController
     @topic = Topic.new
     if params[:parent_id].present?
       @parent_topic = Topic.find(params[:parent_id])
+    end
+    if params[:original_id].present?
+      @original_topic = Topic.find(params[:original_id])
     end
   end
 
@@ -31,10 +37,15 @@ class TopicsController < ApplicationController
     if params[:parent_id].present?
       @parent_topic = Topic.find(params[:parent_id])
     end
-
+    if params[:original_id].present?
+      @original_topic = Topic.find(params[:original_id])
+    end
     if @topic.save
       if params[:parent_id].present?
         @topic.make_parent(@parent_topic)
+      end
+      if params[:original_id].present?
+        @topic.translation_of(@original_topic)
       end
 
       #@user.send_activation_email
@@ -71,7 +82,7 @@ class TopicsController < ApplicationController
   private
 
   def topic_params
-    params.require(:topic).permit(:name, :language, :main_content, :parent_id, :kid_id, :publication_id, :skill)
+    params.require(:topic).permit(:name, :language, :category, :skill, :main_content, :parent_id, :kid_id, :publication_id, :original_id)
   end
 
   def set_topic

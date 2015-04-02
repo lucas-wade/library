@@ -20,14 +20,43 @@
             <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_topic_path(@topic) %>
         <% end %>
         <%= @topic.name %>
+          <!-- translations available -->
+          <rs>
+
+            <% if @topic.translations.present? %>
+                <% @topic.translations.each do |trans| %>
+                    <%= link_to trans.name, trans %>
+                <% end %>
+            <% else if @topic.originals.present? %>
+                    <% @topic.originals.each do |trans| %>
+                        <%= link_to trans.name, trans %>
+                        <% if trans.translations.present? %>
+                            <% trans.translations.each do |trans2| %>
+                                <% if trans2.id != @topic.id %>
+                                <%= link_to trans2.name, trans2 %>
+                                    <% end %>
+                            <% end %>
+                        <% end %>
+                    <% end %>
+
+            <% end %>
+            <% end %>
+          </rs>
       </h2>
-      <h3><sb>
+      <h3><small>
+        Skill Level <strong><%= $available_skills[@topic.skill] unless !@topic.skill.present?%></strong>
+        Category <strong><%= $available_categories[@topic.category] unless !@topic.category.present? %></strong>
+        Language <strong><%= $available_languages[@topic.language] unless !@topic.language.present? %></strong>
+
+      </small></h3>
+      <h3>
+        <sb>
         <% @topic.kids.each do |tt| %>
-            <sb><%= link_to tt.name, tt %>, </sb>
+            <%= link_to tt.name, tt %>
         <% end %>
       </sb>
       </h3>
-        <h2><small>Skill Level <%= @topic.skill %></small></h2>
+
         <%=@topic.main_content.html_safe %>
       <%
          #@image = MiniMagick::Image.open("http://www.tracyworley.com/wp-content/uploads/2015/02/DonkeyTeam.jpg")
@@ -54,9 +83,11 @@
 
       <h2><i class="fa fa-archive fa-1x"></i> Supplemental Files</h2>
       <% if @topic.pubs.present? %>
-      <%= link_to @topic.pubs.first.name, @topic.pubs.first %>
+          <% @topic.pubs.each do |t| %>
+              <%= link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url %>
+              <%= link_to t.name, t %>
           <% end %>
-
+<% end %>
     </div>
 
   </div>

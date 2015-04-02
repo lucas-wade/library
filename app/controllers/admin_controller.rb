@@ -4,6 +4,12 @@ class AdminController < ApplicationController
     @topics = Topic.all
   end
 
+  def index
+    @topics = Topic.all
+  end
+
+
+
 
   def edit_toggle
     if current_user.admin
