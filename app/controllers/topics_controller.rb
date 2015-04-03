@@ -6,9 +6,16 @@ class TopicsController < ApplicationController
     #@topics = Topic.all.where(language =  '1')
     #@topics = Topic.where(:language => '1')
     #@homeless_topics = Topic.find_by_parents(nil)
-
-
   end
+
+  def show
+    @topic = Topic.find(params[:id])
+    @topics = Topic.all
+    if @topic.parents.present?
+      @temp_topic = @topic.parents.first.id
+    end
+  end
+
 
   def new
     @topic = Topic.new
@@ -20,17 +27,6 @@ class TopicsController < ApplicationController
     end
   end
 
-  def edit
-    @topic = Topic.find(params[:id])
-  end
-
-  def show
-    @topic = Topic.find(params[:id])
-    @topics = Topic.all
-    if @topic.parents.present?
-    @temp_topic = @topic.parents.first.id
-      end
-  end
 
   def create
     @topic = Topic.new(topic_params)
@@ -47,15 +43,16 @@ class TopicsController < ApplicationController
       if params[:original_id].present?
         @topic.translation_of(@original_topic)
       end
-
-      #@user.send_activation_email
       flash[:info] = "New Topic Created."
-      redirect_to root_url
+      redirect_to topics_path
     else
       render 'new'
     end
   end
 
+  def edit
+    @topic = Topic.find(params[:id])
+  end
 
   def update
     @topic = Topic.find(params[:id])

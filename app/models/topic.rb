@@ -27,7 +27,7 @@ class Topic < ActiveRecord::Base
   has_many :translations, through: :translation_topic_translationships
 
 
-
+# pub attachments
   has_many :pub_attachmentships, class_name:  'Attachmentship',
            foreign_key: 'topic_id',
            dependent:   :destroy
@@ -48,24 +48,24 @@ class Topic < ActiveRecord::Base
   #not working
   # not USING
 
-  def add_pub_child(pub)
+  #def add_pub_child(pub)
     #pub_pub_topic_relationships.create(publication_id: publication.id)
-  end
+  #end
 
   # Unfollows a user.
-  def remove_pub_child(other_user)
+  #def remove_pub_child(other_user)
     #pub_pub_topic_relationships.find_by(publication_id: publication.id).destroy
-  end
+  #end
 
 #for the translations
 
-  # Follows a user.
+  # becomes a new translation "follow"
   def translation_of(original_topic)
     original_topic_translationships.create(original_id: original_topic.id)
   end
 
   # Unfollows a user.
-  def not_translation_of(other_user)
+  def not_translation_of(original_topic)
     original_topic_translationships.find_by(original_id: original_topic.id).destroy
   end
 

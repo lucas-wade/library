@@ -29,12 +29,13 @@
 
 
 
-          <% if $edit_mode==1 %>
+          <% if edit_mode==1 %>
               <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_topic_path(t) %>
           <% end %>
 
           <%= link_to t.name, t %>
-              <% if $edit_mode==1 %>
+
+              <% if edit_mode == 1 %>
                   <div class="real-small">
                   <%# link_to 'create translation', {:controller => "topics", :action => "create", :id => t.id, :name => t.name }%>
                     <%= link_to 'Create Sub-Topic ', {:controller => "topics", :action => "new", :parent_id => t.id }%>

@@ -8,9 +8,9 @@ class PubsController < ApplicationController
   def show
     @pub = Pub.find(params[:id])
     @pubs = Pub.all
-    #if @pub.topics.present?
-     # @temp_pub = @pub.topics.first.id
-   # end
+    #if @pub.parents.present?
+    #  @temp_topic = @topic.parents.first.id
+    #end
   end
 
   def new
@@ -18,18 +18,28 @@ class PubsController < ApplicationController
     if params[:parent_id].present?
       @parent_topic = Topic.find(params[:parent_id])
     end
+    if params[:original_id].present?
+      @original_pub = Pub.find(params[:original_id])
+    end
   end
 
-  def edit
-    @pub = Pub.find(params[:id])
-  end
+
 
   def create
     @pub = Pub.new(pub_params)
-    @parent_topic = Topic.find(params[:parent_id])
+    if params[:parent_id].present?
+      @parent_topic = Topic.find(params[:parent_id])
+    end
+    if params[:original_id].present?
+      @original_pub = Pub.find(params[:original_id])
+    end
     if @pub.save
-      @pub.make_parent(@parent_topic)
-      #@user.send_activation_email
+      if params[:parent_id].present?
+        @pub.make_parent(@parent_topic)
+      end
+      if params[:original_id].present?
+        @pub.translation_of(@original_pub)
+      end
       flash[:info] = "New Publication Saved."
       redirect_to pubs_path
     else
@@ -37,8 +47,18 @@ class PubsController < ApplicationController
     end
   end
 
+  def edit
+    @pub = Pub.find(params[:id])
+  end
+
   def update
     @pub = Pub.find(params[:id])
+    if params[:parent_id].present?
+      @parent_topic = Topic.find(params[:parent_id])
+    end
+    if params[:original_id].present?
+      @original_pub = Pub.find(params[:original_id])
+    end
     if @pub.update_attributes(pub_params)
       flash[:success] = "Publication updated"
       redirect_to @pub
@@ -50,7 +70,7 @@ class PubsController < ApplicationController
   def destroy
     Pub.find(params[:id]).destroy
     flash[:success] = "Publication deleted"
-    redirect_to pub_url
+    redirect_to pubs_path
   end
 
 
@@ -65,7 +85,9 @@ class PubsController < ApplicationController
                                 :media,
                                 :pub_type,
                                 :meta_data,
-                                :topic_id)
+                                :topic_id,
+                                :original_id,
+                                :translation_id)
   end
 
 end

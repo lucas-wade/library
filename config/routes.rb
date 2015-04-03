@@ -33,7 +33,8 @@ Rails.application.routes.draw do
   resources :topics
   resources :pubs
   resources :attachmentships,       only: [:create, :edit, :destroy]
-  resources :translationships,       only: [:create, :edit, :destroy]
+  resources :topic_translationships,       only: [:create, :edit, :destroy]
+  resources :pub_translationships,       only: [:create, :edit, :destroy]
   resources :admin
 
 

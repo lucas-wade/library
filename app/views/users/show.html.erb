@@ -16,10 +16,10 @@
   </aside>
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
-    <% if @microposts.any? %>
-        <h2>Message Board (<%= @user.microposts.count %>)</h2>
+    <% if @message_board.any? %>
+        <h2>Message Board <%= @message_board.count %></h2>
         <ol class="microposts">
-          <%= render @microposts %>
+          <%= render @message_board %>
         </ol>
         <%= will_paginate @microposts %>
     <% end %>

@@ -2,4 +2,5 @@ class PubTopicRelationshipsController < ApplicationController
 
 
 
+
 end

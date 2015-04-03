@@ -7,11 +7,14 @@
           <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_pub_path(@pub) %>
           <% end %><%= @pub.name %>
     </h1>
-    <h2><%= @pub.language %></h2>
+
 
 This publication is linked to by
 <% @pub.topics.each do |t| %>
 <%= link_to t.name, t %>
+    <% end %>
+<% if @pub.originals.present? %>
+<%= @pub.originals.first.name %>
     <% end %>
 
 <h3>Create Translation?</h3>
@@ -41,7 +44,7 @@ This publication is linked to by
   </span>
 
   <% if current_user.admin?%>
-      <% if $edit_mode==1 %>
+      <% if edit_mode==1 %>
       <%= link_to "delete", @pub, method: :delete,
                   data: { confirm: "You sure?" } %>
           <% end %>

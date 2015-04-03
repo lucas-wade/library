@@ -7,8 +7,12 @@
   <thead>
   <tr>
     <th>Name</th>
+    <th>Language</th>
+    <th>Translation of</th>
+    <th>First Parent Topic</th>
+    <th>Publication Type</th>
     <th>Media Type</th>
-    <th colspan="2"></th>
+    <th colspan="3"></th>
   </tr>
   </thead>
 
@@ -16,10 +20,26 @@
   <% @pubs.each do |p| %>
       <tr>
         <td><%= link_to p.name, p %></td>
+        <td><%= $available_languages[p.language] %></td>
+        <% if p.originals.present? %>
+        <td><%= link_to p.originals.first.name, p.originals.first %></td>
+            <% else %>
+            <td>Original</td>
+            <% end %>
+        <% if p.topics.present? %>
+        <td><%= link_to p.topics.first.name, p.topics.first %></td>
+        <% else %>
+        <td>Orphan</td>
+        <% end %>
+
+        <td><%= $available_pub_types[p.pub_type] %></td>
+
         <td><%= p.media.content_type %></td>
 
         <% if current_user.admin? %>
-            <% if $edit_mode==1 %>
+            <% if edit_mode==1 %>
+                <td><%= link_to 'Create Translation', new_pub_path(original_id: p.id), class: "btn btn-success" %></td>
+                <!-- , :parent_id =>t.parents.first.id -->
                 <td><%= link_to 'Edit', edit_pub_path(p), class: "btn btn-info"  %></td>
                 <td><%= link_to 'Destroy', p, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
                 <% end %>

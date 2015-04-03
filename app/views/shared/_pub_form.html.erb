@@ -20,25 +20,55 @@ placeholder: "Compose new micropost..."
         <%= hidden_field_tag :parent_id, @parent_topic.id %>
     <% end %>
 
+    <!-- #translation hidden field stuff -->
+    <% if @original_pub %>
+        <h3>Translation of <strong><%= @original_pub.name %></strong></h3>
+        <%= hidden_field_tag :original_id, @original_pub.id %>
+    <% end %>
+
+
     <div class="field">
       <%= f.label :name %>
       <%= f.text_field :name %>
     </div>
 
     <div class="field">
-      <%= f.label :language_id %><br>
-      <%= f.select(:language_id, [['English','1'],['Hindi','2'],['Arabic','3'],['Spanish','4'],['Portuguese','5'],['Bengali','6']] ) %>
+      <%= f.label :language %><br>
+      <%# f.select(:language, [['English',1],['Hindi',2],['Arabic',3],['Spanish',4],['Portuguese',5],['Bengali',6]] ) %>
+      <% count =0 %>
+      <% hash = [] %>
+      <% while count < $available_languages.count do %>
+          <% hash << [$available_languages[count],count] %>
+
+          <% count+=1 %>
+      <% end %>
+      <%= f.select(:language, hash ) %>
     </div>
+
 
 
     <div class="field">
-      <%= f.label :is_it_a_translation %>
-      <%= f.check_box :translation %>
+      <%# f.label :is_it_a_translation %>
+      <%# f.check_box :translation %>
     </div>
+
 
     <div class="field">
       <%= f.label :Publication_Type %><br>
-      <%= f.select(:pub_type, [['Book','1'],['Booklet','2'],['Information Sheet','3'],['Compilation','4'],['FAQ','5'],['Movie','6'],['Animation','7']] ) %>
+
+      <% count =0 %>
+      <% hash = [] %>
+      <% while count < $available_pub_types.count do %>
+          <% hash << [$available_pub_types[count],count] %>
+
+          <% count+=1 %>
+      <% end %>
+      <%= f.select(:pub_type, hash ) %>
+    </div>
+
+    <div class="field">
+
+
     </div>
 
 

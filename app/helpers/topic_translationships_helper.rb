@@ -1,0 +1,2 @@
+module TopicTranslationshipsHelper
+end

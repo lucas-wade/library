@@ -19,7 +19,7 @@
         <%= hidden_field_tag :parent_id, @parent_topic.id %>
     <% end %>
 
-      <!-- #parent topic stuff -->
+      <!-- #translation hidden field stuff -->
       <% if @original_topic %>
           <h3>Translation of <strong><%= @original_topic.name %></strong></h3>
           <%= hidden_field_tag :original_id, @original_topic.id %>

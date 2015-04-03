@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150402203706) do
+ActiveRecord::Schema.define(version: 20150403174133) do
 
   create_table "attachmentships", force: :cascade do |t|
     t.integer  "pub_id"
@@ -45,6 +45,17 @@ ActiveRecord::Schema.define(version: 20150402203706) do
 
   add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
   add_index "microposts", ["user_id"], name: "index_microposts_on_user_id"
+
+  create_table "pub_translationships", force: :cascade do |t|
+    t.integer  "translation_id"
+    t.integer  "original_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "pub_translationships", ["original_id"], name: "index_pub_translationships_on_original_id"
+  add_index "pub_translationships", ["translation_id", "original_id"], name: "index_pub_translationships_on_translation_id_and_original_id", unique: true
+  add_index "pub_translationships", ["translation_id"], name: "index_pub_translationships_on_translation_id"
 
   create_table "pubs", force: :cascade do |t|
     t.boolean  "translated"

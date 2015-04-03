@@ -16,7 +16,7 @@
 <div class="col-md-8 filled-container">
     <div class="content_window">
         <h2>
-        <% if $edit_mode==1 %>
+        <% if session[:edit_mode] == 1 %>
             <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_topic_path(@topic) %>
         <% end %>
         <%= @topic.name %>
@@ -81,7 +81,14 @@
     <hr>
     <div class="content_window">
 
-      <h2><i class="fa fa-archive fa-1x"></i> Supplemental Files</h2>
+      <h2>
+        <% if edit_mode == 1 %>
+            <!-- new suplimental files -->
+            <%= link_to '<i class="fa fa-edit"></i>'.html_safe, new_pub_path(parent_id: @topic.id) %>
+        <% end %>
+        <i class="fa fa-archive fa-1x"></i> Supplemental Files
+      </h2>
+
       <% if @topic.pubs.present? %>
           <% @topic.pubs.each do |t| %>
               <%= link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url %>
