@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get     'home'    => 'static_pages#home'
   get     'about'   => 'static_pages#about'
   get     'admin'   => 'static_pages#admin'
+  get     'library' => 'static_pages#library'
   get     'signup'  => 'users#new'
   get     'login'   => 'sessions#new'
   post    'login'   => 'sessions#create'

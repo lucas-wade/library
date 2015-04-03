@@ -1,10 +1,11 @@
 <header class="navbar navbar-default navbar-fixed-top navbar-special-color">
   <div class="container">
-    <%= link_to "BioIntensive Classroom", root_path, id: "logo" %>
+    <%= link_to "BioIntensive Classroom", topics_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to '<i class="fa fa-home"></i>'.html_safe, root_path %></li>
+        <li><%= link_to '<i class="fa fa-home"></i>'.html_safe, topics_path %></li>
         <% if logged_in? %>
+            <li><%= link_to '<i class="fa fa-book"></i>'.html_safe, library_path %> </li>
             <%= render 'admin/dropdown' %>
 
             <li class="dropdown">

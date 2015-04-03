@@ -6,7 +6,7 @@
 
 
 $font-stack:    Helvetica, sans-serif;
-$primary-color: #333;
+$primary-color: black;
 $gray-medium-light: #eaeaea;
 $primary-bg-color: rgb(242,209,148);
 $btn1: rgb(18, 175, 241);
@@ -99,6 +99,9 @@ body {
 
 a {
   color: $primary-color;
+  &:visited {
+    color: $primary-color;
+  }
 }
 
 section {
@@ -185,13 +188,15 @@ p {
   //font-size: 1.35em;
   //padding: .1em;
   //text-align: left;
+
 }
+
 
 .btn-main-menu {
   //background-color: rgb(228, 192, 127);
   background-color: rgba(lighten($primary-bg-color,7%),.95);
   border-color: rgba(darken($primary-bg-color,93%),1);
-
+  color: $primary-color;
   font-size: 1.35em;
   padding: 2%;
   //margin: .5%;
@@ -205,6 +210,9 @@ p {
 
 }
 
+.b0 {
+  background-color: $primary-bg-color;
+}
 
 .b1 {
   background-color: darken($btn1,1%);
@@ -216,9 +224,7 @@ p {
   background-color: darken($btn3,1%);
 }
 
-.c0 {
-  background-color: $primary-bg-color;
-}
+
 
 .c1 {
   color: darken($btn1,20%);
@@ -328,7 +334,7 @@ footer {
 
   color: #777;
   a {
-    color: #555;
+    color: #333;
     &:hover {
       color: #222;
     }

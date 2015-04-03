@@ -1,5 +1,9 @@
 module AdminHelper
-def edit_mode
-  session[:edit_mode]
-end
+  def edit_mode
+   if current_user.admin == TRUE
+     session[:edit_mode]
+   else
+     FALSE
+   end
+  end
 end

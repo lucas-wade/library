@@ -85,4 +85,15 @@ class Topic < ActiveRecord::Base
     parent_families.find_by(parent_id: parent_topic.id).destroy
   end
 
+
+  def self.search_name(query)
+    where("name like ?", "%#{query}%")
+  end
+
+  def self.search_main_content(query)
+    where("main_content like ?", "%#{query}%")
+  end
+
+
+
 end

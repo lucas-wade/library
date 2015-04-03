@@ -3,6 +3,10 @@ class TopicsController < ApplicationController
 
   def index
     @topics = Topic.all
+    #@topics = Topic.search(params[:search])
+
+
+
     #@topics = Topic.all.where(language =  '1')
     #@topics = Topic.where(:language => '1')
     #@homeless_topics = Topic.find_by_parents(nil)

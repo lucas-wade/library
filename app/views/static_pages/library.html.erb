@@ -1,0 +1,32 @@
+<div class="row b0">
+
+  <%= form_tag(library_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Topics" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
+
+
+  <% if @topics
+       @topics.each do |t|
+  %>
+          <%= link_to t.name, t %>
+
+          <% if edit_mode == TRUE %>
+
+              <% if t.parents.count < 1 %>
+                  <strong>no parents</strong>
+              <% else %>
+                  <strong>Parents:</strong> <% t.parents.each do |tt| %> - <%= link_to tt.name, tt %> <% end %>
+                  <strong>Kids:</strong> <% t.kids.each do |tt| %> - <%= link_to tt.name, tt %> <% end %>
+              <% end %>
+
+              <%= link_to 'Edit', edit_topic_path(t), class: "btn btn-info" %>
+              <%= link_to 'Destroy', t,class: "btn btn-danger" ,method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+          <br>
+      <% end %>
+  <% end %>
+
+
+
+</div>

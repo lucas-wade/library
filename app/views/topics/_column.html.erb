@@ -12,7 +12,11 @@
 <% end %>
 
         <div class="list-group main-menu">
-          <!-- <div class="list-group main-menu"> -->
+
+          <% if @temp_topic == 0 %>
+              <%= link_to 'Library', library_path, class: "list-group-item btn-default btn-main-menu button b1" %>
+              <% end %>
+
           <% @topics[@temp_topic].kids.each do |t| %>
               <% if t.language == 0 || t.language == 1 %>
 

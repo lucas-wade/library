@@ -8,6 +8,16 @@ class StaticPagesController < ApplicationController
       end
     end
 
+    def library
+      if params[:search]
+        @topics = Topic.search_name(params[:search]).order("created_at DESC")
+        @topics += Topic.search_main_content(params[:search]).order("created_at DESC")
+      else
+        @topics = Topic.all
+        #.order('created_at DESC')
+      end
+    end
+
   def about
   end
 
