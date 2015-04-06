@@ -17,5 +17,5 @@
 /tmp
 
 #uploads
-/uploads/*
+public/uploads
 
