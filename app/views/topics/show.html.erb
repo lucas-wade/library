@@ -27,6 +27,11 @@
         <% if edit_mode == 1 %>
             <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_topic_path(@topic) %>
         <% end %>
+
+          <!-- NAME -->
+          <% if @topic.icon.present? %>
+          <%= image_tag @topic.icon.url, class: "img-icon" %>
+              <% end %>
         <%= @topic.name %>
           <!-- translations available -->
           <rs>
@@ -96,26 +101,27 @@
         <!-- <i class="fa fa-archive fa-1x"></i> Supplemental Files -->
 
       <div class="col-md-4">
-        <h5><i class="fa fa-star-o c4"></i></h5>
+        <h5><i class="fa fa-star-o"></i></h5>
       <% if @topic.pubs.present? %>
           <% @topic.pubs.each do |t| %>
                 <% if t.skill == 1 %>
+                    <li>
                     <%= link_to '<i class="fa fa-photo fa-1x"></i>'.html_safe, t.media.url, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true } %>
-                    <%= link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url %>
+                    <%= link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url, :target => "_blank" %>
                     <%= link_to t.name, t %>
+                    </li>
                     <% end %>
           <% end %>
         <% end %>
       </div>
 
       <div class="col-md-4">
-        <h5> <i class="fa fa-star-half-o c4"></i></h5>
+        <h5> <i class="fa fa-star-half-o"></i></h5>
         <% if @topic.pubs.present? %>
             <% @topic.pubs.each do |t| %>
                 <% if t.skill == 2 %>
-                    <%= link_to '<i class="fa fa-photo fa-1x"></i>'.html_safe, t.media.url, :data => { :colorbox => true } %>
-                    <% send_file t.media.url %>
-                <%= link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url %>
+                    <%= link_to '<i class="fa fa-photo fa-1x"></i>'.html_safe, t.media.url, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true } %>
+                <%= link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url, :target => "_blank"%>
                 <%= link_to t.name, t %>
                     <% end %>
             <% end %>
@@ -123,12 +129,13 @@
       </div>
 
       <div class="col-md-4">
-        <h5><i class="fa fa-star c4"></i></h5>
+        <h5><i class="fa fa-star"></i></h5>
         <% if @topic.pubs.present? %>
             <% @topic.pubs.each do |t| %>
                 <% if t.skill == 3 %>
-                    <%= link_to '<i class="fa fa-photo fa-1x"></i>'.html_safe, t.media.url, :data => { :colorbox => true } %>
-                <%= link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url %>
+                    <%= link_to '<i class="fa fa-photo fa-1x"></i>'.html_safe, t.media.url, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true } %>
+                <%= link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url, :target => "_blank"%>
+
                 <%= link_to t.name, t %>
                     <% end %>
             <% end %>

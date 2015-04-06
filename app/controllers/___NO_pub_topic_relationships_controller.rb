@@ -1,6 +1,0 @@
-class PubTopicRelationshipsController < ApplicationController
-
-
-
-
-end

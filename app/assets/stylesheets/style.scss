@@ -11,6 +11,7 @@ $font-stack:    Helvetica, sans-serif;
 $primary-color: black;
 $gray-medium-light: #eaeaea;
 $primary-bg-color: rgb(242,209,148);
+$secondary_color: darken(desaturate(adjust-hue($primary-bg-color,172),30),0);
 $btn1: rgb(18, 175, 241);
 $btn2: rgb(38,189,90);
 $btn3: rgb(239, 132, 77);
@@ -98,6 +99,10 @@ body {
   padding-left: 5%;
   padding-right: 5%;
 }
+.img-icon {
+  width: 3em;
+}
+
 
 .tight-butt {
   padding-bottom: 0%;
@@ -273,7 +278,7 @@ p {
   color: $clr4;
 }
 .topic-form {
-  background-color: darken(desaturate(adjust-hue($primary-bg-color,172),30),0);
+  background-color: $secondary_color;
   padding: 4%;
 
 

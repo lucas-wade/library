@@ -48,6 +48,19 @@ class Pub < ActiveRecord::Base
     original_pub_translationships.find_by(original_id: original_pub.id).destroy
   end
 
+  def self.search_name(query)
+    where("name like ?", "%#{query}%")
+  end
+
+  def self.search_main_content(query)
+    where("main_content like ?", "%#{query}%")
+  end
+
+  def self.search_meta_data(query)
+    where("meta_data like ?", "%#{query}%")
+  end
+
+
 end
 
 

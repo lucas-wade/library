@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150406175745) do
+ActiveRecord::Schema.define(version: 20150406224719) do
 
   create_table "attachmentships", force: :cascade do |t|
     t.integer  "pub_id"
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(version: 20150406175745) do
     t.integer  "skill"
   end
 
+  add_index "pubs", ["meta_data"], name: "index_pubs_on_meta_data"
   add_index "pubs", ["name"], name: "index_pubs_on_name", unique: true
 
   create_table "relationships", force: :cascade do |t|

@@ -60,6 +60,7 @@ This publication is linked to by
         &amp is
         <%= number_to_human_size(@pub.media.size) %>
         <% if @pub.media.content_type == "application/pdf" %>
+
             <div class="pdf-viewer">
               <iframe src="<%= @pub.media.url %>" width="62%" height="100%"></iframe>
             </div>
@@ -84,7 +85,20 @@ This publication is linked to by
 
 </div>
 
+
+
       </div>
+
+    <%# reader = PDF::Reader.new(open('public/uploads/pub/media/21/Booklet_20_Final_RGB.pdf')) %>
+    <%# @pub.meta_data = "" %>
+    <%# reader.pages.each do |page| %>
+    <%# @pub.meta_data += page.text %>
+    <%# end %>
+
+
+    <div class="b0">
+      <%= @pub.meta_data %>
+    </div>
 </div>
 
 </div>

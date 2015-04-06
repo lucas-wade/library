@@ -58,6 +58,21 @@
         <%= f.check_box :translation %>
       </div>
 
+      <div class="field">
+        <%= f.label :icon_image %>
+       <span class="picture">
+      <%= f.file_field :icon, accept: 'image/jpeg,image/gif,image/png,application/pdf' %>
+    </span>
+        </div>
+
+      <script type="text/javascript">
+          $('#topic_icon').bind('change', function() {
+              size_in_megabytes = this.files[0].size/1024/1024;
+              if (size_in_megabytes > 5) {
+                  alert('Maximum file size is 5MB. Please choose a smaller file.');
+              }
+          });
+      </script>
 
     <div class="field">
         <%= f.label :main_content %><br>

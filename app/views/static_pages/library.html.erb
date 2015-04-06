@@ -6,12 +6,35 @@
   <% end %>
 
 
-  <% if @topics
-       @topics.each do |t|
+  <h2>Categories Containing "<%= params[:search] %>"</h2>
+  <% if @topics.present? %>
+       <% @topics.each do |t| %>
+          <%= link_to t.name, t %>
+          <% if edit_mode == 1 %>
+              <% if t.parents.count < 1 %>
+                  <strong>no parents</strong>
+              <% else %>
+                  <strong>Parents:</strong> <% t.parents.each do |tt| %> - <%= link_to tt.name, tt %> <% end %>
+                  <strong>Kids:</strong> <% t.kids.each do |tt| %> - <%= link_to tt.name, tt %> <% end %>
+              <% end %>
+              <%= link_to 'Edit', edit_topic_path(t), class: "btn btn-info" %>
+              <%= link_to 'Destroy', t,class: "btn btn-danger" ,method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+          <br>
+      <% end %>
+      <% else %>
+  <h3>Zero Results</h3>
+  <% end %>
+
+  <br>
+  <h2>Publications Containing <%= params[:search] %> </h2>
+
+  <% if @pubs
+       @pubs.each do |t|
   %>
           <%= link_to t.name, t %>
 
-          <% if edit_mode == TRUE %>
+          <% if edit_mode == 1 %>
 
               <% if t.parents.count < 1 %>
                   <strong>no parents</strong>
@@ -26,7 +49,6 @@
           <br>
       <% end %>
   <% end %>
-
 
 
 </div>

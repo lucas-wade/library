@@ -12,6 +12,12 @@ class StaticPagesController < ApplicationController
       if params[:search]
         @topics = Topic.search_name(params[:search]).order("created_at DESC")
         @topics += Topic.search_main_content(params[:search]).order("created_at DESC")
+
+
+        @pubs = Pub.search_name(params[:search]).order("created_at DESC")
+        #@pubs += Pub.search_main_content(params[:search]).order("created_at DESC")
+        @pubs += Pub.search_meta_data(params[:search])
+
       else
         @topics = Topic.all
         #.order('created_at DESC')
