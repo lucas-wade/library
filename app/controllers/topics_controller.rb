@@ -65,7 +65,7 @@ class TopicsController < ApplicationController
     end
     if @topic.update_attributes(topic_params)
       flash[:success] = "topic updated"
-      redirect_to @topic
+      render 'edit'
     else
       render 'edit'
     end
@@ -83,7 +83,17 @@ class TopicsController < ApplicationController
   private
 
   def topic_params
-    params.require(:topic).permit(:name, :language, :category, :skill, :main_content, :parent_id, :kid_id, :publication_id, :original_id)
+    params.require(:topic).permit(:name,
+                                  :language,
+                                  :category,
+                                  :skill,
+                                  :main_content,
+                                  :parent_id,
+                                  :kid_id,
+                                  :publication_id,
+                                  :original_id,
+                                  :icon)
+
   end
 
   def set_topic

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150403174133) do
+ActiveRecord::Schema.define(version: 20150406175745) do
 
   create_table "attachmentships", force: :cascade do |t|
     t.integer  "pub_id"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20150403174133) do
     t.boolean  "translation"
     t.integer  "pub_type"
     t.integer  "language"
+    t.integer  "skill"
   end
 
   add_index "pubs", ["name"], name: "index_pubs_on_name", unique: true
@@ -105,6 +106,7 @@ ActiveRecord::Schema.define(version: 20150403174133) do
     t.boolean  "translation",  default: false
     t.integer  "language"
     t.integer  "category"
+    t.string   "icon"
   end
 
   add_index "topics", ["translation"], name: "index_topics_on_translation"

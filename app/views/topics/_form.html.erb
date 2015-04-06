@@ -1,5 +1,5 @@
 <div class="topic-form">
-<%= form_for(@topic) do |f| %>
+<%= form_for(@topic, html: { multipart: true }) do |f| %>
 
     <% if @topic.errors.any? %>
         <div id="error_explanation">
@@ -17,7 +17,15 @@
         <h3>Subcategory Topic of <strong><%= @parent_topic.name %></strong></h3>
 
         <%= hidden_field_tag :parent_id, @parent_topic.id %>
-    <% end %>
+        <% else %>
+          <div class="field">
+            <!-- Create this Topic as a sub-category of existing Topic? ( Leave blank if no change is desired) -->
+<!-- broken parent_id -->
+            <%# f.label :new_parent_id %>
+            <%# f.number_field :parent_id %>
+          </div>
+
+<% end %>
 
       <!-- #translation hidden field stuff -->
       <% if @original_topic %>
@@ -85,18 +93,8 @@
 
 
 
-    <%# form_for(current_topic.parent_families.build) do |f| %>
 
-    <div class="field">
-      <!-- Create New Parent ( Leave blank if no change is desired) -->
 
-      <%# f.label :parent_id %>
-      <%# f.number_field :parent_id %>
-    </div>
-
-    <%# f.number_field :id %>
-    <%# f.submit "Parent id #", class: "btn btn-primary" %>
-    <%# end %>
 
     <div class="field">
       <%# f.label :parent %><br>

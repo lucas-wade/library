@@ -1,12 +1,21 @@
 <% if @temp_topic == 0 %>
 <div class="col-sm-4">
-  <h5> <i class="fa fa-book fa-3x c1"></i> </h5>
+  <h5> <i class="fa fa-book fa-3x c1"></i>
+  <% if edit_mode ==1 %>
+        <%= link_to '<i class="fa fa-plus-square"></i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topics[@temp_topic].id }%>
+        <% end %> </h5>
     <% else if @temp_topic == 1 %>
         <div class="col-sm-4">
-          <h5> <i class="fa fa-3x c2"><%= image_tag 'shovel_flat.png', class: "img-hi-responsive trimmed-icon" %></i> </h5>
+          <h5> <i class="fa fa-3x c2"><%= image_tag 'shovel_flat.png', class: "img-hi-responsive trimmed-icon" %></i>
+          <% if edit_mode ==1 %>
+              <%= link_to '<i class="fa fa-plus-square"></i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topics[@temp_topic].id }%>
+          <% end %> </h5>
     <% else if @temp_topic == 2 %>
             <div class="col-sm-4">
-              <h5> <i class="fa fa-globe fa-3x c3"></i> </h5>
+              <h5> <i class="fa fa-globe fa-3x c3"></i>
+              <% if edit_mode ==1 %>
+                  <%= link_to '<i class="fa fa-plus-square"></i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topics[@temp_topic].id }%>
+              <% end %> </h5>
         <% end %>
     <% end %>
 <% end %>
@@ -35,17 +44,19 @@
 
           <% if edit_mode==1 %>
               <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_topic_path(t) %>
+                      <%= link_to '<i class="fa fa-language"></i>'.html_safe, new_topic_path(original_id: t.id, :parent_id => t.parents.first.id) %>
           <% end %>
 
           <%= link_to t.name, t %>
 
               <% if edit_mode == 1 %>
+                      <%= link_to '<i class="fa fa-plus-square"></i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => t.id }%>
                   <div class="real-small">
                   <%# link_to 'create translation', {:controller => "topics", :action => "create", :id => t.id, :name => t.name }%>
-                    <%= link_to 'Create Sub-Topic ', {:controller => "topics", :action => "new", :parent_id => t.id }%>
+
                     ||
-                    <%= link_to ' Create Translation ', {:controller => "topics", :action => "new", :original_id => t.id, :parent_id =>t.parents.first.id }%>
-                    ||
+                    <%# link_to ' Create Translation ', {:controller => "topics", :action => "new", :original_id => t.id, :parent_id =>t.parents.first.id }%>
+
                     <%= link_to ' Attach Publication', {:controller => "pubs", :action => "new", :parent_id => t.id }%>
                   </div>
                   <% else %>

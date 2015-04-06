@@ -1,9 +1,10 @@
-<div class="row low-gutter">
+<div class="row low-gutter tight-butt">
   <% if @topic.parents.first
         @temp_topic = @topic.parents.first.id - 1
      else
        @temp_topic =0
      end
+
 
 
   %>
@@ -12,11 +13,18 @@
       <%= render 'column' %>
   <% end %>
 
+<div class="col-md-8 b0 tight-butt">
+  <h3>
+    <% @topic.kids.each do |tt| %>
+        <%= link_to tt.name, tt, class: "btn btn-default" %>
+    <% end %>
+  </h3>
+</div>
 
-<div class="col-md-8 filled-container">
+<div class="col-md-8 filled-container b0">
     <div class="content_window">
         <h2>
-        <% if session[:edit_mode] == 1 %>
+        <% if edit_mode == 1 %>
             <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_topic_path(@topic) %>
         <% end %>
         <%= @topic.name %>
@@ -43,19 +51,15 @@
             <% end %>
           </rs>
       </h2>
-      <h3><small>
+      <% if edit_mode == 1 %>
+
+      <h2><small>
         Skill Level <strong><%= $available_skills[@topic.skill] unless !@topic.skill.present?%></strong>
         Category <strong><%= $available_categories[@topic.category] unless !@topic.category.present? %></strong>
         Language <strong><%= $available_languages[@topic.language] unless !@topic.language.present? %></strong>
+      </small></h2>
+          <% end %>
 
-      </small></h3>
-      <h3>
-        <sb>
-        <% @topic.kids.each do |tt| %>
-            <%= link_to tt.name, tt %>
-        <% end %>
-      </sb>
-      </h3>
 
         <%=@topic.main_content.html_safe %>
       <%
@@ -79,22 +83,58 @@
 
     </div>
     <hr>
-    <div class="content_window">
+    <div class="content_window tight-top big-butt">
 
-      <h2>
+
+
         <% if edit_mode == 1 %>
+          <h3>
             <!-- new suplimental files -->
-            <%= link_to '<i class="fa fa-edit"></i>'.html_safe, new_pub_path(parent_id: @topic.id) %>
+            <%= link_to '<i class="fa fa-plus-square fa-1x"></i> Create New Supplemental File'.html_safe, new_pub_path(parent_id: @topic.id) %>
+          </h3>
         <% end %>
-        <i class="fa fa-archive fa-1x"></i> Supplemental Files
-      </h2>
+        <!-- <i class="fa fa-archive fa-1x"></i> Supplemental Files -->
 
+      <div class="col-md-4">
+        <h5><i class="fa fa-star-o c4"></i></h5>
       <% if @topic.pubs.present? %>
           <% @topic.pubs.each do |t| %>
-              <%= link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url %>
-              <%= link_to t.name, t %>
+                <% if t.skill == 1 %>
+                    <%= link_to '<i class="fa fa-photo fa-1x"></i>'.html_safe, t.media.url, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true } %>
+                    <%= link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url %>
+                    <%= link_to t.name, t %>
+                    <% end %>
           <% end %>
-<% end %>
+        <% end %>
+      </div>
+
+      <div class="col-md-4">
+        <h5> <i class="fa fa-star-half-o c4"></i></h5>
+        <% if @topic.pubs.present? %>
+            <% @topic.pubs.each do |t| %>
+                <% if t.skill == 2 %>
+                    <%= link_to '<i class="fa fa-photo fa-1x"></i>'.html_safe, t.media.url, :data => { :colorbox => true } %>
+                    <% send_file t.media.url %>
+                <%= link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url %>
+                <%= link_to t.name, t %>
+                    <% end %>
+            <% end %>
+        <% end %>
+      </div>
+
+      <div class="col-md-4">
+        <h5><i class="fa fa-star c4"></i></h5>
+        <% if @topic.pubs.present? %>
+            <% @topic.pubs.each do |t| %>
+                <% if t.skill == 3 %>
+                    <%= link_to '<i class="fa fa-photo fa-1x"></i>'.html_safe, t.media.url, :data => { :colorbox => true } %>
+                <%= link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url %>
+                <%= link_to t.name, t %>
+                    <% end %>
+            <% end %>
+        <% end %>
+      </div>
+
     </div>
 
   </div>

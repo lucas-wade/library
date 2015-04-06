@@ -67,10 +67,17 @@ placeholder: "Compose new micropost..."
     </div>
 
     <div class="field">
+      <%= f.label :skill_level %><br>
+      <%# f.select(:skill, [['Basic',1],['Intermediate',2],['Advanced',3]] ) %>
+      <% count =0 %>
+      <% hash = [] %>
+      <% while count < $available_skills.count do %>
+          <% hash << [$available_skills[count],count] %>
 
-
+          <% count+=1 %>
+      <% end %>
+      <%= f.select(:skill, hash ) %>
     </div>
-
 
     <!-- media -->
     <% if @pub.media.url %>

@@ -83,6 +83,7 @@ class PubsController < ApplicationController
                                 :type,
                                 :url,
                                 :media,
+                                :skill,
                                 :pub_type,
                                 :meta_data,
                                 :topic_id,

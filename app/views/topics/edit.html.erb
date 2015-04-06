@@ -4,25 +4,27 @@
 
   <h1 class="center">Edit Topic</h1>
 
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6">
 
   <%= render 'form' %>
 
     <!-- remove a parent -->
 <% @topic.parents.each do |t| %>
         <div class="topic-form">
-        <h3>Edit parents</h3>
-        Current Parents <br>
+        <h3 class="tight-butt">Edit Parents</h3>
+
       <ul class="list-inline2">
         <li>
             <%= t.name %> id= <%= t.id %>
         </li>
         <li>
-            <%= current_topic.parent_families.find_by(parent_id: t).parent_id %>
+            <%# current_topic.parent_families.find_by(parent_id: t).parent_id %>
             <%= form_for(current_topic.parent_families.find_by(parent_id: t),
                  html: { method: :delete }) do |f| %>
-            <%= f.submit "Remove Parent", class: "btn btn-primary" %>
+            <%= f.submit "Remove Parent", class: "btn btn-danger" %>
             <% end %>
+
+
         </li>
       </ul>
         <br>
@@ -39,4 +41,9 @@
 
 
 
-</div></div>
+</div>
+<div class="col-md-6 b0 nice-butt">
+  <h2><%= @topic.name %> </h2>
+  <%= @topic.main_content.html_safe %>
+</div>
+</div>

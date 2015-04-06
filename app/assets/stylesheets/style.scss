@@ -1,3 +1,5 @@
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -12,6 +14,7 @@ $primary-bg-color: rgb(242,209,148);
 $btn1: rgb(18, 175, 241);
 $btn2: rgb(38,189,90);
 $btn3: rgb(239, 132, 77);
+$clr4: darken(adjust_hue($primary-bg-color,168),50);
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -96,12 +99,37 @@ body {
   padding-right: 5%;
 }
 
+.tight-butt {
+  padding-bottom: 0%;
+  margin-bottom: -1%;
+}
+
+.big-butt {
+  padding-bottom: 16%;
+}
+
+.nice-butt {
+  padding-bottom: 2em;
+}
+
+.tight-top {
+  margin-top: 0em;
+}
+
+hr {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 
 a {
   color: $primary-color;
   &:visited {
     color: $primary-color;
   }
+  &:hover {
+    color: lighten($primary-bg-color,20);
+  }
+
 }
 
 section {
@@ -134,10 +162,13 @@ h1 {
 h2 {
   font-size: 2em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
+  margin-bottom: 2%;
+
+  margin-top: 1%;
   //text-align: center;
   font-weight: normal;
   //color: #777;
+  //line-height: .1em;
 }
 
 h3 {
@@ -223,6 +254,9 @@ p {
 .b3 {
   background-color: darken($btn3,1%);
 }
+.b4 {
+  background-color: $clr4;
+}
 
 
 
@@ -235,7 +269,9 @@ p {
 .c3 {
   color: darken($btn3,20%);
 }
-
+.c4 {
+  color: $clr4;
+}
 .topic-form {
   background-color: darken(desaturate(adjust-hue($primary-bg-color,172),30),0);
   padding: 4%;

@@ -44,6 +44,9 @@ class Topic < ActiveRecord::Base
   accepts_nested_attributes_for :pub_attachmentships
   accepts_nested_attributes_for :pubs
 
+  mount_uploader :icon, IconUploader
+
+
 #for the pub babies
   #not working
   # not USING

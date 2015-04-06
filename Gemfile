@@ -35,6 +35,8 @@ gem 'pdf-reader', '~> 1.3.3'
 gem 'will_paginate',           '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
 
+#lightbox
+gem 'colorbox-rails', '~> 0.1.2'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

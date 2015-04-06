@@ -147,6 +147,7 @@
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v4.1.0, ruby-2.2.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.3.0, ruby-2.2.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.9.1, ruby-2.2.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="colorbox-rails (v0.1.2, ruby-2.2.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="columnize (v0.9.0, ruby-2.2.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug_inspector (v0.0.2, ruby-2.2.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, ruby-2.2.0-p0) [gem]" level="application" />
