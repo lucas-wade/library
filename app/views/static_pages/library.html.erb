@@ -31,7 +31,12 @@
 
   <% if @pubs.present? %>
        <% @pubs.each do |t|   %>
+
           <%= link_to t.name, t %>
+
+          <%= link_to '<i class="fa fa-photo fa-1x"></i>'.html_safe, t.media.url, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true } %>
+          <%= link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url, :target => "_blank" %>
+
 
           <% if edit_mode == 1 %>
 

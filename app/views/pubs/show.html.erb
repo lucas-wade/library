@@ -82,12 +82,9 @@ This publication is linked to by
       <% end %>
 
 
-
 </div>
 
-
-
-      </div>
+    </div>
 
     <%# reader = PDF::Reader.new(open('public/uploads/pub/media/21/Booklet_20_Final_RGB.pdf')) %>
     <%# @pub.meta_data = "" %>
@@ -95,10 +92,11 @@ This publication is linked to by
     <%# @pub.meta_data += page.text %>
     <%# end %>
 
-
+<% if edit_mode == 1 %>
     <div class="b0">
       <%= @pub.meta_data %>
     </div>
+    <% end %>
 </div>
 
 </div>

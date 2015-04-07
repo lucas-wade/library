@@ -138,7 +138,7 @@ a {
     color: $primary-color;
   }
   &:hover {
-    color: lighten($primary-bg-color,20);
+    color: darken($primary-bg-color,30);
   }
 
 }
@@ -221,7 +221,10 @@ p {
   line-height: 1.7em;
 }
 
+.table-bb {
+  border-color: black;
 
+}
 .button {
 
   //background-color: rgb(118, 149, 153);
@@ -374,7 +377,7 @@ p {
   padding-top: 9px;
 //  font-weight: bold;
   &:hover {
-    color: #0;
+    color: black;
     text-decoration: none;
   }
 }
