@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  scope '(:locale)', locale: /#{I18n.available_locales.join("|")}/ do
   #get 'password_resets/new'
 
  # get 'password_resets/edit'
@@ -25,6 +26,7 @@ Rails.application.routes.draw do
     end
   end
 
+
   resources :microposts,          only: [:create, :destroy]
   resources :users
   resources :account_activations, only: [:edit]
@@ -37,16 +39,16 @@ Rails.application.routes.draw do
   resources :topic_translationships,       only: [:create, :edit, :destroy]
   resources :pub_translationships,       only: [:create, :edit, :destroy]
   resources :admin
-
-
-  scope '(:locale)', locale: /#{I18n.available_locales.join("|")}/ do
-    resources :topics
-    resources :pubs
-    resources :static_pages
-    resources :users
-    resources :microposts
-    root 'static_pages#home', as: 'home', via: :all
+  #root 'static_pages#home', as: 'home', via: :all
   end
+
+
+    #resources :topics
+    #resources :pubs
+    #resources :static_pages
+    #resources :users
+    #resources :microposts
+
 
   #match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}/" }
   #match '', to: redirect("/#{I18n.default_locale}")

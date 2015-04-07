@@ -88,8 +88,7 @@ class TopicsController < ApplicationController
   private
 
   def topic_params
-    #.require(:topic)
-    params.permit(:name,
+    params.require(:topic).permit(:name,
                                   :language,
                                   :category,
                                   :skill,
@@ -99,7 +98,8 @@ class TopicsController < ApplicationController
                                   :publication_id,
                                   :original_id,
                                   :icon,
-                                  :set_local)
+                                  :set_locale,
+                                  :locale)
 
   end
 
