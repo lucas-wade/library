@@ -2,7 +2,12 @@ class TopicsController < ApplicationController
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   def index
-    @topics = Topic.all
+    if params[:set_locale]
+      redirect_to topics_path(locale: params[:set_locale])
+    else
+      @topics = Topic.all
+    end
+
     #@topics = Topic.search(params[:search])
 
 
@@ -83,7 +88,8 @@ class TopicsController < ApplicationController
   private
 
   def topic_params
-    params.require(:topic).permit(:name,
+    #.require(:topic)
+    params.permit(:name,
                                   :language,
                                   :category,
                                   :skill,
@@ -92,7 +98,8 @@ class TopicsController < ApplicationController
                                   :kid_id,
                                   :publication_id,
                                   :original_id,
-                                  :icon)
+                                  :icon,
+                                  :set_local)
 
   end
 

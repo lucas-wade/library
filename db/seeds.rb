@@ -80,11 +80,6 @@ join = Topic.third
 #t=topics[3]
 #t.make_parent(info)
 
-Topic.create!(name:  "Library",
-              language: 1,
-              main_content: "All Publications and Classroom Content"
-              )
-Topic.last.make_parent(info)
 
 Topic.create!(name:  "Dig Deeper Basic Needs",
               language: 1,

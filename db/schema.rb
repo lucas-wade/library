@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150406232248) do
+ActiveRecord::Schema.define(version: 20150407173838) do
 
   create_table "attachmentships", force: :cascade do |t|
     t.integer  "pub_id"
@@ -62,9 +62,9 @@ ActiveRecord::Schema.define(version: 20150406232248) do
     t.string   "type"
     t.string   "url"
     t.string   "media"
-    t.text     "meta_data"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.text     "meta_data",   limit: 4294967295
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "name"
     t.integer  "language_id"
     t.boolean  "translation"

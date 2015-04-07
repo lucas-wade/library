@@ -60,6 +60,20 @@ class Pub < ActiveRecord::Base
     where("meta_data like ?", "%#{query}%")
   end
 
+  def pdf_to_meta_data
+    reader = PDF::Reader.new(open("public#{self.media.url}"))
+    t = ""
+    reader.pages.each do |page|
+      t += page.text
+    end
+    #@pub.meta_data = reader.page(all)
+    if self.update_attribute(:meta_data, t)
+      TRUE
+    else
+      FALSE
+    end
+
+  end
 
 end
 

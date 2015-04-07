@@ -20,4 +20,20 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+
+  number:
+    currency:
+      format:
+        unit:       "$"
+        precision:  2
+        separator:  "."
+        delimiter:  ","
+        format:     "%u%n"
+
+  layouts:
+    application:
+      title: "BioIntensive Classroom"
+    header:
+      title: "BioIntensive Classroom"
+
+

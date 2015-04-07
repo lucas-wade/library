@@ -6,7 +6,7 @@
     <% if micropost.picture? %>
         <% if micropost.picture.content_type == "application/pdf" %>
             <div class="pdf-viewer">
-              <iframe src="<%= micropost.picture.url %>" width="100%" height="100%"></iframe>
+              <iframe src="<%= micropost.picture.url %>" wi dth="100%" height="100%"></iframe>
             </div>
         <% else %>
             <%= image_tag micropost.picture.url %>

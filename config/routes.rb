@@ -5,8 +5,8 @@ Rails.application.routes.draw do
  # get 'password_resets/edit'
 
   root             'static_pages#home'
-  #root    'microposts#index'
-  get     'home'    => 'static_pages#home'
+
+  #get     'home'    => 'static_pages#home'
   get     'about'   => 'static_pages#about'
   get     'admin'   => 'static_pages#admin'
   get     'library' => 'static_pages#library'
@@ -38,6 +38,18 @@ Rails.application.routes.draw do
   resources :pub_translationships,       only: [:create, :edit, :destroy]
   resources :admin
 
+
+  scope '(:locale)', locale: /#{I18n.available_locales.join("|")}/ do
+    resources :topics
+    resources :pubs
+    resources :static_pages
+    resources :users
+    resources :microposts
+    root 'static_pages#home', as: 'home', via: :all
+  end
+
+  #match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}/" }
+  #match '', to: redirect("/#{I18n.default_locale}")
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

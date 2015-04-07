@@ -42,22 +42,17 @@ class PubsController < ApplicationController
       end
       if @pub.media.present?
         #fopen = open(@pub.media.url)
-        reader = PDF::Reader.new(open("public#{@pub.media.url}"))
-        t = ""
-        reader.pages.each do |page|
-          t += page.text
-        end
-        #@pub.meta_data = reader.page(all)
-        if @pub.update_attribute(:meta_data, t)
+        if @pub.pdf_to_meta_data == TRUE
           flash[:info] = "New Publication Saved & pdf indexed."
+        redirect_to pubs_path
         else
           flash[:warn] = "not indexed"
-        end
-        redirect_to pubs_path
+          render 'new'
+          end
       else
         flash[:info] = "New Publication Saved."
-      redirect_to pubs_path
-        end
+        redirect_to pubs_path
+      end
     else
       render 'new'
     end
