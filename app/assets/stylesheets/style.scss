@@ -223,6 +223,7 @@ p {
 
 
 .button {
+
   //background-color: rgb(118, 149, 153);
   display: block;
   //border: none;
@@ -230,6 +231,10 @@ p {
   //font-size: 1.35em;
   //padding: .1em;
   //text-align: left;
+  a {
+    color: black;
+
+  }
 
 }
 

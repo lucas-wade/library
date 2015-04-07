@@ -29,18 +29,17 @@
   <br>
   <h2>Publications Containing <%= params[:search] %> </h2>
 
-  <% if @pubs
-       @pubs.each do |t|
-  %>
+  <% if @pubs.present? %>
+       <% @pubs.each do |t|   %>
           <%= link_to t.name, t %>
 
           <% if edit_mode == 1 %>
 
-              <% if t.parents.count < 1 %>
+              <% if t.topics.count < 1 %>
                   <strong>no parents</strong>
               <% else %>
-                  <strong>Parents:</strong> <% t.parents.each do |tt| %> - <%= link_to tt.name, tt %> <% end %>
-                  <strong>Kids:</strong> <% t.kids.each do |tt| %> - <%= link_to tt.name, tt %> <% end %>
+                  <strong>Parents:</strong> <% t.topics.each do |tt| %> - <%= link_to tt.name, tt %> <% end %>
+
               <% end %>
 
               <%= link_to 'Edit', edit_topic_path(t), class: "btn btn-info" %>
