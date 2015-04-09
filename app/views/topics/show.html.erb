@@ -125,7 +125,7 @@
         <% end %>
 
       <div class="col-md-4">
-        <h5><i class="fa fa-star-o"></i></h5>
+        <p class="center"> <%= image_tag("icon_skill_1.png", size: "29") %> </p>
         <% if @topic.pubs.present? %>
             <div class="tight-list">
           <% @topic.pubs.each do |t| %>
@@ -138,7 +138,7 @@
       </div>
 
       <div class="col-md-4">
-        <h5> <i class="fa fa-star-half-o"></i></h5>
+        <p class="center"> <%= image_tag("icon_skill_2.png", size: "29") %> </p>
         <% if @topic.pubs.present? %>
             <% @topic.pubs.each do |t| %>
                 <% if t.skill == 2 %>
@@ -149,7 +149,7 @@
       </div>
 
       <div class="col-md-4">
-        <h5><i class="fa fa-star"></i></h5>
+        <p class="center"> <%= image_tag("icon_skill_3.png", size: "29") %> </p>
         <% if @topic.pubs.present? %>
             <% @topic.pubs.each do |t| %>
                 <% if t.skill == 3 %>
