@@ -1,6 +1,7 @@
 <div class="topic-form">
 <%= form_for(@topic, html: { multipart: true }) do |f| %>
 
+      <!-- errors -->
     <% if @topic.errors.any? %>
         <div id="error_explanation">
             <h2><%= pluralize(@topic.errors.count, "error") %> prohibited this topic from being saved:</h2>

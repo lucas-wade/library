@@ -57,7 +57,7 @@ This publication is linked to by
     <% if @pub.media.present? %>
         The Attached file is a
         <strong><%= @pub.media.content_type %></strong>
-        &amp is
+        and is
         <%= number_to_human_size(@pub.media.size) %>
         <% if @pub.media.content_type == "application/pdf" %>
 

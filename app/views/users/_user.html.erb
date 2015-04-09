@@ -13,8 +13,8 @@
     </li>
 
 
-      <% if current_user.admin? && !current_user?(user) %>
-          <% if $edit_mode==1 %>
+      <% if current_user && current_user.admin? && !current_user?(user) %>
+          <% if edit_mode == 1 %>
             <li>
               <%= link_to "delete", user, method: :delete,
                           data: { confirm: "You sure?" } %>

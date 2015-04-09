@@ -62,15 +62,18 @@ followers.each { |follower| follower.follow(user) }
 =end
 
 Topic.create!(name:  "Information",
-             language: 1)
+             language: 1,
+             main_content: "" )
 
 
 Topic.create!(name:  "Action",
-              language: 1)
+              language: 1,
+              main_content: "" )
 
 
-Topic.create!(name:  "Join",
-              language: 1)
+Topic.create!(name:  "Support",
+              language: 1,
+              main_content: "" )
 
 
 topics = Topic.all

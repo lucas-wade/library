@@ -1,78 +1,50 @@
-<% if @temp_topic == 0 %>
 <div class="col-sm-4">
-  <h5> <i class="fa fa-book fa-3x c1"></i>
+  <h5> <i class="fa fa-3x"><%= image_tag @topics[@temp_topic].icon.url, class: "img-hi-responsive trimmed-icon" %></i>
   <% if edit_mode ==1 %>
-        <%= link_to '<i class="fa fa-plus-square"></i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topics[@temp_topic].id }%>
-        <% end %> </h5>
-    <% else if @temp_topic == 1 %>
-        <div class="col-sm-4">
-          <h5> <i class="fa fa-3x c2"><%= image_tag 'shovel_flat.png', class: "img-hi-responsive trimmed-icon" %></i>
-          <% if edit_mode ==1 %>
-              <%= link_to '<i class="fa fa-plus-square"></i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topics[@temp_topic].id }%>
-          <% end %> </h5>
-    <% else if @temp_topic == 2 %>
-            <div class="col-sm-4">
-              <h5> <i class="fa fa-globe fa-3x c3"></i>
-              <% if edit_mode ==1 %>
-                  <%= link_to '<i class="fa fa-plus-square"></i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topics[@temp_topic].id }%>
-              <% end %> </h5>
+        <%= link_to '<i class="fa fa-plus-square edit-color"></i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topics[@temp_topic].id }%>
         <% end %>
+  </h5>
+
+  <div class="list-group main-menu">
+
+    <!-- library -->
+    <% if @temp_topic == 0 %>
+        <!-- <div class="list-group-item btn-default btn-main-menu button b1"> -->
+              <%= link_to 'Library', library_path, class: "list-group-item btn-default btn-main-menu button b1 button-text" %>
+        <!-- </div> -->
     <% end %>
-<% end %>
-
-        <div class="list-group main-menu">
-
-          <% if @temp_topic == 0 %>
-              <%= link_to 'Library', library_path, class: "list-group-item btn-default btn-main-menu button b1" %>
-              <% end %>
-
-          <% @topics[@temp_topic].kids.each do |t| %>
-              <% if t.language == 0 || t.language == 1 %>
-
-                <% if @temp_topic == 0 %>
-                <div class="list-group-item btn-default btn-main-menu button b1">
-                <!-- <div class="list-group-item btn-main-menu b1"> -->
-                  <% else if @temp_topic == 1 %>
-                    <div class="list-group-item btn-default btn-main-menu button b2">
-                      <% else if @temp_topic == 2 %>
-                        <div class="list-group-item btn-default btn-main-menu button b3">
-                      <% end %>
-                <% end %>
-              <% end %>
 
 
+    <!-- main loop for the column -->
+    <!-- still need to implement ordering. -->
+    <% @topics[@temp_topic].kids.each do |t| %>
+        <!-- current lang? -->
+        <% if t.language == 0 || t.language == 1 %>
+            <% if edit_mode==1 %>
+                <div class="list-group-item btn-main-menu button <%= $index_column_colors[@temp_topic] %>">
+                  <%= link_to '<i class="fa fa-edit edit-color"></i>'.html_safe, edit_topic_path(t), class: 'edit-color' %>
+                  <%= link_to '<i class="fa fa-language edit-color"></i>'.html_safe, new_topic_path(original_id: t.id, :parent_id => t.parents.first.id) %>
+                  <%= link_to t.name, t %>
+                  <%= link_to '<i class="fa fa-plus-square edit-color"></i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => t.id }%>
+                  <br>
+                  <small> <%= link_to '<i class="fa fa-file edit-color">Attach Publication</i>'.html_safe, {:controller => "pubs", :action => "new", :parent_id => t.id }%> </small>
+                </div>
+            <% else %>
+                <a href="<%= topic_path(t) %>" class="list-group-item btn-default btn-main-menu button <%= $index_column_colors[@temp_topic] %>">
+                  <div class="button-text"> <%= t.name %>  </div>
+                        <div class="button-text-small">
+                  <% t.kids.each do |tt| %>
+                          <%= tt.name %>
+                  <% end %>
+                            </div>
+                </a>
+            <% end %>
 
-          <% if edit_mode==1 %>
-              <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_topic_path(t) %>
-                      <%= link_to '<i class="fa fa-language"></i>'.html_safe, new_topic_path(original_id: t.id, :parent_id => t.parents.first.id) %>
-          <% end %>
 
-          <%= link_to t.name, t %>
 
-              <% if edit_mode == 1 %>
-                      <%= link_to '<i class="fa fa-plus-square"></i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => t.id }%>
-                  <div class="real-small">
-                  <%# link_to 'create translation', {:controller => "topics", :action => "create", :id => t.id, :name => t.name }%>
-
-                    ||
-                    <%# link_to ' Create Translation ', {:controller => "topics", :action => "new", :original_id => t.id, :parent_id =>t.parents.first.id }%>
-
-                    <%= link_to ' Attach Publication', {:controller => "pubs", :action => "new", :parent_id => t.id }%>
-                  </div>
-                  <% else %>
-              <br>
-              <% end %>
-
-              <% t.kids.each do |tt| %>
-
-                  <sb><%= link_to tt.name, tt %>
-
-                    </sb>
-              <% end %>
-              </div>
-<% end %>
-    <% end %>
+        <% end %> <!-- language 0 or 1 -->
+    <% end %> <!-- main loop -->
     </div>
-</div>
+</div> <!-- close of the header icon -->
 
 

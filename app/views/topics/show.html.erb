@@ -1,8 +1,9 @@
 <div class="row low-gutter tight-butt">
-  <% if @topic.parents.first
-        @temp_topic = @topic.parents.first.id - 1
+  <% if @topic.parents.first.id < 4
+       @temp_topic = @topic.parents.first.id - 1
+       session[:current_collumn]= @temp_topic
      else
-       @temp_topic =0
+       @temp_topic = session[:current_collumn]
      end
 
 
@@ -13,19 +14,45 @@
       <%= render 'column' %>
   <% end %>
 
-<div class="col-md-8 b0 tight-butt">
+<div id="sub-topics-window" class="col-md-8 content-window-bg-color">
   <h3>
-    <% @topic.kids.each do |tt| %>
-        <%= link_to tt.name, tt, class: "btn btn-default" %>
+        <% @topic.kids.each do |tt| %>
+            <% if tt.icon.present? %>
+            <%= image_tag tt.icon.url, class: "img-icon" %>
+        <% else %>
+            <%= link_to tt.name, tt, class: "btn btn-default" %>
+        <% end %>
     <% end %>
   </h3>
 </div>
 
-<div class="col-md-8 filled-container b0">
-    <div class="content_window">
+
+<div class="col-md-8 content-window-bg-color tight-butt">
+    <div id="content-window" class="content_window">
+
+      <% if @show_pub.present? %> <!-- maybe render a pub in dis here window -->
+          <div class="col-md-8">
+            <% if @show_pub.media.content_type == "application/pdf" %>
+              <div class="pdf-viewer">
+                <iframe src="<%= @show_pub.media.url %>" width="100%" height="100%"></iframe>
+              </div>
+            <% else %>
+              <%= image_tag @show_pub.media.url %>
+            <% end %>
+          </div>
+          <div class="col-md-4">
+            <h3><%= render partial: 'shared/pub_link_to', locals: {t: @show_pub} %></h3>
+
+            <strong><%= @show_pub.media.content_type %></strong>
+            <br>
+            <%= number_to_human_size(@show_pub.media.size) %>
+          </div>
+
+      <% else %> <!-- render the topic -->
+
         <h2>
         <% if edit_mode == 1 %>
-            <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_topic_path(@topic) %>
+            <%= link_to '<i class="fa fa-edit edit-color"></i>'.html_safe, edit_topic_path(@topic) %>
         <% end %>
 
           <!-- NAME -->
@@ -56,8 +83,8 @@
             <% end %>
           </rs>
       </h2>
-      <% if edit_mode == 1 %>
 
+      <% if edit_mode == 1 %>
       <h2><small>
         Skill Level <strong><%= $available_skills[@topic.skill] unless !@topic.skill.present?%></strong>
         Category <strong><%= $available_categories[@topic.category] unless !@topic.category.present? %></strong>
@@ -67,13 +94,15 @@
 
 
         <%=@topic.main_content.html_safe %>
+      <% end %>
+
       <%
          #@image = MiniMagick::Image.open("http://www.tracyworley.com/wp-content/uploads/2015/02/DonkeyTeam.jpg")
          #open_pdf = open("public/media/Booklet_20_Final_RGB.pdf")
          #reader = PDF::Reader.new(open('public/media/Booklet_20_Final_RGB.pdf'))
       %>
 
-      <div id="pdf-viewer">
+
         <%
         # this reader is the pdf-reader gem it gets all the text out of the pdf so i can put that into the meta-data area for searching. whoo hoo
         %>
@@ -84,34 +113,27 @@
 
       <%# image_tag "/media/Booklet_20_Final_RGB.pdf"  %>
       <%# image_tag "/media/1.jpg" %>
-      </div>
+
 
     </div>
-    <hr>
-    <div class="content_window tight-top big-butt">
 
-
-
+    <div id="supplimental-window" class="content_window tight-top">
         <% if edit_mode == 1 %>
-          <h3>
-            <!-- new suplimental files -->
-            <%= link_to '<i class="fa fa-plus-square fa-1x"></i> Create New Supplemental File'.html_safe, new_pub_path(parent_id: @topic.id) %>
+          <h3>  <!-- new suplimental files -->
+            <%= link_to '<i class="fa fa-plus-square fa-1x edit-color">Create New Supplemental File</i>'.html_safe, new_pub_path(parent_id: @topic.id) %>
           </h3>
         <% end %>
-        <!-- <i class="fa fa-archive fa-1x"></i> Supplemental Files -->
 
       <div class="col-md-4">
         <h5><i class="fa fa-star-o"></i></h5>
-      <% if @topic.pubs.present? %>
+        <% if @topic.pubs.present? %>
+            <div class="tight-list">
           <% @topic.pubs.each do |t| %>
                 <% if t.skill == 1 %>
-                    <li>
-                    <%= link_to '<i class="fa fa-photo fa-1x"></i>'.html_safe, t.media.url, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true } %>
-                    <%= link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url, :target => "_blank" %>
-                    <%= link_to t.name, t %>
-                    </li>
-                    <% end %>
+                    <%= render partial: 'shared/pub_link_to', locals: {t: t} %>
+                <% end %>
           <% end %>
+            </div>
         <% end %>
       </div>
 
@@ -120,9 +142,7 @@
         <% if @topic.pubs.present? %>
             <% @topic.pubs.each do |t| %>
                 <% if t.skill == 2 %>
-                    <%= link_to '<i class="fa fa-photo fa-1x"></i>'.html_safe, t.media.url, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true } %>
-                <%= link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url, :target => "_blank"%>
-                <%= link_to t.name, t %>
+                    <%= render partial: 'shared/pub_link_to', locals: {t: t} %>
                     <% end %>
             <% end %>
         <% end %>
@@ -133,16 +153,53 @@
         <% if @topic.pubs.present? %>
             <% @topic.pubs.each do |t| %>
                 <% if t.skill == 3 %>
-                    <%= link_to '<i class="fa fa-photo fa-1x"></i>'.html_safe, t.media.url, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true } %>
-                <%= link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url, :target => "_blank"%>
-
-                <%= link_to t.name, t %>
+                    <%= render partial: 'shared/pub_link_to', locals: {t: t} %>
                     <% end %>
             <% end %>
         <% end %>
       </div>
 
-    </div>
+    </div> <!-- end of supplimental window -->
+
+  <div id="category-window" class="content_window tight-top">
+    <% if edit_mode == 1 %>
+       <h3>
+         <%= link_to '<i class="fa fa-plus-square edit-color">Create Sub Category (Peak, I, II, III)</i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topic.id }%>
+           </h3>
+    <% end %>
+    <% @topic.kids.each do |t| %>
+
+        <div class="col-md-3">
+            <% if t.category == 4 %>
+            peak<%= link_to t.name, t, class: "btn btn-info" %>
+          <% end %>
+        </div>
+
+        <div class="col-md-3">
+          <% if t.category == 1 %>
+          CAT 1 <%= link_to t.name, t, class: "btn btn-info" %>
+          <% end %>
+        </div>
+
+        <div class="col-md-3">
+          <% if t.category == 2 %>
+          CAT 2 <%= link_to t.name, t, class: "btn btn-default" %>
+          <% end %>
+        </div>
+
+        <div class="col-md-3">
+          <% if t.category == 3 %>
+          CAT 3<%= link_to t.name, t, class: "btn btn-default" %>
+          <% end %>
+        </div>
+
+<% end %>
+
+
+
+
+  </div>
+  <%= link_to '<i class="fa fa-close fa-3x"></i>'.html_safe, topics_path  %>
 
   </div>
 

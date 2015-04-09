@@ -20,6 +20,9 @@ class TopicsController < ApplicationController
   def show
     @topic = Topic.find(params[:id])
     @topics = Topic.all
+    if params[:publication_id].present?
+      @show_pub = Pub.find(params[:publication_id])
+    end
     if @topic.parents.present?
       @temp_topic = @topic.parents.first.id
     end
