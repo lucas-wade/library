@@ -6,9 +6,16 @@
     </li>
 
     <li>
-      <%= link_to user.name, user %>
+      <Strong><%= link_to user.name, user %></Strong>
+      Last Login: <% if user.last_login.present? %>
+            <%= time_ago_in_words(user.last_login) %> ago
+            <% else %> Never
+            <% end %>
+
+
       <% if user.admin == TRUE %>
-          ADMIN USER
+          <strong>: ADMIN USER</strong>
+
       <% end %>
     </li>
 

@@ -1,4 +1,4 @@
-<% if current_user && current_user.admin == TRUE %>
+<% if current_admin == TRUE %>
 
     <li><%= link_to '<i class="fa fa-edit"></i>'.html_safe, admin_edit_toggle_path, :method=> :post %></li>
 

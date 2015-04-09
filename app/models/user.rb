@@ -64,7 +64,7 @@ class User < ActiveRecord::Base
   end
 
   def update_login
-    update_attribute(:last_login, DateTime.now)
+    update_attribute(:last_login, Time.zone.now)
   end
 
   # Activates an account.

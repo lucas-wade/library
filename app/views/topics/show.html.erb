@@ -119,10 +119,11 @@
 
     <div id="supplimental-window" class="content_window">
         <% if edit_mode == 1 %>
-          <h3>  <!-- new suplimental files -->
+            <!-- new suplimental files -->
+          <div>
             <%= link_to '<i class="fa fa-plus-square fa-1x edit-color">Create New Supplemental File</i>'.html_safe, new_pub_path(parent_id: @topic.id) %>
-          </h3>
-        <% end %>
+          </div>
+      <% end %>
 
       <div class="col-md-4">
         <p class="center"> <%= image_tag("icon_skill_1.png", size: "29") %> </p>
@@ -161,11 +162,13 @@
 
     </div> <!-- end of supplimental window -->
 
+
+  <!-- category window -->
   <div id="category-window" class="content_window tight-top">
     <% if edit_mode == 1 %>
-       <h3>
+       <div>
          <%= link_to '<i class="fa fa-plus-square edit-color">Create Sub Category (Peak, I, II, III)</i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topic.id }%>
-           </h3>
+       </div>
     <% end %>
     <% @topic.kids.each do |t| %>
 
@@ -199,7 +202,7 @@
 
 
   </div>
-  <%= link_to '<i class="fa fa-close fa-3x"></i>'.html_safe, topics_path  %>
+  <%= link_to '<i class="fa fa-close fa-3x "></i>'.html_safe, topics_path  %>
 
   </div>
 
