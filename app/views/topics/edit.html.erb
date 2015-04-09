@@ -21,7 +21,7 @@
             <%# current_topic.parent_families.find_by(parent_id: t).parent_id %>
             <%= form_for(current_topic.parent_families.find_by(parent_id: t),
                  html: { method: :delete }) do |f| %>
-            <%= f.submit "Remove Parent", class: "btn btn-danger" %>
+            <%= f.submit "Remove this topic from Parent", class: "btn btn-danger" %>
             <% end %>
 
 
@@ -43,7 +43,7 @@
 
 </div>
 <div class="col-md-6 b0 nice-butt">
-  <h2><%= @topic.name %> </h2>
+  <h2><%= link_to @topic.name, @topic %> </h2>
   <%= @topic.main_content.html_safe %>
 </div>
 </div>

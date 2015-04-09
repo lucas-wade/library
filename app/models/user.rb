@@ -63,6 +63,10 @@ class User < ActiveRecord::Base
 
   end
 
+  def update_login
+    update_attribute(:last_login, DateTime.now)
+  end
+
   # Activates an account.
   def activate
     update_attribute(:activated,    true)

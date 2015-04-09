@@ -7,8 +7,8 @@
     <div class="content_window">
     <h1>
       <% if edit_mode==1 %>
-          <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_pub_path(@pub) %>
-          <%= link_to '<i class="fa fa-language"></i>'.html_safe, new_pub_path(original_id: @pub.id, parent_id: @pub.topics.first.id) %>
+          <%= link_to '<i class="fa fa-edit edit-color"></i>'.html_safe, edit_pub_path(@pub) %>
+          <%= link_to '<i class="fa fa-language edit-color"></i>'.html_safe, new_pub_path(original_id: @pub.id, parent_id: @pub.topics.first.id) %>
 
           <% end %><%= @pub.name %>
       Skill Level <strong><%= $available_skills[@pub.skill] unless !@pub.skill.present?%></strong>
@@ -74,10 +74,11 @@ This publication is linked to by
     Posted <%= time_ago_in_words(@pub.created_at) %> ago.
   </span>
 
-  <% if current_user.admin?%>
-      <% if edit_mode==1 %>
+  <% if current_user && current_user.admin?%>
+      <% if edit_mode == 1 %>
       <%= link_to "delete", @pub, method: :delete,
-                  data: { confirm: "You sure?" } %>
+                  data: { confirm: "You sure?" },
+      class: "btn btn-danger"%>
           <% end %>
       <% end %>
 
@@ -93,7 +94,7 @@ This publication is linked to by
     <%# end %>
 
 <% if edit_mode == 1 %>
-    <div class="b0">
+    <div class="b0 edit-color">
       <%= @pub.meta_data %>
     </div>
     <% end %>

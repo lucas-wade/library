@@ -38,9 +38,9 @@
 
         <% if current_user.admin? %>
             <% if edit_mode==1 %>
-                <td><%= link_to 'Create Translation', new_pub_path(original_id: p.id), class: "btn btn-success" %></td>
+                <td><%= link_to '<i class="fa fa-language edit-color">Create Translation</i>'.html_safe, new_pub_path(original_id: p.id), class: "btn btn-success" %></td>
                 <!-- , :parent_id =>t.parents.first.id -->
-                <td><%= link_to 'Edit', edit_pub_path(p), class: "btn btn-info"  %></td>
+                <td><%= link_to '<i class="fa fa-edit edit-color">Edit</i>'.html_safe, edit_pub_path(p), class: "btn btn-info"  %></td>
                 <td><%= link_to 'Destroy', p, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
                 <% end %>
             <% end %>

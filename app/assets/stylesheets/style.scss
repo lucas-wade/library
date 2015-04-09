@@ -70,26 +70,30 @@ body {
 .content_window {
 
   height: 100%;
-  margin: 2%;
-  margin-bottom: 0px;
+ // margin: 2%;
+  //margin-bottom: 10px;
 
   padding-bottom: 0%;
-  rs {
-    font-size: .45em;
-    line-height: .1em;
-    color: $gray-medium-light
-  }
+
 }
 #sub-topics-window {
   height: 4em;
 }
 #content-window {
-  height: 24em;
+  height: 26em;
   background-color: #222222;
-  //margin: 1em;
+  margin: 0;
+  margin-top: .618em;
+  overflow: scroll;
+  
 
-  padding: 2em;
-  padding-top: .5em;
+  padding: 1em;
+  //padding-left: 2em;
+
+  //padding-top: .5em;
+  //  padding-right: 2em;
+  padding-bottom: .1em;
+
   color: #F7F7F7;
   a {
     color: #F7F7F7;
@@ -99,9 +103,11 @@ body {
 #supplimental-window {
   
   background-color: #3c3c3c;
-  height: 10em;
+  height: 7em;
   color: white;
-  //padding-bottom: 0px;
+  overflow: scroll;
+  padding: 1px;
+  margin: 0;
   a {
     color: #F7F7F7;
   }

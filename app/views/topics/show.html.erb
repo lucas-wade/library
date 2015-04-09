@@ -27,7 +27,7 @@
 </div>
 
 
-<div class="col-md-8 content-window-bg-color tight-butt">
+<div class="col-md-8 content-window-bg-color">
     <div id="content-window" class="content_window">
 
       <% if @show_pub.present? %> <!-- maybe render a pub in dis here window -->
@@ -117,7 +117,7 @@
 
     </div>
 
-    <div id="supplimental-window" class="content_window tight-top">
+    <div id="supplimental-window" class="content_window">
         <% if edit_mode == 1 %>
           <h3>  <!-- new suplimental files -->
             <%= link_to '<i class="fa fa-plus-square fa-1x edit-color">Create New Supplemental File</i>'.html_safe, new_pub_path(parent_id: @topic.id) %>
