@@ -84,7 +84,7 @@ join = Topic.third
 #t.make_parent(info)
 
 
-Topic.create!(name:  "Dig Deeper Basic Needs",
+Topic.create!(name:  "Basic Needs & GROW BIOINTENSIVE®",
               language: 1,
               main_content: "the basic needs are here"
               )
@@ -129,7 +129,7 @@ last_topic.make_parent(info)
 
 
 
-Topic.create!(name:  "8 Components of Grow BioIntensive",
+Topic.create!(name:  "8 Components of GROW BIOINTENSIVE®",
               language: 1,
               main_content: "All this info"
 )
