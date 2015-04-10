@@ -1,12 +1,18 @@
 <div class="col-sm-4">
-  <h5> <i class="fa fa-3x"><%= image_tag @topics[@temp_topic].icon.url, class: "img-hi-responsive trimmed-icon" %></i>
+  <h5>
+    <i class="fa fa-3x">
+      <% $collumn_icon_1 = @topics[0]
+         $collumn_icon_2 = @topics[1]
+         $collumn_icon_3 = @topics[2]
+      %>
+      <%= image_tag @topics[@temp_topic].icon.url, class: "img-hi-responsive trimmed-icon" %>
+    </i>
   <% if edit_mode ==1 %>
         <%= link_to '<i class="fa fa-plus-square edit-color"></i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topics[@temp_topic].id }%>
         <% end %>
   </h5>
 
   <div class="list-group main-menu">
-
     <!-- library -->
     <% if @temp_topic == 0 %>
         <!-- <div class="list-group-item btn-default btn-main-menu button b1"> -->
@@ -20,6 +26,7 @@
     <% @topics[@temp_topic].kids.each do |t| %>
         <!-- current lang? -->
         <% if t.language == 0 || t.language == 1 %>
+          <% if t.category != 1 && t.category != 2 && t.category != 3 && t.category != 4 %>
             <% if edit_mode==1 %>
                 <div class="list-group-item btn-main-menu button <%= $index_column_colors[@temp_topic] %>">
                   <%= link_to '<i class="fa fa-edit edit-color"></i>'.html_safe, edit_topic_path(t), class: 'edit-color' %>
@@ -32,16 +39,16 @@
             <% else %>
                 <a href="<%= topic_path(t) %>" class="list-group-item btn-default btn-main-menu button <%= $index_column_colors[@temp_topic] %>">
                   <div class="button-text"> <%= t.name %>  </div>
-                        <div class="button-text-small">
-                  <% t.kids.each do |tt| %>
+                  <div class="button-text-small">
+                    <% t.kids.each do |tt| %>
+                        <% if tt.category == 0 %>
                           <%= tt.name %>
+                        <% end %>
                   <% end %>
-                            </div>
+                  </div>
                 </a>
             <% end %>
-
-
-
+          <% end %> <!-- main category -->
         <% end %> <!-- language 0 or 1 -->
     <% end %> <!-- main loop -->
     </div>

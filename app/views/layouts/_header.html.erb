@@ -9,13 +9,49 @@
         <span class="icon-bar"></span>
       </button>
     <%= link_to t('.title'), topics_path, id: "logo" %>
-</div>
+    </div>
+
+    <div class="navbar-header header-middle">
+
+
+
+
+
+
+
+    </div>
+    <div class="nav navbar-nav center">
+      <div class="col-sm-4">
+        <% if session[:current_collumn] == 0 && @topic.present? %>
+            <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
+
+        <% else if session[:current_collumn] == 1 && @topic.present? %>
+                <%= link_to image_tag($collumn_icon_1.icon.url, class: 'small-icon'), topic_path($collumn_icon_1.kids.first) %>
+
+            <% else if session[:current_collumn] == 2 && @topic.present? %>
+                    <%= link_to image_tag($collumn_icon_1.icon.url, class: 'small-icon'), topic_path($collumn_icon_1.kids.first) %>
+                <% end %>
+            <% end %>
+        <% end %>
+      </div>
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+      <% if session[:current_collumn] == 0 && @topic.present? %>
+          <%= link_to image_tag($collumn_icon_3.icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
+
+      <% else if session[:current_collumn] == 1 && @topic.present? %>
+              <%= link_to image_tag($collumn_icon_3.icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
+
+          <% else if session[:current_collumn] == 2 && @topic.present? %>
+                  <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
+              <% end %>
+          <% end %>
+      <% end %>
+        </div>
+    </div>
       <div id="navbar-collapse" class="collapse navbar-collapse">
+
       <ul class="nav navbar-nav navbar-right">
-
-
-
-
         <li class="dropdown">
           <button class="btn btn-default dropdown-toggle" type="button" id="lang-dropdown" data-toggle="dropdown" aria-expanded="true">
             <%= I18n.locale.to_s %>

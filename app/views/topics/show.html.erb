@@ -1,5 +1,5 @@
 <div class="row low-gutter tight-butt">
-  <% if @topic.parents.first.id < 4
+  <% if @topic.parents.present? && @topic.parents.first.id < 4
        @temp_topic = @topic.parents.first.id - 1
        session[:current_collumn]= @temp_topic
      else
@@ -27,7 +27,7 @@
 </div>
 
 
-<div class="col-md-8 content-window-bg-color">
+<div class="col-sm-8 content-window-bg-color">
     <div id="content-window" class="content_window">
 
       <% if @show_pub.present? %> <!-- maybe render a pub in dis here window -->
