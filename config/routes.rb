@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
   resources :microposts,          only: [:create, :destroy]
   resources :users
-  resources :account_activations, only: [:edit]
+
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :relationships,       only: [:create, :destroy]
   resources :families,       only: [:create, :destroy]
@@ -40,8 +40,10 @@ Rails.application.routes.draw do
   resources :pub_translationships,       only: [:create, :edit, :destroy]
   resources :admin
   #root 'static_pages#home', as: 'home', via: :all
+
   end
 
+  resources :account_activations, only: [:edit]
 
     #resources :topics
     #resources :pubs
