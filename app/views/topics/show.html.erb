@@ -14,7 +14,7 @@
       <%= render 'column' %>
   <% end %>
 
-<div id="sub-topics-window" class="col-md-8 content-window-bg-color">
+<div id="sub-topics-window" class="col-md-8 ">
   <h3>
         <% @topic.kids.each do |tt| %>
             <% if tt.icon.present? %>
@@ -27,7 +27,7 @@
 </div>
 
 
-<div class="col-sm-8 content-window-bg-color">
+<div class="col-sm-8 ">
     <div id="content-window" class="content_window">
 
       <% if @show_pub.present? %> <!-- maybe render a pub in dis here window -->
