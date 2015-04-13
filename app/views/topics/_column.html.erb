@@ -5,7 +5,7 @@
          $collumn_icon_2 = @topics[1]
          $collumn_icon_3 = @topics[2]
       %>
-      <%= image_tag @topics[@temp_topic].icon.url, class: "img-hi-responsive trmed-icon" %>
+      <%= image_tag @topics[@temp_topic].icon.url, class: " trmed-icon img-icon" %>
     </i>
   <% if edit_mode ==1 %>
         <%= link_to '<i class="fa fa-plus-square edit-color"></i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topics[@temp_topic].id }%>

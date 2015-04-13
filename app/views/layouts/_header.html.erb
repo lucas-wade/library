@@ -13,15 +13,10 @@
 
     <div class="navbar-header header-middle">
 
-
-
-
-
-
-
     </div>
+
     <div class="nav navbar-nav center">
-      <div class="col-sm-4">
+      <div class="col-xs-4">
         <% if session[:current_collumn] == 0 && @topic.present? %>
             <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
 
@@ -34,8 +29,10 @@
             <% end %>
         <% end %>
       </div>
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
+
+      <div class="col-xs-4"></div>
+      <div class="col-xs-4">
+
       <% if session[:current_collumn] == 0 && @topic.present? %>
           <%= link_to image_tag($collumn_icon_3.icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
 
