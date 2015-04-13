@@ -20,7 +20,7 @@
   <% @pubs.each do |p| %>
       <tr>
         <td><%= link_to p.name, p %></td>
-        <td><%= $available_languages[p.language] %></td>
+        <td><%= p.language %></td>
         <% if p.originals.present? %>
         <td><%= link_to p.originals.first.name, p.originals.first %></td>
             <% else %>
@@ -36,7 +36,7 @@
 
         <td><%= p.media.content_type %></td>
 
-        <% if current_user.admin? %>
+        <% if current_admin %>
             <% if edit_mode==1 %>
                 <td><%= link_to '<i class="fa fa-language edit-color">Create Translation</i>'.html_safe, new_pub_path(original_id: p.id), class: "btn btn-success" %></td>
                 <!-- , :parent_id =>t.parents.first.id -->

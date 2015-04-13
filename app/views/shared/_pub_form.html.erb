@@ -35,14 +35,15 @@ placeholder: "Compose new micropost..."
     <div class="field">
       <%= f.label :language %><br>
       <%# f.select(:language, [['English',1],['Hindi',2],['Arabic',3],['Spanish',4],['Portuguese',5],['Bengali',6]] ) %>
-      <% count =0 %>
-      <% hash = [] %>
-      <% while count < $available_languages.count do %>
-          <% hash << [$available_languages[count],count] %>
+      <%= f.select(:language, $available_languages) %>
+      <%# count =0 %>
+      <%# hash = [] %>
+      <%# while count < $available_languages.count do %>
+          <%# hash << [$available_languages[count],count] %>
 
-          <% count+=1 %>
-      <% end %>
-      <%= f.select(:language, hash ) %>
+          <%# count+=1 %>
+      <%# end %>
+      <%# f.select(:language, hash ) %>
     </div>
 
 

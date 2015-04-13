@@ -62,19 +62,19 @@ followers.each { |follower| follower.follow(user) }
 =end
 
 Topic.create!(name:  "Information",
-             language: 1,
+             language: 'en',
              main_content: "",
              category: 0 )
 
 
 Topic.create!(name:  "Action",
-              language: 1,
+              language: 'en',
               main_content: "",
               category: 0)
 
 
 Topic.create!(name:  "Support",
-              language: 1,
+              language: 'en',
               main_content: "",
               category: 0 )
 
@@ -88,7 +88,7 @@ join = Topic.third
 
 
 Topic.create!(name:  "Basic Needs & GROW BIOINTENSIVE®",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
               )
@@ -96,43 +96,43 @@ last_topic = Topic.last
 last_topic.make_parent(info)
 
   Topic.create!(name:  "Water",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
   )
   Topic.last.make_parent(last_topic)
   Topic.create!(name:  "Farmable Soil",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
   )
   Topic.last.make_parent(last_topic)
   Topic.create!(name:  "Food / Nutrients",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
   )
   Topic.last.make_parent(last_topic)
   Topic.create!(name:  "Energy",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
   )
   Topic.last.make_parent(last_topic)
   Topic.create!(name:  "Atmosphere",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
   )
   Topic.last.make_parent(last_topic)
   Topic.create!(name:  "Wild Space",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
   )
   Topic.last.make_parent(last_topic)
   Topic.create!(name:  "Peace",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
   )
@@ -141,112 +141,112 @@ last_topic.make_parent(info)
 
 
 Topic.create!(name:  "8 Components of GROW BIOINTENSIVE®",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
 )
 Topic.last.make_parent(info)
 
 Topic.create!(name:  "Soil & Soil Building",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
 )
 Topic.last.make_parent(info)
 
 Topic.create!(name:  "Food, Diet, & Human Health",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
 )
 Topic.last.make_parent(info)
 
 Topic.create!(name:  "Garden Planning, Economics, & Scalability",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
 )
 Topic.last.make_parent(info)
 
 Topic.create!(name:  "Human Impact and Sustainability",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
 )
 Topic.last.make_parent(info)
 
 Topic.create!(name:  "EcoSystem",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
 )
 Topic.last.make_parent(info)
 
 Topic.create!(name:  "Learn / Train",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
 )
 Topic.last.make_parent(action)
 
 Topic.create!(name:  "Grow",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
 )
 Topic.last.make_parent(action)
 
 Topic.create!(name:  "Teach",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
 )
 Topic.last.make_parent(action)
 
 Topic.create!(name:  "Rate Your Sustainability",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
 )
 Topic.last.make_parent(action)
 
 Topic.create!(name:  "Join Us",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
 )
 Topic.last.make_parent(join)
 
 Topic.create!(name:  "Start a Project",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
 )
 Topic.last.make_parent(join)
 
 Topic.create!(name:  "Volunteer / Translate",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
 )
 Topic.last.make_parent(join)
 
 Topic.create!(name:  "About Ecology Action",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
 )
 Topic.last.make_parent(join)
 
 Topic.create!(name:  "Network",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
 )
 Topic.last.make_parent(join)
 
 Topic.create!(name:  "Kids",
-              language: 1,
+              language: 'en',
               main_content: "Introduction Text to be replaced",
               category: 0
 )

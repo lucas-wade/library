@@ -1,4 +1,4 @@
-$available_languages = 'Universal (no language)', 'English', 'Mandarin', 'Hindi', 'Arabic', 'Spanish', 'Portuguese', 'Bengali'
+$available_languages = ['Universal (no language)','na'], ['English','en'], ['Mandarin','zh'], ['Hindi','hi'], ['Arabic','ar'], ['Spanish','es'], ['Portuguese','pt'], ['Bengali','bn']
 $available_skills = 'Universal (skill level does not apply)', 'Basic', 'Intermediate', 'Advanced'
 $available_categories = 'Introduction / Main Content', 'I', 'II', 'III', 'Peak'
 

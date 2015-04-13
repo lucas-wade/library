@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20150409190516) do
   add_index "pub_translationships", ["translation_id"], name: "index_pub_translationships_on_translation_id"
 
   create_table "pubs", force: :cascade do |t|
+    t.string   "language"
     t.boolean  "translated"
     t.string   "type"
     t.string   "url"
@@ -69,10 +70,10 @@ ActiveRecord::Schema.define(version: 20150409190516) do
     t.integer  "language_id"
     t.boolean  "translation"
     t.integer  "pub_type"
-    t.integer  "language"
     t.integer  "skill"
   end
 
+  add_index "pubs", ["language"], name: "index_pubs_on_language"
   add_index "pubs", ["name"], name: "index_pubs_on_name", unique: true
 
   create_table "relationships", force: :cascade do |t|
@@ -99,12 +100,12 @@ ActiveRecord::Schema.define(version: 20150409190516) do
 
   create_table "topics", force: :cascade do |t|
     t.string   "name"
+    t.string   "language"
     t.text     "main_content"
     t.integer  "skill"
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
     t.boolean  "translation",  default: false
-    t.integer  "language"
     t.integer  "category"
     t.string   "icon"
   end

@@ -88,7 +88,7 @@
       <h2><small>
         Skill Level <strong><%= $available_skills[@topic.skill] unless !@topic.skill.present?%></strong>
         Category <strong><%= $available_categories[@topic.category] unless !@topic.category.present? %></strong>
-        Language <strong><%= $available_languages[@topic.language] unless !@topic.language.present? %></strong>
+        Language <strong><%= @topic.language unless !@topic.language.present? %></strong>
       </small></h2>
           <% end %>
 

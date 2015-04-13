@@ -25,7 +25,7 @@
     <!-- still need to implement ordering. -->
     <% @topics[@temp_topic].kids.each do |t| %>
         <!-- current lang? -->
-        <% if t.language == 0 || t.language == 1 %>
+        <% if t.language == 0 || t.language == I18n.locale.to_s %>
           <% if t.category != 1 && t.category != 2 && t.category != 3 && t.category != 4 %>
             <% if edit_mode==1 %>
                 <div class="list-group-item btn-main-menu button <%= $index_column_colors[@temp_topic] %>">
