@@ -170,12 +170,12 @@ body {
 }
 
 #supplimental-window {
-  
+  position: relative;
   background-color: #3c3c3c;
   height: 7em;
   color: white;
-  overflow: scroll;
-  padding: 1px;
+  //overflow: scroll;
+  padding: 0px;
   margin: 0;
   overflow-y: auto;
   overflow-x: hidden;
@@ -217,9 +217,11 @@ body {
 }
 
 .tight-list {
-  padding-left: 3em;
-  padding-right: 3em;
+  padding-left: -1em;
+  padding-right: -1em;
+  maring: -1em;
   margin-top: -1em;
+  line-height: .9em;
 }
 
 
@@ -464,7 +466,7 @@ p {
 .c4 {
   color: $clr4;
 }
-.topic-form {
+.edit-form {
   background-color: $secondary_color;
   padding: 4%;
 

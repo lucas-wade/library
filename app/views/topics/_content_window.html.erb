@@ -76,6 +76,7 @@
       </h2>
 
       <% if edit_mode == 1 %>
+          <!-- debuggin stuff
           <h2><small>
             Skill Level <strong><%= $available_skills[@topic.skill] unless !@topic.skill.present?%></strong>
             Category <strong><%= $available_categories[@topic.category] unless !@topic.category.present? %></strong>
@@ -83,6 +84,7 @@
             placeholder <strong><%= @topic.placeholder %></strong>
 
           </small></h2>
+          -->
       <% end %>
 
 
@@ -102,6 +104,7 @@
 <% if @topic.pubs.present? || edit_mode == 1%>
 
 <div id="supplimental-window" class="content_window">
+
   <% if edit_mode == 1 %>
       <!-- new suplimental files -->
       <div>
@@ -109,7 +112,8 @@
       </div>
   <% end %>
 
-  <div class="col-md-4">
+
+  <div class="col-xs-4">
     <p class="center"> <%= image_tag("icon_skills_1.png", size: "29") %> </p>
     <% if @topic.pubs.present? %>
         <div class="tight-list">
@@ -122,7 +126,7 @@
     <% end %>
   </div>
 
-  <div class="col-md-4">
+  <div class="col-xs-4">
     <p class="center"> <%= image_tag("icon_skills_2.png", size: "29") %> </p>
     <% if @topic.pubs.present? %>
         <% @topic.pubs.each do |t| %>
@@ -133,7 +137,7 @@
     <% end %>
   </div>
 
-  <div class="col-md-4">
+  <div class="col-xs-4">
     <p class="center"> <%= image_tag("icon_skills_3.png", size: "29") %> </p>
     <% if @topic.pubs.present? %>
         <% @topic.pubs.each do |t| %>
@@ -144,11 +148,11 @@
     <% end %>
   </div>
 
+
 </div> <!-- end of supplimental window -->
 <% end %>
 
 <% if has_sub_cats == TRUE || edit_mode ==1 %>
-
 <!-- category window -->
 <div id="category-window" class="content_window tight-top">
   <% if edit_mode == 1 %>
@@ -160,13 +164,13 @@
 
       <div class="col-md-3">
         <% if t.category == 4 %>
-            peak<%= link_to t.name, t, class: "btn btn-info" %>
+            peak<%= link_to t.name, t, class: "btn btn-default" %>
         <% end %>
       </div>
 
       <div class="col-md-3">
         <% if t.category == 1 %>
-            CAT 1 <%= link_to t.name, t, class: "btn btn-info" %>
+            CAT 1 <%= link_to t.name, t, class: "btn btn-default" %>
         <% end %>
       </div>
 
@@ -183,10 +187,8 @@
       </div>
 
   <% end %>
-
-
-
-
 </div> <!-- end of cat window -->
     <% end %>
+
+
 <%= link_to '<i class="fa fa-close fa-3x"></i>'.html_safe, topics_path, class: "btn-kill"  %>

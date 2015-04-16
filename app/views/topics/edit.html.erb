@@ -1,6 +1,6 @@
 <% provide(:title, 'Edit Topic') %>
 
-<div class="row">
+<div class="row edit-form">
 
   <h1 class="center">Edit Topic</h1>
 
@@ -10,7 +10,7 @@
 
     <!-- remove a parent -->
 <% @topic.parents.each do |t| %>
-        <div class="topic-form">
+        <div class="edit-form">
         <h3 class="tight-butt">Edit Parents</h3>
 
       <ul class="list-inline2">
@@ -42,8 +42,9 @@
 
 
 </div>
-<div class="col-md-6 b0 nice-butt">
+<div class="col-md-6 nice-butt">
   <h2><%= link_to @topic.name, @topic %> </h2>
-  <%= @topic.main_content.html_safe %>
+  <%= render 'content_window' %>
+      <%# @topic.main_content.html_safe %>
 </div>
 </div>

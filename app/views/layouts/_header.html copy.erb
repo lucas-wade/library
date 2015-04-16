@@ -60,7 +60,7 @@
             <%= I18n.locale.to_s %>
             <span class="caret"></span>
           </button>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+          <ul class="dropdown-menu list-group-item" role="menu" aria-labelledby="dropdownMenu1">
             <li role="presentation"> <%= link_to_unless_current "English", locale: "en" %> </li>
             <li role="presentation"> <%= link_to_unless_current "Espanol", locale: "es" %> </li>
           </ul>
