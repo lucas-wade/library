@@ -72,6 +72,15 @@ $clr4: darken(adjust_hue($primary-bg-color,168),50);
   }
 }
 
+@media (max-width: 1024px) {
+
+  #navbar-middle {
+    display: none;
+  }
+}
+
+
+
 #navbar-middle {
 //  width: 20%;
 }
@@ -139,7 +148,7 @@ body {
   height: 4em;
 }
 #content-window {
-  height: 26em;
+  //height: 26em;
   background-color: #222222;
   margin: 0;
   margin-top: .618em;
@@ -174,6 +183,16 @@ body {
   a {
     color: #F7F7F7;
   }
+}
+
+.content-window-size-1 {
+  height: 26em;
+}
+.content-window-size-2 {
+  height: 33em;
+}
+.content-window-size-3 {
+  height: 40em;
 }
 
 #category-window {
@@ -503,15 +522,16 @@ p {
 
   li {
     display: inline-block;
+    padding: 0px;
     //float: left;
   }
 }
-.navbar-right {
+.navbar-right2 {
   padding-left: 0px;
-  .navbar-right {float: right !important;}
+  float: right;
+  padding-right: 2em;
+
 }
-/* try this */
-//.navbar-right > ul > li { float:left; }
 
 
 .nav-list {
