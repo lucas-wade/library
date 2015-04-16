@@ -9,21 +9,33 @@
 
 
   %>
-
+  <div id="big_c">
   <% if @temp_topic == 0 %>
       <%= render 'column' %>
   <% end %>
+    </div>
 
 <div id="sub-topics-window" class="col-md-8 ">
   <h3>
+    <% if @topic.kids.present? %>
         <% @topic.kids.each do |tt| %>
             <% if tt.icon.present? %>
             <%= image_tag tt.icon.url, class: "img-icon" %>
-        <% else %>
+            <% else %>
             <%= link_to tt.name, tt, class: "btn btn-default" %>
+            <% end %>
         <% end %>
-    <% end %>
-  </h3>
+    <% else if @topic.parents.first.id > 3 %>
+        <% @topic.parents.first.kids.each do |tt| %>
+            <% if tt.icon.present? %>
+                <%= image_tag tt.icon.url, class: "img-icon" %>
+            <% else %>
+                <%= link_to tt.name, tt, class: "btn btn-default" %>
+            <% end %>
+        <% end %>
+<% end %>
+<% end %>
+        </h3>
 </div>
 
 
@@ -206,9 +218,28 @@
 
   </div>
 
-
+<div id="big_c">
   <% if @temp_topic == 1 || @temp_topic == 2 %>
      <%= render 'column' %>
   <% end %>
+</div>
+
+    <% tt=@temp_topic %>
+
+  <div id="small_c1">
+    <% @temp_topic =0 %>
+    <%= render 'column' %>
+  </div>
+  <div id="small_c3">
+    <% @temp_topic =1 %>
+    <%= render 'column' %>
+  </div>
+  <div id="small_c3">
+    <% @temp_topic =2 %>
+    <%= render 'column' %>
+  </div>
+
+
+  </div>
 
 </div>

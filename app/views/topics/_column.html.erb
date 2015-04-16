@@ -1,11 +1,13 @@
-<div class="col-sm-4">
+<div class="col-sm-4 <% if @temp_topic == 1 %> action-collumn <% end %>">
   <h5>
     <i class="fa fa-3x">
       <% $collumn_icon_1 = @topics[0]
          $collumn_icon_2 = @topics[1]
          $collumn_icon_3 = @topics[2]
       %>
-      <%= image_tag @topics[@temp_topic].icon.url, class: " trmed-icon img-icon" %>
+      <% if @temp_topic != 1 %>
+      <%= image_tag @topics[@temp_topic].icon.url, class: " trimmed-icon img-icon" %>
+          <% end %>
     </i>
   <% if edit_mode ==1 %>
         <%= link_to '<i class="fa fa-plus-square edit-color"></i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topics[@temp_topic].id }%>

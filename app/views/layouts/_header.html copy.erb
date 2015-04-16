@@ -1,0 +1,118 @@
+<header class="navbar navbar-default navbar-fixed-top navbar-special-color">
+  <nav>
+  <div class="container">
+
+    <div class="navbar-header">
+
+    <%= link_to t('.title'), topics_path, id: "logo" %>
+    </div>
+
+
+    <div class="nav navbar-nav"> <!-- middle -->
+      <div class="row">
+      <div class="col-sm-4 top-menu-icon b1">
+        <%# if session[:current_collumn] == 0 && @topic.present? %>
+            <%# link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
+
+        <%  if session[:current_collumn] == 1 && @topic.present? %>
+                <%= link_to image_tag($collumn_icon_1.icon.url, class: 'small-icon'), topic_path($collumn_icon_1.kids.first) %>
+
+            <% else if session[:current_collumn] == 2 && @topic.present? %>
+                    <%= link_to image_tag($collumn_icon_1.icon.url, class: 'small-icon'), topic_path($collumn_icon_1.kids.first) %>
+                <% end %>
+            <% end %>
+        <%# end %>
+      </div>
+      <div class="col-sm-4 top-menu-icon b2">
+        <% if session[:current_collumn] == 0 && @topic.present? %>
+            <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
+
+        <%# else if session[:current_collumn] == 1 && @topic.present? %>
+                <%# link_to image_tag($collumn_icon_3.icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
+
+            <% else if session[:current_collumn] == 2 && @topic.present? %>
+                    <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
+                <% end %>
+            <% end %>
+        <%# end %>
+      </div>
+      <div class="col-sm-4 top-menu-icon b3">
+        <% if session[:current_collumn] == 0 && @topic.present? %>
+            <%= link_to image_tag($collumn_icon_3   .icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
+
+            <% else if session[:current_collumn] == 1 && @topic.present? %>
+            <%= link_to image_tag($collumn_icon_3.icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
+
+        <%# else if session[:current_collumn] == 2 && @topic.present? %>
+                <%# link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
+            <% end %>
+        <% end %>
+        <%# end %>
+        </div>
+        </div>
+    </div> <!-- middle -->
+
+    <div class="navbar-right navbar-right2 b1">
+      <ul class="nav navbar-nav list-inline3">
+
+        <li class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="lang-dropdown" data-toggle="dropdown" aria-expanded="true">
+            <%= I18n.locale.to_s %>
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"> <%= link_to_unless_current "English", locale: "en" %> </li>
+            <li role="presentation"> <%= link_to_unless_current "Espanol", locale: "es" %> </li>
+          </ul>
+        </li>
+
+
+        <!-- not working form for language
+        <li>
+          <%# form_for topics_path, method: :get, class: 'locale' do %>
+          <%# select_tag 'locale',
+                         options_for_select(LANGUAGES, I18n.locale.to_s),
+                         onchange: 'this.form.submit()' %>
+              <%# submit_tag 'submit' %>
+              <%# javascript_tag "$('.locale input').hide()" %>
+              <%# end %>
+        </li>
+        NOT WORKING LANGUAGES FROM -->
+
+        <li><%= link_to '<i class="fa fa-home"></i>'.html_safe, topics_path %></li>
+
+        <% if logged_in? %>
+            <li><%= link_to '<i class="fa fa-book"></i>'.html_safe, library_path %> </li>
+            <%= render 'admin/dropdown' %>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-user"></i>
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Message Board", current_user %></li>
+                <li><%= link_to "User Settings", edit_user_path(current_user) %></li>
+                <li class="divider"></li>
+
+                <li class="divider"></li>
+                <li>
+                  <%= link_to "Log out", logout_path, method: "delete" %>
+                </li>
+              </ul>
+            </li>
+
+        <% else %>
+            <li><%= link_to "Log in", login_path %></li>
+        <% end %>
+      </ul>
+      </div>
+
+
+  </div>
+  </nav>
+
+</header>
+
+
+

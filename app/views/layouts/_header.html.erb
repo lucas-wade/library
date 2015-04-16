@@ -1,54 +1,56 @@
-<header class="navbar navbar-default navbar-fixed-top navbar-special-color">
-  <nav>
-  <div class="container">
+<div class="navbar navbar-fixed-top navbar-special-color">
+  <div >
+<!-- class="container" -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    <%= link_to t('.title'), topics_path, id: "logo" %>
-    </div>
 
-    <div class="navbar-header header-middle">
+      <%= link_to t('.title'), topics_path, id: "logo" %>
 
     </div>
 
-    <div class="nav navbar-nav center">
-      <div class="col-xs-4">
-        <% if session[:current_collumn] == 0 && @topic.present? %>
-            <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
+    <div id="navbar-middle" class="navbar-header">
 
-        <% else if session[:current_collumn] == 1 && @topic.present? %>
-                <%= link_to image_tag($collumn_icon_1.icon.url, class: 'small-icon'), topic_path($collumn_icon_1.kids.first) %>
-
-            <% else if session[:current_collumn] == 2 && @topic.present? %>
-                    <%= link_to image_tag($collumn_icon_1.icon.url, class: 'small-icon'), topic_path($collumn_icon_1.kids.first) %>
-                <% end %>
-            <% end %>
-        <% end %>
-      </div>
-
-      <div class="col-xs-4"></div>
-      <div class="col-xs-4">
-
-      <% if session[:current_collumn] == 0 && @topic.present? %>
-          <%= link_to image_tag($collumn_icon_3.icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
-
-      <% else if session[:current_collumn] == 1 && @topic.present? %>
-              <%= link_to image_tag($collumn_icon_3.icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
+      <ul class="nav-list list-inline3">
+        <li class="top-menu-icon small-icon">
+          <%  if session[:current_collumn] == 1 && @topic.present? %>
+              <%= link_to image_tag($collumn_icon_1.icon.url, class: 'small-icon'), topic_path($collumn_icon_1.kids.first) %>
 
           <% else if session[:current_collumn] == 2 && @topic.present? %>
-                  <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
+                  <%= link_to image_tag($collumn_icon_1.icon.url, class: 'small-icon'), topic_path($collumn_icon_1.kids.first) %>
               <% end %>
           <% end %>
-      <% end %>
-        </div>
-    </div>
-      <div id="navbar-collapse" class="collapse navbar-collapse">
+        </li>
 
-      <ul class="nav navbar-nav navbar-right">
+        <li class="top-menu-icon small-icon">
+        <% if session[:current_collumn] == 0 && @topic.present? %>
+            <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
+
+            <%# else if session[:current_collumn] == 1 && @topic.present? %>
+            <%# link_to image_tag($collumn_icon_3.icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
+
+        <% else if session[:current_collumn] == 2 && @topic.present? %>
+                <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
+            <% end %>
+        <% end %>
+        </li>
+        <li class="top-menu-icon small-icon">
+          <% if session[:current_collumn] == 0 && @topic.present? %>
+              <%= link_to image_tag($collumn_icon_3   .icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
+
+          <% else if session[:current_collumn] == 1 && @topic.present? %>
+                  <%= link_to image_tag($collumn_icon_3.icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
+
+                  <%# else if session[:current_collumn] == 2 && @topic.present? %>
+                  <%# link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
+              <% end %>
+          <% end %>
+        </li>
+
+      </ul>
+    </div><!--/.nav-middle -->
+
+    <div class="navbar-header pull-right">
+      <ul class="nav navbar-nav list-inline3">
+
         <li class="dropdown">
           <button class="btn btn-default dropdown-toggle" type="button" id="lang-dropdown" data-toggle="dropdown" aria-expanded="true">
             <%= I18n.locale.to_s %>
@@ -58,23 +60,10 @@
             <li role="presentation"> <%= link_to_unless_current "English", locale: "en" %> </li>
             <li role="presentation"> <%= link_to_unless_current "Espanol", locale: "es" %> </li>
           </ul>
-
         </li>
-
-
-        <!-- not working form for language
-        <li>
-          <%# form_for topics_path, method: :get, class: 'locale' do %>
-          <%# select_tag 'locale',
-                         options_for_select(LANGUAGES, I18n.locale.to_s),
-                         onchange: 'this.form.submit()' %>
-              <%# submit_tag 'submit' %>
-              <%# javascript_tag "$('.locale input').hide()" %>
-              <%# end %>
-        </li>
-        NOT WORKING LANGUAGES FROM -->
 
         <li><%= link_to '<i class="fa fa-home"></i>'.html_safe, topics_path %></li>
+
         <% if logged_in? %>
             <li><%= link_to '<i class="fa fa-book"></i>'.html_safe, library_path %> </li>
             <%= render 'admin/dropdown' %>
@@ -95,16 +84,12 @@
                 </li>
               </ul>
             </li>
+
         <% else %>
             <li><%= link_to "Log in", login_path %></li>
         <% end %>
       </ul>
-      </div>
-      </div>
 
-    </nav>
-
-</header>
-
-
-
+    </div><!--/.navbar-right -->
+  </div><!-- container -->
+</div>
