@@ -102,7 +102,10 @@ class TopicsController < ApplicationController
                                   :original_id,
                                   :icon,
                                   :set_locale,
-                                  :locale)
+                                  :locale,
+                                  :translation,
+                                  :placeholder,
+                                  :growing)
 
   end
 

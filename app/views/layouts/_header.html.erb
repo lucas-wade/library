@@ -10,13 +10,27 @@
     <div id="navbar-middle" class="navbar-header">
 
       <ul class="nav-list list-inline3">
+
         <li class="top-menu-icon small-icon">
           <%  if session[:current_collumn] == 1 && @topic.present? %>
               <%= link_to image_tag($collumn_icon_1.icon.url, class: 'small-icon'), topic_path($collumn_icon_1.kids.first) %>
 
           <% else if session[:current_collumn] == 2 && @topic.present? %>
                   <%= link_to image_tag($collumn_icon_1.icon.url, class: 'small-icon'), topic_path($collumn_icon_1.kids.first) %>
-              <% end %>
+
+          <% else %>
+              <i class="fa fa-3x"></i>
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+        <% end %>
           <% end %>
         </li>
 
@@ -29,6 +43,18 @@
 
         <% else if session[:current_collumn] == 2 && @topic.present? %>
                 <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
+              <% else %>
+                  <i class="fa fa-3x"></i>
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
             <% end %>
         <% end %>
         </li>
@@ -41,6 +67,18 @@
 
                   <%# else if session[:current_collumn] == 2 && @topic.present? %>
                   <%# link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
+              <% else %>
+                  <i class="fa fa-3x"></i>
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
               <% end %>
           <% end %>
         </li>
@@ -48,7 +86,7 @@
       </ul>
     </div><!--/.nav-middle -->
 
-    <div class="navbar-header navbar-right2">
+    <div class="navbar-header navbar-right">
       <ul class="nav navbar-nav list-inline3">
 
         <li class="dropdown">
@@ -76,8 +114,6 @@
               <ul class="dropdown-menu">
                 <li><%= link_to "Message Board", current_user %></li>
                 <li><%= link_to "User Settings", edit_user_path(current_user) %></li>
-                <li class="divider"></li>
-
                 <li class="divider"></li>
                 <li>
                   <%= link_to "Log out", logout_path, method: "delete" %>

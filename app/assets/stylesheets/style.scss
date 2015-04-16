@@ -56,7 +56,7 @@ $clr4: darken(adjust_hue($primary-bg-color,168),50);
   }
 }
 
-@media (min-width:760px) {
+@media (min-width:767px) {
 
   #big_c {
     display: block;
@@ -406,7 +406,13 @@ p {
   }
 
 }
+.btn-kill {
+  color: #b04431;
+  //&:hover {
+    //color: #fff;
 
+  //}
+}
 
 .btn-main-menu {
   //background-color: rgb(228, 192, 127);
@@ -526,7 +532,7 @@ p {
     //float: left;
   }
 }
-.navbar-right2 {
+.navbar-right {
   padding-left: 0px;
   float: right;
   padding-right: 2em;

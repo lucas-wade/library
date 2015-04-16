@@ -55,10 +55,21 @@
     </div>
 
 
-      <div class="field">
-        <%= f.label :is_it_a_translation %>
-        <%= f.check_box :translation %>
-      </div>
+      <%# f.label :is_it_a_translation, class: "checkbox inline" do %>
+          <%# f.check_box :translation %>
+          <!-- <span>Remember me on this computer</span> -->
+      <%# end %>
+
+      <%= f.label :placeholder, class: "checkbox inline" do %>
+          <%= f.check_box :placeholder %>
+      <span>Is this a placeholder?</span>
+          <% end %>
+
+      <%= f.label :growing, class: "checkbox inline" do %>
+          <%= f.check_box :growing %>
+          <span>Or Is this still growing? (In progress)</span>
+      <% end %>
+
 
       <div class="field">
         <%= f.label :icon_image %>

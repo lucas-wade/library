@@ -80,12 +80,22 @@
             Skill Level <strong><%= $available_skills[@topic.skill] unless !@topic.skill.present?%></strong>
             Category <strong><%= $available_categories[@topic.category] unless !@topic.category.present? %></strong>
             Language <strong><%= @topic.language unless !@topic.language.present? %></strong>
+            placeholder <strong><%= @topic.placeholder %></strong>
+
           </small></h2>
       <% end %>
 
 
       <%=@topic.main_content.html_safe %>
-  <% end %>
+
+      <% if @topic.placeholder == TRUE %>
+        <%= render 'shared/placeholder' %>
+      <% else if @topic.growing == TRUE %>
+        <%= render 'shared/growing' %>
+          <% end %>
+          <% end %>
+
+  <% end %> <!-- end of controll for pub or content window -->
 
 </div>
 
@@ -179,4 +189,4 @@
 
 </div> <!-- end of cat window -->
     <% end %>
-<%= link_to '<i class="fa fa-close fa-3x "></i>'.html_safe, topics_path  %>
+<%= link_to '<i class="fa fa-close fa-3x"></i>'.html_safe, topics_path, class: "btn-kill"  %>
