@@ -30,13 +30,19 @@
                   &nbsp
                   &nbsp
                   &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
         <% end %>
           <% end %>
         </li>
 
         <li class="top-menu-icon small-icon">
         <% if session[:current_collumn] == 0 && @topic.present? %>
-            <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
+            <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
 
             <%# else if session[:current_collumn] == 1 && @topic.present? %>
             <%# link_to image_tag($collumn_icon_3.icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
@@ -45,6 +51,16 @@
                 <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
               <% else %>
                   <i class="fa fa-3x"></i>
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
+                  &nbsp
                   &nbsp
                   &nbsp
                   &nbsp
@@ -68,17 +84,7 @@
                   <%# else if session[:current_collumn] == 2 && @topic.present? %>
                   <%# link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
               <% else %>
-                  <i class="fa fa-3x"></i>
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
+
               <% end %>
           <% end %>
         </li>

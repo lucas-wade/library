@@ -72,7 +72,7 @@ $clr4: darken(adjust_hue($primary-bg-color,168),50);
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1004px) {
 
   #navbar-middle {
     display: none;
@@ -254,11 +254,12 @@ body {
   width: 3em;
 }
 .small-icon {
-  margin: .5em;
+  margin-top: .55em;
+
   vertical-align: top;
   align-content: flex-start;
   margin_top: -2em;
-  max-height: 3.1em;
+  max-height: 2.0em;
 
 }
 
@@ -830,7 +831,7 @@ a {
 
 .kids-button-style {
 
-  background-color: #d396ef;
+  background-color: #ad82ef;
   .button-text {
     font-size: 1.618em;
     padding: .518em;
