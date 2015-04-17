@@ -830,7 +830,11 @@ a {
 
 .kids-button-style {
 
-  background-color: #9953b0;
+  background-color: #d396ef;
+  .button-text {
+    font-size: 1.618em;
+    padding: .518em;
+  }
 }
 
 .grow-button-style {
