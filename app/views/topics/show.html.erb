@@ -18,13 +18,14 @@
 <div id="sub-topics-window" class="col-md-8 ">
   <h3>
     <% if @topic.kids.present? %>
-        <% @topic.kids.each do |tt| %>
+        <% @topic.kids.each do |tt| if tt.category < 1 %>
             <% if tt.icon.present? %>
             <%= image_tag tt.icon.url, class: "img-icon" %>
             <% else %>
             <%= link_to tt.name, tt, class: "btn btn-default" %>
             <% end %>
         <% end %>
+            <% end %>
     <% else if @topic.parents.first.id > 3 %>
         <% @topic.parents.first.kids.each do |tt| %>
             <% if tt.icon.present? %>

@@ -1,23 +1,27 @@
 <% if current_admin == TRUE %>
 
-<h2>Admin Area</h2>
+
+
 <div class="main-menu">
   <%# link_to 'New Topic', new_topic_path, class:"btn btn-primary"%>
-<br>
+
   <h2>Topics</h2>
 
   <% if @topics
        @topics.each do |t|
   %>
        <%= link_to t.name, t %>
+        <% if edit_mode == 1 %>
           <td><%= link_to 'Edit', edit_topic_path(t), class: "btn btn-info" %></td>
           <%= link_to 'Destroy', t,class: "btn btn-danger" ,method: :delete, data: { confirm: 'Are you sure?' } %>
           <% if t.parents.count < 1 %>
             <strong>no parents</strong>
           <% else %>
             <strong>Parents:</strong> <% t.parents.each do |tt| %> - <%= link_to tt.name, tt %> <% end %>
-              <strong>Kids:</strong> <% t.kids.each do |tt| %> - <%= link_to tt.name, tt %> <% end %>
+              <strong>Sub Topics:</strong> <% t.kids.each do |tt| %> - <%= link_to tt.name, tt %> <% end %>
           <% end %>
+
+        <% end %>
           <br>
       <% end %>
   <% end %>
