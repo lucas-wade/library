@@ -51,28 +51,7 @@
             <%= image_tag @topic.icon.url, class: "img-icon" %>
         <% end %>
         <%= @topic.name %>
-        <!-- translations available -->
-        <rs>
 
-          <% if @topic.translations.present? %>
-              <% @topic.translations.each do |trans| %>
-                  <%= link_to trans.name, trans %>
-              <% end %>
-          <% else if @topic.originals.present? %>
-                  <% @topic.originals.each do |trans| %>
-                      <%= link_to trans.name, trans %>
-                      <% if trans.translations.present? %>
-                          <% trans.translations.each do |trans2| %>
-                              <% if trans2.id != @topic.id %>
-                                  <%= link_to trans2.name, trans2 %>
-                              <% end %>
-                          <% end %>
-                      <% end %>
-                  <% end %>
-
-              <% end %>
-          <% end %>
-        </rs>
       </h2>
 
       <% if edit_mode == 1 %>
@@ -96,6 +75,30 @@
         <%= render 'shared/growing' %>
           <% end %>
           <% end %>
+
+      <!-- translations available -->
+      <div>
+
+        <% if @topic.translations.present? %>
+            <% @topic.translations.each do |trans| %>
+                <%= link_to trans.name, trans %>
+            <% end %>
+        <% else if @topic.originals.present? %>
+                <% @topic.originals.each do |trans| %>
+                    <%= link_to trans.name, trans %>
+                    <% if trans.translations.present? %>
+                        <% trans.translations.each do |trans2| %>
+                            <% if trans2.id != @topic.id %>
+                                <%= link_to trans2.name, trans2 %>
+                            <% end %>
+                        <% end %>
+                    <% end %>
+                <% end %>
+
+            <% end %>
+        <% end %>
+      </div>
+
 
   <% end %> <!-- end of controll for pub or content window -->
 

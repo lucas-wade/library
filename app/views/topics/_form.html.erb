@@ -62,12 +62,12 @@
 
       <%= f.label :placeholder, class: "checkbox inline" do %>
           <%= f.check_box :placeholder %>
-      <span>Is this a placeholder?</span>
+      <span>Is this a placeholder? ("Not Yet Grown Content" message)</span>
           <% end %>
 
       <%= f.label :growing, class: "checkbox inline" do %>
           <%= f.check_box :growing %>
-          <span>Or Is this still growing? (In progress)</span>
+          <span>Or Is this still in development? ("Growing Content" message)</span>
       <% end %>
 
 
@@ -87,10 +87,23 @@
           });
       </script>
 
+      <!-- main content -->
     <div class="field">
         <%= f.label $available_categories[0] %><br>
         <%= f.text_area :main_content, :size => "2x10" %>
     </div>
+
+      <input type="button" value="Add New Text" onClick="addtext();"></p>
+      <script>
+          function addtext() {
+              var newtext = document.edit-form.main_content.value;
+              document.getElementById("insert").innerHTML = newtext;
+          }
+      </script>
+
+
+
+
 
     <div class="field">
       <%= f.label :skill_level %><br>
@@ -135,3 +148,19 @@
 
 <% end %>
   </div>
+
+
+<div class="form" style="color: #2E2F30">
+  <form name="form">
+    <label>
+      <textarea name="inputtext"></textarea>
+    </label>
+    <input type="button" value="Add New Text" onClick="addtext();"></p>
+  </form>
+</div>
+<div>
+  <p id="insert">
+  </p>
+</div>
+
+
