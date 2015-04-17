@@ -39,7 +39,7 @@
                   <small> <%= link_to '<i class="fa fa-file edit-color">Attach Publication</i>'.html_safe, {:controller => "pubs", :action => "new", :parent_id => t.id }%> </small>
                 </div>
             <% else %>
-                <a href="<%= topic_path(t) %>" class="list-group-item btn-default btn-main-menu button <%= $index_column_colors[@temp_topic] %> <%= t.name.downcase %>-button-style">
+                <a href="<%= topic_path(t) %>" class="list-group-item btn-default btn-main-menu button <%= $index_column_colors[@temp_topic] %> <%= t.name.downcase.tr(' ','-') %>-button-style">
                   <div class="button-text"> <%= t.name %>  </div>
                   <div class="button-text-small">
                     <% t.kids.each do |tt| %>
