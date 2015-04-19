@@ -16,5 +16,5 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require colorbox-rails
-//= require fancybox
+
 //= require_tree .

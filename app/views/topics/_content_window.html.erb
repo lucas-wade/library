@@ -115,7 +115,7 @@
     <% if @show_pub.present? %>
         <%= link_to '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>'.html_safe, @show_pub.media.url, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, :colorbox_className => 'b0' } %>
     <% else if there_is_a_topic_in_the_content_window == TRUE %>
-            <%= link_to '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>'.html_safe, @topic.main_content.html_safe, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_html => @topic.main_content.html_safe} %>
+            <%= link_to '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>'.html_safe, @topic, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_html => @topic.main_content.html_safe } %>
     <% end %>
         <% end %>
 
@@ -125,7 +125,7 @@
 
 
 <!-- pubs supplimentary files -->
-<% if @topic.pubs.present? || edit_mode == 1%>
+<% if @topic.pubs.count > 0 || edit_mode == 1 %>
 <div id="supplimental-window" class="content_window">
 
   <% if edit_mode == 1 %>
