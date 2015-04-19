@@ -4,7 +4,7 @@ class CreateTopics < ActiveRecord::Migration
       t.string :name
       t.string :language
       t.text :main_content
-      t.integer :skill
+      t.integer :skill, default: 0
 
       t.timestamps null: false
     end

@@ -111,20 +111,21 @@
             <%= $av_langs_hash[key] %>
             <span class="caret"></span>
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu nav-menu-icons">
             <li><%= link_to "English", locale: "en" %></li>
             <li><%= link_to "Espanol", locale: "es" %></li>
           </ul>
         </li>
 
-        <li><%= link_to '<i class="fa fa-home"></i>'.html_safe, topics_path %></li>
+        <li><%= link_to '<i class="fa fa-home nav-menu-icons"></i>'.html_safe, topics_path %></li>
 
         <% if logged_in? %>
-            <li><%= link_to '<i class="fa fa-book"></i>'.html_safe, library_path %> </li>
+            <li><%= link_to '<i class="fa fa-book nav-menu-icons"></i>'.html_safe, library_path %> </li>
+
             <%= render 'admin/dropdown' %>
 
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <a href="#" class="dropdown-toggle nav-menu-icons-dropdown" data-toggle="dropdown">
                 <i class="fa fa-user"></i>
                 <b class="caret"></b>
               </a>

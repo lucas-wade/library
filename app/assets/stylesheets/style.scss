@@ -74,7 +74,7 @@ $content_bg_color: #222222;
   }
 }
 
-@media (max-width: 1004px) {
+@media (max-width: 844px) {
 
   #navbar-middle {
     display: none;
@@ -293,7 +293,6 @@ body {
 }
 .small-icon {
   margin-top: .55em;
-
   vertical-align: top;
   align-content: flex-start;
   margin_top: -2em;
@@ -301,9 +300,22 @@ body {
 
 }
 
+.nav-menu-icons {
+
+  text-align: center;
+  margin-left: -1em;
+  margin-right: -1em;
+  padding: -1em;
+}
+.nav-menu-icons-dropdown {
+  margin-left: -.5em;
+  margin-right: -.5em;
+  //padding: -.5em;
+}
+
 .header-middle {
   //width: 100%;
-  text-align: center;
+  //text-align: center;
 }
 
 .tight-butt {

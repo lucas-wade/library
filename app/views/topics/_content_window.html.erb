@@ -93,11 +93,11 @@
       <% end %>
   <% else if @topic.originals.present? %>
           <% @topic.originals.each do |trans| %>
-              <%= link_to trans.name, trans %>
+              <%= link_to $av_langs_hash[trans.language], trans %>
               <% if trans.translations.present? %>
                   <% trans.translations.each do |trans2| %>
                       <% if trans2.id != @topic.id %>
-                          <%= link_to trans2.name, trans2 %>
+                          <%= link_to $av_langs_hash[trans2.language], trans2 %>
                       <% end %>
                   <% end %>
               <% end %>

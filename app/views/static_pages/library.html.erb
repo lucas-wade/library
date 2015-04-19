@@ -1,58 +1,70 @@
 <div class="row b0">
-
+<div class="col-xs-12">
   <%= form_tag(library_path, :method => "get", id: "search-form") do %>
       <%= text_field_tag :search, params[:search], placeholder: "Search Topics" %>
       <%= submit_tag "Search", :name => nil %>
   <% end %>
 
 
-  <h2>Categories Containing "<%= params[:search] %>"</h2>
-  <% if @topics.present? %>
-       <% @topics.each do |t| %>
-          <%= link_to t.name, t %>
-          <% if edit_mode == 1 %>
-              <% if t.parents.count < 1 %>
-                  <strong>no parents</strong>
-              <% else %>
-                  <strong>Parents:</strong> <% t.parents.each do |tt| %> - <%= link_to tt.name, tt %> <% end %>
-                  <strong>Kids:</strong> <% t.kids.each do |tt| %> - <%= link_to tt.name, tt %> <% end %>
-              <% end %>
-              <%= link_to 'Edit', edit_topic_path(t), class: "btn btn-info" %>
-              <%= link_to 'Destroy', t,class: "btn btn-danger" ,method: :delete, data: { confirm: 'Are you sure?' } %>
-          <% end %>
-          <br>
-      <% end %>
-      <% else %>
-  <h3>Zero Results</h3>
-  <% end %>
+  <h3><%= params[:search] %></h3>
 
-  <br>
-  <h2>Publications Containing <%= params[:search] %> </h2>
+      <table class="table table-bordered">
+        <tr>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Sub-Category</th>
+          <th>Depth</th>
+          <th>Skill Level</th>
+          <th>Type</th>
+          <th>Language</th>
+        </tr>
+        <!-- TOPICS -->
+        <% if @topics.present? %>
+        <% @topics.each do |t| %>
+        <tr>
+            <td><%= link_to t.name, t %></td>
+            <td><%= link_to t.parents.first.name, t.parents.first if t.parents.present?%></td>
+            <td>.. <%=  %></td>
+            <td><%= $available_categories[t.category]%></td>
+            <td><%= $available_skills[t.skill] if t.skill.present? %></td>
+            <td>Category</td>
+            <td><%= $av_langs_hash[t.language] %></td>
+            <% if edit_mode == 1 %>
+                <td><%= link_to 'Edit', edit_topic_path(t), class: "btn btn-info" %></td>
+                <td><%= link_to 'Destroy', t,class: "btn btn-danger" ,method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
+        </tr>
+        <% end %>
+        <% end %>
 
-  <% if @pubs.present? %>
-       <% @pubs.each do |t|   %>
+        <!-- pubs -->
+        <% if @pubs.present? %>
+            <% @pubs.each do |t| %>
+            <tr>
+                  <td>
+                    <%# link_to '<i class="fa fa-zoom fa-1x"></i>'.html_safe, t.media.url, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true } %>
+                    <%# link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url, :target => "_blank" %>
+                    <%# link_to t.name, t %>
+                    <%= render partial: 'shared/pub_link_to', locals: {t: t} %>
+                  </td>
+                  <td><%= link_to t.topics.first.parents.first.name, t.topics.first.parents.first %></td>
+                  <td><%= link_to t.topics.first.name, t.topics.first %></td>
+                  <td><%= $available_categories[t.topics.first.category]%></td>
+                  <td><%= $available_skills[t.skill]%></td>
+                  <td><%= t.media.content_type %></td>
+                  <td><%= $av_langs_hash[t.language] %></td>
+                  <% if edit_mode == 1 %>
+                      <td> <%= link_to 'Edit', edit_topic_path(t), class: "btn btn-info" %> </td>
+                      <td> <%= link_to 'Destroy', t,class: "btn btn-danger" ,method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+                <% end %>
+            </tr>
+            <% end %>
+        <% end %>
 
-          <%= link_to t.name, t %>
-
-          <%= link_to '<i class="fa fa-photo fa-1x"></i>'.html_safe, t.media.url, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true } %>
-          <%= link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url, :target => "_blank" %>
+      </table>
 
 
-          <% if edit_mode == 1 %>
-
-              <% if t.topics.count < 1 %>
-                  <strong>no parents</strong>
-              <% else %>
-                  <strong>Parents:</strong> <% t.topics.each do |tt| %> - <%= link_to tt.name, tt %> <% end %>
-
-              <% end %>
-
-              <%= link_to 'Edit', edit_topic_path(t), class: "btn btn-info" %>
-              <%= link_to 'Destroy', t,class: "btn btn-danger" ,method: :delete, data: { confirm: 'Are you sure?' } %>
-          <% end %>
-          <br>
-      <% end %>
-  <% end %>
 
 
+</div>
 </div>

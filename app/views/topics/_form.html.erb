@@ -1,4 +1,4 @@
-<div class="edit-form">
+<div class="edit-form" id="edit-form">
 <%= form_for(@topic, html: { multipart: true }) do |f| %>
 
       <!-- errors -->
@@ -90,17 +90,18 @@
       <!-- main content -->
     <div class="field">
         <%= f.label $available_categories[0] %><br>
-        <%= f.text_area :main_content, :size => "2x10" %>
+        <%= f.text_area :main_content,:name => 'main_content', :size => "2x10" %>
     </div>
 
+      <!--
       <input type="button" value="Add New Text" onClick="addtext();"></p>
-      <script>
+      <script type="text/javascript">
           function addtext() {
-              var newtext = document.edit-form.main_content.value;
-              document.getElementById("insert").innerHTML = newtext;
+
+              document.getElementById("insert").innerHTML = document.topic_main_content.value;
           }
       </script>
-
+-->
 
 
 
@@ -150,16 +151,10 @@
   </div>
 
 
-<div class="form" style="color: #2E2F30">
-  <form name="form">
-    <label>
-      <textarea name="inputtext"></textarea>
-    </label>
-    <input type="button" value="Add New Text" onClick="addtext();"></p>
-  </form>
-</div>
+
 <div>
   <p id="insert">
+
   </p>
 </div>
 
