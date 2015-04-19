@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c26f1794-bb60-4aec-abfa-4a86b499a95e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/topics/_content_window.html.erb" afterPath="$PROJECT_DIR$/app/views/topics/_content_window.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/library.iml" afterPath="$PROJECT_DIR$/.idea/library.iml" />
     </list>
     <ignored path="library.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -129,8 +124,8 @@
       <file leaf-file-name="_content_window.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/topics/_content_window.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4" vertical-offset="1585" max-vertical-offset="3345">
-              <caret line="117" column="117" selection-start-line="117" selection-start-column="117" selection-end-line="117" selection-end-column="117" />
+            <state vertical-scroll-proportion="0.76235294" vertical-offset="1746" max-vertical-offset="3420">
+              <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -1382,8 +1377,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/topics/_content_window.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4" vertical-offset="1585" max-vertical-offset="3345">
-          <caret line="117" column="117" selection-start-line="117" selection-start-column="117" selection-end-line="117" selection-end-column="117" />
+        <state vertical-scroll-proportion="0.76235294" vertical-offset="1746" max-vertical-offset="3420">
+          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
           <folding />
         </state>
       </provider>
