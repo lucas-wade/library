@@ -40,10 +40,11 @@
       </div>
 
   <% else %> <!-- render the topic -->
-
-      <h2>
+<% there_is_a_topic_in_the_content_window = TRUE %>
+      <h3>
         <% if edit_mode == 1 %>
             <%= link_to '<i class="fa fa-edit edit-color"></i>'.html_safe, edit_topic_path(@topic) %>
+            <%= link_to '<i class="fa fa-language edit-color"></i>'.html_safe, new_topic_path(original_id: @topic.id, :parent_id => @topic.parents.first.id) %>
         <% end %>
 
         <!-- NAME -->
@@ -52,7 +53,7 @@
         <% end %>
         <%= @topic.name %>
 
-      </h2>
+      </h3>
 
       <% if edit_mode == 1 %>
           <!-- debuggin stuff
@@ -76,36 +77,55 @@
           <% end %>
           <% end %>
 
-      <!-- translations available -->
-      <div>
 
-        <% if @topic.translations.present? %>
-            <% @topic.translations.each do |trans| %>
-                <%= link_to trans.name, trans %>
-            <% end %>
-        <% else if @topic.originals.present? %>
-                <% @topic.originals.each do |trans| %>
-                    <%= link_to trans.name, trans %>
-                    <% if trans.translations.present? %>
-                        <% trans.translations.each do |trans2| %>
-                            <% if trans2.id != @topic.id %>
-                                <%= link_to trans2.name, trans2 %>
-                            <% end %>
-                        <% end %>
-                    <% end %>
-                <% end %>
-
-            <% end %>
-        <% end %>
-      </div>
 
 
   <% end %> <!-- end of controll for pub or content window -->
 
 </div>
 
-<% if @topic.pubs.present? || edit_mode == 1%>
+<!-- translations available -->
+<div id="below-content-window">
 
+  <% if @topic.translations.present? && there_is_a_topic_in_the_content_window %>
+      <% @topic.translations.each do |trans| %>
+          <%= link_to $av_langs_hash[trans.language], trans %>
+      <% end %>
+  <% else if @topic.originals.present? %>
+          <% @topic.originals.each do |trans| %>
+              <%= link_to trans.name, trans %>
+              <% if trans.translations.present? %>
+                  <% trans.translations.each do |trans2| %>
+                      <% if trans2.id != @topic.id %>
+                          <%= link_to trans2.name, trans2 %>
+                      <% end %>
+                  <% end %>
+              <% end %>
+          <% end %>
+      <% end %>
+  <% end %>
+
+  <% if @show_pub.present? && @show_pub.translations.present? %>
+
+   <% end %>
+
+
+
+  <div class="nav pull-right">
+    <% if @show_pub.present? %>
+        <%= link_to '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>'.html_safe, @show_pub.media.url, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, :colorbox_className => 'b0' } %>
+    <% else if there_is_a_topic_in_the_content_window == TRUE %>
+            <%= link_to '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>'.html_safe, @topic.main_content.html_safe, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_html => @topic.main_content.html_safe} %>
+    <% end %>
+        <% end %>
+
+
+              </div>
+</div> <!-- end of extra lang and fullscreen -->
+
+
+<!-- pubs supplimentary files -->
+<% if @topic.pubs.present? || edit_mode == 1%>
 <div id="supplimental-window" class="content_window">
 
   <% if edit_mode == 1 %>
@@ -129,7 +149,7 @@
     <% end %>
   </div>
 
-  <div class="col-xs-4">
+  <div class="col-xs-4 col-borders">
     <p class="center"> <%= image_tag("icon_skills_2.png", size: "29") %> </p>
     <% if @topic.pubs.present? %>
         <% @topic.pubs.each do |t| %>

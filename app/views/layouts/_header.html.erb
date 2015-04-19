@@ -3,8 +3,8 @@
 <!-- class="container" -->
     <div class="navbar-header">
 
-      <%= link_to t('.title'), topics_path, id: "logo" %>
-
+      <%= link_to image_tag('growbiologo.png',size: '300x25', alt: 'GROW BIOINTENSIVE® Classroom'), topics_path, id: "logo" %>
+<%# t('.title') %>
     </div>
 
     <div id="navbar-middle" class="navbar-header">
@@ -18,7 +18,7 @@
           <% else if session[:current_collumn] == 2 && @topic.present? %>
                   <%= link_to image_tag($collumn_icon_1.icon.url, class: 'small-icon'), topic_path($collumn_icon_1.kids.first) %>
 
-          <% else %>
+          <% else %> <!--
               <i class="fa fa-3x"></i>
                   &nbsp
                   &nbsp
@@ -35,7 +35,7 @@
                   &nbsp
                   &nbsp
                   &nbsp
-                  &nbsp
+                  &nbsp -->
         <% end %>
           <% end %>
         </li>
@@ -49,7 +49,7 @@
 
         <% else if session[:current_collumn] == 2 && @topic.present? %>
                 <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
-              <% else %>
+              <% else %> <!--
                   <i class="fa fa-3x"></i>
                   &nbsp
                   &nbsp
@@ -70,11 +70,12 @@
                   &nbsp
                   &nbsp
                   &nbsp
-                  &nbsp
+                  &nbsp -->
             <% end %>
         <% end %>
         </li>
         <li class="top-menu-icon small-icon">
+
           <% if session[:current_collumn] == 0 && @topic.present? %>
               <%= link_to image_tag($collumn_icon_3   .icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
 
@@ -87,6 +88,7 @@
 
               <% end %>
           <% end %>
+
         </li>
 
       </ul>
