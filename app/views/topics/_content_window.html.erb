@@ -133,11 +133,6 @@
       <div>
         <%= link_to '<i class="fa fa-plus-square fa-1x edit-color">Create New Supplemental File</i>'.html_safe, new_pub_path(parent_id: @topic.id) %>
       </div>
-      <div>
-        <% @topic.pubs.each do |t| %>
-        <%= link_to t.name, t %>
-            <% end %>
-      </div>
   <% end %>
 
 
@@ -146,7 +141,7 @@
 
         <div class="tight-list">
           <% @topic.pubs.each do |t| %>
-              <% if t.skill == 1 %>
+              <% if t.skill <= 1 %>
                   <%= render partial: 'shared/pub_link_to', locals: {t: t} %>
               <% end %>
           <% end %>
