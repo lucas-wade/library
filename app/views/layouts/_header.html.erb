@@ -111,9 +111,11 @@
             <%= $av_langs_hash[key] %>
             <span class="caret"></span>
           </a>
-          <ul class="dropdown-menu nav-menu-icons">
-            <li><%= link_to "English", locale: "en" %></li>
-            <li><%= link_to "Espanol", locale: "es" %></li>
+          <ul class="dropdown-menu">
+            <% $av_langs_hash.each do |k, v| %>
+            <li><%= link_to v, locale: k if k != 'na' %></li>
+            <% end %>
+
           </ul>
         </li>
 
