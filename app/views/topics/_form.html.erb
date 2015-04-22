@@ -15,7 +15,7 @@
 
       <!-- #parent topic stuff -->
     <% if @parent_topic %>
-        <h3>Subcategory Topic of <strong><%= @parent_topic.name %></strong></h3>
+        <h3>Sub-Topic of <strong><%= @parent_topic.name %></strong></h3>
 
         <%= hidden_field_tag :parent_id, @parent_topic.id %>
         <% else %>

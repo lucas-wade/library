@@ -9,6 +9,13 @@ module ApplicationHelper
     end
   end
 
+  def the_logo(library_mode)
+    if library_mode == 'library'
+      'growbiologo_library.png'
+    else
+      'growbiologo_classroom.png'
+      end
+  end
 
 
 end

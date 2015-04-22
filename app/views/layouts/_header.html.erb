@@ -2,8 +2,9 @@
   <div >
 <!-- class="container" -->
     <div class="navbar-header">
+      <% current_logo = the_logo(yield(:logo)) %>
 
-      <%= link_to image_tag('growbiologo.png',size: '300x25', alt: 'GROW BIOINTENSIVE® Classroom'), topics_path, id: "logo" %>
+      <%= link_to image_tag( current_logo, size: '300x25', alt: 'GROW BIOINTENSIVE® Library'), topics_path, id: "logo" %>
 <%# t('.title') %>
     </div>
 

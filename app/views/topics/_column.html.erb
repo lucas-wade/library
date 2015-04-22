@@ -34,7 +34,7 @@
                   <%= link_to '<i class="fa fa-edit edit-color"></i>'.html_safe, edit_topic_path(t), class: 'edit-color' %>
                   <%= link_to '<i class="fa fa-language edit-color"></i>'.html_safe, new_topic_path(original_id: t.id, :parent_id => t.parents.first.id) %>
                   <%= link_to t.name, t %>
-                  <%= link_to '<i class="fa fa-plus-square edit-color"> Sub Topic</i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => t.id }%>
+                  <%= link_to '<i class="fa fa-plus-square edit-color"> Sub-Topic</i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => t.id }%>
                   <br>
                   <small> <%= link_to '<i class="fa fa-file edit-color">Attach Publication</i>'.html_safe, {:controller => "pubs", :action => "new", :parent_id => t.id }%> </small>
                 </div>
