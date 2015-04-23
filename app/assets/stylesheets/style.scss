@@ -598,14 +598,11 @@ p {
   border-radius: 1% ;
 }
 
-
 /* header */
 
 .navbar-special-color {
-
-  background-color: lighten($primary-bg-color,8%);
-
-
+  //background-color: lighten($primary-bg-color,8%);
+  background-color: lighten($primary-bg-color,18%);
 }
 
 
