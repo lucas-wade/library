@@ -34,7 +34,8 @@ $content_bg_color: #222222;
   .navbar-header:after  {
     clear: none;
   }
-  .navbar-nav.navbar-right > li { float: left; }
+
+
 
   #navbar-middle {
     display: none;
@@ -97,9 +98,6 @@ body {
   background: linear-gradient( lighten($primary-bg-color,15%),darken($primary-bg-color,10%) );
   //background-image: url("http://animalia-life.com/data_images/donkey/donkey1.jpg");
 
-  rs {
-    font-size: .418em;
-  }
 }
 
 
@@ -107,16 +105,12 @@ body {
 .jumbotron {
   background-color: darken($primary-bg-color,3%);
   padding-top: 10px;
-  //margin-left: 10px;
-  //margin-left: 1px;
-  padding-left: 0px;
+  padding-left: 0;
 
 }
 .main-container{
   background-image: image_url("garden_footer.png");
   background-repeat: repeat-x;
-  //margin-bottom: 100px;
-
   padding-bottom: 30%;
 }
 .jimbo {
@@ -143,7 +137,7 @@ body {
  // margin: 2%;
   //margin-bottom: 10px;
 
-  padding-bottom: 0%;
+  padding-bottom: 0;
 
 }
 #sub-topics-window {
@@ -156,13 +150,8 @@ body {
   margin-top: .618em;
   overflow-y: auto;
   overflow-x: hidden;
-  
 
   padding: 1em;
-  //padding-left: 2em;
-
-  //padding-top: .5em;
-  //  padding-right: 2em;
   padding-bottom: .1em;
 
   p {
@@ -251,7 +240,7 @@ body {
 .tight-list {
   padding-left: -1em;
   padding-right: -1em;
-  maring: -1em;
+  margin: -1em;
   margin-top: -1em;
   line-height: .9em;
 }
@@ -264,7 +253,7 @@ body {
 
 .row {
   margin-left: -11%;
-  margin-right: 0%;
+  margin-right: 0;
 
 }
 
@@ -296,7 +285,7 @@ body {
   margin-top: .55em;
   vertical-align: top;
   align-content: flex-start;
-  margin_top: -2em;
+  //margin-top: -2em; *****
   max-height: 2.0em;
 
 }
@@ -342,11 +331,9 @@ hr {
 }
 
 #lang-dropdown{
-  margin-top: .618em;
-  //padding: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-
-
 
 section {
   overflow: auto;
@@ -567,24 +554,8 @@ p {
       //float: left;
     }
 }
-.list-inline3 {
 
-  //text-decoration: none;
 
-  //ul {
-    //list-style-type: none;
-
-    //margin: 0;
-    //padding: 0;
-    //float: right;
-  //}
-
-  li {
-    display: inline-block;
-    padding: 0px;
-    //float: left;
-  }
-}
 .navbar-right {
   padding-left: 0px;
   float: right;
@@ -910,4 +881,13 @@ a {
     //line-height: .99em;
   }
 
+}
+
+
+.navbar-nav > li {
+  margin-left: -4px;
+  margin-right: -4px;
+}
+.navbar-right {
+  margin-right: 10px;
 }
