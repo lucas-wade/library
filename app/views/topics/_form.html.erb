@@ -15,43 +15,25 @@
 
       <!-- #parent topic stuff -->
     <% if @parent_topic %>
-        <h3>Sub-Topic of <strong><%= @parent_topic.name %></strong></h3>
-
-        <%= hidden_field_tag :parent_id, @parent_topic.id %>
-        <% else %>
-          <div class="field">
-            <!-- Create this Topic as a sub-category of existing Topic? ( Leave blank if no change is desired) -->
-<!-- broken parent_id -->
-            <%# f.label :new_parent_id %>
-            <%# f.number_field :parent_id %>
-          </div>
-
-<% end %>
+          <h3>Sub-Topic of <strong><%= @parent_topic.name %></strong></h3>
+          <%= hidden_field_tag :parent_id, @parent_topic.id %>
+    <% end %>
 
       <!-- #translation hidden field stuff -->
-      <% if @original_topic %>
-          <h3>Translation of <strong><%= @original_topic.name %></strong></h3>
-          <%= hidden_field_tag :original_id, @original_topic.id %>
-      <% end %>
+    <% if @original_topic %>
+        <h3>Translation of <strong><%= @original_topic.name %></strong></h3>
+        <%= hidden_field_tag :original_id, @original_topic.id %>
+    <% end %>
 
 
-      <div class="field">
+    <div class="field">
         <%= f.label :name %><br>
         <%= f.text_area :name %>
     </div>
 
     <div class="field">
       <%= f.label :language %><br>
-      <%# f.select(:language, [['English',1],['Hindi',2],['Arabic',3],['Spanish',4],['Portuguese',5],['Bengali',6]] ) %>
       <%= f.select(:language, $available_languages) %>
-      <%# count =0 %>
-      <%# hash = [] %>
-      <%# while count < $available_languages.count do %>
-        <%# hash << [$available_languages[count],count] %>
-
-        <%# count+=1 %>
-        <%# end %>
-      <%# f.select(:language, hash ) %>
     </div>
 
 
@@ -60,15 +42,22 @@
           <!-- <span>Remember me on this computer</span> -->
       <%# end %>
 
-      <%= f.label :placeholder, class: "checkbox inline" do %>
-          <%= f.check_box :placeholder %>
-      <span>Placeholder: greyed out with "Not Yet Grown Content" message</span>
-          <% end %>
+    <div class="col-sm-6">
+        <%= f.label :placeholder, class: "checkbox inline" do %>
+            <%= f.check_box :placeholder %>
+            <span><strong>Placeholder:</strong><br> greyed out with "Not Yet Grown Content" message</span>
+        <% end %>
+    </div>
+    <div class="col-sm-6">
+        <%= f.label :growing, class: "checkbox inline" do %>
+            <%= f.check_box :growing %>
+            <span><strong>Under Development:</strong><br> active button with "We are Growing Content" message</span>
+        <% end %>
+    </div>
 
-      <%= f.label :growing, class: "checkbox inline" do %>
-          <%= f.check_box :growing %>
-          <span>Under Development: active button with "We are Growing Content" message</span>
-      <% end %>
+
+
+
 
 
       <div class="field">

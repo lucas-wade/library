@@ -1,36 +1,52 @@
-<% provide(:title, 'Edit Topic') %>
+<% provide(:title, 'Translation Manager & Topic Editor') %>
 
-<div class="row edit-form">
+<div class="row big-row edit-form low-gutter">
 
-  <h1 class="center">Edit Topic</h1>
+  <% if @topic.parents.present? && @topic.parents.first.id < 4
+       @temp_topic = @topic.parents.first.id - 1
+       session[:current_collumn]= @temp_topic
+     else
+       @temp_topic = session[:current_collumn]
+     end
+  %>
+  <div class="col-md-2">
+  <%= render 'topics/column' %>
+  </div>
 
-  <div class="col-md-6">
-
+  <div class="col-md-4">
   <%= render 'form' %>
+  </div>
+
+  <div class="col-md-6 nice-butt">
+    <h2><%= link_to @topic.name, @topic %> </h2>
+    <%= render 'content_window' %>
+    <%# @topic.main_content.html_safe %>
+  </div>
+</div>
+
 
     <!-- remove a parent -->
-<% @topic.parents.each do |t| %>
+    <!--
+<%# @topic.parents.each do |t| %>
         <div class="edit-form">
         <h3 class="tight-butt">Edit Parents</h3>
 
       <ul class="list-inline2">
         <li>
-            <%= t.name %> id= <%= t.id %>
+            <%# t.name %> id= <%# t.id %>
         </li>
         <li>
-            <%# current_topic.parent_families.find_by(parent_id: t).parent_id %>
-            <%= form_for(current_topic.parent_families.find_by(parent_id: t),
+
+            <%# form_for(current_topic.parent_families.find_by(parent_id: t),
                  html: { method: :delete }) do |f| %>
-            <%= f.submit "Remove this topic from Parent", class: "btn btn-danger" %>
-            <% end %>
-
-
+            <%# f.submit "Remove this topic from Parent", class: "btn btn-danger" %>
+            <%# end %>
         </li>
       </ul>
         <br>
         </div>
-<% end %>
-
+<%# end %>
+-->
     <!-- new parent id -->
 
   <%# form_for(current_topic.parent_families.build) do |f| %>
@@ -39,12 +55,3 @@
       <%# f.submit "Parent id #", class: "btn btn-primary" %>
   <%# end %>
 
-
-
-</div>
-<div class="col-md-6 nice-butt">
-  <h2><%= link_to @topic.name, @topic %> </h2>
-  <%= render 'content_window' %>
-      <%# @topic.main_content.html_safe %>
-</div>
-</div>

@@ -11,7 +11,9 @@
   %>
   <div id="big_c">
   <% if @temp_topic == 0 %>
-      <%= render 'column' %>
+        <div class="col-sm-4">
+          <%= render 'column' %>
+        </div>
   <% end %>
     </div>
 
@@ -48,23 +50,31 @@
 
 <div id="big_c">
   <% if @temp_topic == 1 || @temp_topic == 2 %>
+      <div class="col-sm-4">
      <%= render 'column' %>
+      </div>
   <% end %>
 </div>
 
     <% tt=@temp_topic %>
 
   <div id="small_c1">
+    <div class="col-sm-4">
     <% @temp_topic =0 %>
     <%= render 'column' %>
+      </div>
   </div>
   <div id="small_c3">
+    <div class="col-sm-4">
     <% @temp_topic =1 %>
     <%= render 'column' %>
+      </div>
   </div>
   <div id="small_c3">
+    <div class="col-sm-4">
     <% @temp_topic =2 %>
     <%= render 'column' %>
+      </div>
   </div>
 
 

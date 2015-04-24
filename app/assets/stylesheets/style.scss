@@ -21,6 +21,7 @@ $btn2: rgb(38,189,90);
 $btn3: rgb(239, 132, 77);
 $clr4: darken(adjust_hue($primary-bg-color,168),50);
 $content_bg_color: #222222;
+$site_orange: rgb(235, 74, 49);
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -34,13 +35,9 @@ $content_bg_color: #222222;
   .navbar-header:after  {
     clear: none;
   }
-
-
-
   #navbar-middle {
     display: none;
   }
-
   body {
     padding-top: 230px;
   }
@@ -57,6 +54,19 @@ $content_bg_color: #222222;
   #small_c3 {
     display: block;
   }
+
+  #action-collumn {
+    background-image: image_url("shovel_flat_tall.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 6em;
+    background-position-y: 1em;
+    //height: 20em;
+    padding-top: 4em;
+    padding-bottom: 22em;
+  }
+
+
 }
 // larger screen
 @media (min-width:767px) {
@@ -73,6 +83,19 @@ $content_bg_color: #222222;
   #small_c3 {
     display: none;
   }
+
+  #action-collumn {
+    background-image: image_url("shovel_flat_tall.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 7.4em;
+    background-position-y: 2em;
+    //height: 20em;
+    padding-top: 4em;
+    padding-bottom: 22em;
+  }
+
+
 }
 
 @media (max-width: 844px) {
@@ -89,7 +112,7 @@ $content_bg_color: #222222;
 }
 
 body {
-  padding-top: 70px;
+  padding-top: 50px;
   font: $font-stack;
   @font-face {
 
@@ -109,9 +132,11 @@ body {
 
 }
 .main-container{
-  background-image: image_url("garden_footer.png");
+  background-image: image_url("garden_footer.jpg");
   background-repeat: repeat-x;
   padding-bottom: 30%;
+  background-position: -60px -60px;
+
 }
 .jimbo {
   padding-left: 10%;
@@ -141,6 +166,8 @@ body {
 
 }
 #sub-topics-window {
+  padding-top: 1em;
+  
   height: 4em;
 }
 #content-window {
@@ -168,13 +195,13 @@ body {
 }
 
 .content-window-size-1 {
-  height: 26em;
+  height: 29em;
 }
 .content-window-size-2 {
-  height: 33em;
+  height: 36em;
 }
 .content-window-size-3 {
-  height: 40em;
+  height: 43em;
 }
 
 #below-content-window {
@@ -226,16 +253,6 @@ body {
   }
 }
 
-.action-collumn {
-  background-image: image_url("shovel_flat_tall.png");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: 8em;
-  background-position-y: 2em;
-  //height: 20em;
-  padding-top: 4em;
-  padding-bottom: 22em;
-}
 
 .tight-list {
   padding-left: -1em;
@@ -627,11 +644,11 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
 
-  color: #777;
+  color: #e3e3e3;
   a {
-    color: #333;
+    color: #e3e3e3;
     &:hover {
-      color: #222;
+      color: $site_orange;
     }
   }
   small {
@@ -887,4 +904,8 @@ a {
 }
 .navbar-right {
   margin-right: 10px;
+}
+
+.big-row {
+  width: 120em;
 }
