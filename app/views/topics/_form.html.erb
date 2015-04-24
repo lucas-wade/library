@@ -62,12 +62,12 @@
 
       <%= f.label :placeholder, class: "checkbox inline" do %>
           <%= f.check_box :placeholder %>
-      <span>Is this a placeholder? ("Not Yet Grown Content" message)</span>
+      <span>Placeholder: greyed out with "Not Yet Grown Content" message</span>
           <% end %>
 
       <%= f.label :growing, class: "checkbox inline" do %>
           <%= f.check_box :growing %>
-          <span>Or Is this still in development? ("Growing Content" message)</span>
+          <span>Under Development: active button with "We are Growing Content" message</span>
       <% end %>
 
 
@@ -90,7 +90,7 @@
       <!-- main content -->
     <div class="field">
         <%= f.label $available_categories[0] %><br>
-        <%= f.text_area :main_content,:name => 'main_content', :size => "2x10" %>
+        <%= f.text_area :main_content, :size => "2x10" %>
     </div>
 
       <!--
@@ -108,7 +108,7 @@
 
     <div class="field">
       <%= f.label :skill_level %><br>
-      <%# f.select(:skill, [['Basic',1],['Intermediate',2],['Advanced',3]] ) %>
+
       <% count =0 %>
       <% hash = [] %>
       <% while count < $available_skills.count do %>

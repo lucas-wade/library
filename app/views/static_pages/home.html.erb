@@ -60,9 +60,12 @@
         frameborder="0" allowfullscreen></iframe>
 
 -->
+  <!--
   <video  width="100%" controls autoplay>
     <source src="/media/growing.mp4">
   </video>
+-->
+  <%= video_tag "growing.mp4", :width => "100%", controls: true, autoplay: true %>
 </div>
 
     <p>New user? <%= link_to "Sign up now!", signup_path %></p>

@@ -72,7 +72,7 @@ class TopicsController < ApplicationController
       @parent_topic = Topic.find(params[:parent_id])
     end
     if @topic.update_attributes(topic_params)
-      flash[:success] = "topic updated"
+      flash[:success] = "Topic updated"
       redirect_to @topic
     else
       render 'edit'

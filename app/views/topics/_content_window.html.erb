@@ -67,8 +67,11 @@
           -->
       <% end %>
 
+<% if !@topic.main_content.present?
+     @topic.main_content = ''
+     end %>
 
-      <%=@topic.main_content.html_safe %>
+      <%= @topic.main_content.html_safe  %>
 
       <% if @topic.placeholder == TRUE %>
         <%= render 'shared/placeholder' %>
