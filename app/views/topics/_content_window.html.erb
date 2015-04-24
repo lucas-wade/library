@@ -1,9 +1,16 @@
 
 <% has_sub_cats = FALSE %>
+<% sub_cats = @topic %>
+
 <% @topic.kids.each do |t| %>
     <% if t.category > 0 %>
         <% has_sub_cats = TRUE %>
     <% end %>
+<% end %>
+
+<% if @topic.category > 0 %>
+    <% sub_cats = @topic.parents.first %>
+    <% has_sub_cats = TRUE %>
 <% end %>
 
 <div id="content-window" class="content_window
@@ -175,44 +182,62 @@
   </div>
 
 
-</div> <!-- end of supplimental window -->
+</div>
 <% end %>
+<!-- end of supplimental window -->
 
-<% if has_sub_cats == TRUE || edit_mode ==1 %>
 <!-- category window -->
-<div id="category-window" class="content_window tight-top">
+<% if has_sub_cats == TRUE || edit_mode ==1 %>
+
+<div id="category-window" class="content_window tight-top <% if edit_mode == 1 %>b0 clr4 <% end %>">
   <% if edit_mode == 1 %>
       <div>
         <%= link_to '<i class="fa fa-plus-square edit-color">Create Sub Category (Peak, I, II, III)</i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topic.id }%>
       </div>
   <% end %>
-  <% @topic.kids.each do |t| %>
 
-      <div class="col-md-3">
+  <div class="col-sm-8">
+
+    <div class="col-md-3">
+      <% sub_cats.kids.each do |t| %>
         <% if t.category == 4 %>
-            peak<%= link_to t.name, t, class: "btn btn-default" %>
+          <%= link_to image_tag("icon-tabs-cat-4.png", class: "tab-cat4"), t %>
         <% end %>
-      </div>
+      <% end %>
+    </div>
 
-      <div class="col-md-3">
-        <% if t.category == 1 %>
-            CAT 1 <%= link_to t.name, t, class: "btn btn-default" %>
-        <% end %>
-      </div>
+    <div class="col-md-3">
+      <% sub_cats.kids.each do |t| %>
+          <% if t.category == 1 %>
+              <%= link_to image_tag("icon-tabs-cat-1.png", class: "tab-cat1"), t %>
+          <% end %>
+      <% end %>
+    </div>
 
-      <div class="col-md-3">
-        <% if t.category == 2 %>
-            CAT 2 <%= link_to t.name, t, class: "btn btn-default" %>
-        <% end %>
-      </div>
 
-      <div class="col-md-3">
-        <% if t.category == 3 %>
-            CAT 3<%= link_to t.name, t, class: "btn btn-default" %>
-        <% end %>
-      </div>
+    <div class="col-md-3">
+      <% sub_cats.kids.each do |t| %>
+          <% if t.category == 2 %>
+              <%= link_to image_tag("icon-tabs-cat-2.png", class: "tab-cat2"), t %>
+          <% end %>
+      <% end %>
+    </div>
 
-  <% end %>
+    <div class="col-md-3">
+      <% sub_cats.kids.each do |t| %>
+          <% if t.category == 3 %>
+              <%= link_to image_tag("icon-tabs-cat-3.png", class: "tab-cat3"), t %>
+          <% end %>
+      <% end %>
+    </div>
+
+  </div>
+
+  <div class="col-xs-4">
+    <br>
+  </div>
+
+
 </div> <!-- end of cat window -->
     <% end %>
 

@@ -1,4 +1,4 @@
-<% provide(:title, 'Translation Manager & Topic Editor') %>
+<% provide(:title, 'Translation Manager Topic Editor') %>
 
 <div class="row big-row edit-form low-gutter">
 
@@ -9,6 +9,48 @@
        @temp_topic = session[:current_collumn]
      end
   %>
+
+
+<div class="col-sm-2">
+<br>
+</div>
+
+  <div class="col-sm-4">
+    <strong><%= $av_langs_hash_english[@topic.language] %></strong><small> Version <%= @topic.version %> </small>
+
+    <% if @topic.translations.present? %>
+        <% @topic.translations.each do |trans| %>
+            <%= link_to $av_langs_hash_english[trans.language], edit_topic_path(trans) %>
+            <small>v<%= trans.version %></small>
+        <% end %>
+    <% else if @topic.originals.present? %>
+            <% @topic.originals.each do |trans| %>
+                <%= link_to $av_langs_hash_english[trans.language], edit_topic_path(trans) %>
+                <small>v<%= trans.version %></small>
+                <% if trans.translations.present? %>
+                    <% trans.translations.each do |trans2| %>
+                        <% if trans2.id != @topic.id %>
+                            <%= link_to $av_langs_hash_english[trans2.language], edit_topic_path(trans2) %>
+                            <small>v<%= trans2.version %></small>
+                        <% end %>
+                    <% end %>
+                <% end %>
+            <% end %>
+        <% end %>
+    <% end %>
+
+
+  </div>
+
+  <div class="col-sm-6">
+    <br>
+  </div>
+
+
+
+
+
+
   <div class="col-md-2">
   <%= render 'topics/column' %>
   </div>

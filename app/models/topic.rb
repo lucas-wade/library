@@ -1,4 +1,6 @@
 class Topic < ActiveRecord::Base
+  attr_accessor :major_update
+
   has_many :parent_families, class_name:  'Family',
            foreign_key: 'kid_id',
            dependent:   :destroy

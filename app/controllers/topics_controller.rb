@@ -65,6 +65,7 @@ class TopicsController < ApplicationController
   def edit
     @topic = Topic.find(params[:id])
     @topics = Topic.all
+
   end
 
   def update
@@ -72,9 +73,14 @@ class TopicsController < ApplicationController
     if params[:parent_id].present?
       @parent_topic = Topic.find(params[:parent_id])
     end
+
+   if topic_params[:major_update].present?
+     @topic.version+=1
+   end
+
     if @topic.update_attributes(topic_params)
       flash[:success] = "Topic updated"
-      redirect_to @topic
+      redirect_to edit_topic_path(@topic)
     else
       render 'edit'
     end
@@ -106,7 +112,8 @@ class TopicsController < ApplicationController
                                   :locale,
                                   :translation,
                                   :placeholder,
-                                  :growing)
+                                  :growing,
+                                  :major_update)
 
   end
 

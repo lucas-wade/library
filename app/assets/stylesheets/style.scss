@@ -19,7 +19,7 @@ $secondary_color: darken(desaturate(adjust-hue($primary-bg-color,172),30),0);
 $btn1: rgb(18, 175, 241);
 $btn2: rgb(38,189,90);
 $btn3: rgb(239, 132, 77);
-$clr4: darken(adjust_hue($primary-bg-color,168),50);
+$clr4: adjust_hue($primary-bg-color,168);
 $content_bg_color: #222222;
 $site_orange: rgb(235, 74, 49);
 
@@ -88,7 +88,7 @@ $site_orange: rgb(235, 74, 49);
     background-image: image_url("shovel_flat_tall.png");
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 7.4em;
+    background-size: 7.2em;
     background-position-y: 2em;
     //height: 20em;
     padding-top: 4em;
@@ -167,12 +167,12 @@ body {
 }
 #sub-topics-window {
   padding-top: 1em;
-  
+
   height: 4em;
 }
 #content-window {
   //height: 26em;
-  background-color: $content_bg_color;
+  background-color: rgba($content_bg_color,.99);
   margin: 0;
   margin-top: .618em;
   overflow-y: auto;
@@ -207,7 +207,7 @@ body {
 #below-content-window {
   font-size: 0.76em;
   height: 2em;
-  background-color: darken($content_bg_color, 2%);
+  background-color: rgba(darken($content_bg_color, 2%),0.98);
   margin: 0;
 
   padding-top: 0.3em;
@@ -244,7 +244,7 @@ body {
 
 #category-window {
 
-  background-color: #6c6c6c;
+  //background-color: #6c6c6c;
   height: 7em;
   color: white;
   //padding-bottom: 0px;
@@ -908,4 +908,40 @@ a {
 
 .big-row {
   width: 120em;
+}
+
+.tab-cat1 {
+  vertical-align: top;
+  position: relative;
+  left: -2em;
+
+}
+
+.tab-cat2 {
+  vertical-align: top;
+  position: relative;
+  left: -6em;
+
+  //margin: 0em;
+  //padding: 0em;
+
+}
+
+.tab-cat3 {
+  vertical-align: top;
+  position: relative;
+  left: -10em;
+
+  //margin: 0em;
+  //padding: 0em;
+
+}
+.tab-cat4 {
+  vertical-align: top;
+  position: relative;
+  //left: -50px;
+
+  //margin: 0em;
+  //padding: 0em;
+
 }
