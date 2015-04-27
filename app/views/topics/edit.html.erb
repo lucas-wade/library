@@ -4,13 +4,13 @@
 
 <div class="row big-row edit-form low-gutter">
 
-  <% if @topic.parents.present? && @topic.parents.first.id < 4
-       @temp_topic = @topic.parents.first.id - 1
-       session[:current_collumn]= @temp_topic
-     else
+  <% #if @topic.parents.present? && @topic.parents.first.id < 4
+      # @temp_topic = @topic.parents.first.id - 1
+      # session[:current_collumn]= @temp_topic
+     #else
        @temp_topic = @topic.col_finder - 1
        session[:current_collumn] = @temp_topic
-     end
+     #end
   %>
 
 

@@ -1,12 +1,13 @@
 <div class="row low-gutter tight-butt">
-  <% if @topic.parents.present? && @topic.parents.first.id < 4
-       @temp_topic = @topic.parents.first.id - 1
-       session[:current_collumn]= @temp_topic
-     else
-       @temp_topic = session[:current_collumn]
-     end
+  <% #if @topic.parents.present? && @topic.parents.first.id < 4
+     #  @temp_topic = @topic.parents.first.id - 1
+     #  session[:current_collumn]= @temp_topic
+     #else
+     #  @temp_topic = session[:current_collumn]
+     #end
 
-
+     @temp_topic = @topic.col_finder - 1
+     session[:current_collumn] = @temp_topic
 
   %>
   <div id="big_c">
