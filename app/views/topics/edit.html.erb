@@ -1,21 +1,42 @@
 <% provide(:title, 'Translation Manager Topic Editor') %>
 
+
+
 <div class="row big-row edit-form low-gutter">
 
   <% if @topic.parents.present? && @topic.parents.first.id < 4
        @temp_topic = @topic.parents.first.id - 1
        session[:current_collumn]= @temp_topic
      else
-       @temp_topic = session[:current_collumn]
+       @temp_topic = @topic.col_finder - 1
+       session[:current_collumn] = @temp_topic
      end
   %>
 
 
-<div class="col-sm-2">
-<br>
-</div>
+  <%= @temp_topic %>
 
-  <div class="col-sm-4">
+
+
+  <div class="col-md-2">
+    <% if @topic.category > 0 %>
+        Sub-Category "<%= $available_categories[@topic.category] %>" of <%= link_to @topic.parents.first.name, edit_topic_path(@topic.parents.first) %>
+    <% else if @topic.parents.present? %>
+        Sub-topic of <%= link_to @topic.parents.first.name, edit_topic_path(@topic.parents.first) %>
+    <% end %>
+        <% end %>
+    <br>
+    <% if @topic.originals.present? %>
+        Translation of <%= link_to @topic.originals.first.name, edit_topic_path(@topic.originals.first) %>
+    <% end %>
+    <br>
+
+  <%= render 'topics/column' %>
+  </div>
+
+  <div class="col-md-4">
+
+
     <strong><%= $av_langs_hash_english[@topic.language] %></strong><small> Version <%= @topic.version %> </small>
 
     <% if @topic.translations.present? %>
@@ -40,23 +61,9 @@
     <% end %>
 
 
-  </div>
-
-  <div class="col-sm-6">
-    <br>
-  </div>
 
 
-
-
-
-
-  <div class="col-md-2">
-  <%= render 'topics/column' %>
-  </div>
-
-  <div class="col-md-4">
-  <%= render 'form' %>
+    <%= render 'form' %>
   </div>
 
   <div class="col-md-6 nice-butt">

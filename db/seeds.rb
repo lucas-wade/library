@@ -64,19 +64,22 @@ followers.each { |follower| follower.follow(user) }
 Topic.create!(name:  "Information",
              language: 'en',
              main_content: "",
-             category: 0 )
+             category: 0,
+             skill: 0)
 
 
 Topic.create!(name:  "Action",
               language: 'en',
               main_content: "",
-              category: 0)
+              category: 0,
+              skill: 0)
 
 
 Topic.create!(name:  "Support",
               language: 'en',
               main_content: "",
-              category: 0 )
+              category: 0,
+              skill: 0)
 
 
 topics = Topic.all
@@ -85,174 +88,6 @@ action = Topic.second
 join = Topic.third
 #t=topics[3]
 #t.make_parent(info)
-
-
-Topic.create!(name:  "Basic Needs & GROW BIOINTENSIVE®",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-              )
-last_topic = Topic.last
-last_topic.make_parent(info)
-
-  Topic.create!(name:  "Water",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-  )
-  Topic.last.make_parent(last_topic)
-  Topic.create!(name:  "Farmable Soil",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-  )
-  Topic.last.make_parent(last_topic)
-  Topic.create!(name:  "Food / Nutrients",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-  )
-  Topic.last.make_parent(last_topic)
-  Topic.create!(name:  "Energy",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-  )
-  Topic.last.make_parent(last_topic)
-  Topic.create!(name:  "Atmosphere",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-  )
-  Topic.last.make_parent(last_topic)
-  Topic.create!(name:  "Wild Space",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-  )
-  Topic.last.make_parent(last_topic)
-  Topic.create!(name:  "Peace",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-  )
-  Topic.last.make_parent(last_topic)
-
-
-
-Topic.create!(name:  "8 Components of GROW BIOINTENSIVE®",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-)
-Topic.last.make_parent(info)
-
-Topic.create!(name:  "Soil & Soil Building",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-)
-Topic.last.make_parent(info)
-
-Topic.create!(name:  "Food, Diet, & Human Health",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-)
-Topic.last.make_parent(info)
-
-Topic.create!(name:  "Garden Planning, Economics, & Scalability",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-)
-Topic.last.make_parent(info)
-
-Topic.create!(name:  "Human Impact and Sustainability",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-)
-Topic.last.make_parent(info)
-
-Topic.create!(name:  "EcoSystem",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-)
-Topic.last.make_parent(info)
-
-Topic.create!(name:  "Learn / Train",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-)
-Topic.last.make_parent(action)
-
-Topic.create!(name:  "Grow",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-)
-Topic.last.make_parent(action)
-
-Topic.create!(name:  "Teach",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-)
-Topic.last.make_parent(action)
-
-Topic.create!(name:  "Rate Your Sustainability",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-)
-Topic.last.make_parent(action)
-
-Topic.create!(name:  "Join Us",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-)
-Topic.last.make_parent(join)
-
-Topic.create!(name:  "Start a Project",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-)
-Topic.last.make_parent(join)
-
-Topic.create!(name:  "Volunteer / Translate",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-)
-Topic.last.make_parent(join)
-
-Topic.create!(name:  "About Ecology Action",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-)
-Topic.last.make_parent(join)
-
-Topic.create!(name:  "Network",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-)
-Topic.last.make_parent(join)
-
-Topic.create!(name:  "Kids",
-              language: 'en',
-              main_content: "Introduction Text to be replaced",
-              category: 0
-)
-Topic.last.make_parent(join)
-
-
 
 
 

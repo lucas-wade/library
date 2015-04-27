@@ -51,14 +51,22 @@
       <h3>
         <% if edit_mode == 1 %>
             <%= link_to '<i class="fa fa-edit edit-color"></i>'.html_safe, edit_topic_path(@topic) %>
-            <%= link_to '<i class="fa fa-language edit-color"></i>'.html_safe, new_topic_path(original_id: @topic.id, :parent_id => @topic.parents.first.id) %>
+            <!-- new translations link NOT USING RIGHT NOW-->
+            <%# link_to '<i class="fa fa-language edit-color"></i>'.html_safe, new_topic_path(original_id: @topic.id, :parent_id => @topic.parents.first.id) %>
         <% end %>
 
         <!-- NAME -->
-        <% if @topic.icon.present? %>
-            <%= image_tag @topic.icon.url, class: "img-icon" %>
+        <% if @topic.category > 0
+           tt = @topic.parents.first
+             tt.name = tt.name + ' ' + $available_categories[@topic.category]
+            else
+           tt = @topic
+           end
+             %>
+        <% if tt.icon.present? %>
+            <%= image_tag tt.icon.url, class: "img-icon" %>
         <% end %>
-        <%= @topic.name %>
+        <%= tt.name %>
 
       </h3>
 
@@ -98,17 +106,19 @@
 <div id="below-content-window">
 
   <% if @topic.translations.present? && there_is_a_topic_in_the_content_window %>
-      <% @topic.translations.each do |trans| %>
+      <% @topic.translations.each do |trans| if trans.name != ' ' %>
           <%= link_to $av_langs_hash[trans.language], trans %>
       <% end %>
+          <% end %>
   <% else if @topic.originals.present? %>
           <% @topic.originals.each do |trans| %>
               <%= link_to $av_langs_hash[trans.language], trans %>
               <% if trans.translations.present? %>
-                  <% trans.translations.each do |trans2| %>
+                  <% trans.translations.each do |trans2| if trans2.name != ' ' %>
                       <% if trans2.id != @topic.id %>
                           <%= link_to $av_langs_hash[trans2.language], trans2 %>
                       <% end %>
+                          <% end %>
                   <% end %>
               <% end %>
           <% end %>
@@ -192,7 +202,7 @@
 <div id="category-window" class="content_window tight-top <% if edit_mode == 1 %>b0 clr4 <% end %>">
   <% if edit_mode == 1 %>
       <div>
-        <%= link_to '<i class="fa fa-plus-square edit-color">Create Sub Category (Peak, I, II, III)</i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topic.id }%>
+        <%= link_to '<i class="fa fa-plus-square edit-color">Create Sub Category (Peak, I, II, III)</i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topic.id, :language => @topic.language }%>
       </div>
   <% end %>
 

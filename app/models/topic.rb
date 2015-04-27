@@ -1,5 +1,10 @@
 class Topic < ActiveRecord::Base
   attr_accessor :major_update
+  attr_accessor :create_cat_1
+  attr_accessor :create_cat_2
+  attr_accessor :create_cat_3
+  attr_accessor :create_cat_4
+
 
   has_many :parent_families, class_name:  'Family',
            foreign_key: 'kid_id',
@@ -99,6 +104,35 @@ class Topic < ActiveRecord::Base
     where("main_content like ?", "%#{query}%")
   end
 
+  def col_finder
+    t = self.parents.first
+    while t.parents.present?
+      t = t.parents.first
+    end
+    t.id
+  end
+
+  def create_all_translations
+
+    Topic.create(language: 'es', category: 0, skill: 0, placeholder: TRUE, name: 'es', original_id: self.id)
+
+  end
+
+  def all_translations_exist?
+    count = 1
+    $av_langs_hash.each do |k,v| unless k == 'na'
+      if self.translations.include?(k)
+        count+=1
+      end
+                                  end
+    end
+
+    if count == $av_langs_hash.count
+      TRUE
+    else
+      FALSE
+    end
+  end
 
 
 end

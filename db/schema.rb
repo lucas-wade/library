@@ -102,7 +102,7 @@ ActiveRecord::Schema.define(version: 20150424201642) do
     t.string   "name"
     t.string   "language"
     t.text     "main_content"
-    t.integer  "skill"
+    t.integer  "skill",        default: 0
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
     t.boolean  "translation",  default: false

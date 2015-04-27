@@ -12,10 +12,9 @@
       <ul class="nav-list list-inline2">
 
         <li class="top-menu-icon small-icon">
-          <%  if session[:current_collumn] == 1 && @topic.present? %>
+          <%  if session[:current_collumn] == 1 && @topic.present? && $collumn_icon_1.kids.present?%>
               <%= link_to image_tag($collumn_icon_1.icon.url, class: 'small-icon'), topic_path($collumn_icon_1.kids.first) %>
-
-          <% else if session[:current_collumn] == 2 && @topic.present? %>
+          <% else if session[:current_collumn] == 2 && @topic.present?  && $collumn_icon_1.kids.present?%>
                   <%= link_to image_tag($collumn_icon_1.icon.url, class: 'small-icon'), topic_path($collumn_icon_1.kids.first) %>
 
           <% else %> <!--
@@ -41,13 +40,13 @@
         </li>
 
         <li class="top-menu-icon small-icon">
-        <% if session[:current_collumn] == 0 && @topic.present? %>
+        <% if session[:current_collumn] == 0 && @topic.present? && $collumn_icon_2.kids.present?%>
             <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
 
             <%# else if session[:current_collumn] == 1 && @topic.present? %>
             <%# link_to image_tag($collumn_icon_3.icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
 
-        <% else if session[:current_collumn] == 2 && @topic.present? %>
+        <% else if session[:current_collumn] == 2 && @topic.present? && $collumn_icon_2.kids.present?%>
                 <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
               <% else %> <!--
                   <i class="fa fa-3x"></i>
@@ -76,10 +75,10 @@
         </li>
         <li class="top-menu-icon small-icon">
 
-          <% if session[:current_collumn] == 0 && @topic.present? %>
+          <% if session[:current_collumn] == 0 && @topic.present? && $collumn_icon_3.kids.present? %>
               <%= link_to image_tag($collumn_icon_3   .icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
 
-          <% else if session[:current_collumn] == 1 && @topic.present? %>
+          <% else if session[:current_collumn] == 1 && @topic.present? && $collumn_icon_3.kids.present? %>
                   <%= link_to image_tag($collumn_icon_3.icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
 
                   <%# else if session[:current_collumn] == 2 && @topic.present? %>

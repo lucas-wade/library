@@ -29,13 +29,13 @@
     <% @topics[@temp_topic].kids.each do |t| %>
         <!-- current lang? -->
         <% if t.language == 0 || t.language == I18n.locale.to_s %>
-          <% if t.category != 1 && t.category != 2 && t.category != 3 && t.category != 4 %>
+          <% if t.category == 0 || t.category == nil %>
             <% if edit_mode==1 %>
                 <div class="list-group-item btn-main-menu button <%= $index_column_colors[@temp_topic] %> <%= t.name.downcase.tr(' ','-') %>-button-style">
                   <%= link_to '<i class="fa fa-edit edit-color"></i>'.html_safe, edit_topic_path(t), class: 'edit-color' %>
-                  <%= link_to '<i class="fa fa-language edit-color"></i>'.html_safe, new_topic_path(original_id: t.id, :parent_id => t.parents.first.id) %>
-                  <%= link_to t.name, t %>
-                  <%= link_to '<i class="fa fa-plus-square edit-color"> Sub-Topic</i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => t.id }%>
+                  <%# link_to '<i class="fa fa-language edit-color"></i>'.html_safe, new_topic_path(original_id: t.id, :parent_id => t.parents.first.id) %>
+                  <%= link_to t.name, t %><br>
+                  <%= link_to '<i class="fa fa-plus-square edit-color"> Sub-Topic</i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => t.id, :language => t.language }%>
                   <br>
                   <small> <%= link_to '<i class="fa fa-file edit-color">Attach Publication</i>'.html_safe, {:controller => "pubs", :action => "new", :parent_id => t.id }%> </small>
                   <div class="button-text-small">
@@ -47,7 +47,7 @@
                   </div>
                 </div>
             <!-- not edit mode -->
-            <% else %>
+            <% else if t.name != ' ' %>
                 <a href="<%= topic_path(t) %>" class="list-group-item btn-default btn-main-menu button <%= $index_column_colors[@temp_topic] %> <%= t.name.downcase.tr(' ','-') %>-button-style">
                   <div class="button-text"> <%= t.name %>  </div>
                   <div class="button-text-small">
@@ -58,6 +58,7 @@
                   <% end %>
                   </div>
                 </a>
+             <% end %>
             <% end %>
           <% end %> <!-- main category -->
         <% end %> <!-- language 0 or 1 -->

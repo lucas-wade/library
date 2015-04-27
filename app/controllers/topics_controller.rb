@@ -37,11 +37,15 @@ class TopicsController < ApplicationController
     if params[:original_id].present?
       @original_topic = Topic.find(params[:original_id])
     end
+
   end
 
 
   def create
     @topic = Topic.new(topic_params)
+    if topic_params[:major_update].present?
+      @topic.version=1
+    end
     if params[:parent_id].present?
       @parent_topic = Topic.find(params[:parent_id])
     end
@@ -49,18 +53,61 @@ class TopicsController < ApplicationController
       @original_topic = Topic.find(params[:original_id])
     end
     if @topic.save
-      if params[:parent_id].present?
+      if @parent_topic.present?
         @topic.make_parent(@parent_topic)
       end
-      if params[:original_id].present?
+      if @original_topic.present?
         @topic.translation_of(@original_topic)
       end
+
+      # its saved and now we create the translations
+      #if !@topic.all_translations_exist?
+
+
+      # NOW CREATE THE TRANSLATIONS
+      @original_topic=@topic
+
+      if @original_topic.language != 'na'
+      $av_langs_hash.each do |k,v| unless k == 'na' || k == @original_topic.language
+                                     if @original_topic.parents.first.id < 4
+                                       @parent_topic=@topic.parents.first
+                                     else
+                                       @parent_topic = @original_topic.parents.first.translations.find_by_language(k)
+                                     end
+
+
+                                     #if !@original_topic.translations.include?(k)
+                                       @topic = Topic.new(language: k,
+                                                          placeholder: TRUE,
+                                                          category: @original_topic.category,
+                                                          name: ' ',
+                                                          skill: 0)
+                                       if @topic.save
+                                         @topic.make_parent(@parent_topic)
+                                         @topic.translation_of(@original_topic)
+                                         #flash[:info] = "New Spanish Topic Created."
+                                       end
+                                     #end
+                                   end
+      end
+      end
+
       flash[:info] = "New Topic Created."
-      redirect_to topics_path
+      # now create the categories
+      if params[:create_cat_1] == 1
+        if !@original_topic.kids.include?(category: 1)
+          breakpoint
+        end
+      end
+
+
+      redirect_to edit_topic_path(@original_topic)
     else
       render 'new'
     end
   end
+
+
 
   def edit
     @topic = Topic.find(params[:id])
@@ -74,7 +121,7 @@ class TopicsController < ApplicationController
       @parent_topic = Topic.find(params[:parent_id])
     end
 
-   if topic_params[:major_update].present?
+   if topic_params[:major_update] == 1
      @topic.version+=1
    end
 
@@ -92,6 +139,7 @@ class TopicsController < ApplicationController
     flash[:success] = "Topic deleted"
     redirect_to topics_url
   end
+
 
 
 
@@ -113,7 +161,11 @@ class TopicsController < ApplicationController
                                   :translation,
                                   :placeholder,
                                   :growing,
-                                  :major_update)
+                                  :major_update,
+                                  :create_cat_1,
+                                  :create_cat_2,
+                                  :create_cat_3,
+                                  :create_cat_4)
 
   end
 
