@@ -105,7 +105,7 @@ class Topic < ActiveRecord::Base
   end
 
   def col_finder
-    t = self.parents.first
+    t = self.parents.first || self
     while t.parents.present?
       t = t.parents.first
     end
