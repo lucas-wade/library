@@ -32,14 +32,22 @@
         <%= f.text_area :name %>
     </div>
 
+      <div class="col-lg-6">
 
-      <div class="field">
+
         <%= f.label :major_update, class: "checkbox inline" do %>
         <%= f.check_box :major_update %>
         <strong>New Version?</strong> (Significant Edits)
         <% end %>
-      </div>
+        </div>
 
+      <div class="col-lg-6">
+          <%= f.label :icon_image %>
+          <span class="picture">
+      <%= f.file_field :icon, accept: 'image/jpeg,image/gif,image/png,application/pdf' %>
+    </span>
+
+        </div>
 
 
 
@@ -82,12 +90,7 @@
 
 
 
-      <div class="field">
-        <%= f.label :icon_image %>
-       <span class="picture">
-      <%= f.file_field :icon, accept: 'image/jpeg,image/gif,image/png,application/pdf' %>
-    </span>
-        </div>
+
 
       <script type="text/javascript">
           $('#topic_icon').bind('change', function() {
@@ -99,6 +102,7 @@
       </script>
 
       <!-- main content -->
+
     <div class="field">
         <%= f.label $available_categories[0] %><br>
         <%= f.text_area :main_content, :size => "2x10" %>
@@ -115,24 +119,24 @@
 -->
 
 
-
+<!--
 
     <div class="field">
-      <%= f.label :skill_level %><br>
+      <%# f.label :skill_level %><br>
 
-      <% count =0 %>
-      <% hash = [] %>
-      <% while count < $available_skills.count do %>
-          <% hash << [$available_skills[count],count] %>
+      <%# count =0
+       hash = []
+       while count < $available_skills.count do
+           hash << [$available_skills[count],count]
 
-          <% count+=1 %>
-      <% end %>
-      <%= f.select(:skill, hash ) %>
+           count+=1
+       end %>
+      <%# f.select(:skill, hash ) %>
     </div>
 
-
+-->
       <div class="field">
-        <%= f.label :Category %><br>
+        <%= f.label :category %><br>
         <%# f.select(:category, [['Main',0],['Category 1',1],['Category 2',2]] ) %>
         <% count =0 %>
         <% hash = [] %>
@@ -141,42 +145,15 @@
 
             <% count+=1 %>
         <% end %>
-        <%= f.select(:category, hash ) %>
-      </div>
-
-
-
-      <div>
-        Add tabs:
-      </div>
-      <br>
-      <div class="col-sm-3">
-        <%= f.label :create_cat_4, class: "checkbox inline" do %>
-            <%= f.check_box :create_cat_4 %>
-            <span><strong>PEAK</strong></span>
+        <%# f.select(:category, hash, value: params[:category] ) %>
+        <% if params[:category].present? %>
+            <%= f.select(:category, $available_categories_numbered, :selected => params[:category]) %>
+        <% else %>
+            <%= f.select(:category, $available_categories_numbered) %>
         <% end %>
-      </div>
-      <div class="col-sm-3">
-        <%= f.label :create_cat_1, class: "checkbox inline" do %>
-            <%= f.check_box :create_cat_1 %>
-            <span><strong>I</strong></span>
-        <% end %>
-      </div>
-      <div class="col-sm-3">
-        <%= f.label :create_cat_2, class: "checkbox inline" do %>
-            <%= f.check_box :create_cat_2 %>
-            <span><strong>II</strong></span>
-        <% end %>
-      </div>
-      <div class="col-sm-3">
-        <%= f.label :create_cat_3, class: "checkbox inline" do %>
-            <%= f.check_box :create_cat_3 %>
-            <span><strong>III</strong></span>
-        <% end %>
+
       </div>
 
-
-        </span>
 
 
     <div class="field">
@@ -185,7 +162,7 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "Go Live", class: "btn btn-primary" %>
+      <%= f.submit "SAVE!", class: "btn btn-primary" %>
     </div>
 
 <% end %>

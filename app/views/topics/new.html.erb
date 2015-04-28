@@ -1,11 +1,37 @@
 <% provide(:title, 'New topics') %>
 
-  <div class="row edit-form">
-  <h1 class="center"></h1>
+<%
+   #if params[:parent_id].present?
+   @temp_topic = @topic.col_finder - 1
+   session[:current_collumn] = @temp_topic
+%>
 
-  <div class="col-md-6 col-md-offset-3">
-<%= render 'form' %>
+  <div class="row big-row edit-form low-gutter">
+    <div class="col-md-2">
+      <% if params[:category].present? %>
+          Tab "<%= $available_categories[params[:category].to_i] %>" of <%= @topics.find(params[:parent_id]).parents.first.name %>
+      <% else if @topic.parents.present? %>
+              Sub-topic of <%= link_to @topic.parents.first.name, edit_topic_path(@topic.parents.first) %>
+          <% end %>
+      <% end %>
+      <br>
+      <% if @topic.originals.present? %>
+          Translation of <%= link_to @topic.originals.first.name, edit_topic_path(@topic.originals.first) %>
+      <% end %>
+      <br>
 
-<%= link_to 'Back', topics_path %>
-  </div>
+      <%= render 'topics/column' %>
+    </div>
+
+    <div class="col-md-4">
+      <%= render 'edit_translations' %>
+      <%= render 'form' %>
+    </div>
+
+    <div class="col-md-6 nice-butt">
+      <h2><%= link_to @topic.name, @topic %> </h2>
+      <%= render 'content_window' %>
+      <%# @topic.main_content.html_safe %>
+    </div>
+
 </div>

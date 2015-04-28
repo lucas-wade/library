@@ -11,7 +11,7 @@
           <% end %>
     </i>
   <% if edit_mode ==1 %>
-        <%= link_to '<i class="fa fa-plus-square edit-color"></i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topics[@temp_topic].id }%>
+        <%= link_to '<i class="fa fa-plus-square edit-color"></i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topics[@temp_topic].id, :language => 'en' }%>
         <% end %>
   </h5>
 
@@ -41,13 +41,13 @@
                   <div class="button-text-small">
                     <% t.kids.each do |tt| %>
                         <% if tt.category == 0 %>
-                            <%= link_to tt.name, tt %>
+                            <%= link_to tt.name, edit_topic_path(tt) %>
                         <% end %>
                     <% end %>
                   </div>
                 </div>
             <!-- not edit mode -->
-            <% else if t.name != ' ' %>
+            <% else if t.name != nil %>
                 <a href="<%= topic_path(t) %>" class="list-group-item btn-default btn-main-menu button <%= $index_column_colors[@temp_topic] %> <%= t.name.downcase.tr(' ','-') %>-button-style">
                   <div class="button-text"> <%= t.name %>  </div>
                   <div class="button-text-small">

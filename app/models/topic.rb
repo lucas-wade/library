@@ -109,7 +109,7 @@ class Topic < ActiveRecord::Base
     while t.parents.present?
       t = t.parents.first
     end
-    t.id
+    t.id if t.id.present? else 1
   end
 
   def create_all_translations

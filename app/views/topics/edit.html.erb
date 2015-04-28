@@ -13,11 +13,11 @@
      #end
   %>
 
-  
+
 
   <div class="col-md-2">
-    <% if @topic.category > 0 %>
-        Sub-Category "<%= $available_categories[@topic.category] %>" of <%= link_to @topic.parents.first.name, edit_topic_path(@topic.parents.first) %>
+    <% if @topic.category.present? && @topic.category > 0 %>
+        Tab of "<%= $available_categories[@topic.category] || $available_categories[params[:category]] %>" of <%= link_to @topic.parents.first.name, edit_topic_path(@topic.parents.first) %>
     <% else if @topic.parents.present? %>
         Sub-topic of <%= link_to @topic.parents.first.name, edit_topic_path(@topic.parents.first) %>
     <% end %>
@@ -32,34 +32,7 @@
   </div>
 
   <div class="col-md-4">
-
-
-    <strong><%= $av_langs_hash_english[@topic.language] %></strong><small> Version <%= @topic.version %> </small>
-
-    <% if @topic.translations.present? %>
-        <% @topic.translations.each do |trans| %>
-            <%= link_to $av_langs_hash_english[trans.language], edit_topic_path(trans) %>
-            <small>v<%= trans.version %></small>
-        <% end %>
-    <% else if @topic.originals.present? %>
-            <% @topic.originals.each do |trans| %>
-                <%= link_to $av_langs_hash_english[trans.language], edit_topic_path(trans) %>
-                <small>v<%= trans.version %></small>
-                <% if trans.translations.present? %>
-                    <% trans.translations.each do |trans2| %>
-                        <% if trans2.id != @topic.id %>
-                            <%= link_to $av_langs_hash_english[trans2.language], edit_topic_path(trans2) %>
-                            <small>v<%= trans2.version %></small>
-                        <% end %>
-                    <% end %>
-                <% end %>
-            <% end %>
-        <% end %>
-    <% end %>
-
-
-
-
+    <%= render 'edit_translations' %>
     <%= render 'form' %>
   </div>
 

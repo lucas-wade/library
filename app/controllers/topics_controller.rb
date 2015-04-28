@@ -9,9 +9,6 @@ class TopicsController < ApplicationController
     end
 
     #@topics = Topic.search(params[:search])
-
-
-
     #@topics = Topic.all.where(language =  '1')
     #@topics = Topic.where(:language => '1')
     #@homeless_topics = Topic.find_by_parents(nil)
@@ -31,6 +28,7 @@ class TopicsController < ApplicationController
 
   def new
     @topic = Topic.new
+    @topics = Topic.all
     if params[:parent_id].present?
       @parent_topic = Topic.find(params[:parent_id])
     end
@@ -80,7 +78,7 @@ class TopicsController < ApplicationController
                                        @topic = Topic.new(language: k,
                                                           placeholder: TRUE,
                                                           category: @original_topic.category,
-                                                          name: ' ',
+                                                          name: nil,
                                                           skill: 0)
                                        if @topic.save
                                          @topic.make_parent(@parent_topic)
