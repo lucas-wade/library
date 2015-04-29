@@ -1,15 +1,29 @@
 <% provide(:title, 'New topics') %>
 
 <%
-   #if params[:parent_id].present?
-   @temp_topic = @topic.col_finder - 1
+   t=@topics.find(params[:parent_id])
+   if t.id < 4
+     @temp_topic = t.id - 1
+   else
+     while t.parents.present?
+        #if t.parents.first.id > 4
+            t=t.parents.first
+        #else
+        #    break
+        #end
+     end
+     @temp_topic = t.id - 1
+   end
+
+#     @temp_topic = @topic.col_finder - 1
+
    session[:current_collumn] = @temp_topic
 %>
 
   <div class="row big-row edit-form low-gutter">
     <div class="col-md-2">
       <% if params[:category].present? %>
-          Tab "<%= $available_categories[params[:category].to_i] %>" of <%= @topics.find(params[:parent_id]).parents.first.name %>
+          Tab "<%= $available_categories[params[:category].to_i] %>" of <%= @topics.find(params[:parent_id]).name %>
       <% else if @topic.parents.present? %>
               Sub-topic of <%= link_to @topic.parents.first.name, edit_topic_path(@topic.parents.first) %>
           <% end %>
@@ -29,7 +43,11 @@
     </div>
 
     <div class="col-md-6 nice-butt">
-      <h2><%= link_to @topic.name, @topic %> </h2>
+      <% if @topic.name != nil %>
+          <h2><%= link_to @topic.name, @topic %> </h2>
+      <% end %>
+
+
       <%= render 'content_window' %>
       <%# @topic.main_content.html_safe %>
     </div>

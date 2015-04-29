@@ -24,7 +24,7 @@
         <% if @topics.present? %>
         <% @topics.each do |t| %>
         <tr>
-            <td><%= link_to t.name, t %></td>
+            <td><%= link_to t.name || t.language, t %></td>
             <td><%= link_to t.parents.first.name, t.parents.first if t.parents.present?%></td>
             <td>.. <%=  %></td>
             <td><%= $available_categories[t.category]%></td>

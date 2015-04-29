@@ -9,8 +9,10 @@
 <% end %>
 
 <% if @topic.category && @topic.category > 0 %>
+
     <% sub_cats = @topic.parents.first %>
     <% has_sub_cats = TRUE %>
+    <% sub_cat_active = TRUE %>
 <% end %>
 
 <div id="content-window" class="content_window
@@ -56,19 +58,23 @@
         <% end %>
 
         <!-- NAME -->
-        <% if @topic.category && @topic.category > 0
-           tt = @topic.parents.first
-             tt.name = tt.name + ' ' + $available_categories[@topic.category]
+        <% if @topic.category.present? && @topic.category > 0
+            tt = @topic.parents.first
+            if !tt.name.present?
+             tt.name =''
             else
-           tt = @topic
+             tt.name = tt.name + ' ' + $available_categories[@topic.category]
+            end
+           else
+            tt = @topic
            end
              %>
         <% if tt.icon.present? %>
             <%= image_tag tt.icon.url, class: "img-icon" %>
         <% end %>
-        <% if @topic.name != nil %>
+        <%# if @topic.name != nil %>
         <%= tt.name %>
-            <% end %>
+            <%# end %>
 
       </h3>
 
@@ -217,6 +223,7 @@
     two = false
     three = false
 %>
+
     <div class="col-md-3">
       <% sub_cats.kids.each do |t| %>
         <% if t.category == 4 %>
@@ -225,7 +232,12 @@
         <% end %>
       <% end %>
       <% if edit_mode == 1 && peak == false %>
-        <%= link_to '<h3 class="edit-color center">PEAK <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topic.id, :language => @topic.language, :category => 4 }%>
+              <%= link_to '<h3 class="edit-color center">PEAK <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics",
+                                                                                                                             :action => "new",
+                                                                                                                             :parent_id => sub_cats.id,
+                                                                                                                             :language => @topic.language,
+                                                                                                                             :category => 4 }
+              %>
     <% end %>
     </div>
 
@@ -233,10 +245,11 @@
       <% sub_cats.kids.each do |t| %>
           <% if t.category == 1 %>
               <%= link_to image_tag("icon-tabs-cat-1.png", class: "tab-cat1"), t %>
+              <% one = true %>
           <% end %>
       <% end %>
       <% if edit_mode == 1 && one == false %>
-          <%= link_to '<h3 class="edit-color center">I <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topic.id, :language => @topic.language, :category => 1 }%>
+          <%= link_to '<h3 class="edit-color center">I <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics", :action => "new", :parent_id => sub_cats.id, :language => @topic.language, :category => 1 }%>
       <% end %>
     </div>
 
@@ -245,10 +258,11 @@
       <% sub_cats.kids.each do |t| %>
           <% if t.category == 2 %>
               <%= link_to image_tag("icon-tabs-cat-2.png", class: "tab-cat2"), t %>
+              <% two = true %>
           <% end %>
       <% end %>
       <% if edit_mode == 1 && two == false %>
-          <%= link_to '<h3 class="edit-color center">II <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topic.id, :language => @topic.language, :category => 2 }%>
+          <%= link_to '<h3 class="edit-color center">II <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics", :action => "new", :parent_id => sub_cats.id, :language => @topic.language, :category => 2 }%>
       <% end %>
     </div>
 
@@ -256,10 +270,11 @@
       <% sub_cats.kids.each do |t| %>
           <% if t.category == 3 %>
               <%= link_to image_tag("icon-tabs-cat-3.png", class: "tab-cat3"), t %>
+              <% three = true %>
           <% end %>
       <% end %>
       <% if edit_mode == 1 && three == false %>
-          <%= link_to '<h3 class="edit-color center">III <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topic.id, :language => @topic.language, :category => 3 }%>
+          <%= link_to '<h3 class="edit-color center">III <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics", :action => "new", :parent_id => sub_cats.id, :language => @topic.language, :category => 3 }%>
       <% end %>
     </div>
 

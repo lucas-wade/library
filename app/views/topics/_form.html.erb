@@ -15,7 +15,11 @@
 
       <!-- #parent topic stuff -->
     <% if @parent_topic %>
+          <% if params[:category].present? %>
+              <h3>Tab <%= $available_categories[params[:category].to_i] %> of <strong><%= @parent_topic.name %></strong></h3>
+              <% else %>
           <h3>Sub-Topic of <strong><%= @parent_topic.name %></strong></h3>
+              <% end %>
           <%= hidden_field_tag :parent_id, @parent_topic.id %>
     <% end %>
 
@@ -26,31 +30,31 @@
     <% end %>
 
 
+<%
+   if @topic.category.present? && @topic.category == 0
+   topic = true
+    end
+%>
+      <% if !params[:category].present? || topic == true %>
+        <div class="field">
+            <%= f.label :name! %>
+            <%= f.text_area :name %>
+        </div>
+      <% end %>
 
-    <div class="field">
-        <%= f.label :name %>
-        <%= f.text_area :name %>
-    </div>
-
-      <div class="col-lg-6">
-
-
+      <div class="col-sm-6">
         <%= f.label :major_update, class: "checkbox inline" do %>
         <%= f.check_box :major_update %>
         <strong>New Version?</strong> (Significant Edits)
         <% end %>
-        </div>
+      </div>
 
-      <div class="col-lg-6">
+      <div class="col-sm-6">
           <%= f.label :icon_image %>
           <span class="picture">
-      <%= f.file_field :icon, accept: 'image/jpeg,image/gif,image/png,application/pdf' %>
-    </span>
-
-        </div>
-
-
-
+            <%= f.file_field :icon, accept: 'image/jpeg,image/gif,image/png,application/pdf' %>
+          </span>
+      </div>
 
     <div class="field">
       <%= f.label :language %><br>
@@ -61,35 +65,18 @@
       <% end %>
     </div>
 
-
-
-
-
-
-
-      <%# f.label :is_it_a_translation, class: "checkbox inline" do %>
-          <%# f.check_box :translation %>
-          <!-- <span>Remember me on this computer</span> -->
-      <%# end %>
-
-    <div class="col-lg-6">
+    <div class="col-sm-6">
         <%= f.label :placeholder, class: "checkbox inline" do %>
             <%= f.check_box :placeholder %>
             <span><strong>Placeholder:</strong><br> greyed out with "Not Yet Grown Content" message</span>
         <% end %>
     </div>
-    <div class="col-lg-6">
+    <div class="col-sm-6">
         <%= f.label :growing, class: "checkbox inline" do %>
             <%= f.check_box :growing %>
             <span><strong>Under Development:</strong><br> active button with "We are Growing Content" message</span>
         <% end %>
     </div>
-
-
-
-
-
-
 
 
       <script type="text/javascript">
@@ -146,6 +133,7 @@
             <% count+=1 %>
         <% end %>
         <%# f.select(:category, hash, value: params[:category] ) %>
+
         <% if params[:category].present? %>
             <%= f.select(:category, $available_categories_numbered, :selected => params[:category]) %>
         <% else %>
@@ -162,7 +150,7 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "SAVE!", class: "btn btn-primary" %>
+      <%= f.submit "SAVE!", class: "btn btn-danger" %>
     </div>
 
 <% end %>

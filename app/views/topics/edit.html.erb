@@ -1,7 +1,5 @@
 <% provide(:title, 'Translation Manager Topic Editor') %>
 
-
-
 <div class="row big-row edit-form low-gutter">
 
   <% #if @topic.parents.present? && @topic.parents.first.id < 4
@@ -14,10 +12,9 @@
   %>
 
 
-
-  <div class="col-md-2">
+  <div class="col-sm-2">
     <% if @topic.category.present? && @topic.category > 0 %>
-        Tab of "<%= $available_categories[@topic.category] || $available_categories[params[:category]] %>" of <%= link_to @topic.parents.first.name, edit_topic_path(@topic.parents.first) %>
+        Tab "<%= $available_categories[@topic.category] || $available_categories[params[:category]] %>" of <%= link_to @topic.parents.first.name, edit_topic_path(@topic.parents.first) %>
     <% else if @topic.parents.present? %>
         Sub-topic of <%= link_to @topic.parents.first.name, edit_topic_path(@topic.parents.first) %>
     <% end %>
@@ -31,46 +28,23 @@
   <%= render 'topics/column' %>
   </div>
 
-  <div class="col-md-4">
+  <div class="col-sm-4">
+
     <%= render 'edit_translations' %>
     <%= render 'form' %>
   </div>
 
-  <div class="col-md-6 nice-butt">
-    <h2><%= link_to @topic.name, @topic %> </h2>
+  <div class="col-sm-6 nice-butt">
+    <% if @topic.name == nil
+         name = @topic.parents.first.name
+       else
+         name = @topic.name
+       end
+    %>
+
+    <h2><%= link_to name, @topic %> </h2>
     <%= render 'content_window' %>
     <%# @topic.main_content.html_safe %>
   </div>
 </div>
-
-
-    <!-- remove a parent -->
-    <!--
-<%# @topic.parents.each do |t| %>
-        <div class="edit-form">
-        <h3 class="tight-butt">Edit Parents</h3>
-
-      <ul class="list-inline2">
-        <li>
-            <%# t.name %> id= <%# t.id %>
-        </li>
-        <li>
-
-            <%# form_for(current_topic.parent_families.find_by(parent_id: t),
-                 html: { method: :delete }) do |f| %>
-            <%# f.submit "Remove this topic from Parent", class: "btn btn-danger" %>
-            <%# end %>
-        </li>
-      </ul>
-        <br>
-        </div>
-<%# end %>
--->
-    <!-- new parent id -->
-
-  <%# form_for(current_topic.parent_families.build) do |f| %>
-      <%# f.label :parent_id %>
-      <%# f.number_field :id %>
-      <%# f.submit "Parent id #", class: "btn btn-primary" %>
-  <%# end %>
 

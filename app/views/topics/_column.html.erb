@@ -6,7 +6,7 @@
          $collumn_icon_2 = @topics[1]
          $collumn_icon_3 = @topics[2]
       %>
-      <% if @temp_topic != 1 %>
+      <% if @temp_topic != 1 && @topics.count > 0 %>
       <%= image_tag @topics[@temp_topic].icon.url, class: "trimmed-icon img-icon" %>
           <% end %>
     </i>
@@ -26,6 +26,7 @@
 
     <!-- main loop for the column -->
     <!-- still need to implement ordering. -->
+
     <% @topics[@temp_topic].kids.each do |t| %>
         <!-- current lang? -->
         <% if t.language == 0 || t.language == I18n.locale.to_s %>

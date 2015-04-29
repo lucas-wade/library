@@ -110,7 +110,9 @@ class TopicsController < ApplicationController
   def edit
     @topic = Topic.find(params[:id])
     @topics = Topic.all
-
+    if @topic.name == nil
+      @topic.name = $av_langs_hash_english[@topic.language]
+    end
   end
 
   def update
@@ -131,11 +133,24 @@ class TopicsController < ApplicationController
     end
   end
 
+  def recursive_delete (topic)
+    topic.kids.each do |t|
+      recursive_delete(t)
+    end
+      Topic.find(topic.id).destroy
+  end
 
   def destroy
-    Topic.find(params[:id]).destroy
-    flash[:success] = "Topic deleted"
-    redirect_to topics_url
+    deleted_topic = Topic.find(params[:id])
+    deleted_topic.translations.each do |t|
+      recursive_delete(t)
+    end
+    recursive_delete(deleted_topic)
+
+    flash[:success] = "Sub-topics, Tabs and associated translations deleted"
+    #Topic.find(params[:id]).destroy
+    #flash[:success] = "Topic deleted"
+    redirect_to library_url
   end
 
 

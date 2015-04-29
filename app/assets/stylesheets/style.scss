@@ -7,8 +7,9 @@
 @import "font-awesome";
 
 
+
 $font-stack:    Helvetica, sans-serif;
-//$font-stack:    opensans;
+//$font-stack:    Lobster, sans-serif;
 $primary-color: black;
 $gray-medium-light: #eaeaea;
 $primary-bg-color: rgb(242,209,148);
@@ -66,6 +67,9 @@ $site_orange: rgb(235, 74, 49);
     padding-bottom: 22em;
   }
 
+  .big-row {
+    width: 110%;
+  }
 
 }
 // larger screen
@@ -95,6 +99,11 @@ $site_orange: rgb(235, 74, 49);
     padding-bottom: 24em;
   }
 
+  .big-row {
+    width: 120em;
+  }
+
+
 
 }
 
@@ -114,9 +123,7 @@ $site_orange: rgb(235, 74, 49);
 body {
   padding-top: 50px;
   font: $font-stack;
-  @font-face {
 
-  }
   //background-color: $primary-bg-color;
   background: linear-gradient( lighten($primary-bg-color,15%),darken($primary-bg-color,10%) );
   //background-image: url("http://animalia-life.com/data_images/donkey/donkey1.jpg");
@@ -436,7 +443,7 @@ p {
 }
 
 .button-text {
-  font: $font-stack;
+  //font: $font-stack;
   color: $primary-color;
   margin-bottom: -.118em;
 }
@@ -906,9 +913,6 @@ a {
   margin-right: 10px;
 }
 
-.big-row {
-  width: 120em;
-}
 
 .tab-cat1 {
   vertical-align: top;
