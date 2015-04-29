@@ -152,7 +152,7 @@ body {
 
 .video {
   position:fixed !important;
-  position:absolute;
+    position:absolute;
   top:0;
   right:0;
   bottom:0;
@@ -948,4 +948,11 @@ a {
   //margin: 0em;
   //padding: 0em;
 
+}
+
+.alert {
+  position: absolute;
+  right: 0;
+  
+  z-index: 10;
 }
