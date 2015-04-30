@@ -8,8 +8,10 @@
 
 
 
-$font-stack:    Helvetica, sans-serif;
-//$font-stack:    Lobster, sans-serif;
+//$font-stack:    Helvetica, sans-serif;
+$font-stack:    'Open Sans', sans-serif;
+//$font-stack:    'Comic Sans', sans-serif;
+
 $primary-color: black;
 $gray-medium-light: #eaeaea;
 $primary-bg-color: rgb(242,209,148);
@@ -122,7 +124,8 @@ $site_orange: rgb(235, 74, 49);
 
 body {
   padding-top: 50px;
-  font: $font-stack;
+  font-family: $font-stack;
+
 
   //background-color: $primary-bg-color;
   background: linear-gradient( lighten($primary-bg-color,15%),darken($primary-bg-color,10%) );
@@ -953,6 +956,5 @@ a {
 .alert {
   position: absolute;
   right: 0;
-  
-  z-index: 10;
+  z-index: 100;
 }
