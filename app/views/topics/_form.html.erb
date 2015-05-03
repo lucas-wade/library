@@ -13,16 +13,11 @@
         </div>
     <% end %>
 
-      <!-- #parent topic stuff
+      <!-- #parent topic stuff -->
     <% if @parent_topic %>
-          <%# if params[:category].present? %>
-              <h3>Tab <%= $available_categories[params[:category].to_i] %> of <strong><%= @parent_topic.name %></strong></h3>
-              <%# else %>
-          <h3>Sub-Topic of <strong><%# @parent_topic.name %></strong></h3>
-              <%# end %>
           <%= hidden_field_tag :parent_id, @parent_topic.id %>
     <% end %>
--->
+
       <!-- #translation hidden field stuff -->
     <% if @original_topic %>
         <h3>Translation of <strong><%= @original_topic.name %></strong></h3>
@@ -56,16 +51,18 @@
         <% end %>
         <br>
       </div>
-<!-- language selector
+
+ 
+
     <div class="field">
-      <%# f.label :language %>
-      <%# if params[:language].present? %>
-        <%# f.select(:language, $available_languages, :selected => params[:language]) %>
-      <%# else %>
-          <%# f.select(:language, $available_languages) %>
-      <%# end %>
+      <%= f.label :language %>
+      <% if params[:language].present? %>
+        <%= f.select(:language, $available_languages, :selected => params[:language]) %>
+      <% else %>
+          <%= f.select(:language, $available_languages) %>
+      <% end %>
     </div>
--->
+
     <div class="col-sm-6">
         <%= f.label :placeholder, class: "checkbox inline" do %>
             <%= f.check_box :placeholder %>
