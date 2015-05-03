@@ -32,7 +32,7 @@
         <% if t.language == 0 || t.language == I18n.locale.to_s %>
           <% if t.category == 0 || t.category == nil %>
             <% if edit_mode==1 %>
-                <div class="list-group-item btn-main-menu button <%= $index_column_colors[@temp_topic] %> <%= t.name.downcase.tr(' ','-') %>-button-style">
+                <div class="list-group-item btn-main-menu button <%= $index_column_colors[@temp_topic] %> <%= t.name.downcase.tr(' ','-') if t.name.present? %>-button-style">
                   <%= link_to '<i class="fa fa-edit edit-color"></i>'.html_safe, edit_topic_path(t), class: 'edit-color' %>
                   <%# link_to '<i class="fa fa-language edit-color"></i>'.html_safe, new_topic_path(original_id: t.id, :parent_id => t.parents.first.id) %>
                   <%= link_to t.name, t %><br>
@@ -55,6 +55,7 @@
                     <% t.kids.each do |tt| %>
                         <% if tt.category == 0 %>
                           <%= tt.name %>
+                            &nbsp
                         <% end %>
                   <% end %>
                   </div>

@@ -21,21 +21,24 @@
 
 en:
 
-  title: "GROW BIOINTENSIVE® Classroom"
-
-  number:
-    currency:
-      format:
-        unit:       "$"
-        precision:  2
-        separator:  "."
-        delimiter:  ","
-        format:     "%u%n"
-
+  titles:
+    library: "Library"
+    title: "GROW BIOINTENSIVE "
+    classroom: "Classroom"
+  static_pages:
+    library:
   layouts:
     application:
-      title: "BioIntensive Classroom"
     header:
-      title: "BioIntensive Classroom"
+  sessions:
+    log_in: "Log in"
+    email: "Email"
+    password: "Password"
+    forgot_password: "(forgot password)"
+    remember_me: "Remember me on this computer"
+    new_user: "New user?"
+    sign_up: "Sign up now!"
+
+
 
 

@@ -22,10 +22,11 @@
 
   <div class="row big-row edit-form low-gutter">
     <div class="col-md-2">
+<strong>New</strong>
       <% if params[:category].present? %>
           Tab "<%= $available_categories[params[:category].to_i] %>" of <%= @topics.find(params[:parent_id]).name %>
-      <% else if @topic.parents.present? %>
-              Sub-topic of <%= link_to @topic.parents.first.name, edit_topic_path(@topic.parents.first) %>
+      <% else if params[:parent_id].present? %>
+              Sub-topic of <%= @topics.find(params[:parent_id]).name %>
           <% end %>
       <% end %>
       <br>

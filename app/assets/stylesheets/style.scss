@@ -161,6 +161,7 @@ body {
 .video {
   position:fixed !important;
     position:absolute;
+  background: linear-gradient( lighten($primary-bg-color,18%),darken($primary-bg-color,11%) );
   margin-top: 50px;
   top: 0;
   right:0;
@@ -645,7 +646,7 @@ p {
   float: left;
   margin-right: 10px;
   padding-left: 1em;
-  font-size: 1.618em;
+  font-size: 1.518em;
   color: #333;
   //text-transform: uppercase;
   letter-spacing: -1px;
@@ -964,5 +965,14 @@ a {
 .alert {
   position: absolute;
   right: 0;
+  margin-top: .5em;
   z-index: 100;
+}
+
+.hot-words {
+  color: #62d1ff;
+}
+
+.underline {
+  text-decoration: underline;
 }

@@ -1,10 +1,10 @@
 <div class="navbar navbar-fixed-top navbar-special-color">
   <div>
-    <!-- class="container" -->
     <div class="navbar-header">
-      <% current_logo = the_logo(yield(:logo)) %>
+      <% header_title = header_title(yield(:title)) %>
 
-      <%= link_to image_tag(current_logo, size: '300x25', alt: 'GROW BIOINTENSIVE® Library'), topics_path, id: "logo" %>
+      <%# link_to image_tag(current_logo, size: '300x25', alt: 'GROW BIOINTENSIVE® Library'), topics_path, id: "logo" %>
+      <%= link_to header_title, topics_path, id: "logo" %>
     </div>
 
     <div id="navbar-middle" class="navbar-header">
@@ -131,7 +131,7 @@
             </li>
 
         <% else %>
-            <li><%= link_to "Log in", login_path %></li>
+            <li><%= link_to t('sessions.log_in'), login_path %></li>
         <% end %>
       </ul>
 
