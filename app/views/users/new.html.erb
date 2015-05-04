@@ -1,10 +1,9 @@
-<% provide(:title, 'Sign up') %>
-
-<h1>New User Sign-up</h1>
-
+<% provide(:title, t('sessions.sign_up') ) %>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6 col-md-offset-3 filled-container big-butt">
+    <h1><%= t('sessions.sign_up') %></h1>
+    <%= t('users.registration') %>
     <%= form_for(@user) do |f| %>
 
         <%= render 'fields',f: f %>

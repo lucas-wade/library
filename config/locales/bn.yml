@@ -1,7 +1,22 @@
 bn:
-
+  titles:
+    library: "গ্রন্থাগার"
+    title: "GROW BIOINTENSIVE® "
+    classroom: "শ্রেণীকক্ষ"
   layouts:
-    application:
-      title: "GROW BIOINTENSIVE®"
-    header:
-      title: "GROW BIOINTENSIVE®"
+    a_project: "A project of Ecology Action of the Mid Peninsula"
+    submit: "Submit"
+  sessions:
+    log_in: "লগ ইন"
+    log_out: "লগ আউট"
+    email: "ই-মেল"
+    password: "পাসওয়ার্ড"
+    forgot_password: 'আপনার পাসওয়ার্ড ভুলে গেছেন? '
+    remember_me: "এই কম্পিউটারে আমাকে মনে রেখো"
+    new_user: "নতুন ইউজার?"
+    sign_up: "এখন সাইন আপ করুন!"
+    name: "নাম"
+    confirm_password: "পাসওয়ার্ড নিশ্চিতকরণ"
+  users:
+    settings: "ইউজার সেটিংস"
+    registration: "স্বাগতম। এই ওয়েবসাইট  Ecology Action, 1972 সাল থেকে একটি অমুনাফাভোগী সংস্থার একটি নিরন্তর শিক্ষামূলক প্রচেষ্টা। প্রকল্পের তহবিল সমর্থন করলে নতুন শিক্ষামূলক বিষয়বস্তু যোগ করা হবে। এই ওয়েবসাইটে আপনার ভাষায় নতুন বিষয়বস্তু যোগ করা হলে তার সাথে ভবিষ্যতে পরস্পর ক্রিয়াশীল বর্ধিত প্রশিক্ষন এবং ঐচ্ছিক শিক্ষামূলক বৈশিষ্ট্য সম্বন্ধে অবহিত হতে অনুগ্রহ করে নীচে রেজিস্টার করুন।  "

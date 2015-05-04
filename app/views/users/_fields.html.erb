@@ -2,14 +2,14 @@
 
     <%= render 'shared/error_messages', object: f.object %>
 
-        <%= f.label :name %>
+        <%= f.label( t('sessions.name') ) %>
         <%= f.text_field :name %>
 
-        <%= f.label :email %>
+        <%= f.label( t('sessions.email') ) %>
         <%= f.email_field :email %>
 
-        <%= f.label :password %>
+        <%= f.label( t('sessions.password') ) %>
         <%= f.password_field :password %>
 
-        <%= f.label :password_confirmation, "Confirmation" %>
+        <%= f.label( t('sessions.confirm_password') ) %>
         <%= f.password_field :password_confirmation %>

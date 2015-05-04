@@ -21,13 +21,14 @@ module ApplicationHelper
     base_title = t('titles.title')
 
     if mode.empty?
-      base_title
+      "#{base_title} #{t('titles.classroom')}"
     else if mode == 'library'
       "#{base_title}  #{t('titles.library')}"
-         else
-           "#{base_title} #{t('titles.classroom')}"
+         else if mode == 'clear'
+           base_title
     end
     end
     end
+  end
 
 end

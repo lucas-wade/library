@@ -1,7 +1,7 @@
 <div class="navbar navbar-fixed-top navbar-special-color">
   <div>
     <div class="navbar-header">
-      <% header_title = header_title(yield(:title)) %>
+      <% header_title = header_title(yield(:logo)) %>
 
       <%# link_to image_tag(current_logo, size: '300x25', alt: 'GROW BIOINTENSIVE® Library'), topics_path, id: "logo" %>
       <%= link_to header_title, topics_path, id: "logo" %>
@@ -124,9 +124,9 @@
                 <i class="fa fa-caret-down"></i>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to "User Settings", edit_user_path(current_user) %></li>
+                <li><%= link_to t('users.settings'), edit_user_path(current_user) %></li>
                 <li class="divider"></li>
-                <li> <%= link_to "Log out", logout_path, method: "delete" %> </li>
+                <li> <%= link_to t('sessions.log_out'), logout_path, method: "delete" %> </li>
               </ul>
             </li>
 

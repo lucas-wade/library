@@ -1,7 +1,23 @@
 zh:
 
+  titles:
+    library: "图书馆"
+    title: "GROW BIOINTENSIVE® "
+    classroom: "教室"
   layouts:
-    application:
-      title: "GROW BIOINTENSIVE®"
-    header:
-      title: "GROW BIOINTENSIVE®"
+    a_project: "A project of Ecology Action of the Mid Peninsula"
+    submit: "Submit"
+  sessions:
+    log_in: "登陆"
+    log_out: "登出"
+    email: "电子邮件"
+    password: "密码"
+    forgot_password: '忘记密码？'
+    remember_me: "在这台电脑上记住我？"
+    new_user: "新用户？"
+    sign_up: "立即注册！"
+    name: "姓名"
+    confirm_password: "确认密码"
+  users:
+    settings: "用户设定"
+    registration: "欢迎。这个网站是Ecology Action的一个正在进行的教育活动。这是一个成立于1972年的非营利性组织。新的教育内容将在项目资金允许的情况下添加进来。请先注册，这样在有用你的语言制作的新内容添加时，你将得到我们的通知；同时，你也将有机会参与我们进一步加强的互动培训和运营教育。我们将对你提供的信息保密。"

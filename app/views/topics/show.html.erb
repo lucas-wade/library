@@ -48,7 +48,7 @@
               <% end %>
           <% end %>
 
-      
+
       <% if @topic.category > 0 %>
           <% @topic.parents.first.parents.first.kids.each do |tt|
             if tt.category < 1 && tt.language == I18n.locale.to_s %>

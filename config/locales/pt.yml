@@ -1,7 +1,23 @@
 pt:
 
+  titles:
+    library: "Biblioteca"
+    title: "GROW BIOINTENSIVE® "
+    classroom: "Sala de aula"
   layouts:
-    application:
-      title: "GROW BIOINTENSIVE®"
-    header:
-      title: "GROW BIOINTENSIVE®"
+    a_project: "A project of Ecology Action of the Mid Peninsula"
+    submit: "Submit"
+  sessions:
+    log_in: "Login"
+    log_out: "Desconectar"
+    email: "E-mail"
+    password: "Senha"
+    forgot_password: 'Esqueceu sua senha?'
+    remember_me: "Lembrar-me neste computador?"
+    new_user: "Novo usuário?"
+    sign_up: "Registre-se agora!"
+    name: "Nome"
+    confirm_password: "Confirmar senha"
+  users:
+    settings: "Configurações de usuário"
+    registration: "Bem-vindo(a)  Este website é uma iniciativa educacional contínua da Ecology Action, uma organização sem fins lucrativos desde 1972.  Novo conteúdo educacional será adicionado conforme o financiamento do projeto permitir.  Registre-se abaixo para ser notificado conforme conteúdos são adicionados em seu idioma bem como para acessar treinamentos interativos melhorados futuros e recursos educacionais opcionais deste website.  As informações que você fornece não serão compartilhadas com ninguém. "

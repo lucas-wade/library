@@ -1,7 +1,23 @@
 hi:
 
+  titles:
+    library: "लाइब्रेरी"
+    title: "GROW BIOINTENSIVE® "
+    classroom: "क्लासरूम"
   layouts:
-    application:
-      title: "GROW BIOINTENSIVE®"
-    header:
-      title: "GROW BIOINTENSIVE®"
+    a_project: "A project of Ecology Action of the Mid Peninsula"
+    submit: "Submit"
+  sessions:
+    log_in: "लॉग इन"
+    log_out: "लॉग आउट"
+    email: "ईमेल"
+    password: "पासवर्ड"
+    forgot_password: 'अपना पासवर्ड भूल गए?'
+    remember_me: "मुझे इस कंप्यूटर पर याद रखें?"
+    new_user: "नए यूज़र?"
+    sign_up: "अभी साइन इन करो!"
+    name: "नाम"
+    confirm_password: "पासवर्ड की पुष्टि"
+  users:
+    settings: "यूज़र सेटिंग"
+    registration: "स्वागत है। यह वेबसाइट, 1972 से संचालित स्वंयसेवी संस्था Ecology Action का एक अविरत शैक्षणिक प्रयास है। आर्थिक स्रोत से अनुमति मिलने पर नए शैक्षणिक विषय जोड़े जाएंगे। विषय सामग्री आपकी भाषा में जोड़ दी गई है इसकी सूचना प्राप्त करने साथ ही साथ इस वेबसाइट पर भविष्य में आने उन्नत सरल प्रशिक्षण तक पहुँच प्राप्त करने और वैकल्पिक शैक्षणिक विशेषताओं का लाभ उठाने के लिए कृपया नीचे रज़िस्टर करें। आपके द्वारा दी गई सूचना का किसी दूसरे से साझा नहीं किया जाएगा।"
