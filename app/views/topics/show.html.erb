@@ -22,6 +22,7 @@
   <!-- sub topic nav bar -->
   <div id="sub-topics-window" class="col-md-8 ">
     <h3>
+      <%# @topic.parents.first.id %>
 
       <% if @topic.kids.present? %>
           <% @topic.kids.each do |tt|
@@ -33,9 +34,9 @@
                   <% end %>
               <% end %>
           <% end %>
-      <% else
-           if @topic.parents.first.id > 3 %>
+      <% end %>
 
+           <% if @topic.parents.first.id > 3  && @topic.category == 0 %>
               <% @topic.parents.first.kids.each do |tt|
                 if tt.category < 1 && tt.language == I18n.locale.to_s %>
                       <% if tt.icon.present? %>
@@ -43,6 +44,18 @@
                       <% else %>
                           <%= link_to tt.name, tt, class: "btn btn-default" %>
                       <% end %>
+                  <% end %>
+              <% end %>
+          <% end %>
+
+      
+      <% if @topic.category > 0 %>
+          <% @topic.parents.first.parents.first.kids.each do |tt|
+            if tt.category < 1 && tt.language == I18n.locale.to_s %>
+                  <% if tt.icon.present? %>
+                      <%= image_tag tt.icon.url, class: "img-icon" %>
+                  <% else %>
+                      <%= link_to tt.name, tt, class: "btn btn-default" %>
                   <% end %>
               <% end %>
           <% end %>
