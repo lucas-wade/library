@@ -2,7 +2,8 @@ es:
 
   titles:
     library: "Biblioteca"
-    title: "CULTIVE BIOINTENSIVAMENTE® "
+    title: "CULTIVE BIOINTENSIVAMENTE®"
+    title_html: CULTIVE BIOINTENSIVAMENTE<sup>®</sup>
     classroom: "Aula"
   layouts:
     a_project: "A project of Ecology Action of the Mid Peninsula"
