@@ -233,7 +233,11 @@
         <div class="col-md-3">
           <% sub_cats.kids.each do |t| %>
               <% if t.category == 4 %>
-                  <%= link_to image_tag("icon-tabs-cat-4.png", class: "tab-cat4"), t %>
+                  <% if edit_mode ==1 %>
+                      <%= link_to image_tag("icon-tabs-cat-4.png", class: "tab-cat4"), edit_topic_path(t) %>
+                  <% else %>
+                      <%= link_to image_tag("icon-tabs-cat-4.png", class: "tab-cat4"), t %>
+                  <% end %>
                   <% peak = true %>
               <% end %>
           <% end %>
@@ -250,7 +254,11 @@
         <div class="col-md-3">
           <% sub_cats.kids.each do |t| %>
               <% if t.category == 1 %>
+                  <% if edit_mode ==1 %>
+                      <%= link_to image_tag("icon-tabs-cat-1.png", class: "tab-cat1"), edit_topic_path(t) %>
+                      <% else %>
                   <%= link_to image_tag("icon-tabs-cat-1.png", class: "tab-cat1"), t %>
+                      <% end %>
                   <% one = true %>
               <% end %>
           <% end %>
@@ -263,7 +271,11 @@
         <div class="col-md-3">
           <% sub_cats.kids.each do |t| %>
               <% if t.category == 2 %>
-                  <%= link_to image_tag("icon-tabs-cat-2.png", class: "tab-cat2"), t %>
+                  <% if edit_mode ==1 %>
+                      <%= link_to image_tag("icon-tabs-cat-2.png", class: "tab-cat2"), edit_topic_path(t) %>
+                  <% else %>
+                      <%= link_to image_tag("icon-tabs-cat-2.png", class: "tab-cat2"), t %>
+                  <% end %>
                   <% two = true %>
               <% end %>
           <% end %>
@@ -275,7 +287,11 @@
         <div class="col-md-3">
           <% sub_cats.kids.each do |t| %>
               <% if t.category == 3 %>
-                  <%= link_to image_tag("icon-tabs-cat-3.png", class: "tab-cat3"), t %>
+                  <% if edit_mode ==1 %>
+                      <%= link_to image_tag("icon-tabs-cat-3.png", class: "tab-cat3"), edit_topic_path(t) %>
+                  <% else %>
+                      <%= link_to image_tag("icon-tabs-cat-3.png", class: "tab-cat3"), t %>
+                  <% end %>
                   <% three = true %>
               <% end %>
           <% end %>

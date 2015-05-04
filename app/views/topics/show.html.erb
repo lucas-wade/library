@@ -12,74 +12,79 @@
   %>
 
   <div id="big_c">
-  <% if @temp_topic == 0 %>
+    <% if @temp_topic == 0 %>
         <div class="col-sm-4">
           <%= render 'column' %>
         </div>
-  <% end %>
-    </div>
+    <% end %>
+  </div>
 
   <!-- sub topic nav bar -->
-<div id="sub-topics-window" class="col-md-8 ">
-  <h3>
-    <% if @topic.kids.present? %>
-        <% @topic.kids.each do |tt| if tt.category < 1 && tt.language == I18n.locale.to_s %>
-            <% if tt.icon.present? %>
-            <%= image_tag tt.icon.url, class: "img-icon" %>
-            <% else %>
-            <%= link_to tt.name, tt, class: "btn btn-default" %>
-            <% end %>
-        <% end %>
-            <% end %>
-    <% else if @topic.parents.first.id > 3 %>
-        <% @topic.parents.first.kids.each do |tt| if tt.category < 1 && tt.language == I18n.locale.to_s %>
-            <% if tt.icon.present? %>
-                <%= image_tag tt.icon.url, class: "img-icon" %>
-            <% else %>
-                <%= link_to tt.name, tt, class: "btn btn-default" %>
-            <% end %>
-        <% end %>
-                <% end %>
-<% end %>
-<% end %>
-        </h3>
-</div>
+  <div id="sub-topics-window" class="col-md-8 ">
+    <h3>
+
+      <% if @topic.kids.present? %>
+          <% @topic.kids.each do |tt|
+            if tt.category < 1 && tt.language == I18n.locale.to_s %>
+                  <% if tt.icon.present? %>
+                      <%= image_tag tt.icon.url, class: "img-icon" %>
+                  <% else %>
+                      <%= link_to tt.name, tt, class: "btn btn-default" %>
+                  <% end %>
+              <% end %>
+          <% end %>
+      <% else
+           if @topic.parents.first.id > 3 %>
+
+              <% @topic.parents.first.kids.each do |tt|
+                if tt.category < 1 && tt.language == I18n.locale.to_s %>
+                      <% if tt.icon.present? %>
+                          <%= image_tag tt.icon.url, class: "img-icon" %>
+                      <% else %>
+                          <%= link_to tt.name, tt, class: "btn btn-default" %>
+                      <% end %>
+                  <% end %>
+              <% end %>
+          <% end %>
+      <% end %>
+    </h3>
+  </div>
 
 
-<div class="col-sm-8 ">
+  <div class="col-sm-8 ">
     <%= render 'content_window' %>
   </div>
 
-<div id="big_c">
-  <% if @temp_topic == 1 || @temp_topic == 2 %>
-      <div class="col-sm-4">
-     <%= render 'column' %>
-      </div>
-  <% end %>
-</div>
+  <div id="big_c">
+    <% if @temp_topic == 1 || @temp_topic == 2 %>
+        <div class="col-sm-4">
+          <%= render 'column' %>
+        </div>
+    <% end %>
+  </div>
 
-    <% tt=@temp_topic %>
+  <% tt=@temp_topic %>
 
   <div id="small_c1">
     <div class="col-sm-4">
-    <% @temp_topic =0 %>
-    <%= render 'column' %>
-      </div>
+      <% @temp_topic =0 %>
+      <%= render 'column' %>
+    </div>
   </div>
   <div id="small_c3">
     <div class="col-sm-4">
-    <% @temp_topic =1 %>
-    <%= render 'column' %>
-      </div>
+      <% @temp_topic =1 %>
+      <%= render 'column' %>
+    </div>
   </div>
   <div id="small_c3">
     <div class="col-sm-4">
-    <% @temp_topic =2 %>
-    <%= render 'column' %>
-      </div>
+      <% @temp_topic =2 %>
+      <%= render 'column' %>
+    </div>
   </div>
 
 
-  </div>
+</div>
 
 </div>
