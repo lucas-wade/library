@@ -32,6 +32,8 @@ $site_orange: rgb(235, 74, 49);
   box-sizing:         border-box;
 }
 
+
+
 //smaller screen
 @media (max-width: 767px) {
   .navbar-right {margin-right:20px;}
@@ -185,9 +187,17 @@ body {
 
 }
 #sub-topics-window {
-  padding-top: 1em;
 
-  height: 4em;
+  padding-top: 1em;
+  padding-left: .5em;
+  padding-right: .5em;
+
+  margin: 0;
+  margin-bottom: -1em;
+
+
+  //height: 4em;
+  height: 100%;
 }
 #content-window {
   //height: 26em;
