@@ -54,7 +54,9 @@
                            else
                              the_class = t.name
                            end
-                           %>
+                           the_class = the_class.downcase
+                           the_class = the_class.gsub(/[^0-9a-z ]/, '')
+                        %>
                 <a href="<%= topic_path(t) %>" class="list-group-item btn-default btn-main-menu button <%= $index_column_colors[@temp_topic] %> <%= the_class.downcase.tr(' ','-') %>-button-style">
                   <div class="button-text"> <%= t.name %>  </div>
                   <div class="button-text-small">
