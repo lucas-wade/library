@@ -76,7 +76,7 @@ class TopicsController < ApplicationController
 
                                      #if !@original_topic.translations.include?(k)
                                        @topic = Topic.new(language: k,
-                                                          placeholder: TRUE,
+                                                          placeholder: FALSE,
                                                           category: @original_topic.category,
                                                           name: nil,
                                                           skill: 0)
@@ -91,12 +91,7 @@ class TopicsController < ApplicationController
       end
 
       flash[:info] = "New Topic Created."
-      # now create the categories
-      if params[:create_cat_1] == 1
-        if !@original_topic.kids.include?(category: 1)
-          breakpoint
-        end
-      end
+
 
 
       redirect_to edit_topic_path(@original_topic)
@@ -110,9 +105,9 @@ class TopicsController < ApplicationController
   def edit
     @topic = Topic.find(params[:id])
     @topics = Topic.all
-    if @topic.name == nil
-      @topic.name = $av_langs_hash_english[@topic.language]
-    end
+    #if @topic.name == nil
+     # @topic.name = $av_langs_hash_english[@topic.language]
+    #end
   end
 
   def update
@@ -121,8 +116,10 @@ class TopicsController < ApplicationController
       @parent_topic = Topic.find(params[:parent_id])
     end
 
-   if topic_params[:major_update] == 1
-     @topic.version+=1
+#breakpoint
+   if topic_params[:major_update] == "1"
+
+     @topic.version += 1
    end
 
     if @topic.update_attributes(topic_params)
@@ -175,6 +172,7 @@ class TopicsController < ApplicationController
                                   :placeholder,
                                   :growing,
                                   :major_update,
+                                  :version,
                                   :create_cat_1,
                                   :create_cat_2,
                                   :create_cat_3,

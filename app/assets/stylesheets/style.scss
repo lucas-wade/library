@@ -940,7 +940,7 @@ a {
   vertical-align: top;
   position: relative;
   left: -2em;
-
+  z-index: 0;
 }
 
 .tab-cat2 {
@@ -950,7 +950,7 @@ a {
 
   //margin: 0em;
   //padding: 0em;
-
+  z-index: 0;
 }
 
 .tab-cat3 {
@@ -960,7 +960,7 @@ a {
 
   //margin: 0em;
   //padding: 0em;
-
+  z-index: 0;
 }
 .tab-cat4 {
   vertical-align: top;
@@ -969,7 +969,15 @@ a {
 
   //margin: 0em;
   //padding: 0em;
+z-index: 0;
+}
 
+.tab-selected {
+  z-index: 10;
+}
+
+.tab-greyed-out {
+  opacity: .4;
 }
 
 .alert {
@@ -981,8 +989,4 @@ a {
 
 .hot-words {
   color: #62d1ff;
-}
-
-.underline {
-  text-decoration: underline;
 }

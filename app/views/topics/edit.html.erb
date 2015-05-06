@@ -12,6 +12,7 @@
   %>
 
 
+
   <div class="col-sm-2">
     <% if @topic.category.present? && @topic.category > 0 %>
         Tab "<%= $available_categories[@topic.category] || $available_categories[params[:category]] %>" of <%= link_to @topic.parents.first.name, edit_topic_path(@topic.parents.first) %>
@@ -21,7 +22,13 @@
         <% end %>
     <br>
     <% if @topic.originals.present? %>
-        Translation of <%= link_to @topic.originals.first.name, edit_topic_path(@topic.originals.first) %>
+        <% if @topic.category > 0
+             the_name = @topic.originals.first.parents.first.name
+           else
+             the_name = @topic.originals.first.name
+           end
+        %>
+        Translation of <%= @topic.originals.first.language %> - <%= link_to the_name, edit_topic_path(@topic.originals.first) %>
     <% end %>
     <br>
 
@@ -36,13 +43,17 @@
 
   <div class="col-sm-6 nice-butt">
     <% if @topic.name == nil
+         if @topic.originals.present?
+           name = 'Translation of ' + @topic.originals.first.name
+           else
          name = @topic.parents.first.name
+         end
        else
          name = @topic.name
        end
     %>
 
-    <h2><%= link_to name, @topic %> </h2>
+    <h2><%# link_to name, @topic %> </h2>
     <%= render 'content_window' %>
     <%# @topic.main_content.html_safe %>
   </div>
