@@ -1,3 +1,9 @@
+<% if edit_mode == 1 %>
+    <script type="text/javascript">
+        window.location.href="<%= edit_topic_path %>"
+    </script>
+    <% else %>
+
 <div class="row low-gutter tight-butt">
   <% #if @topic.parents.present? && @topic.parents.first.id < 4
      #  @temp_topic = @topic.parents.first.id - 1
@@ -101,3 +107,5 @@
 </div>
 
 </div>
+
+<% end %>
