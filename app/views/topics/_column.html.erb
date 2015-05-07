@@ -42,7 +42,7 @@
                   <div class="button-text-small">
                     <% t.kids.each do |tt| %>
                         <% if tt.category == 0 %>
-                            <%= link_to tt.name, edit_topic_path(tt) %>
+                            <%= link_to tt.name, tt %>
                         <% end %>
                     <% end %>
                   </div>

@@ -1,9 +1,15 @@
 <% if edit_mode == 1 %>
-    <%# if session[:edit_lang].present? %>
-        
+    <% if session[:edit_lang].present? && session[:edit_lang] != 'en' %>
+        <% new_topic = @topic.translations.find_by_language(session[:edit_lang]) %>
+
+        <script type="text/javascript">
+            window.location.href="<%= edit_topic_path(new_topic) %>"
+        </script>
+        <% else %>
     <script type="text/javascript">
         window.location.href="<%= edit_topic_path %>"
     </script>
+        <% end %>
     <% else %>
 
 <div class="row low-gutter tight-butt">
