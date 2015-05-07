@@ -1,1 +1,5 @@
-<%= video_tag "growing.mp4", :width => "100%", controls: true, autoplay: true %>
+<% if edit_mode == 1 %>
+    <%= image_tag "growing_content.jpg", :width => "100%" %>
+<% else %>
+    <%= video_tag "growing.mp4", :width => "100%", controls: true, autoplay: true %>
+<% end %>

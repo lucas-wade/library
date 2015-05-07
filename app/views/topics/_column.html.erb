@@ -50,12 +50,11 @@
 
             <!-- not edit mode -->
             <% else if t.name != nil %>
-                        <%color_class = ''
+                        <% color_class = ''
                            if params[:id].present? && params[:id].to_i == t.id
                                 color_class = 'btn-a'
                               else
                               color_class = $index_column_colors[@temp_topic]
-                                
                            end
 
                            if t.originals.present?
