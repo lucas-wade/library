@@ -1,4 +1,6 @@
 <% if edit_mode == 1 %>
+    <%# if session[:edit_lang].present? %>
+        
     <script type="text/javascript">
         window.location.href="<%= edit_topic_path %>"
     </script>
