@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c26f1794-bb60-4aec-abfa-4a86b499a95e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/topics/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/topics/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/topics/_column.html.erb" afterPath="$PROJECT_DIR$/app/views/topics/_column.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/style.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/style.scss" />
     </list>
     <ignored path="library.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,27 +58,27 @@
       <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.0980392" vertical-offset="13528" max-vertical-offset="14970">
-              <caret line="909" column="0" selection-start-line="909" selection-start-column="0" selection-end-line="909" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.4705882" vertical-offset="7668" max-vertical-offset="15015">
+              <caret line="523" column="24" selection-start-line="523" selection-start-column="24" selection-end-line="523" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_column.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_column.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/topics/_column.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.5416665" vertical-offset="596" max-vertical-offset="1275">
-              <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.3985849" vertical-offset="686" max-vertical-offset="1425">
+              <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="edit.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/topics/edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4245283" vertical-offset="495" max-vertical-offset="1005">
+            <state vertical-scroll-proportion="-20.625" vertical-offset="180" max-vertical-offset="1005">
               <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
               <folding />
             </state>
@@ -151,9 +151,9 @@
         <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
         <option value="$PROJECT_DIR$/app/helpers/topics_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/topics/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/topics/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/style.scss" />
         <option value="$PROJECT_DIR$/app/views/topics/_column.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/topics/edit.html.erb" />
       </list>
     </option>
   </component>
@@ -1117,26 +1117,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/topics/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.625" vertical-offset="180" max-vertical-offset="1005">
+          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0980392" vertical-offset="13528" max-vertical-offset="14970">
-          <caret line="909" column="0" selection-start-line="909" selection-start-column="0" selection-end-line="909" selection-end-column="0" />
+        <state vertical-scroll-proportion="-3.4705882" vertical-offset="7668" max-vertical-offset="15015">
+          <caret line="523" column="24" selection-start-line="523" selection-start-column="24" selection-end-line="523" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/topics/_column.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.5416665" vertical-offset="596" max-vertical-offset="1275">
-          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/topics/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4245283" vertical-offset="495" max-vertical-offset="1005">
-          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.3985849" vertical-offset="686" max-vertical-offset="1425">
+          <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
           <folding />
         </state>
       </provider>

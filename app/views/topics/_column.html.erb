@@ -47,17 +47,27 @@
                     <% end %>
                   </div>
                 </div>
+
             <!-- not edit mode -->
             <% else if t.name != nil %>
-                        <% if t.originals.present?
+                        <%color_class = ''
+                           if params[:id].present? && params[:id].to_i == t.id
+                                color_class = 'btn-a'
+                              else
+                              color_class = $index_column_colors[@temp_topic]
+                                
+                           end
+
+                           if t.originals.present?
                              the_class = t.originals.first.name
                            else
                              the_class = t.name
                            end
                            the_class = the_class.downcase
                            the_class = the_class.gsub(/[^0-9a-z ]/, '')
+                           the_class = the_class.downcase.tr(' ','-') + '-button-style'
                         %>
-                <a href="<%= topic_path(t) %>" class="list-group-item btn-default btn-main-menu button <%= $index_column_colors[@temp_topic] %> <%= the_class.downcase.tr(' ','-') %>-button-style">
+                <a href="<%= topic_path(t) %>" class="list-group-item btn-default btn-main-menu button <%= the_class %> <%= color_class %>">
                   <div class="button-text"> <%= t.name %>  </div>
                   <div class="button-text-small">
                     <% t.kids.each do |tt| %>
