@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c26f1794-bb60-4aec-abfa-4a86b499a95e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/icon_skills_1.png" afterPath="$PROJECT_DIR$/app/assets/images/icon_skills_1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/icon_skills_2.png" afterPath="$PROJECT_DIR$/app/assets/images/icon_skills_2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/icon_skills_3.png" afterPath="$PROJECT_DIR$/app/assets/images/icon_skills_3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/topics/_column.html.erb" afterPath="$PROJECT_DIR$/app/views/topics/_column.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/topics/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/topics/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="library.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,11 +65,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_column.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_column.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/topics/_column.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5400943" vertical-offset="626" max-vertical-offset="1275">
-              <caret line="57" column="71" selection-start-line="57" selection-start-column="71" selection-end-line="57" selection-end-column="71" />
+            <state vertical-scroll-proportion="-4.5416665" vertical-offset="596" max-vertical-offset="1275">
+              <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/topics/edit.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4245283" vertical-offset="495" max-vertical-offset="1005">
+              <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -137,7 +145,6 @@
         <option value="$PROJECT_DIR$/app/views/topics/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
         <option value="$PROJECT_DIR$/app/views/topics/_content_window.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/topics/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/topics_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/topics/_form.html.erb" />
         <option value="$PROJECT_DIR$/config/initializers/prefereneces.rb" />
@@ -146,6 +153,7 @@
         <option value="$PROJECT_DIR$/app/views/topics/show.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/style.scss" />
         <option value="$PROJECT_DIR$/app/views/topics/_column.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/topics/edit.html.erb" />
       </list>
     </option>
   </component>
@@ -1053,14 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/topics/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.379717" vertical-offset="0" max-vertical-offset="1005">
-          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/microposts/_micropost.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
@@ -1127,8 +1127,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/topics/_column.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5400943" vertical-offset="626" max-vertical-offset="1275">
-          <caret line="57" column="71" selection-start-line="57" selection-start-column="71" selection-end-line="57" selection-end-column="71" />
+        <state vertical-scroll-proportion="-4.5416665" vertical-offset="596" max-vertical-offset="1275">
+          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/topics/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4245283" vertical-offset="495" max-vertical-offset="1005">
+          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
           <folding />
         </state>
       </provider>
