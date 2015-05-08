@@ -44,7 +44,7 @@
                   <% if tt.icon.present? %>
                       <%= image_tag tt.icon.url, class: "img-icon" %>
                   <% else %>
-                      <%= link_to tt.name, tt, class: "btn btn-default" %>
+                      <%= link_to tt.name, tt, class: "btn btn-default" unless tt.name == nil %>
                   <% end %>
               <% end %>
           <% end %>

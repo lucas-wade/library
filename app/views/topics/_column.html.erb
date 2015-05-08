@@ -1,3 +1,5 @@
+
+
 <!-- col-sm-4 -->
 <div id="<% if @temp_topic == 1 %>action-collumn<% end %>">
   <h5>
@@ -15,11 +17,13 @@
         <% end %>
   </h5>
 
+
   <div class="list-group main-menu">
     <!-- library -->
     <% if @temp_topic == 0 %>
         <!-- <div class="list-group-item btn-default btn-main-menu button b1"> -->
-              <%= link_to t('titles.library'), library_path, class: "list-group-item btn-default btn-main-menu button b1 button-text" %>
+        <% the_class = "list-group-item btn-default btn-main-menu button b1 button-text " + rtl_checker.to_s %>
+              <%= link_to t('titles.library'), library_path, class: the_class %>
         <!-- </div> -->
     <% end %>
 
@@ -65,9 +69,11 @@
                            the_class = the_class.downcase
                            the_class = the_class.gsub(/[^0-9a-z ]/, '')
                            the_class = the_class.downcase.tr(' ','-') + '-button-style'
+
+
                         %>
-                <a href="<%= topic_path(t) %>" class="list-group-item btn-default btn-main-menu button <%= the_class %> <%= color_class %>">
-                  <div class="button-text"> <%= t.name %>  </div>
+                <a href="<%= topic_path(t) %>" class="list-group-item btn-default btn-main-menu button <%= the_class %> <%= color_class %> <%= rtl_checker %> ">
+                  <div class="button-text"> <%= t.name %> </div>
                   <div class="button-text-small">
                     <% t.kids.each do |tt| %>
                         <% if tt.category == 0 %>
