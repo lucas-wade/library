@@ -14,5 +14,12 @@ module TopicsHelper
      end
   end
 
+  def rtl_checker
+    if @topic.language == 'ar'
+      rtl_class = 'rtl'
+    else
+      rtl_class = ''
+    end
+  end
 
 end

@@ -14,6 +14,9 @@
     <% sub_cat_active = TRUE %>
 <% end %>
 
+<% rtl_class = rtl_checker %>
+
+
 <div id="content-window" class="content_window
                                             <% if @topic.pubs.present? && has_sub_cats == TRUE %>
                                             content-window-size-1
@@ -51,6 +54,7 @@
 
   <% else %> <!-- render the topic -->
       <% there_is_a_topic_in_the_content_window = TRUE %>
+      <div class="<%= rtl_class %>">
       <h3>
         <% if edit_mode == 1 && @topic.parents.present? %>
             <%= link_to '<i class="fa fa-edit edit-color"></i>'.html_safe, edit_topic_path(@topic) %>
@@ -76,8 +80,8 @@
         <%# if @topic.name != nil %>
         <%= tt.name %>
         <%# end %>
-
       </h3>
+      </div>
 
       <% if edit_mode == 1 %>
           <!-- debuggin stuff
@@ -95,7 +99,10 @@
            @topic.main_content = ''
          end %>
 
+
+      <div class="<%= rtl_class %>">
       <%= @topic.main_content.html_safe %>
+        </div>
 
       <% if @topic.placeholder == TRUE %>
           <%= render 'shared/placeholder' %>
