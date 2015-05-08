@@ -22,7 +22,7 @@
     <!-- library -->
     <% if @temp_topic == 0 %>
         <!-- <div class="list-group-item btn-default btn-main-menu button b1"> -->
-        <% the_class = "list-group-item btn-default btn-main-menu button b1 button-text " + rtl_checker.to_s %>
+        <% the_class = "list-group-item btn-default btn-main-menu button b1 button-text " + rtl_checker(I18n.locale).to_s %>
               <%= link_to t('titles.library'), library_path, class: the_class %>
         <!-- </div> -->
     <% end %>
@@ -72,7 +72,7 @@
 
 
                         %>
-                <a href="<%= topic_path(t) %>" class="list-group-item btn-default btn-main-menu button <%= the_class %> <%= color_class %> <%= rtl_checker %> ">
+                <a href="<%= topic_path(t) %>" class="list-group-item btn-default btn-main-menu button <%= the_class %> <%= color_class %> <%= rtl_checker(t.language) %> ">
                   <div class="button-text"> <%= t.name %> </div>
                   <div class="button-text-small">
                     <% t.kids.each do |tt| %>

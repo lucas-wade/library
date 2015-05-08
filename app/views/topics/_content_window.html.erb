@@ -54,7 +54,7 @@
 
   <% else %> <!-- render the topic -->
       <% there_is_a_topic_in_the_content_window = TRUE %>
-      <div class="<%= rtl_class %>">
+      <div class="<%= rtl_checker %>">
       <h3>
         <% if edit_mode == 1 && @topic.parents.present? %>
             <%= link_to '<i class="fa fa-edit edit-color"></i>'.html_safe, edit_topic_path(@topic) %>

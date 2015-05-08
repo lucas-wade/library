@@ -14,8 +14,8 @@ module TopicsHelper
      end
   end
 
-  def rtl_checker(t = @topic)
-    if I18n.locale.to_s == 'ar'
+  def rtl_checker(t = @topic.language)
+    if t.to_s == 'ar'
       rtl_class = 'rtl'
     else
       rtl_class = ''
