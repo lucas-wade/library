@@ -1,105 +1,111 @@
 <div class="edit-form" id="edit-form">
-<%= form_for(@topic, html: { multipart: true }) do |f| %>
+  <%= form_for(@topic, class: "form-inline", html: {multipart: true}) do |f| %>
 
       <!-- errors -->
-    <% if @topic.errors.any? %>
-        <div id="error_explanation">
+      <% if @topic.errors.any? %>
+          <div id="error_explanation">
             <h2><%= pluralize(@topic.errors.count, "error") %> prohibited this topic from being saved:</h2>
             <ul>
-            <% @topic.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
+              <% @topic.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+              <% end %>
             </ul>
-        </div>
-    <% end %>
+          </div>
+      <% end %>
 
       <!-- #parent topic stuff -->
-    <% if @parent_topic %>
+      <% if @parent_topic %>
           <%= hidden_field_tag :parent_id, @parent_topic.id %>
-    <% end %>
+      <% end %>
 
       <!-- #translation hidden field stuff -->
-    <% if @original_topic %>
-        <h3>Translation of <strong><%= @original_topic.name %></strong></h3>
-        <%= hidden_field_tag :original_id, @original_topic.id %>
-    <% end %>
+      <% if @original_topic %>
+          <h3>Translation of <strong><%= @original_topic.name %></strong></h3>
+          <%= hidden_field_tag :original_id, @original_topic.id %>
+      <% end %>
 
 
-<%
-
-   if params[:category].present?
-     the_cat = params[:category].to_i
-     else
-     the_cat = 0
-   end
 
 
-   if @topic.category.present?
-     if @topic.category == 0
-        topic = TRUE
-     else
-        topic = FALSE
-     end
-   else
-     if the_cat > 0
-        topic = FALSE
-     else
-       topic = TRUE
-     end
-   end
 
 
-%>
+      <%
+
+         if params[:category].present?
+           the_cat = params[:category].to_i
+         else
+           the_cat = 0
+         end
+
+
+         if @topic.category.present?
+           if @topic.category == 0
+             topic = TRUE
+           else
+             topic = FALSE
+           end
+         else
+           if the_cat > 0
+             topic = FALSE
+           else
+             topic = TRUE
+           end
+         end
+
+
+      %>
       <% if topic == TRUE %>
-        <div class="field">
+          <div class="field">
             <%= f.label :name! %>
             <%= f.text_area :name %>
-        </div>
+          </div>
       <% end %>
 
-      <div class="col-sm-6">
-          <%= f.label :icon_image %>
-          <span class="picture">
+
+
+          <div class="form-group checkbox-inline">
+            <%= f.label :major_update do %>
+                <%= f.check_box :major_update %>
+                <strong>New Version?</strong> (Significant Edits)
+            <% end %>
+          </div>
+
+        <br>
+
+
+
+        <%= f.label :icon_image %>
+        <span class="picture">
             <%= f.file_field :icon, accept: 'image/jpeg,image/gif,image/png,application/pdf' %>
           </span>
-      </div>
-
-      <div class="col-sm-6">
-        <%= f.label :major_update, class: "checkbox inline" do %>
-            <%= f.check_box :major_update %>
-            <strong>New Version?</strong> (Significant Edits)
-        <% end %>
-        <br>
-      </div>
 
 
 
-    <div class="field">
-      <%= f.label :language %>
-      <% if params[:language].present? %>
-        <%= f.select(:language, $available_languages, :selected => params[:language]) %>
-      <% else %>
-          <%= f.select(:language, $available_languages) %>
-      <% end %>
-    </div>
 
-    <div class="col-sm-6">
-        <%= f.label :placeholder, class: "checkbox inline" do %>
+
+
+
+
+
+      <div class="form-group checkbox-inline">
+        <%= f.label :placeholder do %>
             <%= f.check_box :placeholder %>
-            <span><strong>Placeholder:</strong><br> greyed out with "Not Yet Grown Content" message</span>
+            <span><strong>Placeholder:</strong> greyed out with "Not Yet Grown Content" message</span>
         <% end %>
-    </div>
-    <div class="col-sm-6">
-        <%= f.label :growing, class: "checkbox inline" do %>
-            <%= f.check_box :growing %>
-            <span><strong>Under Development:</strong><br> active button with "We are Growing Content" message</span>
+      </div>
+      <br>
+
+      <div class="form-group checkbox-inline">
+        <%= f.label :growing do %>
+            <%= f.check_box :growing, class: 'checkbox-inline' %>
+            <span><strong>Under Development:</strong> active button with "We are Growing Content" message</span>
         <% end %>
-    </div>
+      </div>
 
 
       <script type="text/javascript">
-          $('#topic_icon').bind('change', function() {
-              size_in_megabytes = this.files[0].size/1024/1024;
+          $('#topic_icon').bind('change', function () {
+              size_in_megabytes = this.files[0].size / 1024 / 1024;
               if (size_in_megabytes > 5) {
                   alert('Maximum file size is 5MB. Please choose a smaller file.');
               }
@@ -108,10 +114,10 @@
 
       <!-- main content -->
 
-    <div class="field">
+      <div class="field">
         <%= f.label $available_categories[0] %><br>
         <%= f.text_area :main_content, :size => "2x10" %>
-    </div>
+      </div>
 
       <!--
       <input type="button" value="Add New Text" onClick="addtext();"></p>
@@ -124,7 +130,7 @@
 -->
 
 
-<!--
+      <!--
 
     <div class="field">
       <%# f.label :skill_level %><br>
@@ -146,7 +152,7 @@
         <% count =0 %>
         <% hash = [] %>
         <% while count < $available_categories.count do %>
-            <% hash << [$available_categories[count],count] %>
+            <% hash << [$available_categories[count], count] %>
 
             <% count+=1 %>
         <% end %>
@@ -161,18 +167,28 @@
       </div>
 
 
+      <div class="field">
+        <%# f.label :parent %><br>
+        <%# f.collection_select(:parents, Topic.all, :id, :name) %>
+      </div>
 
-    <div class="field">
-      <%# f.label :parent %><br>
-      <%# f.collection_select(:parents, Topic.all, :id, :name) %>
-    </div>
+      <div class="actions">
+        <%= f.submit "SAVE!", class: "btn btn-danger" %>
+      </div>
 
-    <div class="actions">
-      <%= f.submit "SAVE!", class: "btn btn-danger" %>
-    </div>
 
-<% end %>
-  </div>
+      <% if params[:language].present? %>
+          <%= f.label :language %>
+          <%# hidden_field_tag :language, params[:language] %>
+          <%= f.select(:language, $available_languages, :selected => params[:language]) %>
+      <%# else %>
+          <%# @topic.language %>
+          <%# hidden_field_tag :language, "en" %>
+          <%# f.select(:language, $available_languages) %>
+      <% end %>
+
+  <% end %>
+</div>
 
 
 

@@ -49,4 +49,8 @@ class StaticPagesController < ApplicationController
     def admin
       @topics = Topic.all
     end
+
+    def language
+
+    end
 end

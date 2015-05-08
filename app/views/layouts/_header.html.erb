@@ -16,24 +16,8 @@
           <% else if session[:current_collumn] == 2 && @topic.present?  && $collumn_icon_1.kids.present?%>
                   <%= link_to image_tag($collumn_icon_1.icon.url, class: 'small-icon'), topic_path($collumn_icon_1.kids.first) %>
 
-          <% else %> <!--
-              <i class="fa fa-3x"></i>
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp -->
+          <% else %>
+
         <% end %>
           <% end %>
         </li>
@@ -47,28 +31,8 @@
 
         <% else if session[:current_collumn] == 2 && @topic.present? && $collumn_icon_2.kids.present?%>
                 <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
-              <% else %> <!--
-                  <i class="fa fa-3x"></i>
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp
-                  &nbsp -->
+              <% else %>
+
             <% end %>
         <% end %>
         </li>

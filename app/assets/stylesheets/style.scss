@@ -154,6 +154,11 @@ body {
   padding-left: 10%;
 
 }
+
+.offset-jimbo {
+  margin-left: -11%;
+  //padding-left: -10%;
+}
 .vid-container {
   //position: absolute;
   //top: 50px;
@@ -167,7 +172,7 @@ body {
   margin-top: 50px;
   top: 0;
   right:0;
-  bottom:0;
+  bottom: 0;
   left:0;
 
   //background-color: #000000;
@@ -367,8 +372,17 @@ body {
   padding-bottom: 2em;
 }
 
+.firm-butt {
+  padding-bottom: 0em;
+  margin-bottom: .2em;
+}
+
 .tight-top {
   margin-top: 0em;
+}
+
+.big-top {
+  padding-top: 2em;
 }
 
 hr {
@@ -557,6 +571,10 @@ p {
 .edit-form {
   background-color: $secondary_color;
   padding: 2em;
+}
+
+.edit_topic {
+  margin-top: -1em;
 }
 
 .edit-color {

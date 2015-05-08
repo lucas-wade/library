@@ -5,12 +5,13 @@ Rails.application.routes.draw do
 
  # get 'password_resets/edit'
 
-  root             'static_pages#home'
+  root             'static_pages#language_select'
 
-  #get     'home'    => 'static_pages#home'
+  get     'home'    => 'static_pages#home'
   get     'about'   => 'static_pages#about'
   get     'admin'   => 'static_pages#admin'
   get     'library' => 'static_pages#library'
+  #get     'language_select' => 'static_pages#language_select'
   get     'translations' => 'static_pages#translations'
   get     'signup'  => 'users#new'
   get     'login'   => 'sessions#new'

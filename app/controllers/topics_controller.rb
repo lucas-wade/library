@@ -40,6 +40,7 @@ class TopicsController < ApplicationController
 
 
   def create
+
     @topic = Topic.new(topic_params)
     if topic_params[:major_update].present?
       @topic.version=1

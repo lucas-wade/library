@@ -5,7 +5,10 @@
 <% provide(:title, t('titles.classroom') ) %>
 
 
-<div class="row low-gutter">
+<div class="row low-gutter <% if edit_mode == 1 %>
+                                edit-form
+                                <% end %>
+                                ">
 
   <% @temp_topic=0 %>
   <div class="col-xs-12 col-sm-4">
