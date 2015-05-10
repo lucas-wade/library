@@ -68,7 +68,7 @@ $site_orange: rgb(235, 74, 49);
     background-position-y: 1em;
     //height: 20em;
     padding-top: 4em;
-    padding-bottom: 22em;
+    //padding-bottom: 22em;
   }
 
   .big-row {
@@ -100,7 +100,7 @@ $site_orange: rgb(235, 74, 49);
     background-position-y: 2em;
     min-height: 40em;
     padding-top: 4em;
-    padding-bottom: 24em;
+    //padding-bottom: 24em;
   }
 
   .big-row {
@@ -146,7 +146,8 @@ body {
 .main-container{
   background-image: image_url("garden_footer.jpg");
   background-repeat: repeat-x;
-  padding-bottom: 30%;
+  height: 60em;
+  //padding-bottom: 3%;
   background-position: -60px -60px;
 
 }
@@ -452,7 +453,7 @@ h4 {
 h5 {
   font-size: 2em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
+  margin-bottom: 2%;
   text-align: center;
   font-weight: normal;
   //color: #777;
@@ -461,7 +462,7 @@ h5 {
 h6 {
   font-size: 1.2em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
+  margin-bottom: 2%;
   text-align: center;
   font-weight: normal;
   //color: #777;
