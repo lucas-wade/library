@@ -1,6 +1,10 @@
 class TopicsController < ApplicationController
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
+  before_filter :disable_xss_protection, only: [:edit, :update]
+
+
+
   def index
     if params[:set_locale]
       redirect_to topics_path(locale: params[:set_locale])
@@ -152,6 +156,13 @@ class TopicsController < ApplicationController
   end
 
 
+  protected
+  def disable_xss_protection
+    # Disabling this is probably not a good idea,
+    # but the header causes Chrome to choke when being
+    # redirected back after a submit and the page contains an iframe.
+    response.headers['X-XSS-Protection'] = "0"
+  end
 
 
   private

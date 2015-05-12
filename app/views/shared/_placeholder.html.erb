@@ -1,5 +1,9 @@
 <% if edit_mode == 1 %>
     <%= image_tag "growing_content.jpg", :width => "100%" %>
 <% else %>
-    <%= video_tag "growing.mp4", :width => "100%", controls: true, autoplay: true %>
+    <%# video_tag "growing.mp4", :width => "100%", controls: true, autoplay: true %>
+    <% source = '/' + I18n.locale.to_s + '/media/growing.mp4' %>
+
+    <%= video_tag source, :width => "100%", controls: true, autoplay: true %>
+
 <% end %>

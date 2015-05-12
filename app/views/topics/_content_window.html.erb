@@ -47,8 +47,10 @@
       <div class="col-md-4">
         <h3><%= render partial: 'shared/pub_link_to', locals: {t: @show_pub} %></h3>
 
-        <strong><%= @show_pub.media.content_type %></strong>
-        <br>
+        <% if @show_pub.media.content_type == 'application/pdf' %>
+            PDF_
+        <strong><%# @show_pub.media.content_type %></strong>
+        <% end %>
         <%= number_to_human_size(@show_pub.media.size) %>
       </div>
 
@@ -101,7 +103,8 @@
 
 
       <div class="<%= rtl_class %>">
-      <%= @topic.main_content.html_safe %>
+      <%# @topic.main_content.html_safe %>
+        <%= raw @topic.main_content %>
         </div>
 
       <% if @topic.placeholder == TRUE %>
@@ -153,8 +156,8 @@
     <% if @show_pub.present? %>
         <%= link_to '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>'.html_safe, @show_pub.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, :colorbox_className => 'b0'} %>
     <% else
-         if there_is_a_topic_in_the_content_window == TRUE %>
-            <%# link_to '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>'.html_safe, @topic, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_html => @topic.main_content.html_safe} %>
+         if there_is_a_topic_in_the_content_window == TRUE && @topic.growing == FALSE %>
+            <%= link_to '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>'.html_safe, @topic, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_html => @topic.main_content} %>
         <% end %>
     <% end %>
 

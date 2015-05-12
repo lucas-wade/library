@@ -1,6 +1,10 @@
 <% provide(:title, 'Translation Manager Topic Editor') %>
 <% session[:edit_lang] = @topic.language %>
-
+<% if edit_mode == 0 %>
+        <script type="text/javascript">
+            window.location.href="<%= topic_path %>"
+        </script>
+<% end %>
 <div class="row big-row edit-form low-gutter">
 
   <% #if @topic.parents.present? && @topic.parents.first.id < 4
