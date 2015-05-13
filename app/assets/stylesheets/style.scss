@@ -32,6 +32,9 @@ $site_orange: rgb(235, 74, 49);
   box-sizing:         border-box;
 }
 
+html {
+  background-color: $primary-bg-color;
+}
 
 
 //smaller screen
@@ -128,10 +131,8 @@ body {
   padding-top: 50px;
   font-family: $font-stack;
 
-
-  //background-color: $primary-bg-color;
-  background: linear-gradient( lighten($primary-bg-color,15%),darken($primary-bg-color,10%) );
-  //background-image: url("http://animalia-life.com/data_images/donkey/donkey1.jpg");
+  background-color: $primary-bg-color;
+  //background: linear-gradient( lighten($primary-bg-color,15%),darken($primary-bg-color,10%) );
 
 }
 
@@ -148,7 +149,8 @@ body {
   background-repeat: repeat-x;
   height: 62em;
   //padding-bottom: 3%;
-  background-position: -60px -60px;
+  //background-position: -60px -60px;
+  background-position: center -60px;
 
 }
 .jimbo {
