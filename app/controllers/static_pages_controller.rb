@@ -51,6 +51,8 @@ class StaticPagesController < ApplicationController
     end
 
     def language
+    end
 
+    def classroom_doors
     end
 end

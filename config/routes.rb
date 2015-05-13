@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get     'about'   => 'static_pages#about'
   get     'admin'   => 'static_pages#admin'
   get     'library' => 'static_pages#library'
-  #get     'language_select' => 'static_pages#language_select'
+  get     'classroom_doors' => 'static_pages#classroom_doors'
   get     'translations' => 'static_pages#translations'
   get     'signup'  => 'users#new'
   get     'login'   => 'sessions#new'

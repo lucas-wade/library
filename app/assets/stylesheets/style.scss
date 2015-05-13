@@ -1017,3 +1017,19 @@ z-index: 0;
   direction:rtl;
   text-align: right;
 }
+
+.classroom-doors {
+  background-image: image_url("classroom_doors.jpg");
+
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: cover;
+
+  height: 70em;
+  padding-top: 4em;
+
+  margin-left: -14%;
+  margin-right: -2%;
+  color: #dffdff;
+
+}
