@@ -50,7 +50,7 @@
           <% end %>
       <% end %>
 
-           <% if @topic.parents.first.id > 3  && @topic.category == 0 %>
+           <% if shot_topic_first_parent_or_self.id > 3  && @topic.category == 0 %>
               <% @topic.parents.first.kids.each do |tt|
                 if tt.category < 1 && tt.language == I18n.locale.to_s %>
                       <% if tt.icon.present? %>
