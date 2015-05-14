@@ -574,6 +574,9 @@ p {
 .edit-form {
   background-color: $secondary_color;
   padding: 2em;
+  //height: 100%;
+  //padding-left: 3em;
+  //margin-left: -13%;
 }
 
 .edit_topic {
@@ -1027,7 +1030,8 @@ z-index: 0;
   background-position: center;
   background-size: cover;
 
-  height: 70em;
+  //height: 70em;
+  height: 100%;
   padding-top: 10em;
 
   margin-left: -14%;
@@ -1036,4 +1040,9 @@ z-index: 0;
   color: black;
   text-align: center;
 
+}
+
+.sub-topic-button {
+
+  font-weight: 600;
 }

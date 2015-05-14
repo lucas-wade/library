@@ -20,7 +20,7 @@ module TopicsHelper
     end
   end
 
-  def shot_topic_first_parent_or_self
+  def show_topic_first_parent_or_self
     if @topic.parents.first.present?
       @topic.parents.first
     else

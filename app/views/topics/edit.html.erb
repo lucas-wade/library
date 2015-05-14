@@ -5,7 +5,7 @@
             window.location.href="<%= topic_path %>"
         </script>
 <% end %>
-<div class="row big-row edit-form low-gutter">
+<div class="row big-row low-gutter edit-form">
 
   <% #if @topic.parents.present? && @topic.parents.first.id < 4
       # @temp_topic = @topic.parents.first.id - 1

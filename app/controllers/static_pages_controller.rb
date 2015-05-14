@@ -19,7 +19,7 @@ class StaticPagesController < ApplicationController
         @pubs += Pub.search_meta_data(params[:search])
 
       else
-        @topics = Topic.all
+        @topics = Topic.all.where("language like ?", I18n.locale.to_s)
         @pubs = Pub.all
         #.order('created_at DESC')
       end
