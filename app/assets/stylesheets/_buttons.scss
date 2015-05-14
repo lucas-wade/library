@@ -46,7 +46,7 @@
 
 .btn-main-menu {
   //background-color: rgb(228, 192, 127);
-  background-color: rgba(lighten($primary-bg-color, 7%), .95);
+  //background-color: rgba(lighten($primary-bg-color, 7%), .95);
   border-color: rgba(darken($primary-bg-color, 93%), 1);
   color: $primary-color;
   font-size: 1.35em;
@@ -67,6 +67,7 @@
 .btn-a {
   background-color: #edffe6;
 }
+
 
 
 // SPECIAL BUTTON COLORS

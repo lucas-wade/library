@@ -117,3 +117,43 @@ p {
   line-height: 1.7em;
 }
 
+
+// COLORS
+
+
+.b0 {
+  background-color: $primary-bg-color;
+}
+
+.b1 {
+  background-color: darken($btn1, 1%);
+}
+
+.b2 {
+  background-color: darken($btn2, 0%);
+}
+
+.b3 {
+  background-color: darken($btn3, 1%);
+}
+
+.b4 {
+  background-color: $clr4;
+}
+
+.c1 {
+  color: darken($btn1, 20%);
+}
+
+.c2 {
+  color: darken($btn2, 20%);
+}
+
+.c3 {
+  color: darken($btn3, 20%);
+}
+
+.c4 {
+  color: $clr4;
+}
+

@@ -9,9 +9,11 @@
 @import "buttons";
 @import "header";
 @import "video";
-@import "mixin";
+
 @import "topics";
 
+@import "variables";
+@import "mixin";
 
 /* vv To be sorted CSS vv */
 .real-small {
@@ -469,7 +471,7 @@ a {
 
   height: 90em;
   //height: 100%;
-  padding-top: 22em;
+  padding-top: 13em;
 
   margin-left: -14%;
   margin-right: -2%;
@@ -478,7 +480,7 @@ a {
   text-align: justify;
 
   font-weight: 500;
-  font-size: 1.4em;
+  font-size: 1.31em;
 
 
 }
@@ -486,6 +488,9 @@ a {
 
 .classroom-doors-text-bg {
 
+  //margin-left: 6em;
+  //margin-right: 6em;
+  padding: 1.618em;
   padding-top: .5em;
   //background-color: rgba(56, 32, 29, 0.55);
   background-color: rgba(255, 255, 255, .333);
@@ -493,45 +498,5 @@ a {
 
 }
 
-
-
-// COLORS
-
-
-.b0 {
-  background-color: $primary-bg-color;
-}
-
-.b1 {
-  background-color: darken($btn1, 1%);
-}
-
-.b2 {
-  background-color: darken($btn2, 0%);
-}
-
-.b3 {
-  background-color: darken($btn3, 1%);
-}
-
-.b4 {
-  background-color: $clr4;
-}
-
-.c1 {
-  color: darken($btn1, 20%);
-}
-
-.c2 {
-  color: darken($btn2, 20%);
-}
-
-.c3 {
-  color: darken($btn3, 20%);
-}
-
-.c4 {
-  color: $clr4;
-}
 
 
