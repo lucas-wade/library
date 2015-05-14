@@ -62,11 +62,6 @@
   padding-top: 2em;
 }
 
-hr {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 section {
   overflow: auto;
 }
@@ -86,104 +81,6 @@ textarea {
 .table-bb {
   border-color: black;
 
-}
-
-.button-text {
-  //font: $font-stack;
-  color: $primary-color;
-  margin-bottom: -.118em;
-}
-
-.button-text-small {
-  //font: $font-stack;
-  color: $primary-color;
-  font-size: .618em;
-  //line-height: .99em;
-}
-
-.button {
-
-  //background-color: rgb(118, 149, 153);
-  display: block;
-  //border: thin;
-  margin: 10px;
-  //font-size: 1.35em;
-  //padding: .1em;
-  //text-align: left;
-  color: $primary-color;
-  a {
-    color: black;
-
-  }
-
-}
-
-.btn-kill {
-  color: #b04431;
-  //&:hover {
-  //color: #fff;
-
-  //}
-}
-
-.btn-main-menu {
-  //background-color: rgb(228, 192, 127);
-  background-color: rgba(lighten($primary-bg-color, 7%), .95);
-  border-color: rgba(darken($primary-bg-color, 93%), 1);
-  color: $primary-color;
-  font-size: 1.35em;
-  padding: 2%;
-  //margin: .5%;
-  //list-style: none;
-  text-align: left;
-  a {
-    color: $primary-color;
-  }
-  // li {
-  //padding: 10px 0;
-  //border-top: 1px solid #e8e8e8;
-  //}
-
-}
-
-.btn-a {
-  background-color: #edffe6;
-}
-
-.b0 {
-  background-color: $primary-bg-color;
-}
-
-.b1 {
-  background-color: darken($btn1, 1%);
-}
-
-.b2 {
-  background-color: darken($btn2, 0%);
-}
-
-.b3 {
-  background-color: darken($btn3, 1%);
-}
-
-.b4 {
-  background-color: $clr4;
-}
-
-.c1 {
-  color: darken($btn1, 20%);
-}
-
-.c2 {
-  color: darken($btn2, 20%);
-}
-
-.c3 {
-  color: darken($btn3, 20%);
-}
-
-.c4 {
-  color: $clr4;
 }
 
 .edit-form {
@@ -504,15 +401,6 @@ a {
   color: $primary-color;
 }
 
-.navbar-nav > li {
-  margin-left: -4px;
-  margin-right: -4px;
-}
-
-.navbar-right {
-  margin-right: 10px;
-}
-
 .tab-cat1 {
   vertical-align: top;
   position: relative;
@@ -594,10 +482,6 @@ a {
 
 }
 
-.sub-topic-button {
-
-  font-weight: 600;
-}
 
 .classroom-doors-text-bg {
 

@@ -1,3 +1,72 @@
+// BUTTON STYLES
+.button-text {
+  //font: $font-stack;
+  color: $primary-color;
+  margin-bottom: -.118em;
+}
+
+.button-text-small {
+  //font: $font-stack;
+  color: $primary-color;
+  font-size: .618em;
+  //line-height: .99em;
+}
+
+.button {
+
+  //background-color: rgb(118, 149, 153);
+  display: block;
+  //border: thin;
+  margin: 10px;
+  //font-size: 1.35em;
+  //padding: .1em;
+  //text-align: left;
+  color: $primary-color;
+  a {
+    color: black;
+
+  }
+}
+
+.sub-topic-button {
+
+  //font-size: 101%;
+  //font-weight: 300;
+}
+
+.btn-kill {
+  color: #b04431;
+  //&:hover {
+  //color: #fff;
+
+  //}
+}
+
+.btn-main-menu {
+  //background-color: rgb(228, 192, 127);
+  background-color: rgba(lighten($primary-bg-color, 7%), .95);
+  border-color: rgba(darken($primary-bg-color, 93%), 1);
+  color: $primary-color;
+  font-size: 1.35em;
+  padding: 2%;
+  //margin: .5%;
+  //list-style: none;
+  text-align: left;
+  a {
+    color: $primary-color;
+  }
+  // li {
+  //padding: 10px 0;
+  //border-top: 1px solid #e8e8e8;
+  //}
+
+}
+
+.btn-a {
+  background-color: #edffe6;
+}
+
+
 // SPECIAL BUTTON COLORS
 
 .kids-corner-button-style {
@@ -29,7 +98,3 @@
 
 }
 
-.sub-topic-button {
-
-  font-weight: 600;
-}

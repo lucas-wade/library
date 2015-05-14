@@ -1,9 +1,15 @@
 @import "variables";
 
 
-#navbar-middle {
-  //  width: 20%;
+.navbar-nav > li {
+  margin-left: -4px;
+  margin-right: -4px;
 }
+
+.navbar-right {
+  margin-right: 10px;
+}
+
 
 /* header */
 
