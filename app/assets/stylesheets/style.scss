@@ -12,6 +12,7 @@
 @import "mixin";
 @import "topics";
 
+
 /* vv To be sorted CSS vv */
 .real-small {
   font-size: .618em;
@@ -468,12 +469,12 @@ a {
 
   height: 90em;
   //height: 100%;
-  padding-top: 8em;
+  padding-top: 22em;
 
   margin-left: -14%;
   margin-right: -2%;
-  color: #dffdff;
-  //color: black;
+  //color: #dffdff;
+  color: black;
   text-align: justify;
 
   font-weight: 500;
@@ -486,10 +487,51 @@ a {
 .classroom-doors-text-bg {
 
   padding-top: .5em;
-  background-color: rgba(56, 32, 29, 0.55);
+  //background-color: rgba(56, 32, 29, 0.55);
+  background-color: rgba(255, 255, 255, .333);
   height: 100%;
 
 }
 
+
+
+// COLORS
+
+
+.b0 {
+  background-color: $primary-bg-color;
+}
+
+.b1 {
+  background-color: darken($btn1, 1%);
+}
+
+.b2 {
+  background-color: darken($btn2, 0%);
+}
+
+.b3 {
+  background-color: darken($btn3, 1%);
+}
+
+.b4 {
+  background-color: $clr4;
+}
+
+.c1 {
+  color: darken($btn1, 20%);
+}
+
+.c2 {
+  color: darken($btn2, 20%);
+}
+
+.c3 {
+  color: darken($btn3, 20%);
+}
+
+.c4 {
+  color: $clr4;
+}
 
 
