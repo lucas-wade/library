@@ -64,9 +64,7 @@ html {
   }
 
   #action-collumn {
-    background-image: image_url("shovel_flat_tall.png");
-    background-repeat: no-repeat;
-    background-position: top;
+    background: image_url("shovel_flat_tall.png") no-repeat top;
     background-size: 6em;
     background-position-y: 1em;
     //height: 20em;
@@ -96,9 +94,7 @@ html {
   }
 
   #action-collumn {
-    background-image: image_url("shovel_flat_tall.png");
-    background-repeat: no-repeat;
-    background-position: top;
+    background: image_url("shovel_flat_tall.png") no-repeat top;
     background-size: 7.2em;
     background-position-y: 2em;
     min-height: 40em;
@@ -145,12 +141,10 @@ body {
 
 }
 .main-container{
-  background-image: image_url("garden_footer.jpg");
-  background-repeat: repeat-x;
   height: 62em;
   //padding-bottom: 3%;
   //background-position: -60px -60px;
-  background-position: center -60px;
+  background: image_url("garden_footer.jpg") repeat-x center -60px;
 
 }
 .jimbo {
@@ -169,9 +163,7 @@ body {
 }
 
 .video {
-  position:fixed !important;
-    position:absolute;
-  background: linear-gradient( lighten($primary-bg-color,18%),darken($primary-bg-color,11%) );
+  position:absolute;
   margin-top: 50px;
   top: 0;
   right:0;
@@ -179,7 +171,7 @@ body {
   left:0;
 
   //background-color: #000000;
-  background-color: $primary-bg-color;
+  background: $primary-bg-color linear-gradient(lighten($primary-bg-color, 18%), darken($primary-bg-color, 11%));
 }
 
 .content-window-bg-color {
@@ -200,9 +192,7 @@ body {
   padding-left: .5em;
   padding-right: .5em;
 
-  margin: 0;
-  margin-bottom: -1em;
-
+  margin: 0 0 -1em;
 
   //height: 4em;
   height: 100%;
@@ -210,13 +200,11 @@ body {
 #content-window {
   //height: 26em;
   background-color: rgba($content_bg_color,.99);
-  margin: 0;
-  margin-top: .618em;
+  margin: .618em 0 0;
   overflow-y: auto;
   overflow-x: hidden;
 
-  padding: 1em;
-  padding-bottom: .1em;
+  padding: 1em 1em .1em;
 
   p {
     .hotwords {
@@ -363,7 +351,7 @@ body {
 }
 
 .tight-butt {
-  padding-bottom: 0%;
+  padding-bottom: 0;
   margin-bottom: -1%;
 }
 
@@ -376,12 +364,12 @@ body {
 }
 
 .firm-butt {
-  padding-bottom: 0em;
+  padding-bottom: 0;
   margin-bottom: .2em;
 }
 
 .tight-top {
-  margin-top: 0em;
+  margin-top: 0;
 }
 
 .big-top {
@@ -389,8 +377,8 @@ body {
 }
 
 hr {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 #lang-dropdown{
@@ -602,7 +590,7 @@ p {
  // list-style: none;
   text-align: left;
 
-  sb {
+  .sb {
 
     //clear: both;
     font-size: .55em;
@@ -631,7 +619,7 @@ p {
 
 
 .navbar-right {
-  padding-left: 0px;
+  padding-left: 0;
   float: right;
   padding-right: 2em;
 
@@ -640,14 +628,14 @@ p {
 
 .nav-list {
   list-style-type: none;
-  padding: 0px;
+  padding: 0;
 
 }
 
 .top-menu-icon {
   //width: 10%;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 .pdf-viewer {
@@ -666,9 +654,7 @@ p {
 }
 
 .classroom-col {
-  border-color: #222222;
-  border-style: solid;
-  border-width: medium;
+  border: medium solid #222222;
   border-radius: 1% ;
 }
 
@@ -745,7 +731,7 @@ aside {
       text-align: left;
       letter-spacing: -1px;
       margin-bottom: 3px;
-      margin-top: 0px;
+      margin-top: 0;
     }
   }
 }
@@ -1025,10 +1011,7 @@ z-index: 0;
 }
 
 .classroom-doors {
-  background-image: image_url("classroom_doors.jpg");
-
-  background-repeat: repeat-y;
-  background-position: center;
+  background: image_url("classroom_doors.jpg") repeat-y center;
   background-size: cover;
 
   //height: 70em;
