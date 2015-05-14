@@ -1,0 +1,118 @@
+@import "variables";
+
+html {
+  background-color: $primary-bg-color;
+}
+
+body {
+  padding-top: 50px;
+  font-family: $font-stack;
+
+  background-color: $primary-bg-color;
+  //background: linear-gradient( lighten($primary-bg-color,15%),darken($primary-bg-color,10%) );
+
+}
+
+.jumbotron {
+  // background-color: darken($primary-bg-color,3%);
+  padding-top: 10px;
+  padding-left: 0;
+
+}
+
+.main-container {
+  height: 62em;
+  //padding-bottom: 3%;
+  //background-position: -60px -60px;
+  background: image_url("garden_footer.jpg") repeat-x center -60px;
+
+}
+
+.jimbo {
+  padding-left: 10%;
+
+}
+
+.offset-jimbo {
+  margin-left: -11%;
+  //padding-left: -10%;
+}
+
+.filled-container {
+  background-color: rgba(255, 255, 255, .333);
+  height: 100%;
+}
+
+.row {
+  margin-left: -11%;
+  margin-right: 0;
+
+}
+
+.low-gutter > [class*='col-'] {
+  padding-right: .6%;
+  padding-left: .6%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  //margin-bottom: 30px;
+  //text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  letter-spacing: -1px;
+  margin-bottom: 2%;
+
+  margin-top: 1%;
+  //text-align: center;
+  font-weight: normal;
+  //color: #777;
+  //line-height: .1em;
+}
+
+h3 {
+  font-size: 1.4em;
+  letter-spacing: -1px;
+  margin-top: 0;
+  margin-bottom: 2%;
+  //text-align: center;
+  font-weight: normal;
+  //color: #777;
+}
+
+h4 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h5 {
+  font-size: 2em;
+  letter-spacing: -1px;
+  margin-bottom: 2%;
+  text-align: center;
+  font-weight: normal;
+  //color: #777;
+}
+
+h6 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 2%;
+  text-align: center;
+  font-weight: normal;
+  //color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
