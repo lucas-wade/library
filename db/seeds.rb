@@ -29,6 +29,13 @@ User.create!(name:  "Jonathan",
              admin: true,
              activated: true,
              activated_at: Time.zone.now)
+User.create!(name:  "Matt",
+             email: 'me@mattslab.net',
+             password:              "default",
+             password_confirmation: "default",
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
 
 =begin
 
