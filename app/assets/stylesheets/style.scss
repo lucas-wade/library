@@ -1031,15 +1031,19 @@ z-index: 0;
   background-position: center;
   background-size: cover;
 
-  //height: 70em;
-  height: 100%;
-  padding-top: 10em;
+  height: 70em;
+  //height: 100%;
+  padding-top: 11em;
 
   margin-left: -14%;
   margin-right: -2%;
   //color: #dffdff;
   color: black;
-  text-align: center;
+  text-align: justify;
+  font-weight: 600;
+  font-size: 1.3em;
+
+
 
 }
 
