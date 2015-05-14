@@ -4,8 +4,15 @@
 
 <% provide(:title, t('titles.classroom') ) %>
 
+    <div class="
 
-<div class="row low-gutter <% if edit_mode == 1 %>
+    <% if edit_mode == 1 %>
+        offset-jimbo
+
+    <% end %>
+">
+
+    <div class="row low-gutter <% if edit_mode == 1 %>
                                 edit-form
                                 <% end %>
                                 ">
@@ -27,9 +34,11 @@
 
 
 </div>
+    </div>
 
 <% else %>
     <script type="text/javascript">
         window.location.href="/"
     </script>
 <% end %>
+
