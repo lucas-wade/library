@@ -2,7 +2,6 @@
   <div>
     <div class="navbar-header">
       <% header_title = header_title(yield(:logo)) %>
-      <%# link_to image_tag(current_logo, size: '300x25', alt: 'GROW BIOINTENSIVE® Library'), topics_path, id: "logo" %>
       <%= link_to header_title, topics_path, id: "logo" %>
     </div>
 
@@ -11,41 +10,42 @@
       <ul class="nav-list list-inline2">
 
         <li class="top-menu-icon small-icon">
-          <%  if session[:current_collumn] == 1 && @topic.present? && $collumn_icon_1.kids.present?%>
+          <% if session[:current_collumn] == 1 && @topic.present? && $collumn_icon_1.kids.present? %>
               <%= link_to image_tag($collumn_icon_1.icon.url, class: 'small-icon'), topic_path($collumn_icon_1.kids.first) %>
-          <% else if session[:current_collumn] == 2 && @topic.present?  && $collumn_icon_1.kids.present?%>
+          <% else
+               if session[:current_collumn] == 2 && @topic.present? && $collumn_icon_1.kids.present? %>
                   <%= link_to image_tag($collumn_icon_1.icon.url, class: 'small-icon'), topic_path($collumn_icon_1.kids.first) %>
 
-          <% else %>
+              <% else %>
 
-        <% end %>
+              <% end %>
           <% end %>
         </li>
 
         <li class="top-menu-icon small-icon">
-        <% if session[:current_collumn] == 0 && @topic.present? && $collumn_icon_2.kids.present?%>
-            <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
+          <% if session[:current_collumn] == 0 && @topic.present? && $collumn_icon_2.kids.present? %>
+              <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
 
-            <%# else if session[:current_collumn] == 1 && @topic.present? %>
-            <%# link_to image_tag($collumn_icon_3.icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
+              <%# else if session[:current_collumn] == 1 && @topic.present? %>
+              <%# link_to image_tag($collumn_icon_3.icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
 
-        <% else if session[:current_collumn] == 2 && @topic.present? && $collumn_icon_2.kids.present?%>
-                <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
+          <% else
+               if session[:current_collumn] == 2 && @topic.present? && $collumn_icon_2.kids.present? %>
+                  <%= link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
               <% else %>
 
-            <% end %>
-        <% end %>
+              <% end %>
+          <% end %>
         </li>
         <li class="top-menu-icon small-icon">
 
           <% if session[:current_collumn] == 0 && @topic.present? && $collumn_icon_3.kids.present? %>
-              <%= link_to image_tag($collumn_icon_3   .icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
+              <%= link_to image_tag($collumn_icon_3.icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
 
-          <% else if session[:current_collumn] == 1 && @topic.present? && $collumn_icon_3.kids.present? %>
+          <% else
+               if session[:current_collumn] == 1 && @topic.present? && $collumn_icon_3.kids.present? %>
                   <%= link_to image_tag($collumn_icon_3.icon.url, class: 'small-icon'), topic_path($collumn_icon_3.kids.first) %>
 
-                  <%# else if session[:current_collumn] == 2 && @topic.present? %>
-                  <%# link_to image_tag($collumn_icon_2.icon.url, class: 'small-icon'), topic_path($collumn_icon_2.kids.first) %>
               <% else %>
 
               <% end %>
