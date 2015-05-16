@@ -158,6 +158,7 @@
     <% else
          if there_is_a_topic_in_the_content_window == TRUE && @topic.growing == FALSE && @topic.placeholder == FALSE %>
             <%= link_to '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>'.html_safe, @topic, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_html => @topic.main_content} %>
+            <!-- BS MODAL --> <%# render 'shared/modal', button: '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>', title: '', body: @topic.main_content %>
         <% end %>
     <% end %>
 

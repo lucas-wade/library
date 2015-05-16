@@ -1,18 +1,65 @@
 <% provide(:logo, 'clear' ) %>
 
+<script>
+    $(document).ready(function() {
+        $('.has-tooltip').tooltip();
+        $('.has-popover').popover({
+            //trigger: 'hover'
+        });
+    });
+</script>
+
 <%# if logged_in? %>
 
 <div class="classroom-doors">
 
-
-
-
      <div class="col-sm-10 col-sm-offset-1 classroom-doors-text-bg">
       <!-- <div class="classroom-doors-text-bg"> -->
+       <p><%= t('classroom_doors.pI') %></p>
 
-    <%= render 'classroom_doors_text' %>
+       <% temp = t('classroom_doors.knowledge_pI') + '<br>' + t('classroom_doors.knowledge_pII')
+
+       %>
+       <p class="center">
+         <%= render 'shared/modal', button: t('classroom_doors.knowledge') , title: t('classroom_doors.knowledge'), body: temp, the_class: "btn btn-lg fat-text-button" %>
+         <%# link_to t('classroom_doors.knowledge'), @topics, class: "btn btn-default", :data => {:colorbox => true, :colorbox_height => '70%', :colorbox_width => '60%', :colorbox_html => temp} %>
+       </p>
+       <p><%= t('classroom_doors.pII') %>
+         <%= t('classroom_doors.knowledge_pIII') %>
+         <%= t('classroom_doors.knowledge_pIV') %></p>
+         <%= t('classroom_doors.hope_gain_html') %>
+         <%# render 'shared/modal', button: t('classroom_doors.btn_why_grow') , title: t('classroom_doors.btn_why_grow'), body: t('classroom_doors.why_grow') %>
+         <%= link_to t('classroom_doors.btn_why_grow'), @topic, class: "btn btn-lg fat-text-button", :data => {:colorbox => true, :colorbox_height => '70%', :colorbox_width => '60%', :colorbox_html => t('classroom_doors.why_grow_html') } %>
+       <br>
+
+       <div>
+         <h6 class="firm-butt">
+           <%= link_to t('sessions.register'), signup_path, class: "btn btn-lg major-button" %>
+
+           <%= link_to t('sessions.log_in'), login_path, class: "btn btn-lg major-button" %>
+
+           <%= link_to 'Guest', classroom_doors_path, class: "btn btn-lg major-button" %>
+
+         </h6>
+       </div>
+
+
+
+
+
+
+
+       <% render 'classroom_doors_text' %>
 
     </div>
+
+
+<!-- popups and such YEAH!!!
+  <button type="button" class="btn btn-link has-popover" data-toggle="popover" title="Notes" data-content="Hello ">View notes (popover)</button>
+
+  <a tabindex="0" class="btn btn-lg btn-success has-popover" role="button" data-toggle="popover" data-trigger="focus" data-placement="top"  data-content="And here's some amazing content. It's very engaging. Right?">A note about knowledge</a>
+-->
+
 
 </div>
 

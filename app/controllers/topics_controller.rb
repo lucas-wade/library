@@ -121,7 +121,7 @@ class TopicsController < ApplicationController
       @parent_topic = Topic.find(params[:parent_id])
     end
 
-#breakpoint
+
    if topic_params[:major_update] == "1"
 
      @topic.version += 1
