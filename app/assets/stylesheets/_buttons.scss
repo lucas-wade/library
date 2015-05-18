@@ -54,13 +54,13 @@
 
 .fat-text-button {
 
-  //font-size: .9em;
+  font-size: 1.3em;
   border: none;
   background-color: transparent;
   //background-color: rgba(lighten($primary-bg-color,20),.5);
   font-weight: 800;
   //padding: .3em .5em .1em .5em;
-  color: rgba(68, 52, 23, .8);
+  color: rgba(68, 52, 23, .93);
   &:hover {
     //background-color: rgba(256,256,256,.93);
     background-color: rgba(lighten($primary-bg-color,0),.43);
@@ -76,16 +76,16 @@
 
 .major-button {
 
-  font-size: 1.3em;
-  border-color: darkslategray;
+  font-size: 1.18em;
+  border-color: white;
   //background-color: transparent;
   background-color: rgba(lighten($primary-bg-color,20),.5);
-  font-weight: 500;
+  font-weight: 600;
   //padding: .3em .5em .1em .5em;
   //color: rgba(68, 52, 23, .8);
   &:hover {
     //background-color: rgba(256,256,256,.93);
-    background-color: rgba(lighten($primary-bg-color,0),.43);
+    background-color: rgba(darken($primary-bg-color,20),.83);
     border-color: #3b5d5d;
   }
 }

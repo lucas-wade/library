@@ -13,9 +13,9 @@
 
 <div class="classroom-doors">
 
-     <div class="col-sm-10 col-sm-offset-1 classroom-doors-text-bg">
+     <div class="col-sm-10 col-sm-offset-1" id="classroom-doors-text-bg">
       <!-- <div class="classroom-doors-text-bg"> -->
-       <p><%= t('classroom_doors.pI') %></p>
+       <p><%= t('classroom_doors.pI_html') %></p>
 
        <% temp = t('classroom_doors.knowledge_pI') + '<br>' + t('classroom_doors.knowledge_pII')
 
@@ -42,11 +42,6 @@
 
          </h6>
        </div>
-
-
-
-
-
 
 
        <% render 'classroom_doors_text' %>

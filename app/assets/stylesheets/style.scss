@@ -489,21 +489,48 @@ a {
 }
 
 
-.classroom-doors-text-bg {
+#classroom-doors-text-bg {
 
   //margin-left: 6em;
   //margin-right: 6em;
-  padding: 1.618em;
-  padding-top: .5em;
+  padding: 2.618em;
+  padding-top: 1.618em;
 
   //background-color: rgba(56, 32, 29, 0.55);
   background-color: rgba(255, 255, 255, .333);
 
   //height: 100%;
 
+  border-radius: 4em 4em 0 0;
+  -webkit-hyphens: manual;
+  -webkit-shape-inside: polygon(0px 0px, 0 300px, 300px 300px);
+
 }
 
 
+
+.archtop {
+float: left;
+height: 670px;
+margin-left: 8.532128%;
+                     margin-top: 57px;
+clear: none;
+width: 82.934327%;
+                border-top-left-radius: 138px;
+//background-color: rgb(196, 146, 146);
+border-top-right-radius: 149px;
+}
+
+
+.basic-shape {
+  font-size: 12px;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  text-align: justify;
+  -webkit-hyphens: manual;
+  -webkit-shape-inside: polygon(0px 0px, 0 300px, 300px 300px);
+}
 
 
 

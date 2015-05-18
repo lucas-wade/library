@@ -21,3 +21,7 @@ public/uploads
 
 .idea
 # test
+
+/db/seeds.rb
+
+
