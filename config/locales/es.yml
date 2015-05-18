@@ -22,3 +22,51 @@ es:
   users:
     settings: "Configuraciones del usuario"
     registration: "Bienvenidos. Este sitio Web es una iniciativa educativa en marcha de Ecology Action: una organización sin fines de lucro que funciona desde 1972.  Se irá agregando contenido educativo nuevo a medida que la financiación del proyecto lo permita.  Regístrese más abajo para ser notificado a medida que se agrega contenido en su idioma así como para acceder a futuras capacitaciones interactivas mejoradas y características educativas opcionales de este sitio Web.  La información que usted proporcione no se compartirá con nadie. "
+  classroom_doors:
+       pI_html: "<span class=\"text-fat\">La agricultura biológicamente intensiva</span> (Biointensivamente) es un método de cultivo de alimentos que funciona en armonía con la naturaleza. Cuando se lo practica correctamente, Biointensivamente permite que la naturaleza se desempeñe según su designio para preservar la vida indefinidamente. La evidencia muestra que, durante al menos 4000 años y en por lo menos cuatro continentes, la agricultura biológicamente intensiva y en pequeña escala, brindó las bases para que civilizaciones prósperas cultivaran sus alimentos sin causar daño significativo a sus medio ambientes. Durante aproximadamente los últimos 125 años, un experimento relativamente nuevo ha venido aplicándose en las tierras de cultivo del mundo en la forma de un sistema mecanizado y químico de cultivo de alimentos. Como consecuencia, los suelos cultivables del mundo, que son la base de la agricultura y civilización, así como sus depósitos de agua, recursos energéticos, nutrientes y hábitat naturales para nuestros congéneres son recursos que se están agotando a un ritmo acelerado.
+                Esto no tiene que ser así."
+       pII: "Desde 1972, Ecology Action ha estado recabando conocimiento tan antiguo como la agricultura misma y redescubriendo los principios científicos universales subyacentes en el cultivo de alimentos que se aplican de la misma manera dondequiera que se cultiven alimentos."
+       knowledge: "Una nota sobre el conocimiento:"
+       knowledge_pI: "Algunos de los avances modernos más importantes en la agricultura biológicamente intensiva, en pequeña escala y sustentable fueron desarrollados por los hortelanos y agricultores que practicaban el sistema intensivo francés a lo largo de los siglos XVII a XIX. En aquellos días, las sociedades de agricultores estaban comúnmente organizadas en gremios que guardaban celosamente sus secretos comerciales. El valor del conocimiento se comprendía. Durante al menos 4000 años, los chinos cultivaron alimentos para su civilización en las mismas parcelas de tierra usando técnicas biointensivas. La gente llamó a sus agricultores \"bibliotecas vivientes\" porque comprendían que la experiencia de sus agricultores iba más allá del conocimiento que brindan los libros. Ecology Action debe mucho de su conocimiento a estos agricultores y a otros innumerables labradores de la tierra que trabajaron duro y fueron innovadores durante todos los tiempos y a lo largo y a lo ancho de nuestro planeta."
+       knowledge_pII: "Desde su fundación, el objetivo de Ecology Action ha sido, a través de la investigación, la práctica y la enseñanza: redescubrir los principios científicos universales y secretos comerciales subyacentes detrás del cultivo sustentable de alimentos, aprehender la experiencia que hace que los agricultores sean \"bibliotecas vivientes\" y compartir este conocimiento con la mayor cantidad posible de personas en todo el mundo, incluso con usted."
+       knowledge_pIII: "Si bien no hay \"soluciones mágicas\" para los problemas actuales en la agricultura, existen soluciones reales."
+       knowledge_pIV: "¿Cuál es el valor de una agricultura alfabetizada? Este sitio Web es su carné de la biblioteca; el jardín es su aula."
+       hope_gain_html: "<p center>
+                     El anhelo y objetivo de Ecology Action es que a través de este sito Web usted obtenga:
+
+                     <strong>
+                     Conocimiento:
+                     </strong>
+
+                     1) de los desafíos que enfrentamos
+                     2) de la esperanza que puede ser nuestra si aceptamos la agradable responsabilidad inherente de cooperar con la Tierra para cultivar alimentos.
+
+                     <strong>
+                     Sentimientos:
+                     </strong>
+
+                     1) de alivio (porque hay una solución)
+                     2) de empoderamiento (porque usted es la solución)
+
+                     <strong>
+                     e Inspiración:
+                     </strong>
+
+                     para actuar en el lugar donde usted se encuentre para poner en práctica el conocimiento aprendido y compartirlo con los demás.
+
+                     El mañana depende de las acciones positivas que usted y yo pongamos en práctica hoy. Únase a nosotros y a millones de personas en el mundo que estamos creando una Gran Diferencia
+
+                   </p>"
+       btn_why_grow: "¿Por qué CULTIVE BIOINTENSIVAMENTE(MR) ?"
+       btn_enter_site: "Ingresar al aula"
+       why_grow_html: "<p>
+                      El nombre CULTIVE BIOINTENSIVAMENTE(MR) se registró para codificar y cuantificar formalmente la sustentabilidad de un método de agricultura biológicamente intensivo que ha sido desarrollado y perfeccionado por Ecology Action desde 1972 y que está compuesto de Ocho Componentes.
+                      </p>
+                      <p>
+                      Si bien los componentes individuales de la agricultura biológicamente intensiva se han usado en varias combinaciones de manera menos sustentable, los resultados de las investigaciones realizadas desde 1972 por Ecology Action y por otros investigadores demostraron que existen sinergias positivas que se manifiestan cuando ciertos componentes se ponen en práctica de manera conjunta, situación que no ocurre si los mismos componentes se ponen en práctica de manera independiente unos de otros. Más importante aún: descubrimos que, dadas las fuertes interrelaciones que existen entre los Ocho Componentes del método CULTIVE BIOINTENSIVAMENTE(MR) , es posible que, si no se ponen en práctica todos los componentes juntos COMO UN SISTEMA COMPLETO, el suelo se agote más rápidamente que con la aplicación de las practicas convencionales. Una razón para esto son las cosechas más altas (de 2 a 4 veces que el promedio de la agricultura convencional) que se logran con las prácticas biológicamente intensivas. Cuando se practica COMO UN SISTEMA COMPLETO de Ocho Componentes, el método CULTIVE BIOINTENSIVAMENTE(MR)  tiene la capacidad de FORMAR EL SUELO hasta 60 veces más rápido
+                      de lo que ocurre en la naturaleza1, preservando la base de la vida mientras reduce considerablemente los recursos necesarios para cultivar alimentos.
+                      </p>
+                      <br>
+                      Nota al pie:
+                      1) [Journal of Sustainable Agriculture]
+                      "

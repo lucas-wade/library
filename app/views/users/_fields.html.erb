@@ -1,32 +1,13 @@
 <%= render 'shared/error_messages', object: f.object %>
-<h3 style="margin-bottom: 0">Name:</h3>
-<div class="input-group" style="margin-bottom: 5px">
-  <%= f.label(t('sessions.name'), :class => 'input-group-addon') do  %>
-      <i class="fa fa-user fa-fw"></i>
-  <%end%>
-  <%= f.text_field :name, :class => 'form-control', :type => 'text', :placeholder => 'Name' %>
-</div>
 
-<h3 style="margin-bottom: 0">Email Address:</h3>
-<div class="input-group" style="margin-bottom: 5px">
-  <%= f.label(t('sessions.email'), :class => 'input-group-addon') do  %>
-      <i class="fa fa-envelope-o fa-fw"></i>
-  <%end%>
-  <%= f.text_field :email, :class => 'form-control', :type => 'text', :placeholder => 'Email Address' %>
-</div>
+<%= f.label( t('sessions.name') ) %>
+<%= f.text_field :name %>
 
-<h3 style="margin-bottom: 0">Password:</h3>
-<div class="input-group" style="margin-bottom: 5px">
-  <%= f.label(t('sessions.password'), :class => 'input-group-addon') do  %>
-      <i class="fa fa-key fa-fw"></i>
-  <%end%>
-  <%= f.text_field :password, :class => 'form-control', :type => 'text', :placeholder => 'Password' %>
-</div>
+<%= f.label( t('sessions.email') ) %>
+<%= f.email_field :email %>
 
-<h3 style="margin-bottom: 0">Confirm Password:</h3>
-<div class="input-group" style="margin-bottom: 5px">
-  <%= f.label(t('sessions.confirm_password'), :class => 'input-group-addon') do  %>
-      <i class="fa fa-check fa-fw"></i>
-  <%end%>
-  <%= f.text_field :password_confirmation, :class => 'form-control', :type => 'text', :placeholder => 'Confirm Password' %>
-</div>
+<%= f.label( t('sessions.password') ) %>
+<%= f.password_field :password %>
+
+<%= f.label( t('sessions.confirm_password') ) %>
+<%= f.password_field :password_confirmation %>

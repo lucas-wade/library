@@ -13,7 +13,7 @@ pt:
     log_out: "Desconectar"
     email: "E-mail"
     password: "Senha"
-    forgot_password: 'Esqueceu sua senha?'
+    forgot_password: "Esqueceu sua senha?"
     remember_me: "Lembrar-me neste computador?"
     new_user: "Novo usuário?"
     sign_up: "Registre-se agora!"
@@ -22,3 +22,70 @@ pt:
   users:
     settings: "Configurações de usuário"
     registration: "Bem-vindo(a)  Este website é uma iniciativa educacional contínua da Ecology Action, uma organização sem fins lucrativos desde 1972.  Novo conteúdo educacional será adicionado conforme o financiamento do projeto permitir.  Registre-se abaixo para ser notificado conforme conteúdos são adicionados em seu idioma bem como para acessar treinamentos interativos melhorados futuros e recursos educacionais opcionais deste website.  As informações que você fornece não serão compartilhadas com ninguém. "
+  classroom_doors:
+     pI_html: "<span class=\"text-fat\">A agricultura biologicamente intensiva</span> (Biointensiva) é um método de cultivo de alimentos que funciona em harmonia com a natureza.  Quando aplicada adequadamente, a Biointensiva permite que a natureza opere de acordo ao que foi concebida para sustentar a vida indefinidamente.  A evidência é que, por pelo menos 4.000 anos e pelo menos em quatro continentes, a agricultura de pequena escala, biologicamente intensiva forneceu a base para a prosperidade de civilizações que aumentaram sua produção de alimentos sem causar danos significativos ao meio-ambiente.  Há aproximadamente 125 anos, um experimento relativamente novo ocorreu nas áreas cultiváveis do mundo- uma forma mecanizada e química de cultivo de alimentos.  Como resultado, os solos cultiváveis do mundo—a base da agricultura e civilização—bem como suas reservas de água, energia, nutrientes e habitats selvagens para espécies amigas são recursos que estão sendo esgotados a taxas aceleradas.
+
+                                                                                      Isso não precisa ser assim."
+     pII: "Desde 1972, a  Ecology Action tem adquirido conhecimento tão antigo quanto a própria agricultura, redescobrindo os princípios científicos universais atrás do cultivo sustentável de alimentos que são igualmente aplicáveis onde quer que seja."
+     knowledge: "Uma nota sobre conhecimento:"
+     knowledge_pI: "Alguns dos grandes avanços  modernos em agricultura biologicamente intensiva, de pequena escala, sustentável, foi feito por agricultores e fazendeiros de mercado praticando o Sistema Intensivo Francês ao longo dos séculos XVII e XIX.  Naquele tempo, as sociedades agricultoras eram comumente organizadas em associações, com cada associação guardando de perto seus segredos comerciais.  O valor do conhecimento era compreendido.  Há pelo menos 4.000 anos, os chineses cultivam seus alimentos para sua civilização das mesmas áreas de terra usando técnicas da Biointensiva.  As pessoas chamavam seus fazendeiros de \"bibliotecas vivas\" porque eles entendiam que a experiências dos fazendeiros se estendia além do conhecimento de livros.  A Ecology Action deve muito de seu conhecimento a esses e outros incontáveis agricultores, de trabalho duro e inovador ao longo do tempo e por todo planeta."
+     knowledge_pII: "Desde sua fundação, a meta da  Ecology Action tem sido, através da pesquisa, prática e ensino:  redescobrir os princípios científicos universais e segredos comerciais por trás do crescimento sustentável, para conquistar a experiência que cria \"bibliotecas vivas\" de fazendeiros e compartilhar esse conhecimento com o máximo de pessoas possível pelo mundo, incluindo você."
+     knowledge_pIII: "Enquanto não há \"soluções rápidas\" para os problemas atuais com a agricultura, há soluções reais."
+     knowledge_pIV: "Qual é o valor do conhecimento do cultivo de alimentos?  Este site é seu cartão de biblioteca; o jardim é sua sala de aula."
+     hope_gain_html: "<p center>
+
+                   A Ecology Action  espera e tem como objetivo que através deste site você adquira:
+
+
+                   <strong>
+                   Conhecimento:
+                   </strong>
+
+                   1) dos desafios que estamos enfrentando
+                   2) da esperança que pode ser nossa ao aceitar a * responsabilidade prazerosa em cooperar com a Terra para o cultivo de alimentos.
+
+                   <strong>
+                   Sentimentos:
+                   </strong>
+
+                   1) de alívio (de que há uma solução)
+                   2) de poder (de que a solução é você)
+
+                   <strong>
+                   e Inspiração:
+                   </strong>
+
+                   para atuar onde você está e colocar em prática o conhecimento adquirido e para compartilhá-lo com outros.
+
+                   O amanhã depende das ações positivas que você e eu tomamos hoje. Junte-se a nós e a milhões pelo mundo que estão fazendo um Mundo de Diferença.
+                 </p>"
+     btn_why_grow: "Por que GROW BIOINTENSIVE?"
+     btn_enter_site: "Entrar na sala de aula"
+     why_grow_html: "<p>
+                    O nome GROW BIOINTENSIVE® foi registrado para codificar e quantificar formalmente a sustentabilidade de um método de agricultura biologicamente intensiva que foi desenvolvido e refinado pela Ecology Action desde 1972 e que está apoiado em oito componentes.
+                    </p>
+                    <p>
+                    Enquanto componentes individuais da agricultura biologicamente intensiva tem sido utilizados em diversas combinações menos sustentáveis, os resultados das pesquisas da Ecology Action desde 1972 e também da pesquisa de outros têm demonstrado que ocorrem sinergias benéficas quando certos componentes são praticados juntos que não ocorrem quando os mesmos são praticados independentes uns dos outros.  Mais importante: descobrimos que, devido às fortes interrelações entre os oito componentes do método GROW BIOINTENSIVE, é´possível, se todos os componentes não forem praticados juntos COMO UM SISTEMA COMPLETO, que esgotem o solo mesmo mais rapidamente que sob práticas convencionais.  Uma razão para isso é o alto rendimento (2 a 4 vezes que a agricultura convencional em média) atingível sob práticas biologicamente intensivas.  Quando praticado COMO UM SISTEMA COMPLETO de oito componentes, o método GROW BIOINTENSIVE tem a capacidade de CULTIVAR O SOLO até 60 vezes mais rápido do que acontece na natureza1, preservando a base da vida enquanto reduz fortemente os recursos necessários para o cultivo de alimentos.
+                    </p>
+
+                    <br>
+                    Nota de rodapé:
+                    1) [Journal of Sustainable Agriculture]
+                    "
+     nature_note_button: "Uma nota sobre trabalhar com a natureza"
+     nature_note_html: "Enzimas e humos são duas substâncias naturalmente presentes em um solo saudável contendo uma quantidade suficiente de matéria orgânica.  Essas substâncias ajudam na dissolução de minerais no solo em formas (nutrientes) que as plantas são capazes de usar paro seu crescimento e para se manterem saudáveis.
+
+                        Uma forma de aumentar rapidamente os níveis de nutrientes em solos é importar e aplicar enzimas adicionais e humos como produtos para o solo.  Enquanto essa estratégia pode parecer beneficiar as plantas no primeiro momento, o efeito em longo prazo é que os minerais do solo são disponibilizados muito rapidamente e em quantidades muito altas para as plantas poderem utilizá-los.  Os nutrientes não utilizados são então lixiviados do solo durante eventos de chuva e irrigação e, portanto, descartados.  Quando nutrientes são descartados, a \"caixa de armazenamento\" de nutrientes disponível para plantas futuras é diminuída.
+
+                        Outro jeito mais natural de aumentar os níveis de nutrientes no solo é aplicar compostos de materiais de plantas cultivados no local.  Esses compostos, se produzidos corretamente, conterão enzimas e humos nas formas e quantidades necessárias para liberar nutrientes no solo a uma taxa natural a qual as plantas podem fazer um melhor uso.
+
+                        Ao seguir a natureza, o desperdício é minimizado ou eliminado e os recursos do solo são preservados para gerações futuras de plantações e pessoas.
+                        "
+     nature_note_button: "Una nota acerca de Cómo trabajar con la naturaleza"
+     nature_note_html: "Las enzimas y los humatos son dos sustancias naturalmente presentes en suelos saludables que contienen una cantidad suficiente de materia orgánica.  Estas sustancias actúan en la descomposición de minerales del suelo en formas (nutrientes) que las plantas pueden absorber para crecer y permanecer saludables.
+
+                        Una manera de aumentar rápidamente los niveles de nutrientes en los suelos es importar y aplicar al suelo enzimas y humatos como productos para el suelo. Si bien esta estrategia puede parecer beneficiosa para las plantas al comienzo, el efecto a largo plazo es que los minerales del suelo se tornan accesibles demasiado rápido y en cantidades demasiado grandes para que las plantas las aprovechen 100%. Los nutrientes que no se absorben se deslavan ante eventos relacionados con el agua y, consecuentemente, se desperdician. Cuando los nutrientes se desperdician, se disminuye el \"depósito de almacenamiento\" de nutrientes para las plantas futuras.
+
+                        Otra forma, más natural, de aumentar los niveles de nutrientes en el suelo es aplicando compost de material vegetal desarrollado en el lugar. Este compost, si se prepara correctamente, contendrá enzimas y humatos en las formas y cantidades necesarias para liberar nutrientes al suelo a un ritmo natural al que las plantas aprovecharán más completamente.
+
+                        Al seguir esta guía de la naturaleza, se minimiza o elimina el desperdicio y los recursos del suelo se preservan para las futuras generaciones de cosechas y de personas."

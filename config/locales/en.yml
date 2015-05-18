@@ -59,17 +59,23 @@ en:
                    It is Ecology Action's hope and objective that through this website you will gain:
 
 
-                   <strong>Knowledge:</strong>
+                   <strong>
+                   Knowledge:
+                   </strong>
 
                    1) of the challenges we are facing
                    2) of the hope that can be ours by accepting the pleasurable responsibility inherent in cooperating with the Earth to grow food.
 
-                   <strong>Feelings:</strong>
+                   <strong>
+                   Feelings:
+                   </strong>
 
                    1) of relief (that there is a solution)
                    2) of empowerment (that the solution is you)
 
-                   and <strong>Inspiration:</strong>
+                   and <strong>
+                   Inspiration:
+                   </strong>
 
                    to act where you are to put into practice the knowledge learned and to share this knowledge with others.
 
@@ -85,7 +91,16 @@ en:
                     COMPLETE SYSTEM of Eight Components, the GROW BIOINTENSIVE method has the capacity to BUILD SOIL up to 60 times faster
                     than happens in nature1, preserving the basis of life while greatly reducing the resources needed to grow food.
                     </p>
-                    [button: A Note About Working With Nature]
+
                     <br>
                     Footnote:
-                    1) [Journal of Sustainable Agriculture]"
+                    1) [Journal of Sustainable Agriculture]
+                    "
+     nature_note_button: "A Note About Working With Nature"
+     nature_note_html: "Enzymes and humates are two substances that are naturally present in a healthy soil containing a sufficient amount of organic matter.  These substances aid in the dissolving of soil minerals into forms (nutrients) that plants are able to use to grow and to stay healthy.
+
+                        One way to quickly increase the nutrient levels in soils is to import and apply additional enzymes and humates as products to the soil.  While this strategy might appear to benefit the plants at first, the long-term effect is that soil minerals are made available too quickly and in quantities too great for plants to make full use of.  The unused nutrients are then leached out of the soil during water events and are, therefore, wasted.  When nutrients are wasted, the nutrient \"storage bin\" available to future plants is diminished.
+
+                        Another, more natural, way of increasing nutrient levels in the soil is to apply compost from plant materials grown on site.  This compost, if made correctly, will contain enzymes and humates in forms and quantities necessary to release soil nutrients at a natural rate at which plants may make more complete use of.
+
+                        By following nature's lead, waste is minimized or eliminated and soil resources are preserved for future generations of crops and people.    "
