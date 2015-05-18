@@ -9,7 +9,7 @@
 
       <ul class="nav-list list-inline2">
 
-        <li style="padding:.3em">
+        <li id="enter-button">
           <% if current_page?(controller: 'static_pages', action: 'home') %>
             <span class="center">
              <%= link_to t('classroom_doors.btn_enter_site'), classroom_doors_path, class: "btn btn-lrg major-button" %>
