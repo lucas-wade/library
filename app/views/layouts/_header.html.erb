@@ -9,7 +9,15 @@
 
       <ul class="nav-list list-inline2">
 
-        <li class="top-menu-icon small-icon">
+        <li style="padding:.3em">
+          <% if current_page?(controller: 'static_pages', action: 'home') %>
+            <span class="center">
+             <%= link_to t('classroom_doors.btn_enter_site'), classroom_doors_path, class: "btn btn-lrg major-button" %>
+            </span>
+          <% end %>
+        </li>
+
+             <li class="top-menu-icon small-icon">
           <% if session[:current_collumn] == 1 && @topic.present? && $collumn_icon_1.kids.present? %>
               <%= link_to image_tag($collumn_icon_1.icon.url, class: 'small-icon'), topic_path($collumn_icon_1.kids.first) %>
           <% else
@@ -54,8 +62,10 @@
         </li>
 
       </ul>
+
     </div>
     <!--/.nav-middle -->
+
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
