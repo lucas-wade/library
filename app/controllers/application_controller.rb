@@ -4,9 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include  SessionsHelper
 
-  before_action :set_i18n_locale_from_params
-
-  #before_filter :set_locale
+  #before_action :set_i18n_locale_from_params
+  before_action :set_locale
 
 
   #protected
@@ -35,7 +34,7 @@ class ApplicationController < ActionController::Base
   private
 
   def set_locale
-    I18n.locale = params[:locale] if params[:locale].present?
+    I18n.locale = params[:locale] || I18n.default_locale
   end
 
   # Confirms a logged-in user.
