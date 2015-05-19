@@ -266,7 +266,13 @@
         <div class="col-md-3">
           <% sub_cats.kids.each do |t| %>
               <% if t.category == 1 %>
-                  <% the_class = tab_active(t) %>
+                  <%
+                     the_class = tab_active(t)
+                     if t.placeholder == TRUE
+                       the_class = the_class + ' placeholder'
+                     end
+                  %>
+
                   <% if edit_mode ==1 %>
                       <%= link_to image_tag("icon-tabs-cat-1.png", class: the_class), edit_topic_path(t) %>
                       <% else %>
@@ -284,7 +290,12 @@
         <div class="col-md-3">
           <% sub_cats.kids.each do |t| %>
               <% if t.category == 2 %>
-                  <% the_class = tab_active(t) %>
+                  <%
+                     the_class = tab_active(t)
+                     if t.placeholder == TRUE
+                       the_class = the_class + ' placeholder'
+                     end
+                  %>
                   <% if edit_mode ==1 %>
                       <%= link_to image_tag("icon-tabs-cat-2.png", class: the_class), edit_topic_path(t) %>
                   <% else %>
@@ -301,7 +312,12 @@
         <div class="col-md-3">
           <% sub_cats.kids.each do |t| %>
               <% if t.category == 3 %>
-                  <% the_class = tab_active(t) %>
+                  <%
+                     the_class = tab_active(t)
+                     if t.placeholder == TRUE
+                       the_class = the_class + ' placeholder'
+                     end
+                  %>
                   <% if edit_mode ==1 %>
                       <%= link_to image_tag("icon-tabs-cat-3.png", class: the_class), edit_topic_path(t) %>
                   <% else %>

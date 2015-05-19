@@ -4,5 +4,8 @@
 <%= link_to '<span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>'.html_safe, t.media.url, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, } %>
 <%= link_to '<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>'.html_safe, t.media.url, :target => "_blank" %>
 
-
-<%= link_to t.name, topic_path(t.topics.first, publication_id: t.id) %>
+<% if t.topics.present? %>
+    <%= link_to t.name, topic_path(t.topics.first, publication_id: t.id) %>
+<% else %>
+    <%= link_to t.name, pub_path(t.id) %>
+<% end %>

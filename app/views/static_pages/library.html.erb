@@ -49,9 +49,9 @@
                     <%# link_to t.name, t %>
                     <%= render partial: 'shared/pub_link_to', locals: {t: t} %>
                   </td>
-                  <td><%= link_to t.topics.first.parents.first.name, t.topics.first.parents.first %></td>
-                  <td><%= link_to t.topics.first.name, t.topics.first %></td>
-                  <td><%= $available_categories[t.topics.first.category]%></td>
+                  <td><%= link_to t.topics.first.parents.first.name, t.topics.first.parents.first if t.topics.present?%></td>
+                  <td><%= link_to t.topics.first.name, t.topics.first if t.topics.present? %></td>
+                  <td><%= $available_categories[t.topics.first.category] if t.topics.present? %></td>
                   <td><%= $available_skills[t.skill]%></td>
                   <td><%= t.media.content_type %></td>
                   <td><%= $av_langs_hash[t.language] %></td>

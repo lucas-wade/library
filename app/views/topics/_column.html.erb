@@ -69,9 +69,12 @@
                            the_class = the_class.downcase
                            the_class = the_class.gsub(/[^0-9a-z ]/, '')
                            the_class = the_class.downcase.tr(' ','-') + '-button-style'
-
-
+                           # now check for placeholder
+                           if t.placeholder == TRUE
+                            the_class = the_class + ' placeholder'
+                           end
                         %>
+
                 <a href="<%= topic_path(t) %>" class="list-group-item btn-default btn-main-menu button <%= the_class %> <%= color_class %> <%= rtl_checker(t.language) %> ">
                   <div class="button-text"> <%= t.name %> </div>
                   <div class="button-text-small">

@@ -34,16 +34,8 @@
   </div>
 
   <!-- sub topic nav bar -->
-  <div id="sub-topics-window" class="col-md-8
-                                    <%# if @topic == %>
-
-                                    <%# end %>
-
-                                    ">
+  <div id="sub-topics-window" class="col-md-8">
     <h3>
-      <%# @topic.parents.first.id %>
-
-
       <% if @topic.kids.present? %>
           <% @topic.kids.each do |tt|
             if tt.category < 1 && tt.language == I18n.locale.to_s %>
@@ -54,6 +46,9 @@
                          the_class = "btn sub-topic-button"
                          if tt.id == @topic.id
                          the_class = the_class + '-active'
+                         end
+                         if tt.placeholder == TRUE
+                           the_class = the_class + ' placeholder'
                          end
                       %>
                       <%= link_to tt.name, tt, class: the_class unless tt.name == nil %>
@@ -73,6 +68,9 @@
                              if tt.id == @topic.id
                                the_class = the_class + '-active'
                              end
+                             if tt.placeholder == TRUE
+                               the_class = the_class + ' placeholder'
+                             end
                           %>
                           <%= link_to tt.name, tt, class: the_class %>
                       <% end %>
@@ -91,6 +89,9 @@
                                  the_class = "btn sub-topic-button"
                                  if tt.id == @topic.id
                                    the_class = the_class + '-active'
+                                 end
+                                 if tt.placeholder == TRUE
+                                   the_class = the_class + ' placeholder'
                                  end
                               %>
                       <%= link_to tt.name, tt, class: the_class %>
