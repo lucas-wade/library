@@ -27,7 +27,7 @@ en:
     title_html: GROW BIOINTENSIVE<sup>®</sup>
     classroom: "Classroom"
   layouts:
-    a_project: "A project of Ecology Action of the Mid Peninsula"
+    a_project: "A project of Ecology Action of the Mid-Peninsula, a 501(c)3 Non-Profit Organization"
     submit: "Submit"
   sessions:
     log_in: "Log in"
@@ -39,6 +39,7 @@ en:
     new_user: "New user?"
     sign_up: "Sign up now!"
     register: "Register"
+    guest_enter: "Enter as a Guest"
     name: "Name"
     confirm_password: "Confirm Password"
   users:

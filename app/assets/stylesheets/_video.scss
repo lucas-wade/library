@@ -1,20 +1,23 @@
 @import "variables";
 
 .vid-container {
-  //position: absolute;
-  //top: 50px;
+  //margin-top: 100px;
+  //background-color: transparent;
 
 }
 
 .video {
-  position:absolute;
-  margin-top: 50px;
+  position: absolute;
   top: 0;
   right:0;
   bottom: 0;
   left:0;
 
+  //margin-top: 100px;
+
   //background-color: #000000;
   //background-color: $primary-bg-color linear-gradient(lighten($primary-bg-color, 18%), darken($primary-bg-color, 11%));
-  background-color: transparent;
+  //background-color: transparent;
+  background-color: $primary-bg-color;
+  //padding-bottom: 100px;
 }

@@ -85,8 +85,8 @@
   //color: rgba(68, 52, 23, .8);
   &:hover {
     //background-color: rgba(256,256,256,.93);
-    background-color: rgba(darken($primary-bg-color,20),.83);
-    border-color: #3b5d5d;
+    background-color: rgba(darken($primary-bg-color,10),.93);
+    border-color: #081111;
   }
 }
 
@@ -164,5 +164,7 @@
 #enter-button {
   padding-top: .5em;
   text-align: center;
+  letter-spacing: .6em;
+  font-size: 1em;
 
 }
