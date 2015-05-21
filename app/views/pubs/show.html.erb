@@ -1,9 +1,9 @@
 <% provide(:title, 'Publication Viewer') %>
 
-<div class="row b0">
-<div class="col-md-2"></div>
+<div class="row">
 
-  <div class="col-md-10">
+
+  <div class="col-md-12">
     <div class="content_window">
     <h1>
       <% if edit_mode==1 %>
@@ -15,8 +15,7 @@
           <% end %>
 
           <% end %><%= @pub.name %>
-      Skill Level <strong><%= $available_skills[@pub.skill] unless !@pub.skill.present?%></strong>
-      <rs>
+
         <!-- translations -->
         <% if @pub.translations.present? %>
 
@@ -40,14 +39,15 @@
       </rs>
 
     </h1>
-
+      <p>
+      Skill Level <strong><%= $available_skills[@pub.skill] unless !@pub.skill.present?%></strong>
 
 This publication is linked to by
-<% @pub.topics.each do |t| %>
+<% @pub.topics.each do |t|%>
 <%= link_to t.name, t %>
     <% end %>
 
-
+      </p>
 
 
 

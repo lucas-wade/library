@@ -24,6 +24,7 @@ placeholder: "Compose new micropost..."
     <% if @original_pub %>
         <h3>Translation of <strong><%= @original_pub.name %></strong></h3>
         <%= hidden_field_tag :original_id, @original_pub.id %>
+
     <% end %>
 
 
@@ -34,16 +35,15 @@ placeholder: "Compose new micropost..."
 
     <div class="field">
       <%= f.label :language %><br>
-      <%# f.select(:language, [['English',1],['Hindi',2],['Arabic',3],['Spanish',4],['Portuguese',5],['Bengali',6]] ) %>
-      <%= f.select(:language, $available_languages) %>
-      <%# count =0 %>
-      <%# hash = [] %>
-      <%# while count < $available_languages.count do %>
-          <%# hash << [$available_languages[count],count] %>
 
-          <%# count+=1 %>
-      <%# end %>
-      <%# f.select(:language, hash ) %>
+      <% if @parent_topic.present? %>
+          <%= f.select(:language, $available_languages, :selected => @parent_topic.language) %>
+      <% else %>
+          <%= f.select(:language, $available_languages) %>
+      <% end %>
+
+
+
     </div>
 
 
@@ -64,7 +64,13 @@ placeholder: "Compose new micropost..."
 
           <% count+=1 %>
       <% end %>
-      <%= f.select(:pub_type, hash ) %>
+      <% if @original_pub.present? %>
+          <%= f.select(:pub_type, hash, :selected => @original_pub.pub_type) %>
+      <% else %>
+          <%= f.select(:pub_type, hash ) %>
+      <% end %>
+
+
     </div>
 
     <div class="field">
@@ -77,7 +83,12 @@ placeholder: "Compose new micropost..."
 
           <% count+=1 %>
       <% end %>
-      <%= f.select(:skill, hash ) %>
+      <% if @original_pub.present? %>
+          <%= f.select(:skill, hash , :selected => @original_pub.skill) %>
+      <% else %>
+          <%= f.select(:skill, hash ) %>
+      <% end %>
+
     </div>
 
     <!-- media -->
@@ -93,7 +104,7 @@ placeholder: "Compose new micropost..."
           <span class="picture">
             <%= f.file_field :media, accept: 'image/jpeg,image/gif,image/png,application/pdf' %>
           </span>
-
+        </div>
 
     <% else %>
         Upload a new File
@@ -106,10 +117,6 @@ placeholder: "Compose new micropost..."
           <%= f.text_field :url %>
         </div>
     <% end %>
-
-
-
-
 
 
 

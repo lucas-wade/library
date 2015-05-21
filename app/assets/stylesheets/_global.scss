@@ -27,7 +27,7 @@ body {
   //background-color: $primary-bg-color;
   //background: linear-gradient( lighten($primary-bg-color,15%),darken($primary-bg-color,10%) );
   // original -- background: image_url("garden_footer.jpg") repeat-x center -60px;
-  background: image_url("garden_footer.jpg") repeat-x center bottom -120px;
+  background: image_url("garden_footer.jpg") repeat-x center bottom -110px;
   //background-position: bottom -200px;
   //position: absolute;
   //bottom: -200px;
@@ -44,7 +44,7 @@ body {
 .main-container {
   //position:
   min-height: 46em;
-  //padding-bottom: 3%;
+  padding-bottom: 3%;
   //background-position: -60px -60px;
   //background: image_url("garden_footer.jpg") repeat-x center -60px;
 
@@ -64,6 +64,7 @@ body {
 .filled-container {
   background-color: rgba(255, 255, 255, .333);
   height: 100%;
+  width: 100%;
 }
 
 .row {

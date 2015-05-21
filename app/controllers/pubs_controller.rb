@@ -1,7 +1,6 @@
 class PubsController < ApplicationController
   def index
     @pubs = Pub.all
-    #@users = User.where(activated: true).paginate(page: params[:page])
   end
 
 
@@ -39,14 +38,18 @@ class PubsController < ApplicationController
       end
       if params[:original_id].present?
         @pub.translation_of(@original_pub)
+        if @parent_topic == nil
+          @parent_topic = @original_pub.topics.first.translations.find_by_language(params[:pub][:language])
+          @pub.make_parent(@parent_topic)
+        end
       end
-      if @pub.media.present?
-        #fopen = open(@pub.media.url)
+
+      if @pub.media.present? && @pub.media.content_type == "application/pdf"
         if @pub.pdf_to_meta_data == TRUE
           flash[:info] = "New Publication Saved & pdf indexed."
         redirect_to pubs_path
         else
-          flash[:warn] = "not indexed"
+          flash[:warn] = "Saved but no Indexed"
           render 'new'
           end
       else
@@ -60,6 +63,7 @@ class PubsController < ApplicationController
 
   def edit
     @pub = Pub.find(params[:id])
+    @pubs = Pub.all
   end
 
   def update
