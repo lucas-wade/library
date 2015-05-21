@@ -55,16 +55,16 @@
 .fat-text-button {
 
   font-size: 1.3em;
-  border: none;
-  background-color: transparent;
-  //background-color: rgba(lighten($primary-bg-color,20),.5);
+  border-color: rgba(68, 52, 23, .93);
+  //background-color: transparent;
+  background-color: rgba(188, 242, 222,.56);
   font-weight: 800;
   //padding: .3em .5em .1em .5em;
-  color: rgba(68, 52, 23, .93);
+  color: $site_orange;
   &:hover {
     //background-color: rgba(256,256,256,.93);
     background-color: rgba(lighten($primary-bg-color,0),.43);
-    border-color: #3b5d5d;
+    border-color: rgba(68, 52, 23, .93);
   }
 }
 
@@ -96,12 +96,45 @@
   border-color: #3b5d5d;
 }
 
+.button-major-orange {
+
+  font-size: 1.18em;
+  border-color: white;
+
+  background-color: lighten($site_orange,10%);
+  font-weight: 600;
+  //padding: .3em .5em .1em .5em;
+  //color: rgba(68, 52, 23, .8);
+  &:hover {
+    //background-color: rgba(256,256,256,.93);
+    background-color: rgba(darken($primary-bg-color,10),.93);
+    border-color: #081111;
+  }
+}
+
+.button-major-orange-active {
+  //background-color: rgba(256,256,256,.93);
+  background-color: rgba(lighten($primary-bg-color,0),.43);
+  border-color: #3b5d5d;
+}
+
+
+
+
 .btn-kill {
   color: #b04431;
   //&:hover {
   //color: #fff;
-
   //}
+  position: absolute;
+  right: .1em;
+  top: 1em;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  padding-top: .1em;
+  padding-right: 1em;
+
 }
 
 .btn-main-menu {
@@ -130,41 +163,10 @@
 
 
 
-// SPECIAL BUTTON COLORS
-
-.kids-corner-button-style {
-
-  background-color: #ad82ef;
-  .button-text {
-    font-size: 1.618em;
-    padding: .518em;
-  }
-}
-
-.join-us-button-style {
-
-  .button-text {
-    //font: $font-stack;
-    //color: $primary-color;
-    //margin-bottom: -.118em;
-
-    font-size: 1.618em;
-  }
-
-  .button-text-small {
-    //font: $font-stack;
-    //color: $primary-color;
-    //padding: 1em;
-    font-size: 1.0em;
-    //line-height: .99em;
-  }
-
-}
-
 #enter-button {
   padding-top: .5em;
   text-align: center;
-  letter-spacing: .6em;
+  //letter-spacing: .6em;
   font-size: 1em;
 
 }

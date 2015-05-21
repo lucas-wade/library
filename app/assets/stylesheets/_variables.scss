@@ -1,17 +1,15 @@
 $primary-color: black;
 $gray-medium-light: #eaeaea;
 $primary-bg-color: rgb(242,209,148);
-//$primary-bg-color: rgb(185, 242, 240);
-//$primary-bg-color: rgb(160, 228, 242);
-//$primary-bg-color: rgb(204, 216, 242);
+
 $secondary_color: darken(desaturate(adjust-hue($primary-bg-color,172),30),0);
 $btn1: rgb(18, 175, 241);
 $btn2: rgb(38,189,90);
 $btn3: rgb(239, 132, 77);
 $clr4: adjust_hue($primary-bg-color,168);
 $content_bg_color: #222222;
-$site_orange: rgb(235, 74, 49);
+$site_orange: rgb(219, 110, 0);
 
 //$font-stack:    Helvetica, sans-serif;
 $font-stack:    'Open Sans', sans-serif, 'Lohit Bengali';
-//$font-stack:    'Comic Sans', sans-serif;
+

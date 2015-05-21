@@ -1,17 +1,38 @@
 @import "variables";
 
 html {
-  background-color: $primary-bg-color;
+  //background-color: $primary-bg-color;
+  height: 100%;
+  //background: image_url("garden_footer.jpg") repeat-x center -60px;
+  //background: radial-gradient(#8ec2c0, #fefebe);
+  background: radial-gradient(circle, #fefebe,#f8e198, #8ec2c0 );
+
+  //position: absolute;
+  //bottom: 0;
+  //overflow: hidden;
+
 }
 
 body {
+  //visibility: hidden;
+  min-height: 100%;
+  padding: 0;
   padding-top: 50px;
+  margin: 0;
+  position: relative;
   font-family: $font-stack;
+  overflow-x: hidden;
+  overflow-y: auto;
 
-  background-color: $primary-bg-color;
+  //background-color: $primary-bg-color;
   //background: linear-gradient( lighten($primary-bg-color,15%),darken($primary-bg-color,10%) );
-
+  // original -- background: image_url("garden_footer.jpg") repeat-x center -60px;
+  background: image_url("garden_footer.jpg") repeat-x center bottom -120px;
+  //background-position: bottom -200px;
+  //position: absolute;
+  //bottom: -200px;
 }
+//body:after{ content:''; display:none; height:100px; }
 
 .jumbotron {
   // background-color: darken($primary-bg-color,3%);
@@ -21,15 +42,17 @@ body {
 }
 
 .main-container {
-  height: 62em;
+  //position:
+  min-height: 46em;
   //padding-bottom: 3%;
   //background-position: -60px -60px;
-  background: image_url("garden_footer.jpg") repeat-x center -60px;
+  //background: image_url("garden_footer.jpg") repeat-x center -60px;
 
 }
 
 .jimbo {
   padding-left: 10%;
+  padding-bottom: 0;
 
 }
 

@@ -15,6 +15,11 @@
 @import "variables";
 @import "mixin";
 
+/* variables */
+
+
+
+
 /* vv To be sorted CSS vv */
 .real-small {
   font-size: .618em;
@@ -183,10 +188,26 @@ textarea {
   border-radius: 1%;
 }
 
+.bottom {
+  //position: absolute;
+//  left: 0;
+  //bottom: 0;
+
+}
+
 footer {
+  position:absolute;
+  bottom: -.2em;
+  width:100%;
+  //height:100px;
+
+  padding-right: 2em;
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  //border-top: 1px solid #eaeaea;
 
   color: #e3e3e3;
   a {
@@ -470,7 +491,8 @@ a {
   background-size: cover;
   background-position: center -22em;
 
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
+
 
   height: 90em;
   //height: 100%;
@@ -493,9 +515,12 @@ a {
 
   //margin-left: 6em;
   //margin-right: 6em;
-  padding: 2.618em;
+  padding: 3.618em;
   padding-top: 1.618em;
+  padding-bottom: 1em;
 
+  //margin-left: 2em;
+  //margin-right: 2em;
   //background-color: rgba(56, 32, 29, 0.55);
   background-color: rgba(255, 255, 255, .333);
 
@@ -503,7 +528,7 @@ a {
 
   border-radius: 4em 4em 0 0;
   -webkit-hyphens: manual;
-  -webkit-shape-inside: polygon(0px 0px, 0 300px, 300px 300px);
+  
 
 }
 
@@ -578,4 +603,44 @@ border-top-right-radius: 149px;
 
 .c5 {
   color: darken($primary-bg-color, 50%);
+}
+
+
+// SPECIAL BUTTON COLORS
+
+.kids-corner-button-style {
+
+  background-color: #ad82ef;
+  .button-text {
+    font-size: 1.618em;
+    padding: .518em;
+  }
+}
+
+.join-us-button-style {
+
+  .button-text {
+    //font: $font-stack;
+    //color: $primary-color;
+    //margin-bottom: -.118em;
+
+    font-size: 1.618em;
+  }
+
+  .button-text-small {
+    //font: $font-stack;
+    //color: $primary-color;
+    //padding: 1em;
+    font-size: 1.0em;
+    //line-height: .99em;
+  }
+
+}
+
+.under-construction {
+  padding: 1em;
+  margin: 1em;
+  //background-color: cornflowerblue;
+  background-color: rgba(188, 242, 222,.75);
+  border-radius: 1em;
 }

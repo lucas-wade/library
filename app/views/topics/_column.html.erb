@@ -75,7 +75,7 @@
                            end
                         %>
 
-                <a href="<%= topic_path(t) %>" class="list-group-item btn-default btn-main-menu button <%= the_class %> <%= color_class %> <%= rtl_checker(t.language) %> ">
+                <a href="<%= topic_path(t) %>" class="list-group-item btn-default btn-main-menu button <%= color_class %> <%= the_class %> <%= rtl_checker(t.language) %> ">
                   <div class="button-text"> <%= t.name %> </div>
                   <div class="button-text-small">
                     <% t.kids.each do |tt| %>

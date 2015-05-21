@@ -33,13 +33,30 @@
          <%= link_to t('classroom_doors.nature_note_button'), @topic, class: "btn btn-lg fat-text-button", :data => {:colorbox => true, :colorbox_height => '70%', :colorbox_width => '60%', :colorbox_html => t('classroom_doors.nature_note_html') } %>
        </p>
          <%= t('classroom_doors.hope_gain_html') %>
+       </p>
+       <p class="center">
          <%# render 'shared/modal', button: t('classroom_doors.btn_why_grow') , title: t('classroom_doors.btn_why_grow'), body: t('classroom_doors.why_grow') %>
          <%= link_to t('classroom_doors.btn_why_grow'), @topic, class: "btn btn-lg fat-text-button", :data => {:colorbox => true, :colorbox_height => '70%', :colorbox_width => '60%', :colorbox_html => t('classroom_doors.why_grow_html') } %>
+       </p>
        <br>
+
+       <div class="under-construction">
+         <p>
+           <%= t('classroom_doors.under_construction_I') %>
+           <a href="http://www.growbiointensive.org">www.growbiointensive.org</a>
+         </p>
+         <p>
+           Para ver nuestra página web actual en español, visita:
+           <a href="http://www.cultivebiointensivamente.org">www.cultivebiointensivamente.org</a>
+         </p>
+         <%= t('classroom_doors.under_construction_II') %>
+         </p>
+       </div>
+
 
        <div>
          <h6 class="firm-butt">
-           <%= link_to t('sessions.register'), signup_path, class: "btn btn-lg major-button" %>
+           <%= link_to t('sessions.register'), signup_path, class: "btn btn-lg button-major-orange" %>
 
            <%= link_to t('sessions.log_in'), login_path, class: "btn btn-lg major-button" %>
 
@@ -49,7 +66,8 @@
        </div>
 
 
-       <% render 'classroom_doors_text' %>
+
+
 
     </div>
 

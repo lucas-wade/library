@@ -16,7 +16,7 @@
 
 <% rtl_class = rtl_checker %>
 
-
+<%= link_to '<i class="fa fa-close fa-1x"></i>'.html_safe, topics_path, class: "btn-kill" %>
 <div id="content-window" class="content_window
                                             <% if @topic.pubs.present? && has_sub_cats == TRUE %>
                                             content-window-size-1
@@ -32,6 +32,8 @@
                                             <% end %>
                                             <% end %>
                                             ">
+
+
 
 
   <% if @show_pub.present? %> <!-- maybe render a pub in dis here window -->
@@ -342,4 +344,4 @@
 <% end %>
 
 
-<%= link_to '<i class="fa fa-close fa-3x"></i>'.html_safe, topics_path, class: "btn-kill" %>
+
