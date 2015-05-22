@@ -21,6 +21,8 @@ bn:
     remember_me: "এই কম্পিউটারে আমাকে মনে রেখো"
     new_user: "নতুন ইউজার?"
     sign_up: "এখন সাইন আপ করুন!"
+    register: "Register"
+    guest_enter: "Enter as a Guest"
     name: "নাম"
     confirm_password: "পাসওয়ার্ড নিশ্চিতকরণ"
   users:

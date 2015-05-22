@@ -22,6 +22,8 @@ zh:
     remember_me: "在这台电脑上记住我？"
     new_user: "新用户？"
     sign_up: "立即注册！"
+    register: "访客"
+    guest_enter: "访客"
     name: "姓名"
     confirm_password: "确认密码"
   users:

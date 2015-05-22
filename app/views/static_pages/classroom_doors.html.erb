@@ -22,7 +22,7 @@
           temp = t('classroom_doors.knowledge_pI') + '<br>' + t('classroom_doors.knowledge_pII')
        %>
        <p class="center">
-         <%= render 'shared/modal', button: t('classroom_doors.knowledge') , title: t('classroom_doors.knowledge'), body: temp, the_class: "btn btn-lg fat-text-button" %>
+         <%= render 'shared/modal', button: t('classroom_doors.knowledge') , title: t('classroom_doors.knowledge'), body: temp, the_class: "btn btn-lg fat-text-button",count:1 %>
          <%# link_to t('classroom_doors.knowledge'), @topics, class: "btn btn-default", :data => {:colorbox => true, :colorbox_height => '70%', :colorbox_width => '60%', :colorbox_html => temp} %>
          </p>
 
@@ -31,12 +31,13 @@
          <%= t('classroom_doors.knowledge_pIV') %></p>
        <p class="center">
          <%= link_to t('classroom_doors.nature_note_button'), @topic, class: "btn btn-lg fat-text-button", :data => {:colorbox => true, :colorbox_height => '70%', :colorbox_width => '60%', :colorbox_html => t('classroom_doors.nature_note_html') } %>
+         <%= render 'shared/modal', button: t('classroom_doors.nature_note_button') , title: t('classroom_doors.btn_why_grow'), body: t('classroom_doors.why_grow_html'), the_class: "btn btn-lg fat-text-button",count:2 %>
        </p>
          <%= t('classroom_doors.hope_gain_html') %>
        </p>
        <p class="center">
-         <%# render 'shared/modal', button: t('classroom_doors.btn_why_grow') , title: t('classroom_doors.btn_why_grow'), body: t('classroom_doors.why_grow') %>
-         <%= link_to t('classroom_doors.btn_why_grow'), @topic, class: "btn btn-lg fat-text-button", :data => {:colorbox => true, :colorbox_height => '70%', :colorbox_width => '60%', :colorbox_html => t('classroom_doors.why_grow_html') } %>
+         <%= render 'shared/modal', button: t('classroom_doors.btn_why_grow') , title: t('classroom_doors.btn_why_grow'), body: t('classroom_doors.why_grow_html'), the_class: "btn btn-lg fat-text-button",count:2 %>
+         <%# link_to t('classroom_doors.btn_why_grow'), @topic, class: "btn btn-lg fat-text-button", :data => {:colorbox => true, :colorbox_height => '70%', :colorbox_width => '60%', :colorbox_html => t('classroom_doors.why_grow_html') } %>
        </p>
        <br>
 

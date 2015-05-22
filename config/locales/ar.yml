@@ -22,6 +22,8 @@ ar:
     remember_me: "تذكرني على هذا الكمبيوتر؟"
     new_user: "هل أنت مستخدم جديد؟"
     sign_up: "قم بالتجسيل الآن!"
+    register: "Register"
+    guest_enter: "تسجيل الدخول كضيف"
     name: "الاسم"
     confirm_password: "تأكيد كلمة المرور"
     registration: "التسجيل"

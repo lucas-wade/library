@@ -22,6 +22,8 @@ pt:
     remember_me: "Lembrar-me neste computador?"
     new_user: "Novo usuário?"
     sign_up: "Registre-se agora!"
+    register: "Cadastre-se"
+    guest_enter: "Entre sem cadastro"
     name: "Nome"
     confirm_password: "Confirmar senha"
   users:

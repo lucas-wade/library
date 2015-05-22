@@ -22,6 +22,8 @@ hi:
     remember_me: "मुझे इस कंप्यूटर पर याद रखें?"
     new_user: "नए यूज़र?"
     sign_up: "अभी साइन इन करो!"
+    register: "Register"
+    guest_enter: "Enter as a Guest"
     name: "नाम"
     confirm_password: "पासवर्ड की पुष्टि"
   users:

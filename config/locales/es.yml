@@ -22,6 +22,8 @@ es:
     remember_me: "¿Me recuerda en esta computadora?"
     new_user: "¿Es un usuario nuevo?"
     sign_up: "Regístrese ahora"
+    register: "Register"
+    guest_enter: "Ingresar como invitado"
     name: "Nombre"
     confirm_password: "Confirmar contraseña"
   users:
