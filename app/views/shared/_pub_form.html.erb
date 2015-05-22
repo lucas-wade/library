@@ -102,14 +102,14 @@ placeholder: "Compose new micropost..."
           <br>
           <%= f.label "Replace document with new File Upload" %>
           <span class="picture">
-            <%= f.file_field :media, accept: 'image/jpeg,image/gif,image/png,application/pdf' %>
+            <%= f.file_field :media, accept: 'image/jpeg,image/gif,image/png,application/pdf, video/mp4' %>
           </span>
         </div>
 
     <% else %>
         Upload a new File
             <span class="picture">
-                <%= f.file_field :media, accept: 'image/jpeg,image/gif,image/png,application/pdf' %>
+                <%= f.file_field :media, accept: 'image/jpeg,image/gif,image/png,application/pdf,video/mp4' %>
             </span>
         Or add an Url
         <div class="field">
@@ -125,8 +125,8 @@ placeholder: "Compose new micropost..."
 <script type="text/javascript">
     $('#micropost_picture').bind('change', function() {
         size_in_megabytes = this.files[0].size/1024/1024;
-        if (size_in_megabytes > 256) {
-            alert('Maximum file size is 5MB. Please choose a smaller file.');
+        if (size_in_megabytes > 1024) {
+            alert('Maximum file size is 1024MB. Please choose a smaller file.');
         }
     });
 </script>

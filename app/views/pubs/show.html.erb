@@ -16,7 +16,7 @@
 
           <% end %><%= @pub.name %>
     </h1>
-
+<small>
         <!-- translations -->
         <% if @pub.translations.present? %>
 
@@ -37,7 +37,7 @@
 
             <% end %>
         <% end %>
-
+</small>
 
       <p>
       Skill Level <strong><%= $available_skills[@pub.skill] unless !@pub.skill.present?%></strong>
@@ -64,12 +64,16 @@ This publication is linked to by
         and is
         <%= number_to_human_size(@pub.media.size) %>
         <% if @pub.media.content_type == "application/pdf" %>
-
             <div class="pdf-viewer">
               <iframe src="<%= @pub.media.url %>" width="62%" height="100%"></iframe>
             </div>
+            <% else if @pub.media.content_type == 'video/mp4' || @pub.media.content_type == 'application/mp4' %>
+                <div class="pdf-viewer">
+                <iframe src="<%= @pub.media.url %>" width="62%" height="100%"></iframe>
+                </div>
         <% else %>
             <%= image_tag @pub.media.url %>
+                <% end %>
         <% end %>
     <% end %>
   </span>

@@ -177,7 +177,12 @@ textarea {
   overflow: hidden;
 
 }
-
+.video-viewer {
+  height: 20em;
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+}
 #pdf-viewer1 {
   height: $pre-scrollable-max-height;
   overflow: visible;
