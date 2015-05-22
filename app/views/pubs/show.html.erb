@@ -15,6 +15,7 @@
           <% end %>
 
           <% end %><%= @pub.name %>
+    </h1>
 
         <!-- translations -->
         <% if @pub.translations.present? %>
@@ -36,9 +37,8 @@
 
             <% end %>
         <% end %>
-      </rs>
 
-    </h1>
+
       <p>
       Skill Level <strong><%= $available_skills[@pub.skill] unless !@pub.skill.present?%></strong>
 

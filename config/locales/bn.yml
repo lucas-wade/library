@@ -7,6 +7,11 @@ bn:
   layouts:
     a_project: "A project of Ecology Action of the Mid Peninsula"
     submit: "Submit"
+  library:
+    disclaimer: "Ecology Action's goal is to fill this online library, to be made even more searchable in upcoming phases, with its 4 books, 40+ booklets, and 175+ white papers on sustainable, Biologically Intensive agriculture--in as many languages as possible.
+
+                 You can help us reach this goal by contributing using the button below."
+    btn_help_develop: "Help Develop This Content Further"
   sessions:
     log_in: "লগ ইন"
     log_out: "লগ আউট"

@@ -8,6 +8,11 @@ zh:
   layouts:
     a_project: "非营利性组织Ecology Action of the Mid-Peninsula（生态在行动）旗下所属项目"
     submit: "Submit"
+  library:
+    disclaimer: "Ecology Action's goal is to fill this online library, to be made even more searchable in upcoming phases, with its 4 books, 40+ booklets, and 175+ white papers on sustainable, Biologically Intensive agriculture--in as many languages as possible.
+
+                 You can help us reach this goal by contributing using the button below."
+    btn_help_develop: "Help Develop This Content Further"
   sessions:
     log_in: "登陆"
     log_out: "登出"

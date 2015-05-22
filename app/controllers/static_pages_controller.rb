@@ -20,7 +20,7 @@ class StaticPagesController < ApplicationController
 
       else
         @topics = Topic.all.where("language like ?", I18n.locale.to_s)
-        @pubs = Pub.all
+        @pubs = Pub.all.where("language like ?", I18n.locale.to_s)
         #.order('created_at DESC')
       end
     end

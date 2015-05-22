@@ -17,9 +17,9 @@
 .button {
 
   //background-color: rgb(118, 149, 153);
-  display: block;
-  //border: thin;
-  margin: 10px;
+  //display: block;
+  //border: none;
+  margin: 6px;
   //font-size: 1.35em;
   //padding: .1em;
   //text-align: left;
@@ -107,7 +107,7 @@
   //color: rgba(68, 52, 23, .8);
   &:hover {
     //background-color: rgba(256,256,256,.93);
-    background-color: rgba(darken($primary-bg-color,10),.93);
+    background-color: rgba(lighten($primary-bg-color,30),.93);
     border-color: #081111;
   }
 }
