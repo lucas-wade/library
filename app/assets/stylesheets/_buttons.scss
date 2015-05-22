@@ -105,10 +105,15 @@
   font-weight: 600;
   //padding: .3em .5em .1em .5em;
   //color: rgba(68, 52, 23, .8);
+
+  a: {
+    color: black;
+  }
   &:hover {
     //background-color: rgba(256,256,256,.93);
-    background-color: rgba(lighten($primary-bg-color,30),.93);
+    background-color: rgba(lighten($primary-bg-color,20),.93);
     border-color: #081111;
+    color: $primary-color;
   }
 }
 
@@ -116,6 +121,7 @@
   //background-color: rgba(256,256,256,.93);
   background-color: rgba(lighten($primary-bg-color,0),.43);
   border-color: #3b5d5d;
+  color: $primary-color;
 }
 
 

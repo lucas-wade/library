@@ -1,14 +1,21 @@
 <% if edit_mode == 1 %>
     <%= image_tag "growing_content.jpg", :width => "100%" %>
 <% else %>
-    <%# video_tag "growing.mp4", :width => "100%", controls: true, autoplay: true %>
-    <% source = '/' + I18n.locale.to_s + '/media/growing.mp4' %>
 
-    <%= video_tag source, :width => "100%", controls: true, autoplay: true %>
-    <!--
-    <iframe  width="100%" height="92%"
-             src="/en/media/growing.mp4"
-             frameborder="0" allowfullscreen></iframe>
-    -->
+    <div class="container-placeholder">
+      <%# video_tag "growing.mp4", :width => "100%", controls: true, autoplay: true %>
+      <% source = '/' + I18n.locale.to_s + '/media/growing.mp4' %>
 
+      <%# video_tag source, :width => "100%", controls: true, autoplay: true %>
+      <%# image_tag "growing_content.jpg", :width => "100%", :class => "image-bg" %>
+
+      <h5 class="under-construction">
+        <%= t('general.growing_content') %>
+      </h5>
+      <p class="under-construction">
+        <%= t('general.register_above') %>
+        <br>
+        <%= link_to t('general.contribute'), '#', class: "btn button-major-orange" %>
+      </p>
+    </div>
 <% end %>
