@@ -16,6 +16,15 @@
 
 <% rtl_class = rtl_checker %>
 
+<% if @topic.category > 0
+    if @topic.parents.first.category == 0
+        intro_topic = @topic.parents.first
+    else
+      intro_topic = @topic.parents.first.parents.first || FALSE %>
+    <% end %>
+<% end %>
+
+
 <%= link_to '<i class="fa fa-close fa-1x"></i>'.html_safe, topics_path, class: "btn-kill" %>
 <div id="content-window" class="content_window
                                             <% if @topic.pubs.present? && has_sub_cats == TRUE %>
@@ -200,23 +209,25 @@
       <div class="col-xs-4 col-borders">
         <p class="center"> <%= image_tag("icon_skills_2.png", size: "29") %> </p>
 
+        <div class="tight-list">
         <% @topic.pubs.each do |t| %>
             <% if t.skill == 2 %>
                 <%= render partial: 'shared/pub_link_to', locals: {t: t} %>
             <% end %>
         <% end %>
-
+        </div>
       </div>
 
       <div class="col-xs-4">
         <p class="center"> <%= image_tag("icon_skills_3.png", size: "29") %> </p>
 
+        <div class="tight-list">
         <% @topic.pubs.each do |t| %>
             <% if t.skill == 3 %>
                 <%= render partial: 'shared/pub_link_to', locals: {t: t} %>
             <% end %>
         <% end %>
-
+        </div>
       </div>
 
 
@@ -238,7 +249,7 @@
       </div>
   <%# end %>
 -->
-      <div class="col-sm-8">
+     <!--  <div class="col-sm-8"> -->
         <%
            peak = false
            one = false
@@ -246,7 +257,24 @@
            three = false
         %>
 
-        <div class="col-md-3">
+      <!-- intro tab -->
+
+        <% if intro_topic.present? %>
+            <% the_class = tab_active(intro_topic) %>
+        <% end %>
+      <div class="col-xs-2 tab-cat0">
+        <% if edit_mode == 1 %>
+            <%= link_to image_tag("icon-tabs-cat-0.png", class: the_class), edit_topic_path(intro_topic) %>
+        <% else %>
+            <%# link_to image_tag("icon-tabs-cat-0.png", class: the_class), intro_topic %>
+        <% end %>
+        <%= t('layouts.introduction_tab') %>
+
+      </div>
+
+
+      <!-- peak tab -->
+        <div class="col-xs-2">
           <% sub_cats.kids.each do |t| %>
               <% if t.category == 4 %>
                   <% the_class = tab_active(t) %>
@@ -268,7 +296,8 @@
           <% end %>
         </div>
 
-        <div class="col-md-3">
+      <!-- tab 1 -->
+        <div class="col-xs-2">
           <% sub_cats.kids.each do |t| %>
               <% if t.category == 1 %>
                   <%
@@ -292,7 +321,7 @@
         </div>
 
 
-        <div class="col-md-3">
+        <div class="col-xs-2">
           <% sub_cats.kids.each do |t| %>
               <% if t.category == 2 %>
                   <%
@@ -314,7 +343,7 @@
           <% end %>
         </div>
 
-        <div class="col-md-3">
+        <div class="col-xs-2">
           <% sub_cats.kids.each do |t| %>
               <% if t.category == 3 %>
                   <%
@@ -338,9 +367,7 @@
 
       </div>
 
-      <div class="col-xs-4">
-        <br>
-      </div>
+
 
 
     </div> <!-- end of cat window -->

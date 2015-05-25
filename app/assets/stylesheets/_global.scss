@@ -42,6 +42,7 @@ body {
 }
 
 .main-container {
+
   //position:
   min-height: 46em;
   padding-bottom: 3%;
@@ -116,8 +117,8 @@ body {
   margin-right: 0;
 
 }
-
-.low-gutter > [class*='col-'] {
+//.low-gutter > [class*='col-'] {
+.low-gutter {
   padding-right: .6%;
   padding-left: .6%;
 }
@@ -178,15 +179,6 @@ h6 {
   text-align: center;
   font-weight: normal;
   //color: #777;
-}
-
-h7 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-
-
 }
 
 p {

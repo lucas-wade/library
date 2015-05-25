@@ -28,4 +28,18 @@ module TopicsHelper
     end
   end
 
+
+  def col_finder
+    t = self.parents.first || self
+    while t.parents.present?
+      t = t.parents.first
+    end
+    if t.id.present?
+      t.id
+    else
+      1
+    end
+  end
+
+
 end

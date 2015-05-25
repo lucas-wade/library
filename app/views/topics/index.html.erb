@@ -1,5 +1,7 @@
+
 <% if logged_in? %>
 
+    <% session[:anim_in_done_it_once] = 0 %>
 
 
 <% provide(:title, t('titles.classroom') ) %>
@@ -18,16 +20,16 @@
                                 ">
 
   <% @temp_topic=0 %>
-  <div class="col-xs-12 col-sm-4 column-1">
+  <div id="column-1" class="col-xs-12 col-sm-4 column-1 animated fadeInLeft">
   <%= render 'column' %>
   </div>
   <!-- 2nd column -->
-  <div class="col-xs-12 col-sm-4">
+  <div id="column-2" class="col-xs-12 col-sm-4 column-2 animated fadeInDown">
   <% @temp_topic=1 %>
   <%= render 'column' %>
   </div>
   <!-- 3rd column -->
-  <div class="col-xs-12 col-sm-4">
+  <div id="column-3" class="col-xs-12 col-sm-4 column-3 animated fadeInRight">
   <% @temp_topic=2 %>
   <%= render 'column' %>
   </div>

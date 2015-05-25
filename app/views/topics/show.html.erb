@@ -1,4 +1,7 @@
+
+
 <% if edit_mode == 1 %>
+    <!-- persistent language editing of topics -->
     <% if session[:edit_lang].present? && session[:edit_lang] != 'en' %>
         <% new_topic = @topic.translations.find_by_language(session[:edit_lang]) %>
         <script type="text/javascript">
@@ -24,14 +27,30 @@
 
   %>
 
-  <div id="big_c">
+
     <% if @temp_topic == 0 %>
+      <div id="big_c">
         <div class="col-sm-4">
           <%= render 'column' %>
         </div>
+      </div>
     <% end %>
-  </div>
 
+
+  <%
+     if session[:anim_in_done_it_once] == 0
+       if @temp_topic == 0
+         the_anim_class = "animated slideInRight"
+       else
+         the_anim_class = "animated slideInLeft"
+       end
+       session[:anim_in_done_it_once] = 1
+       else
+         the_anim_class = ""
+       end
+  %>
+
+<div class="<%= the_anim_class%>">
   <!-- sub topic nav bar -->
   <div id="sub-topics-window" class="col-md-8">
     <h3>
@@ -105,9 +124,10 @@
 
 
   <div class="col-sm-8 ">
-
     <%= render 'content_window' %>
   </div>
+
+</div>
 
   <div id="big_c">
     <% if @temp_topic == 1 || @temp_topic == 2 %>

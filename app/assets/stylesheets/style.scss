@@ -431,17 +431,33 @@ a {
   color: $primary-color;
 }
 
+.tab-cat0 {
+  vertical-align: top;
+  position: relative;
+  left: 0;
+  z-index: 0;
+
+  background: image_url("icon-tabs-cat-0.png") no-repeat;
+  background-position: top 0;
+  background-size: contain;
+  height: 100%;
+  overflow: visible;
+  color: $primary-color;
+  padding: .618em;
+  text-align: center;
+}
+
 .tab-cat1 {
   vertical-align: top;
   position: relative;
-  left: -2em;
+  left: 0;
   z-index: 0;
 }
 
 .tab-cat2 {
   vertical-align: top;
   position: relative;
-  left: -6em;
+  left: -4em;
 
   //margin: 0em;
   //padding: 0em;
@@ -451,7 +467,7 @@ a {
 .tab-cat3 {
   vertical-align: top;
   position: relative;
-  left: -10em;
+  left: -8em;
 
   //margin: 0em;
   //padding: 0em;
@@ -493,12 +509,9 @@ a {
 }
 
 .classroom-doors {
-  background: image_url("classroom_doors.jpg") center;
+  background: image_url("classroom_doors.jpg") center -22em;
   background-size: cover;
-  background-position: center -22em;
-
   background-repeat: repeat-y;
-
 
   height: 90em;
   //height: 100%;
@@ -512,7 +525,6 @@ a {
 
   font-weight: 500;
   font-size: 1.31em;
-
 
 }
 
@@ -609,6 +621,10 @@ border-top-right-radius: 149px;
 
 .c5 {
   color: darken($primary-bg-color, 50%);
+}
+
+.c_red {
+  color: darkred;
 }
 
 
