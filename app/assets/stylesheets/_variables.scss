@@ -9,7 +9,14 @@ $btn3: rgb(239, 132, 77);
 $clr4: adjust_hue($primary-bg-color,168);
 $content_bg_color: #222222;
 $site_orange: rgb(219, 110, 0);
-$site_bg_gradient: radial-gradient(circle, #fefebe,#f8e198, #8ec2c0 );
+//$site_bg_gradient: radial-gradient(circle, #fefebe,#f8e198, #8ec2c0 );
+$grad_c_1: rgb(255,255,231);
+$grad_c_1B: rgb(255,255,222);
+$grad_c_2: rgb(247,245,169);
+$grad_c_3: rgb(236, 233, 195);
+$grad_c_4: rgb(138,225,250);
+$site_bg_gradient: radial-gradient(circle, $grad_c_1,$grad_c_1B, $grad_c_2, $grad_c_3, $grad_c_4 );
+
 //$font-stack:    Helvetica, sans-serif;
 $font-stack:    'Open Sans', sans-serif, 'Lohit Bengali';
 //$font-stack:    'Open Sans', sans-serif;
