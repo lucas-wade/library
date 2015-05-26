@@ -13,6 +13,18 @@ pt:
 
                  You can help us reach this goal by contributing using the button below."
     btn_help_develop: "Help Develop This Content Further"
+  general:
+    growing_content: "Estamos aumentando o conteúdo dessa área."
+    placeholder: "Ainda não aumentamos o conteúdo nessa área."
+    register_above: "Registre-se acima para ser informado quando algum conteúdo for adicionado em seu idioma conforme o tempo e o financiamento permitirem, e selecione o botão abaixo para contribuir com o desenvolvimento desse conteúdo em seu idioma."
+    contribute: "Contribute Towards Developing This Content Further in Your Language."
+    funding_request_html: "A meta deste website é alcançar o maior número possível de pessoas no mundo todo com os princípios sustentáveis de produção de alimentos.  Estamos começando com os sete idiomas mais falados no mundo, ou aproximadamente, 53% dos oradores nativos do mundo.
+                           <br>
+                           Precisamos da sua ajuda para ter sucesso com essa meta.
+                           <br>
+                           Você pode nos ajudar a traduzir este website em seu idioma ou outros com o conteúdo educacional da Ecology Action que já foi ensinado a milhões de pessoas no mundo todo para melhor alimentá-las enquanto cultiva e cuida do solo da Terra e conserva nossos recursos mais preciosos.
+                           <br>
+                           [$15,000.00 USD] cobre o custo de tradução da maior parte do conteúdo educacional crítico em qualquer idioma do mundo.  Esse conteúdo crítico inclui 50 janelas de conteúdo, 45 páginas de documentos adicionais, mais de 150 minutos de seminários web em vídeo cobrindo 13 tópicos, 7 animações expandidas e capacidade de procura em todo o site através da biblioteca on-line, e níveis de desenvolvimento de conteúdo adicional estão disponíveis.  Nós o convidamos a utilizar o botão abaixo para nos contatar em relação a detalhes e opções de desenvolvimento de conteúdo."
   sessions:
     log_in: "Login"
     log_out: "Desconectar"

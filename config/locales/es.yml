@@ -13,6 +13,19 @@ es:
 
                  You can help us reach this goal by contributing using the button below."
     btn_help_develop: "Help Develop This Content Further"
+  general:
+    growing_content: "Estamos agregando contenido en esta área."
+    placeholder: "Aún no hemos agregado contenido en esta área."
+    register_above: "Regístrese más abajo para mantenerlo informado de cuándo se agregará contendido en su idioma a medida que el tiempo y los fondos lo permitan, y seleccione el botón más abajo para contribuir para desarrollar más este contenido en su idioma."
+    contribute: "Contribute Towards Developing This Content Further in Your Language."
+    funding_request_html: "El objetivo de este sitio Web es llegar a la mayor cantidad de personas posible en todo el mundo con los principios subyacentes en una producción sustentable de alimentos. Comenzamos con los siete idiomas nativos más hablados del mundo, o aproximadamente el 53 por ciento de hablantes nativos del mundo.
+                           <br>
+                           Necesitamos su ayuda para que este objetivo sea exitoso.
+                           <br>
+                           ¿Puede ayudarnos a completar este sitio Web en su idioma o en otros idiomas con el contenido educativo de Ecology Action que ya ha enseñado a millones de personas del mundo a alimentarse mejor mientras construyen y cuidan los suelos de la Tierra y conservan nuestros más preciados recursos?
+                           <br>
+                           [$15,000.00 USD] cubren los costos de traducción del contenido educativo esencial a cualquier idioma del mundo.  Este contenido esencial incluye 50 ventanas de contenido, 45 páginas suplementarias de documentos, más de 150 minutos de seminarios grabados en la Web que abarcan 13 temas, 7 animaciones expandidas, y capacidad de búsqueda en todo el sitio a través de la biblioteca en línea, y otros niveles de desarrollo de contenidos disponibles. Lo invitamos a usar el botón de más abajo para comunicarse con nosotros para obtener más información y opciones de contenido de desarrollo.
+"
   sessions:
     log_in: "Iniciar sesión"
     log_out: "Cerrar sesión"

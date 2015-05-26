@@ -13,6 +13,18 @@ zh:
 
                  You can help us reach this goal by contributing using the button below."
     btn_help_develop: "Help Develop This Content Further"
+  general:
+    growing_content: "我们正在在这一区域增加内容。"
+    placeholder: "我们还没有在这一区域增加内容。"
+    register_above: "请注册，这样在时间和资金允许的情况下，我们会在添加以你的母语编辑的内容时第一时间通知你，点击下方按钮，为开发用你的母语编辑的内容做出贡献。"
+    contribute: "Contribute Towards Developing This Content Further in Your Language."
+    funding_request_html: "这个网站的目的在于将可持续粮食生产背后的原理尽可能地传播给全球的人们。我们将从全球最广为使用的7种语言开始，或我们将从全球大约53%的母语使用者开始传播我们的知识。
+                           <br>
+                           实现这一目标，需要你的帮助。
+                           <br>
+                           你能否用你的母语来构构建这个网站或其他Ecology Action的教育内容吗？这些内容已经在全球数百万人中传授过，帮助他们更好的养育自己；同时，构建、照顾地球的土壤，保护最珍贵的资源。
+                           <br>
+                            [$15,000.00 USD]涵盖了将最关键的教育内容翻译成任何语言的成本。这些关键内容包括50个内容窗口，45个补充文档页面，超过150分钟、涵盖13个话题的视频在线研讨，7个拓展动画以及通过在线图书馆进行全站搜索的功能，还有进一步内容开发等级。我们邀请你点击下方按钮，联系我们，讨论内容开发的详情和选项。"
   sessions:
     log_in: "登陆"
     log_out: "登出"

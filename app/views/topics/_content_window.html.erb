@@ -22,6 +22,8 @@
     else
       intro_topic = @topic.parents.first.parents.first || FALSE %>
     <% end %>
+    <% else %>
+    <% intro_topic = @topic %>
 <% end %>
 
 
@@ -241,15 +243,8 @@
     <div id="category-window" class="content_window tight-top
       <% if edit_mode == 1 %> clr4
       <% end %>">
-      <!--
-  <%# if edit_mode == 1 %>
 
-      <div>
-        <%# link_to '<i class="fa fa-plus-square edit-color">Create Sub Category (Peak, I, II, III)</i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topic.id, :language => @topic.language }%>
-      </div>
-  <%# end %>
--->
-     <!--  <div class="col-sm-8"> -->
+
         <%
            peak = false
            one = false
@@ -262,16 +257,17 @@
         <% if intro_topic.present? %>
             <% the_class = tab_active(intro_topic) %>
         <% end %>
+      <!-- intro tab
       <div class="col-xs-2 tab-cat0">
         <% if edit_mode == 1 %>
-            <%= link_to image_tag("icon-tabs-cat-0.png", class: the_class), edit_topic_path(intro_topic) %>
+            <%# link_to image_tag("icon-tabs-cat-0.png", class: the_class), edit_topic_path(intro_topic) %>
         <% else %>
             <%# link_to image_tag("icon-tabs-cat-0.png", class: the_class), intro_topic %>
         <% end %>
-        <%= t('layouts.introduction_tab') %>
+        <%# t('layouts.introduction_tab') %>
 
       </div>
-
+-->
 
       <!-- peak tab -->
         <div class="col-xs-2">

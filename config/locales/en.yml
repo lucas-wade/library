@@ -40,6 +40,13 @@ en:
     placeholder: "We have not yet grown content in this area."
     register_above: "Register above to be informed when content is added in your language as time and funding permits, and select the button below to contribute towards developing this content further in your language."
     contribute: "Contribute Towards Developing This Content Further in Your Language."
+    funding_request_html: "It is the goal of this website to reach as many people as possible worldwide with the principles behind sustainable food production.  We are beginning with the world's seven most-spoken native languages, or approximately 53 percent of the world's native language speakers.
+                      <br>
+                      We need your help to succeed in this goal.
+                      <br>
+                      Are you able to help us fill this website in your language or others with Ecology Action educational content that has already taught millions worldwide to better feed themselves while building and caring for the Earth's soil and conserving our most precious resources?
+                      <br>
+                      [$15,000.00 USD] covers the translation cost of the most critical educational content into any world language.  This critical content includes 50 content windows, 45 supplemental document pages, over 150 minutes of video webinars covering 13 topics, 7 expanded animations, and site-wide searching capability through the online library, and further content development levels are available.  We invite you to use the button below to contact us regarding content development details and options."
   sessions:
     log_in: "Log in"
     log_out: "Log out"

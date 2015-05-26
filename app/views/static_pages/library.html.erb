@@ -5,7 +5,7 @@
     <p>
       <%= t('library.disclaimer') %>
     </p>
-    <%= link_to t('library.btn_help_develop'), '#', class: "btn button-major-orange" %>
+    <%= link_to t('library.btn_help_develop'), request_funding_url, class: "btn button-major-orange" %>
   </div>
 <div class="col-xs-12">
   <%= form_tag(library_path, :method => "get", id: "search-form") do %>

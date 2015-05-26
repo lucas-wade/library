@@ -623,8 +623,8 @@ border-top-right-radius: 149px;
   color: darken($primary-bg-color, 50%);
 }
 
-.c_red {
-  color: darkred;
+.c-red {
+  color: red;
 }
 
 
@@ -665,4 +665,23 @@ border-top-right-radius: 149px;
   //background-color: cornflowerblue;
   background-color: rgba(188, 242, 222,.75);
   border-radius: 1em;
+  max-width: 100%;
+}
+
+
+.request-funding {
+  padding: 2em;
+  background: $site_bg_gradient;
+  color: black;
+  text-align: justify;
+
+  font-weight: 600;
+  font-size: 1.31em;
+
+  height: 100%;
+  margin: 1em;
+
+  border-radius: 4em;
+  -webkit-hyphens: manual;
+
 }
