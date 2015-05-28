@@ -4,6 +4,7 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
+    <div class="filled-container-padded ">
     <h1><%= t('sessions.log_in') %></h1>
     <%= form_for(:session, url: login_path) do |f| %>
 
@@ -23,6 +24,7 @@
     <% end %>
 
     <p><%= t('sessions.new_user') %> <%= link_to t('sessions.register'), signup_path %></p>
+    </div>
   </div>
 </div>
 
