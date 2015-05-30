@@ -5,8 +5,11 @@
 <div class="request-funding <%= rtl_checker(I18n.locale).to_s %>">
 
 <%= t('general.funding_request_html') %>
-
-  <h3><%= link_to 'Contact Ecology Action Regarding Content Development Funding', 'http' %></h3>
+  <div class="center">
+  <%= link_to 'Contact Ecology Action Regarding Funding',
+                                                  'https://donatenow.networkforgood.org/ecologyaction',
+                                                  class: "btn btn-lrg button-major-orange"  %>
+  </div>
 </div>
 </div>
 </div>
