@@ -70,18 +70,20 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
 
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <% key = I18n.locale.to_s %>
-            <%= $av_langs_hash[key] %>
-            <span class="fa fa-caret-down"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <% $av_langs_hash.each do |k, v| %>
-                <li><%= link_to v, locale: k if k != 'na' %></li>
-            <% end %>
-          </ul>
-        </li>
+        <% if params[:action] != "language_select" %>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <% key = I18n.locale.to_s %>
+                <%= $av_langs_hash[key] %>
+                <span class="fa fa-caret-down"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <% $av_langs_hash.each do |k, v| %>
+                    <li><%= link_to v, locale: k if k != 'na' %></li>
+                <% end %>
+              </ul>
+            </li>
+        <% end %>
 
         <% if logged_in? %>
             <li><%= link_to '', topics_path, class: 'fa fa-home' %></li>

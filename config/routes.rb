@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   root             'static_pages#language_select'
 
+  get     'language_select' =>  'static_pages#language_select'
   get     'home'    => 'static_pages#home'
   get     'about'   => 'static_pages#about'
   get     'admin'   => 'static_pages#admin'

@@ -50,7 +50,7 @@ class StaticPagesController < ApplicationController
       @topics = Topic.all
     end
 
-    def language
+    def language_select
     end
 
     def classroom_doors
