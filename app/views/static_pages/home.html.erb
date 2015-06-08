@@ -1,97 +1,9 @@
 <% provide(:logo, 'clear' ) %>
 
 <% if logged_in? %>
-<!--
-    <div class="row">
-      <div class="col-md-4 classroom-col">
-        <h2>Information</h2>
-        <ol>
-        </ol>
-      </div>
-      <div class="col-md-4 classroom-col">
-        <h2>Action</h2>
-      </div>
-      <div class="col-md-4 classroom-col">
-        <h2>Join</h2>
-
-      </div>
-    </div>
-
--->
-
-
     <script type="text/javascript">
         window.location.href="/topics"
     </script>
-
-
-<!--
-    <br>
-    <div class="row">
-      <aside class="col-md-4">
-        <section class="user_info">
-          <%# render 'shared/user_info' %>
-        </section>
-        <section class="stats">
-          <%# render 'shared/user_stats' %>
-        </section>
-        </section>
-        <section class="micropost_form">
-          <%# render 'shared/micropost_form' %>
-        </section>
-      </aside>
-      <div class="col-md-8">
-        <h3>Micropost Feed</h3>
-        <%# render 'shared/feed' %>
-      </div>
-    </div>
--->
 <% else %>
-<!--
-<div class="vid-container">
--->
-<div class="video">
-
-
-
-  <!-- iframe for video
-<iframe  width="100%" height="100%"
-        src="media/gb_intro.mp4"
-        frameborder="0" allowfullscreen></iframe>
--->
-
-<!--youtube
-<iframe  width="100%" height="100%"
-        src="https://www.youtube.com/embed/FPeAvYrfKkU?autoplay=1"
-        frameborder="0" allowfullscreen></iframe>
-
--->
-
-  <video  width="100%" height="92%" controls="true" autoplay src="media/gb_intro.mp4" type='video/mp4'>
-  </video>
-
-
-  <%# video_tag "/media/gb_intro.mp4",  :width => "100%", controls: true, autoplay: true, autobuffer: true %>
-  <!--
-  <div>
-    <h6 class="firm-butt">
-
-
-      <%# link_to 'Guest', classroom_doors_path %>
-      |
-      <%# link_to t('sessions.log_in'), login_path %>
-      |
-      New user? <%# link_to t('sessions.sign_up'), signup_path %>
-
-    </h6>
-    </div>
-    </div>
-      -->
-
-
-</div>
-
-
-
-
+    <%= render 'gb_intro' %>
 <% end %>

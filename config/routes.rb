@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get     'request_funding' => 'static_pages#request_funding'
   get     'classroom_doors' => 'static_pages#classroom_doors'
   get     'translations' => 'static_pages#translations'
+  get     'movie' => 'static_pages#movie'
   get     'signup'  => 'users#new'
   get     'login'   => 'sessions#new'
   post    'login'   => 'sessions#create'
