@@ -12,7 +12,6 @@
 <%= render 'layouts/header' %>
 
 <div class="container-fluid main-container">
-
   <% flash.each do |message_type, message| %>
       <div class="alert alert-<%= message_type %>"><%= message %></div>
   <% end %>
@@ -22,11 +21,9 @@
     <%= yield %>
   </div>
 
-
   <%= render 'layouts/footer' %>
 
-  <%= debug(params) if Rails.env.development? %>
-
+  <%# debug(params) if Rails.env.development? %>
 
   <% if current_admin == TRUE && edit_mode == 1 %>
       <%# render 'admin/console' %>
