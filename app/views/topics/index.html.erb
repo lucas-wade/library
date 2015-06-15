@@ -3,15 +3,8 @@
 <% session[:anim_in_done_it_once] = 0 %>
 <% provide(:title, t('titles.classroom') ) %>
 
-    <div class="
-
-    <% if edit_mode == 1 %>
-        offset-jimbo
-
-    <% end %>
-">
-
-    <div class="row low-gutter <% if edit_mode == 1 %>
+<div class="<% if edit_mode == 1 %>offset-jimbo<% end %>">
+  <div class="row low-gutter <% if edit_mode == 1 %>
                                 edit-form
                                 <% end %>
                                 ">

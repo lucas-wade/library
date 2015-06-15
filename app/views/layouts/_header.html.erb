@@ -69,7 +69,7 @@
         <% if params[:action] != "language_select" %>
             <% if params[:action] != "home" && params[:action] != "classroom_doors" %>
             <li>
-            <%= link_to t('general.watch_movie'), movie_path, class: "btn " %>
+            <%= link_to t('general.watch_movie'), movie_path, class: "btn button-orange-text" %>
                 <%# render 'shared/modal', button: t('general.watch_movie') , title: t('titles.title'), body: temp, the_class: "btn fat-text-button",count: 100 %>
             </li>
             <% end %>

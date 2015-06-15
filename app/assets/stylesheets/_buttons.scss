@@ -15,7 +15,6 @@
 }
 
 .button {
-
   //background-color: rgb(118, 149, 153);
   //display: block;
   //border: none;
@@ -126,7 +125,28 @@
   color: $primary-color;
 }
 
+.button-orange-text {
 
+  font-size: 1.18em;
+  //border-color: white;
+
+  //background-color: lighten($site_orange,10%);
+  font-weight: 600;
+  //padding: .3em .5em .1em .5em;
+  color: lighten($site_orange,10%);
+  max-width: 100%;
+
+
+  a: {
+    color: black;
+  }
+  &:hover {
+    //background-color: rgba(256,256,256,.93);
+    background-color: rgba(lighten($primary-bg-color,20),.93);
+    border-color: #081111;
+    color: $primary-color;
+  }
+}
 
 
 .btn-kill {

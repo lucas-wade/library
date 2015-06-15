@@ -1,13 +1,15 @@
-
+<%
+   #global vars
+   $collumn_icon_1 = @topics[0]
+   $collumn_icon_2 = @topics[1]
+   $collumn_icon_3 = @topics[2]
+%>
 
 <!-- col-sm-4 -->
 <div id="<% if @temp_topic == 1 %>action-collumn<% end %>">
   <h5>
     <i class="fa fa-3x">
-      <% $collumn_icon_1 = @topics[0]
-         $collumn_icon_2 = @topics[1]
-         $collumn_icon_3 = @topics[2]
-      %>
+
       <% if @temp_topic != 1 && @topics.count > 0 %>
       <%= image_tag @topics[@temp_topic].icon.url, class: "trimmed-icon img-icon" %>
           <% end %>
@@ -28,10 +30,6 @@
     <% end %>
 
 
-    <script>
-
-
-    </script>
     <!-- main loop for the column -->
     <!-- still need to implement ordering. -->
 

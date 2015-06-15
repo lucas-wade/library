@@ -15,7 +15,7 @@
       <p class="under-construction">
         <%= t('general.register_above') %>
         <br>
-        <%= link_to t('general.contribute'), request_funding_url , class: "btn button-major-orange" %>
+        <%= button_to t('general.contribute'), request_funding_url , class: "btn button-major-orange", method: 'get'%>
       </p>
     </div>
 <% end %>
