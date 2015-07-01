@@ -28,6 +28,38 @@ module TopicsHelper
     end
   end
 
+  def setup_active_menu_buttons
+    @active_column = top_parent(@topic)
+    @active_main_menu = top_topic(@topic)
+    @active_sub_menu = active_sub_menu(@topic)
+  end
+
+  def top_parent(t)
+    if t.parents.first.present?
+      top_parent(t.parents.first)
+      t.parents.first
+    else
+      t
+    end
+  end
+
+  def top_topic(t)
+    if t.parents.first.present? && t.parents.first.id > 3
+      top_topic(t.parents.first)
+    else
+      t
+    end
+  end
+
+  def active_sub_menu(t)
+    if t.parents.first.present? && t.parents.first.id != @active_main_menu.id
+      active_sub_menu(t.parents.first)
+
+    else
+      t
+    end
+  end
+
 
   def col_finder
     t = self.parents.first || self

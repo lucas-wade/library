@@ -34,6 +34,7 @@
     <!-- still need to implement ordering. -->
 
     <% @topics[@temp_topic].kids.each do |t| %>
+        <%# cache ['topic_entry', t] do %>
         <!-- current lang? -->
         <% if t.language == 0 || t.language == I18n.locale.to_s %>
           <% if t.category == 0 || t.category == nil %>
@@ -55,9 +56,11 @@
                 </div>
 
             <!-- not edit mode -->
+
             <% else if t.name != nil %>
                         <% color_class = ''
-                           if params[:id].present? && params[:id].to_i == t.id
+                           #if params[:id].present? && params[:id].to_i == t.id
+                           if @active_column.present? && @active_main_menu.id == t.id
                                 color_class = 'btn-a'
                               else
                               color_class = $index_column_colors[@temp_topic]
@@ -92,6 +95,7 @@
             <% end %>
           <% end %> <!-- main category -->
         <% end %> <!-- language 0 or 1 -->
+            <%# end %> <!-- caching -->
     <% end %> <!-- main loop -->
     </div>
 </div> <!-- close of the header icon -->

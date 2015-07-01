@@ -21,6 +21,7 @@ class TopicsController < ApplicationController
   def show
     @topic = Topic.find(params[:id])
     @topics = Topic.all
+
     if params[:publication_id].present?
       @show_pub = Pub.find(params[:publication_id])
     end
@@ -62,11 +63,7 @@ class TopicsController < ApplicationController
       if @original_topic.present?
         @topic.translation_of(@original_topic)
       end
-
       # its saved and now we create the translations
-      #if !@topic.all_translations_exist?
-
-
       # NOW CREATE THE TRANSLATIONS
       @original_topic=@topic
 
