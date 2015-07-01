@@ -31,23 +31,24 @@
 
 .sub-topic-button {
 
-  //font-size: .9em;
+
   border-color: white;
-  //background-color: rgba(256,256,256,.5);
+
   background-color: rgba(lighten($primary-bg-color,20),.5);
   font-weight: 500;
-  //padding: .3em .5em .1em .5em;
+
   color: rgb(68, 52, 23);
 &:hover {
-  //background-color: rgba(256,256,256,.93);
-  background-color: rgba(lighten($primary-bg-color,8),.80);
+  //background-color: rgba(lighten($primary-bg-color,8),.80);
+  background-color: #edffe6;
   border-color: #3b5d5d;
 }
 }
 
 .sub-topic-button-active {
   //background-color: rgba(256,256,256,.93);
-  background-color: rgba(lighten($primary-bg-color,8),.80);
+  //background-color: rgba(lighten($primary-bg-color,8),.80);
+  background-color: #edffe6;
   border-color: #3b5d5d;
 }
 
@@ -107,22 +108,31 @@
   max-width: 100%;
 
 
-  a: {
+  a {
     color: black;
   }
   &:hover {
     //background-color: rgba(256,256,256,.93);
     background-color: rgba(lighten($primary-bg-color,20),.93);
-    border-color: #081111;
+    //border-color: #081111;
     color: $primary-color;
+    a {
+      color: $primary-color;
+    }
   }
 }
 
+.button-major-orange a:hover {
+  color: black;
+}
 .button-major-orange-active {
   //background-color: rgba(256,256,256,.93);
   background-color: rgba(lighten($primary-bg-color,0),.43);
   border-color: #3b5d5d;
   color: $primary-color;
+  a: {
+    color: $primary-color;
+  }
 }
 
 .button-orange-text {

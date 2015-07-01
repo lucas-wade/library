@@ -12,19 +12,20 @@
     <% sub_cats = @topic.parents.first %>
     <% has_sub_cats = TRUE %>
     <% sub_cat_active = TRUE %>
+
+    <% if @topic.parents.first.category == 0
+        intro_topic = @topic.parents.first
+       else
+        intro_topic = @topic.parents.first.parents.first || FALSE %>
+    <% end %>
+    <% else %>
+    <% intro_topic = @topic %>
+
+
 <% end %>
 
 <% rtl_class = rtl_checker %>
 
-<% if @topic.category > 0
-    if @topic.parents.first.category == 0
-        intro_topic = @topic.parents.first
-    else
-      intro_topic = @topic.parents.first.parents.first || FALSE %>
-    <% end %>
-    <% else %>
-    <% intro_topic = @topic %>
-<% end %>
 
 
 <%= link_to '<i class="fa fa-close fa-2x"></i>'.html_safe, topics_path, class: "btn-kill" %>
@@ -119,15 +120,15 @@
          end %>
 
 
-      <div style="height:100%; width:100%" class="<%= rtl_class %>">
-      <%= raw @topic.main_content %>
-        </div>
 
       <% if @topic.placeholder == TRUE %>
           <%= render 'shared/placeholder' %>
-      <% else
-           if @topic.growing == TRUE %>
+      <% else if @topic.growing == TRUE %>
               <%= render 'shared/growing' %>
+              <% else %>
+              <div style="height:100%; width:100%" class="<%= rtl_class %>">
+                <%= raw @topic.main_content %>
+              </div>
           <% end %>
       <% end %>
 
@@ -242,7 +243,8 @@
 
     <div id="category-window" class="content_window tight-top
       <% if edit_mode == 1 %> clr4
-      <% end %>">
+      <% end %>
+      ">
 
 
         <%
@@ -268,9 +270,11 @@
 
       </div>
 -->
+      <!-- peak -->
+
 
       <!-- peak tab -->
-        <div class="col-xs-2">
+        <div class="tab-div-4">
           <% sub_cats.kids.each do |t| %>
               <% if t.category == 4 %>
                   <% the_class = tab_active(t) %>
@@ -293,7 +297,7 @@
         </div>
 
       <!-- tab 1 -->
-        <div class="col-xs-2">
+        <div class="tab-div-1">
           <% sub_cats.kids.each do |t| %>
               <% if t.category == 1 %>
                   <%
@@ -317,7 +321,7 @@
         </div>
 
 
-        <div class="col-xs-2">
+        <div class="tab-div-2">
           <% sub_cats.kids.each do |t| %>
               <% if t.category == 2 %>
                   <%
@@ -339,7 +343,7 @@
           <% end %>
         </div>
 
-        <div class="col-xs-2">
+        <div class="tab-div-3">
           <% sub_cats.kids.each do |t| %>
               <% if t.category == 3 %>
                   <%
@@ -361,7 +365,7 @@
           <% end %>
         </div>
 
-      </div>
+       </div>
 
 
 

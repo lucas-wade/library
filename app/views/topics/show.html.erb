@@ -60,13 +60,17 @@
                       <%= image_tag tt.icon.url, class: "img-icon" %>
                   <% else %>
                       <%
+
                          the_class = "btn sub-topic-button"
                          if tt.id == @active_sub_menu.id
                          the_class = the_class + '-active'
+                           else
+                             the_class = the_class + ' b' + @active_column.id.to_s
                          end
                          if tt.placeholder == TRUE
                            the_class = the_class + ' placeholder'
                          end
+
                       %>
                       <%= link_to tt.name, tt, class: the_class unless tt.name == nil %>
                   <% end %>
@@ -85,10 +89,13 @@
                              the_class = "btn sub-topic-button"
                              if tt.id == @active_sub_menu.id
                                the_class = the_class + '-active'
+                               else
+                                 the_class = the_class + ' b' + @active_column.id.to_s
                              end
                              if tt.placeholder == TRUE
                                the_class = the_class + ' placeholder'
                              end
+
                           %>
                           <%= link_to tt.name, tt, class: the_class %>
                       <% end %>
@@ -107,10 +114,13 @@
                                  the_class = "btn sub-topic-button"
                                  if tt.id == @active_sub_menu.id
                                    the_class = the_class + '-active'
+                                   else
+                                     the_class = the_class + ' b' + @active_column.id.to_s
                                  end
                                  if tt.placeholder == TRUE
                                    the_class = the_class + ' placeholder'
                                  end
+
                               %>
                       <%= link_to tt.name, tt, class: the_class %>
                   <% end %>
@@ -127,10 +137,13 @@
                          the_class = "btn sub-topic-button"
                          if tt.id == @active_sub_menu.id
                            the_class = the_class + '-active'
+                           else
+                             the_class = the_class + ' b' + @active_column.id.to_s
                          end
                          if tt.placeholder == TRUE
                            the_class = the_class + ' placeholder'
                          end
+
                       %>
                       <%= link_to tt.name, tt, class: the_class %>
                   <% end %>

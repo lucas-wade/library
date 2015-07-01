@@ -7,9 +7,13 @@ module TopicsHelper
   def tab_active(t)
      if t.main_content == nil || t.main_content == '' && t.placeholder == FALSE && t.growing == FALSE
          the_class = 'tab-cat' + t.category.to_s + ' tab-greyed-out'
+     else if t.id == @topic.id
+            the_class = 'tab-cat' + t.category.to_s + ' tab-active'
        else
          the_class = 'tab-cat' + t.category.to_s
+          end
      end
+
   end
 
   def rtl_checker(t = @topic.language)
@@ -37,7 +41,7 @@ module TopicsHelper
   def top_parent(t)
     if t.parents.first.present?
       top_parent(t.parents.first)
-      t.parents.first
+      #t.parents.first
     else
       t
     end
