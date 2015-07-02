@@ -152,8 +152,8 @@
   }
   &:hover {
     //background-color: rgba(256,256,256,.93);
-    background-color: rgba(lighten($primary-bg-color,20),.93);
-    border-color: #081111;
+    background-color: rgba(lighten($primary-bg-color,90),.90);
+    border-color: rgba(150,150,150,.8);
     color: $primary-color;
   }
 }

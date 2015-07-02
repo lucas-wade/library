@@ -1,19 +1,21 @@
-<%# link_to '<i class="fa fa-photo fa-1x"></i>'.html_safe, t.media.url, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true } %>
-<%# link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url, :target => "_blank" %>
+<% if t.pub_type == 7 %> <!-- photo -->
+    <%= link_to '<i class="fa fa-photo"></i>'.html_safe, t.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, } %>
+    <%= link_to '<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>'.html_safe, t.media.url, :target => "_blank" %>
+<% else
+     if t.pub_type == 6 %> <!-- animation -->
+        <%= link_to image_tag('button_anim_play.png'), t.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, } %>
 
-<% if t.pub_type == 6 %> <!-- animation -->
-    <%= link_to image_tag('button_anim_play.png'), t.media.url, target: 'blank' %>
+    <% else
+         if t.pub_type == 5 %> <!-- movie -->
+            <%= link_to '<i class="fa fa-video-camera"></i>'.html_safe, t.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, } %>
+            <%= link_to '<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>'.html_safe, t.media.url, :target => "_blank" %>
 
-    <% else if t.pub_type == 5 %> <!-- movie -->
-        <%= link_to '<i class="fa fa-video-camera"></i>'.html_safe, t.media.url, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, } %>
-        <%= link_to '<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>'.html_safe, t.media.url, :target => "_blank" %>
-
-    <% else %>
-        <%= link_to '<span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>'.html_safe, t.media.url, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, } %>
-        <%= link_to '<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>'.html_safe, t.media.url, :target => "_blank" %>
+        <% else %>
+            <%= link_to image_tag('button_doc_zoom.png'), t.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, } %>
+            <%= link_to '<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>'.html_safe, t.media.url, :target => "_blank" %>
+        <% end %>
     <% end %>
 <% end %>
-
 
 <% if t.topics.present? %>
     <%= link_to t.name, topic_path(t.topics.first, publication_id: t.id) %>
