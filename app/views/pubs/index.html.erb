@@ -51,7 +51,9 @@
 
 <br>
 
-<%= link_to 'New Publication', new_pub_path, class:"btn btn-primary btn-lg"%>
+  <% if edit_mode==1 %>
+    <%= link_to 'New Publication', new_pub_path, class:"btn btn-primary btn-lg"%>
+      <% end %>
 
     </div>
 </div>

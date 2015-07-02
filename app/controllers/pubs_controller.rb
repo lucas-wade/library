@@ -1,4 +1,8 @@
 class PubsController < ApplicationController
+
+  before_action :admin?,     only: [:new, :destroy, :update, :create, :edit]
+
+
   def index
     @pubs = Pub.all
   end

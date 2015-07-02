@@ -2,7 +2,7 @@ class TopicsController < ApplicationController
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   before_filter :disable_xss_protection, only: [:edit, :update]
-
+  before_action :admin?,     only: [:new, :destroy, :update, :create, :edit]
 
 
   def index
