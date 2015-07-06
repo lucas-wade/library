@@ -7,10 +7,20 @@
     </p>
     <%= link_to t('library.btn_help_develop'), request_funding_url, class: "btn button-major-orange" %>
   </div>
-<div class="col-xs-12">
+<div id="library" class="col-xs-12">
+
   <%= form_tag(library_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Search Topics" %>
-      <%= submit_tag "Search", :name => nil %>
+      <div class="input-group">
+        <span class="input-group-btn">
+
+          <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+            <span class="glyphicon glyphicon-search"></span>
+          <% end %>
+          <%# submit_tag '<span class="glyphicon glyphicon-search" aria-hidden="true"></span>', name: nil, class: 'btn btn-default' %>
+        </span>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Topics", class: 'form-control' %>
+      </div>
+
   <% end %>
 
 

@@ -88,10 +88,10 @@
         <% end %>
 
         <% if logged_in? %>
-            <li><%= link_to '', topics_path, class: 'fa fa-home' %></li>
+            <li><%= link_to '', topics_path, class: 'fa fa-home fa-2x' %></li>
 
             <li>
-              <%= link_to '', library_path, class: 'fa fa-book' %>
+              <%= link_to image_tag('icon_library.png'), library_path, class: 'icon-library' %>
             </li>
             <%= render 'admin/dropdown' %>
 
