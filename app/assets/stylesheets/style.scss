@@ -451,25 +451,32 @@ a {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  left: 0;
+  //left: 0;
+  z-index: 0;
+  .active {
+    z-index: 1;
+  }
 }
 .tab-div-1 {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  left: .5em;
+  //left: -.8em;
+  z-index: 0;
 }
 .tab-div-2 {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  left: 1em;
+  //left: -1.6em;
+  z-index: 0;
 }
 .tab-div-3 {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  left: 1.5em;
+  //left: -2.4em;
+  z-index: 0;
 }
 .tab-cat1 {
 
@@ -486,10 +493,17 @@ a {
 
 .tab-cat4 {
   z-index: 0;
+
 }
 
 .tab-active {
-  z-index: 10;
+  //z-index: 10;
+  background: image_url("icon-tabs-cat-active.png") no-repeat center top;
+  background-size: contain;
+  overflow: visible;
+  padding: 0 24px 24px 24px;
+  margin: 0 -24px -24px -24px;
+
 }
 
 .tab-greyed-out {
@@ -665,12 +679,18 @@ border-top-right-radius: 149px;
 }
 
 .under-construction {
-  padding: 1em;
-  margin: 1em;
+  padding: 1em 2em 1em 2em;
+  //margin: 1em;
   //background-color: cornflowerblue;
-  background-color: rgba(188, 242, 222,.75);
-  border-radius: 1em;
+  background-color: rgba(22, 242, 26, 1.0);
+  //border-radius: 1em 1em 0em 0em;
   max-width: 100%;
+  position: fixed;
+  height: 10em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
 
 

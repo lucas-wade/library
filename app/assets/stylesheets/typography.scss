@@ -1,6 +1,12 @@
+@import "variables";
+
 .text-fat {
 
   font-size: 1.6em;
   font-weight: 600;
 }
 
+.orange {
+  color: lighten($site_orange,10%);
+  font-weight: 600;
+}

@@ -25,5 +25,4 @@ production:
   database: rails
   username: rails
   password: <%= ENV["DATABASE_PASSWORD"] %>
-  #lRLYNzHL1G
   host: localhost

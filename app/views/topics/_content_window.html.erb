@@ -274,6 +274,7 @@
 
 
       <!-- peak tab -->
+
         <div class="tab-div-4">
           <% sub_cats.kids.each do |t| %>
               <% if t.category == 4 %>
@@ -281,7 +282,8 @@
                   <% if edit_mode ==1 %>
                       <%= link_to image_tag("icon-tabs-cat-4.png", class: the_class), edit_topic_path(t) %>
                   <% else %>
-                      <%= link_to image_tag("icon-tabs-cat-4.png", class: the_class), t %>
+                        <%= link_to image_tag("icon-tabs-cat-4.png", class: the_class), t %>
+
                   <% end %>
                   <% peak = true %>
               <% end %>
