@@ -1,8 +1,10 @@
 //smaller screen
 @media (max-width: 767px) {
 
-  #classroom-doors-text-bg {
-    padding-bottom: 22em;
+  .classroom-doors-bottom {
+    padding: 3.618em;
+    padding-top: 1.618em;
+    padding-bottom: 28em;
   }
 
   .navbar-right {
@@ -47,11 +49,14 @@
 }
 
 // larger screen
-@media (min-width: 768px) {
+@media (min-width: 767px) {
 
-  #classroom-doors-text-bg {
-    padding-bottom: 18em;
+  .classroom-doors-bottom {
+    padding: 3.618em;
+    padding-top: 1.618em;
+    padding-bottom: 14em;
   }
+
   #big_c {
     display: block;
 
