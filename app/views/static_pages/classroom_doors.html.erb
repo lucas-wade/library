@@ -19,7 +19,7 @@
        <p><%= t('classroom_doors.pI_html') %></p>
 
        <%
-          temp = t('classroom_doors.knowledge_pI') + '<br>' + t('classroom_doors.knowledge_pII')
+          temp = t('classroom_doors.knowledge_pI') + '<br><br>' + t('classroom_doors.knowledge_pII')
        %>
        <p class="center">
          <%= render 'shared/modal', button: t('classroom_doors.knowledge') , title: t('classroom_doors.knowledge'), body: temp, the_class: "btn btn-lg fat-text-button",count:1 %>
@@ -27,7 +27,7 @@
          </p>
 
        <p><%= t('classroom_doors.pII') %>
-         <%= t('classroom_doors.knowledge_pIII') %>
+       <%= t('classroom_doors.knowledge_pIII') %>
          <%= t('classroom_doors.knowledge_pIV') %></p>
        <p class="center">
          <%# link_to t('classroom_doors.nature_note_button'), @topic, class: "btn btn-lg fat-text-button", :data => {:colorbox => true, :colorbox_height => '70%', :colorbox_width => '60%', :colorbox_html => t('classroom_doors.nature_note_html') } %>
