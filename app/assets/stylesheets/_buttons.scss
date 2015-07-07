@@ -75,23 +75,19 @@
 }
 
 .major-button {
-
   font-size: 1.18em;
   border-color: white;
-  //background-color: transparent;
   background-color: rgba(lighten($primary-bg-color,20),.5);
   font-weight: 600;
-  //padding: .3em .5em .1em .5em;
-  //color: rgba(68, 52, 23, .8);
   &:hover {
-    //background-color: rgba(256,256,256,.93);
-    background-color: rgba(darken($primary-bg-color,10),.93);
-    border-color: #081111;
+    background-color: rgb(141, 219, 255);
+    color: white;
+    box-shadow: 0px 0px 10px 5px #fff;
+    //box-shadow: 10px 10px 5px #888888;
   }
 }
 
 .major-button-active {
-  //background-color: rgba(256,256,256,.93);
   background-color: rgba(lighten($primary-bg-color,0),.43);
   border-color: #3b5d5d;
 }
@@ -101,24 +97,20 @@
   font-size: 1.18em;
   border-color: white;
 
-  background-color: lighten($site_orange,10%);
+  background-color: lighten($site_orange,14%);
   font-weight: 600;
   //padding: .3em .5em .1em .5em;
   //color: rgba(68, 52, 23, .8);
   max-width: 100%;
-
-
+  box-shadow: 0 0 6px 2px white;
   a {
     color: black;
   }
   &:hover {
-    //background-color: rgba(256,256,256,.93);
-    background-color: rgba(lighten($primary-bg-color,20),.93);
-    //border-color: #081111;
-    color: $primary-color;
-    a {
-      color: $primary-color;
-    }
+    background-color: rgb(141, 219, 255);
+    color: white;
+    box-shadow: 0px 0px 10px 5px #fff;
+
   }
 }
 
