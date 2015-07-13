@@ -461,21 +461,22 @@ a {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  //left: -.8em;
+  //left: -42px;
   z-index: 0;
 }
 .tab-div-2 {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  //left: -1.6em;
+  //left: -80px;
   z-index: 0;
 }
 .tab-div-3 {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  //left: -2.4em;
+
+  //left: -140px;
   z-index: 0;
 }
 .tab-cat1 {
@@ -497,7 +498,7 @@ a {
 }
 
 .tab-active {
-  //z-index: 10;
+  z-index: 10;
   background: image_url("icon-tabs-cat-active.png") no-repeat center top;
   background-size: contain;
   overflow: visible;
@@ -678,6 +679,21 @@ border-top-right-radius: 149px;
   }
 
 }
+.growing-banner {
+  padding: 1em 2em 1em 2em;
+  //margin-top: 10em;
+  //background-color: cornflowerblue;
+  background-color: rgb(157, 239, 242);
+  //border-radius: 1em 1em 0em 0em;
+  max-width: 100%;
+
+  height: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
 
 .under-construction {
   padding: 1em 2em 1em 2em;
@@ -714,4 +730,13 @@ border-top-right-radius: 149px;
 
 #login {
   padding-top: 4em;
+}
+
+.topic-col-icon {
+  display: inline-block;
+  float: left;
+  position: relative;
+  z-index: 1;
+  width: 2.5em;
+  margin: .2em .2em .2em 1em;
 }

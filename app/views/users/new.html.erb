@@ -6,7 +6,9 @@
     <h1><%= t('sessions.register') %></h1>
     <%= t('users.registration') %>
     <%= form_for(@user) do |f| %>
+        <%# I18n.locale.to_s %>
 
+        <%= hidden_field_tag :language, I18n.locale.to_s %>
         <%= render 'fields',f: f %>
 
         <%= f.submit "Create my account", class: "btn btn-primary" %>

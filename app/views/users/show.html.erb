@@ -6,7 +6,7 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
-      <h3>Last online <%= time_ago_in_words(@user.last_login) %> </h3>
+      <h3>Last online <%= time_ago_in_words(@user.last_login) if @user.last_login.present?%> </h3>
     </section>
     <section class="stats">
       <% render 'shared/user_stats' %>

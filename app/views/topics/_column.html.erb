@@ -6,7 +6,7 @@
 %>
 
 <!-- col-sm-4 -->
-<div id="<% if @temp_topic == 1 %>action-collumn<% end %>">
+<div id="<% if @temp_topic == 1 %>action-column<% end %>">
   <h5>
     <i class="fa fa-3x">
 
@@ -25,6 +25,7 @@
     <% if @temp_topic == 0 %>
         <!-- <div class="list-group-item btn-default btn-main-menu button b1"> -->
         <% the_class = "list-group-item btn-default btn-main-menu button b1 button-text " + rtl_checker(I18n.locale).to_s %>
+        <%= image_tag 'icon_library.png', class: 'topic-col-icon' %>
               <%= link_to t('titles.library'), library_path, class: the_class %>
         <!-- </div> -->
     <% end %>

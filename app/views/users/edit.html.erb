@@ -1,10 +1,15 @@
-<% provide(:title, "Edit user") %>
-<h1>Update your profile</h1>
+<% provide(:title, t('users.settings')) %>
+
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-2"></div>
+  <div class="col-md-8 container-grad">
+    <h1><%= t('users.settings') %></h1>
     <%= form_for(@user) do |f| %>
         <%= render 'fields',f: f %>
+
+        <%= f.label :language %>
+        <%= f.select(:language, $available_languages, :selected => @user.language) %>
 
         <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
@@ -14,5 +19,5 @@
       <a href="http://gravatar.com/emails" target=_blank>change</a>
     </div>
   </div>
-
+  <div class="col-md-2"></div>
 </div>

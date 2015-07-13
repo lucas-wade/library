@@ -1,5 +1,9 @@
 
-<%# if logged_in? %>
+<% if logged_in?
+
+    end
+%>
+
 <% session[:anim_in_done_it_once] = 0 %>
 <% provide(:title, t('titles.classroom') ) %>
 

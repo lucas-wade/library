@@ -1,9 +1,12 @@
 <% provide(:logo, 'clear' ) %>
 
 <% if logged_in? %>
+    <%= redirect_to topics_url %>
+    <!--
     <script type="text/javascript">
         window.location.href="/topics"
     </script>
+    -->
 <% else %>
     <%= render 'gb_intro' %>
 <% end %>

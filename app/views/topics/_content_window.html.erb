@@ -14,11 +14,11 @@
     <% sub_cat_active = TRUE %>
 
     <% if @topic.parents.first.category == 0
-        intro_topic = @topic.parents.first
+         intro_topic = @topic.parents.first
        else
-        intro_topic = @topic.parents.first.parents.first || FALSE %>
+         intro_topic = @topic.parents.first.parents.first || FALSE %>
     <% end %>
-    <% else %>
+<% else %>
     <% intro_topic = @topic %>
 
 
@@ -46,22 +46,21 @@
                                             ">
 
 
-
-
   <% if @show_pub.present? %> <!-- maybe render a pub in dis here window -->
       <div class="col-md-8">
         <% if @show_pub.media.content_type == "application/pdf" %>
             <div class="pdf-viewer">
               <iframe src="<%= @show_pub.media.url %>" width="100%" height="100%" frameborder="0"></iframe>
             </div>
-        <% else if @show_pub.media.content_type == 'video/mp4' || @show_pub.media.content_type == 'application/mp4' %>
+        <% else
+             if @show_pub.media.content_type == 'video/mp4' || @show_pub.media.content_type == 'application/mp4' %>
                 <div class="video-viewer">
                   <iframe src="<%= @show_pub.media.url %>" width="100%" height="100%" frameborder="0"></iframe>
                 </div>
-        <% else %>
-            <%= image_tag @show_pub.media.url %>
-        <% end %>
+            <% else %>
+                <%= image_tag @show_pub.media.url %>
             <% end %>
+        <% end %>
       </div>
       <div class="col-md-4">
         <h3><%= render partial: 'shared/pub_link_to', locals: {t: @show_pub} %></h3>
@@ -75,32 +74,32 @@
   <% else %> <!-- render the topic -->
       <% there_is_a_topic_in_the_content_window = TRUE %>
       <div class="<%= rtl_checker %>">
-      <h3>
-        <% if edit_mode == 1 && @topic.parents.present? %>
-            <%= link_to '<i class="fa fa-edit edit-color"></i>'.html_safe, edit_topic_path(@topic) %>
-            <!-- new translations link NOT USING RIGHT NOW-->
-            <%# link_to '<i class="fa fa-language edit-color"></i>'.html_safe, new_topic_path(original_id: @topic.id, :parent_id => @topic.parents.first.id) %>
-        <% end %>
+        <h3>
+          <% if edit_mode == 1 && @topic.parents.present? %>
+              <%= link_to '<i class="fa fa-edit edit-color"></i>'.html_safe, edit_topic_path(@topic) %>
+              <!-- new translations link NOT USING RIGHT NOW-->
+              <%# link_to '<i class="fa fa-language edit-color"></i>'.html_safe, new_topic_path(original_id: @topic.id, :parent_id => @topic.parents.first.id) %>
+          <% end %>
 
-        <!-- NAME -->
-        <% if @topic.category.present? && @topic.category > 0
-             tt = @topic.parents.first
-             if !tt.name.present?
-               tt.name =''
+          <!-- NAME -->
+          <% if @topic.category.present? && @topic.category > 0
+               tt = @topic.parents.first
+               if !tt.name.present?
+                 tt.name =''
+               else
+                 tt.name = tt.name + ' ' + $available_categories[@topic.category]
+               end
              else
-               tt.name = tt.name + ' ' + $available_categories[@topic.category]
+               tt = @topic
              end
-           else
-             tt = @topic
-           end
-        %>
-        <% if tt.icon.present? %>
-            <%= image_tag tt.icon.url, class: "img-icon" %>
-        <% end %>
-        <%# if @topic.name != nil %>
-        <%= tt.name %>
-        <%# end %>
-      </h3>
+          %>
+          <% if tt.icon.present? %>
+              <%= image_tag tt.icon.url, class: "img-icon" %>
+          <% end %>
+          <%# if @topic.name != nil %>
+          <%= tt.name %>
+          <%# end %>
+        </h3>
       </div>
 
       <% if edit_mode == 1 %>
@@ -123,9 +122,10 @@
 
       <% if @topic.placeholder == TRUE %>
           <%= render 'shared/placeholder' %>
-      <% else if @topic.growing == TRUE %>
+      <% else
+           if @topic.growing == TRUE %>
               <%= render 'shared/growing' %>
-              <% else %>
+          <% else %>
               <div style="height:100%; width:100%" class="<%= rtl_class %>">
                 <%= raw @topic.main_content %>
               </div>
@@ -213,11 +213,11 @@
         <p class="center"> <%= image_tag("icon_skills_2.png", size: "29") %> </p>
 
         <div class="tight-list">
-        <% @topic.pubs.each do |t| %>
-            <% if t.skill == 2 %>
-                <%= render partial: 'shared/pub_link_to', locals: {t: t} %>
-            <% end %>
-        <% end %>
+          <% @topic.pubs.each do |t| %>
+              <% if t.skill == 2 %>
+                  <%= render partial: 'shared/pub_link_to', locals: {t: t} %>
+              <% end %>
+          <% end %>
         </div>
       </div>
 
@@ -225,11 +225,11 @@
         <p class="center"> <%= image_tag("icon_skills_3.png", size: "29") %> </p>
 
         <div class="tight-list">
-        <% @topic.pubs.each do |t| %>
-            <% if t.skill == 3 %>
-                <%= render partial: 'shared/pub_link_to', locals: {t: t} %>
-            <% end %>
-        <% end %>
+          <% @topic.pubs.each do |t| %>
+              <% if t.skill == 3 %>
+                  <%= render partial: 'shared/pub_link_to', locals: {t: t} %>
+              <% end %>
+          <% end %>
         </div>
       </div>
 
@@ -241,24 +241,25 @@
 <!-- category window TABS -->
 <% if has_sub_cats == TRUE || edit_mode ==1 %>
 
-    <div id="category-window" class="content_window tight-top
-      <% if edit_mode == 1 %> clr4
+    <div id="category-window"
+         class="content_window tight-top
+            <% if edit_mode == 1 %> clr4
       <% end %>
       ">
 
 
-        <%
-           peak = false
-           one = false
-           two = false
-           three = false
-        %>
+      <%
+         peak = false
+         one = false
+         two = false
+         three = false
+      %>
 
       <!-- intro tab -->
 
-        <% if intro_topic.present? %>
-            <% the_class = tab_active(intro_topic) %>
-        <% end %>
+      <% if intro_topic.present? %>
+          <% the_class = tab_active(intro_topic) %>
+      <% end %>
       <!-- intro tab
       <div class="col-xs-2 tab-cat0">
         <% if edit_mode == 1 %>
@@ -275,99 +276,101 @@
 
       <!-- peak tab -->
 
-        <div class="tab-div-4">
-          <% sub_cats.kids.each do |t| %>
-              <% if t.category == 4 %>
-                  <% the_class = tab_active(t) %>
-                  <% if edit_mode ==1 %>
-                      <%= link_to image_tag("icon-tabs-cat-4.png", class: the_class), edit_topic_path(t) %>
-                  <% else %>
-                        <%= link_to image_tag("icon-tabs-cat-4.png", class: the_class), t %>
+      <div class="tab-div-4">
+        <% sub_cats.kids.each do |t| %>
+            <% if t.category == 4 %>
+                <% the_class = tab_active(t) %>
+                <% if edit_mode ==1 %>
+                    <%= link_to image_tag("icon-tabs-cat-4.png", class: the_class), edit_topic_path(t) %>
+                <% else %>
+                    <%= link_to image_tag("icon-tabs-cat-4.png", class: the_class), t %>
 
-                  <% end %>
-                  <% peak = true %>
-              <% end %>
-          <% end %>
-          <% if edit_mode == 1 && peak == false %>
-              <%= link_to '<h3 class="edit-color center">PEAK <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics",
-                                                                                                                             :action => "new",
-                                                                                                                             :parent_id => sub_cats.id,
-                                                                                                                             :language => @topic.language,
-                                                                                                                             :category => 4}
-              %>
-          <% end %>
-        </div>
+                <% end %>
+                <% peak = true %>
+            <% end %>
+        <% end %>
+        <% if edit_mode == 1 && peak == false %>
+            <%= link_to '<h3 class="edit-color center">PEAK <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics",
+                                                                                                                           :action => "new",
+                                                                                                                           :parent_id => sub_cats.id,
+                                                                                                                           :language => @topic.language,
+                                                                                                                           :category => 4}
+            %>
+        <% end %>
+      </div>
 
       <!-- tab 1 -->
-        <div class="tab-div-1">
-          <% sub_cats.kids.each do |t| %>
-              <% if t.category == 1 %>
-                  <%
-                     the_class = tab_active(t)
-                     if t.placeholder == TRUE
-                       the_class = the_class + ' placeholder'
-                     end
-                  %>
+      <div class="tab-div-1">
+        <% sub_cats.kids.each do |t| %>
+            <% if t.category == 1 %>
+                <%
+                   the_class = tab_active(t)
+                   if t.placeholder == TRUE
+                     the_class = the_class + ' placeholder'
+                   end
+                %>
 
-                  <% if edit_mode ==1 %>
-                      <%= link_to image_tag("icon-tabs-cat-1.png", class: the_class), edit_topic_path(t) %>
-                      <% else %>
-                  <%= link_to image_tag("icon-tabs-cat-1.png", class: the_class), t %>
-                      <% end %>
-                  <% one = true %>
-              <% end %>
-          <% end %>
-          <% if edit_mode == 1 && one == false %>
-              <%= link_to '<h3 class="edit-color center">I <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics", :action => "new", :parent_id => sub_cats.id, :language => @topic.language, :category => 1} %>
-          <% end %>
-        </div>
+                <% if edit_mode ==1 %>
+                    <%= link_to image_tag("icon-tabs-cat-1.png", class: the_class), edit_topic_path(t) %>
+                <% else %>
+                    <%= link_to image_tag("icon-tabs-cat-1.png", class: the_class), t %>
+                <% end %>
+                <% one = true %>
+            <% end %>
+        <% end %>
+        <% if edit_mode == 1 && one == false %>
+            <%= link_to '<h3 class="edit-color center">I <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics", :action => "new", :parent_id => sub_cats.id, :language => @topic.language, :category => 1} %>
+        <% end %>
+      </div>
 
 
-        <div class="tab-div-2">
-          <% sub_cats.kids.each do |t| %>
-              <% if t.category == 2 %>
-                  <%
-                     the_class = tab_active(t)
-                     if t.placeholder == TRUE
-                       the_class = the_class + ' placeholder'
-                     end
-                  %>
-                  <% if edit_mode ==1 %>
-                      <%= link_to image_tag("icon-tabs-cat-2.png", class: the_class), edit_topic_path(t) %>
-                  <% else %>
-                      <%= link_to image_tag("icon-tabs-cat-2.png", class: the_class), t %>
-                  <% end %>
-                  <% two = true %>
-              <% end %>
-          <% end %>
-          <% if edit_mode == 1 && two == false %>
-              <%= link_to '<h3 class="edit-color center">II <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics", :action => "new", :parent_id => sub_cats.id, :language => @topic.language, :category => 2} %>
-          <% end %>
-        </div>
+      <div class="tab-div-2">
+      <% sub_cats.kids.each do |t| %>
+          <% if t.category == 2 %>
 
-        <div class="tab-div-3">
-          <% sub_cats.kids.each do |t| %>
-              <% if t.category == 3 %>
-                  <%
-                     the_class = tab_active(t)
-                     if t.placeholder == TRUE
-                       the_class = the_class + ' placeholder'
-                     end
-                  %>
-                  <% if edit_mode ==1 %>
-                      <%= link_to image_tag("icon-tabs-cat-3.png", class: the_class), edit_topic_path(t) %>
-                  <% else %>
-                      <%= link_to image_tag("icon-tabs-cat-3.png", class: the_class), t %>
-                  <% end %>
-                  <% three = true %>
-              <% end %>
-          <% end %>
-          <% if edit_mode == 1 && three == false %>
-              <%= link_to '<h3 class="edit-color center">III <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics", :action => "new", :parent_id => sub_cats.id, :language => @topic.language, :category => 3} %>
-          <% end %>
-        </div>
+                <%
+                   the_class = tab_active(t)
+                   if t.placeholder == TRUE
+                     the_class = the_class + ' placeholder'
+                   end
+                %>
+                <% if edit_mode ==1 %>
+                    <%= link_to image_tag("icon-tabs-cat-2.png", class: the_class), edit_topic_path(t) %>
+                <% else %>
+                    <%= link_to image_tag("icon-tabs-cat-2.png", class: the_class), t %>
+                <% end %>
+                <% two = true %>
 
-       </div>
+          <% end %>
+      <% end %>
+      <% if edit_mode == 1 && two == false %>
+          <%= link_to '<h3 class="edit-color center">II <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics", :action => "new", :parent_id => sub_cats.id, :language => @topic.language, :category => 2} %>
+      <% end %>
+      </div>
+
+      <div class="tab-div-3">
+        <% sub_cats.kids.each do |t| %>
+            <% if t.category == 3 %>
+                <%
+                   the_class = tab_active(t)
+                   if t.placeholder == TRUE
+                     the_class = the_class + ' placeholder'
+                   end
+                %>
+                <% if edit_mode ==1 %>
+                    <%= link_to image_tag("icon-tabs-cat-3.png", class: the_class), edit_topic_path(t) %>
+                <% else %>
+                    <%= link_to image_tag("icon-tabs-cat-3.png", class: the_class), t %>
+                <% end %>
+                <% three = true %>
+            <% end %>
+        <% end %>
+        <% if edit_mode == 1 && three == false %>
+            <%= link_to '<h3 class="edit-color center">III <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics", :action => "new", :parent_id => sub_cats.id, :language => @topic.language, :category => 3} %>
+        <% end %>
+      </div>
+
+    </div>
 
 
 
