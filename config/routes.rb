@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get     'classroom_doors' => 'static_pages#classroom_doors'
   get     'translations' => 'static_pages#translations'
   get     'movie' => 'static_pages#movie'
+  get     'movie_sd' => 'static_pages#movie_sd'
   get     'signup'  => 'users#new'
   get     'login'   => 'sessions#new'
   post    'login'   => 'sessions#create'
