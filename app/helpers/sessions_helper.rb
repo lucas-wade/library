@@ -4,7 +4,7 @@ module SessionsHelper
   def log_in(user)
     user.update_login
 
-    if user.language == '0'
+    if user.language == '0' || user.language == 0
       user.language = 'en'
     end
       params[:set_locale] = user.language
