@@ -3,7 +3,6 @@ module SessionsHelper
   # Logs in the given user.
   def log_in(user)
     user.update_login
-
     if user.language == '0' || user.language == 0
       user.language = 'en'
     end
