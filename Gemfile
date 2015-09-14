@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'yaml_db'
+#gem 'yaml_db'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -76,5 +76,5 @@ gem 'sdoc', '~> 0.4.0', group: :doc
   gem 'spring'
 # end
 group :production do
-  gem 'mysql2'
+  gem 'mysql2', '~> 0.3.18'
 end
