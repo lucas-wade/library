@@ -3,9 +3,13 @@ module SessionsHelper
   # Logs in the given user.
   def log_in(user)
     user.update_login
-    params[:set_locale] = user.language
-    params[:langauge] = user.language
-    I18n.locale = user.language
+
+    if user.language == '0'
+      user.language = 'en'
+    end
+      params[:set_locale] = user.language
+      params[:langauge] = user.language
+      I18n.locale = user.language
     session[:user_id] = user.id
   end
 
