@@ -43,9 +43,12 @@
 
        <div class="under-construction">
          <p>
-           <%= t('classroom_doors.under_construction_I') %>
-           <a href="http://www.growbiointensive.org">www.growbiointensive.org</a>
+           <%= t('classroom_doors.under_construction_I_html') %>
          </p>
+         <p>
+           <p>To view our current website in English (with limited Spanish content), visit:
+             <a href='http://www.growbiointensive.org'>www.growbiointensive.org</a>
+           </p>
          <p>
            Para ver nuestra página web actual en español, visita:
            <a href="http://www.cultivebiointensivamente.org">www.cultivebiointensivamente.org</a>
@@ -54,22 +57,13 @@
          </p>
        </div>
 
-
        <div>
          <h6 class="firm-butt">
            <%= link_to t('sessions.register'), signup_path, class: "btn btn-lg button-major-orange" %>
-
            <%= link_to t('sessions.log_in'), login_path, class: "btn btn-lg major-button" %>
-
            <%= link_to t('sessions.guest_enter'), topics_url, class: "btn btn-lg major-button" %>
-
          </h6>
        </div>
-
-
-
-
-
     </div>
 
 

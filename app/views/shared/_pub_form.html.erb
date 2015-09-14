@@ -16,7 +16,6 @@ placeholder: "Compose new micropost..."
     <!-- #parent topic stuff -->
     <% if @parent_topic %>
         <h3>Create Supplimental Publication of <strong><%= @parent_topic.name %></strong></h3>
-
         <%= hidden_field_tag :parent_id, @parent_topic.id %>
     <% end %>
 
@@ -24,7 +23,6 @@ placeholder: "Compose new micropost..."
     <% if @original_pub %>
         <h3>Translation of <strong><%= @original_pub.name %></strong></h3>
         <%= hidden_field_tag :original_id, @original_pub.id %>
-
     <% end %>
 
 
@@ -41,9 +39,6 @@ placeholder: "Compose new micropost..."
       <% else %>
           <%= f.select(:language, $available_languages) %>
       <% end %>
-
-
-
     </div>
 
 

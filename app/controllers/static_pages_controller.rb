@@ -10,8 +10,11 @@ class StaticPagesController < ApplicationController
 
     def library
       if params[:search]
-        @topics = Topic.search_name(params[:search]).order("created_at DESC")
-        @topics += Topic.search_main_content(params[:search]).order("created_at DESC")
+        #@topics = Topic.search_name(params[:search]).order("created_at DESC")
+        @topics = Topic.search_name(params[:search]).order(:name)
+
+        #@topics += Topic.search_main_content(params[:search]).order("created_at DESC")
+        @topics += Topic.search_main_content(params[:search]).order(:name)
 
 
         @pubs = Pub.search_name(params[:search]).order("created_at DESC")
@@ -19,8 +22,8 @@ class StaticPagesController < ApplicationController
         @pubs += Pub.search_meta_data(params[:search])
 
       else
-        @topics = Topic.all.where("language like ?", I18n.locale.to_s)
-        @pubs = Pub.all.where("language like ?", I18n.locale.to_s)
+        @topics = Topic.all.where("language like ?", I18n.locale.to_s).order(:name)
+        @pubs = Pub.all.where("language like ?", I18n.locale.to_s).order(:name)
         #.order('created_at DESC')
       end
     end
