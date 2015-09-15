@@ -5,28 +5,28 @@
    $collumn_icon_3 = @topics[2]
 %>
 
-<!-- col-sm-4 -->
-<div id="<% if @temp_topic == 1 %>action-column<% end %>">
+<div class="inherit_h" id="<% if @temp_topic == 1 %>action-column<% end %>">
   <h5>
     <i class="fa fa-3x">
-
       <% if @temp_topic != 1 && @topics.count > 0 %>
-      <%= image_tag @topics[@temp_topic].icon.url, class: "trimmed-icon img-icon" %>
-          <% end %>
+        <%= image_tag @topics[@temp_topic].icon.url, class: "trimmed-icon img-icon" %>
+      <% end %>
     </i>
-  <% if edit_mode ==1 %>
-        <%= link_to '<i class="fa fa-plus-square edit-color"></i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topics[@temp_topic].id, :language => 'en' }%>
-        <% end %>
+    <% if edit_mode ==1 %>
+      <%= link_to '<i class="fa fa-plus-square edit-color"></i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topics[@temp_topic].id, :language => 'en' }%>
+    <% end %>
   </h5>
 
 
-  <div class="list-group main-menu">
+  <div class="list-group main-menu column_index">
     <!-- library -->
     <% if @temp_topic == 0 %>
         <!-- <div class="list-group-item btn-default btn-main-menu button b1"> -->
-        <% the_class = "list-group-item btn-default btn-main-menu button b1 button-text " + rtl_checker(I18n.locale).to_s %>
+        <% the_class = "list-group-item btn-default btn-main-menu button b1  " + rtl_checker(I18n.locale).to_s %>
+        <div class="<%= the_class %>">
         <%= image_tag 'icon_library.png', class: 'topic-col-icon' %>
-              <%= link_to t('titles.library'), library_path, class: the_class %>
+              <%= link_to t('titles.library'), library_path, class: "button-text" %>
+            </div>
         <!-- </div> -->
     <% end %>
 
@@ -100,5 +100,3 @@
     <% end %> <!-- main loop -->
     </div>
 </div> <!-- close of the header icon -->
-
-

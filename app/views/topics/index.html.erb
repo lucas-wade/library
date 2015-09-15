@@ -1,42 +1,47 @@
 
-<% if logged_in?
+<%# if logged_in?
 
-    end
+    #end
 %>
-
-<% session[:anim_in_done_it_once] = 0 %>
 <% provide(:title, t('titles.classroom') ) %>
-
-<div class="<% if edit_mode == 1 %>offset-jimbo<% end %>">
-  <div class="row low-gutter <% if edit_mode == 1 %>
-                                edit-form
-                                <% end %>
-                                ">
-<%
-   if edit_mode == 1
-    animated = ''
-    else
-    animated = 'animated'
-   end
-%>
-  <% @temp_topic=0 %>
-  <div id="column-1" class="col-xs-12 col-sm-4 column-1 <%= animated %>">
-  <%= render 'column' %>
-  </div>
-  <!-- 2nd column -->
-  <div id="column-2" class="col-xs-12 col-sm-4 column-2 <%= animated %>">
-  <% @temp_topic=1 %>
-  <%= render 'column' %>
-  </div>
-  <!-- 3rd column -->
-  <div id="column-3" class="col-xs-12 col-sm-4 column-3 <%= animated %>">
-  <% @temp_topic=2 %>
-  <%= render 'column' %>
-  </div>
+<% session[:anim_in_done_it_once] = 0 %>
 
 
-</div>
+<div class="inherit_h <% if edit_mode == 1 %>
+    offset-jimbo
+  <% end %>
+  ">
+  <div class="inherit_h row low-gutter <% if edit_mode == 1 %>
+      edit-form
+    <% end %>
+    ">
+    <%
+     if edit_mode == 1
+      animated = ''
+      else
+      animated = 'animated'
+     end
+    %>
+
+    <div id="column-1" class="col-xs-12 col-sm-4 column-1 inherit_h <%= animated %>">
+      <% @temp_topic=0 %>
+      <%= render 'column' %>
     </div>
+
+    <!-- 2nd column -->
+    <div id="column-2" class="col-xs-12 col-sm-4 column-2 <%= animated %>">
+      <% @temp_topic=1 %>
+      <%= render 'column' %>
+    </div>
+
+    <!-- 3rd column -->
+    <div id="column-3" class="col-xs-12 col-sm-4 column-3 <%= animated %>">
+      <% @temp_topic=2 %>
+      <%= render 'column' %>
+    </div>
+
+  </div>
+</div>
 
 <%# else %>
 <!-- else
@@ -45,4 +50,3 @@
     </script>
     -->
 <%# end %>
-

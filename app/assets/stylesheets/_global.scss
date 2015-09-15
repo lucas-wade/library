@@ -26,9 +26,10 @@ body {
   font-family: $font-stack;
   overflow-x: hidden;
   overflow-y: auto;
-  height: 100%;
-  max-height: 100%;
-
+  @media (min-width: 766px) {
+    height: 100%;
+    //max-height: 100%;
+  }
   background: image_url("garden_footer.png") repeat-x center bottom -110px;
 }
 //body:after{ content:''; display:none; height:100px; }
@@ -44,7 +45,7 @@ body {
 .main-container {
 
   position: relative;
-  min-height: 46em;
+  //min-height: 46em;
   padding-bottom: 3%;
   top: 0;
   //height: inherit;

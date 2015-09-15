@@ -12,80 +12,74 @@
         </script>
     <% end %>
 <% else%>
+  <%# **** Normal mode. NOT edit_mode%>
+  <div class="row low-gutter tight-butt inherit_h">
+    <%
+       @temp_topic = @topic.col_finder - 1
+       session[:current_collumn] = @temp_topic
+    %>
 
-<%# **** Normal mode. NOT edit_mode%>
-<div class="row low-gutter tight-butt inherit_h">
-  <%
-     @temp_topic = @topic.col_finder - 1
-     session[:current_collumn] = @temp_topic
-  %>
+    <%# *** test to see if we have already animated in the sub stopic view %>
+    <%
+       if session[:anim_in_done_it_once] == 0
+         if @temp_topic == 0
+           the_anim_class = "animated slideInRight"
+         else
+           the_anim_class = "animated slideInLeft"
+         end
+         session[:anim_in_done_it_once] = 1
+         else
+           the_anim_class = ""
+         end
+    %>
 
-<%# *** maybe render the first menu column %>
-  <% if @temp_topic == 0 %>
+    <%# *** maybe render the first menu column %>
+    <% if @temp_topic == 0 %>
+      <div id="big_c">
+        <div class="col-sm-4">
+          <%= render 'column' %>
+        </div>
+      </div>
+    <% end %>
+
+    <%# *** now render the active topic %>
+    <div class="col-sm-8 inherit_h topic_show_window <%= the_anim_class%>" id="sub-topics-window-animated">
+      <%= render 'sub_topics_menu' %>
+      <div class="inherit_h">
+        <%= render 'content_window' %>
+      </div>
+    </div>
+
+    <%# maybe render the other 2 colums on the right %>
     <div id="big_c">
+      <% if @temp_topic == 1 || @temp_topic == 2 %>
+          <div class="col-sm-4 inherit_h">
+            <%= render 'column' %>
+          </div>
+      <% end %>
+    </div>
+
+
+    <%#  *** the small columns for the phone %>
+    <div id="small_c1">
       <div class="col-sm-4">
+        <% @temp_topic =0 %>
         <%= render 'column' %>
       </div>
     </div>
-  <% end %>
-
-<%# *** test to see if we have already animated in the sub stopic view %>
-  <%
-     if session[:anim_in_done_it_once] == 0
-       if @temp_topic == 0
-         the_anim_class = "animated slideInRight"
-       else
-         the_anim_class = "animated slideInLeft"
-       end
-       session[:anim_in_done_it_once] = 1
-       else
-         the_anim_class = ""
-       end
-  %>
-
-<%# *** now render the active topic %>
-<div class="col-sm-8 inherit_h <%= the_anim_class%>" id="sub-topics-window-animated">
-
-  <%= render 'sub_topics_menu' %>
-
-  <div class="inherit_h">
-    <%= render 'content_window' %>
-  </div>
-
-</div>
-
-  <div id="big_c">
-    <% if @temp_topic == 1 || @temp_topic == 2 %>
-        <div class="col-sm-4 inherit_h">
-          <%= render 'column' %>
-        </div>
-    <% end %>
-  </div>
-
-
-
-  <div id="small_c1">
-    <div class="col-sm-4">
-      <% @temp_topic =0 %>
-      <%= render 'column' %>
+    <div id="small_c3">
+      <div class="col-sm-4">
+        <% @temp_topic =1 %>
+        <%= render 'column' %>
+      </div>
     </div>
-  </div>
-  <div id="small_c3">
-    <div class="col-sm-4">
-      <% @temp_topic =1 %>
-      <%= render 'column' %>
+    <div id="small_c3">
+      <div class="col-sm-4">
+        <% @temp_topic =2 %>
+        <%= render 'column' %>
+      </div>
     </div>
-  </div>
-  <div id="small_c3">
-    <div class="col-sm-4">
-      <% @temp_topic =2 %>
-      <%= render 'column' %>
-    </div>
-  </div>
 
 
-</div>
-
-
-
-<% end %>
+  </div> <%# ** main row close *** %>
+<% end %> <%# ** end of normal mode /edit mode branch **%>
