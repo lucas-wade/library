@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-#gem 'yaml_db'
+gem 'yaml_db'
+gem 'rack', '1.6.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
