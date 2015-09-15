@@ -171,10 +171,10 @@ textarea {
 }
 
 .pdf-viewer {
-  height: 30em;
-  //$pre-scrollable-max-height;
-
-  overflow: hidden;
+  height: 100%;
+  //overflow: hidden;
+}
+.full-content {
 
 }
 .video-viewer {
@@ -567,7 +567,7 @@ a {
 
   border-radius: 4em 4em 0 0;
   -webkit-hyphens: manual;
-  
+
 
 }
 

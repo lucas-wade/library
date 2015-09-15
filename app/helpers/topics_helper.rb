@@ -24,7 +24,7 @@ module TopicsHelper
     end
   end
 
-  def show_topic_first_parent_or_self
+  def inherit_h
     if @topic.parents.first.present?
       @topic.parents.first
     else

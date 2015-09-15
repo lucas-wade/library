@@ -9,13 +9,19 @@
   height: 100%;
   // margin: 2%;
   //margin-bottom: 10px;
-
+  bottom: 0;
   padding-bottom: 0;
 
 }
 
-#sub-topics-window {
+.inherit_h {
+  //position: relative;
+  height: 100%;//inherit;
+  max-width: inherit;
+}
 
+#sub-topics-window {
+  position: relative;
   padding-top: 1em;
 
   padding-left: .5em;
@@ -25,18 +31,18 @@
 
 
   //height: 4em;
-  height: 100%;
+  height: auto;//4em;
+  //max-height: 100%;
 }
 
 #content-window {
-  //height: 26em;
-  background-color: rgba($content_bg_color, .99);
+  position: relative;
+  background-color: rgba($content_bg_color, .9);
   margin: .618em 0 0;
   overflow-y: auto;
   overflow-x: hidden;
-  border-radius: .2em;
+  border-radius: .3em .3em 0 0;
   padding: 1em 1em .1em;
-
   p {
     .hotwords {
       color: #62d1ff;
@@ -51,18 +57,34 @@
 }
 
 .content-window-size-1 {
-  height: 29em;
+  height: auto;
+  max-height: calc(100% - 17em);
 }
 
 .content-window-size-2 {
-  height: 36em;
+  height: auto;
+  max-height: calc(100% - 10em);
 }
 
 .content-window-size-3 {
-  height: 43em;
+  height: auto;
+  max-height: calc(100% - 9em);
 }
 
+.content-window-size-4 {
+  height: calc(100% - 17em);
+}
+
+.content-window-size-5 {
+  height: calc(100% - 10em);
+}
+.content-window-size-6 {
+  height: calc(100% - 9em);
+}
+
+
 #below-content-window {
+  position: relative;
   font-size: 0.76em;
   height: 2em;
   background-color: rgba(darken($content_bg_color, 2%), 0.98);
