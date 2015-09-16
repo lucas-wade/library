@@ -199,3 +199,17 @@
   //pointer-events: none;
   //cursor: default;
 }
+
+
+// **** tabs
+
+.nav-tabs-custom {
+
+    a {
+      background-color: rgba(255,255,255,0) !important;
+      background: none;
+      &:hover {
+        box-shadow: 0px 0px 10px 5px #fff;
+      }
+    }
+}
