@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150708184334) do
+ActiveRecord::Schema.define(version: 20150917134353) do
 
   create_table "attachmentships", force: :cascade do |t|
     t.integer  "pub_id"
@@ -23,6 +23,20 @@ ActiveRecord::Schema.define(version: 20150708184334) do
   add_index "attachmentships", ["pub_id", "topic_id"], name: "index_attachmentships_on_pub_id_and_topic_id", unique: true
   add_index "attachmentships", ["pub_id"], name: "index_attachmentships_on_pub_id"
   add_index "attachmentships", ["topic_id"], name: "index_attachmentships_on_topic_id"
+
+  create_table "bootsy_image_galleries", force: :cascade do |t|
+    t.integer  "bootsy_resource_id"
+    t.string   "bootsy_resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bootsy_images", force: :cascade do |t|
+    t.string   "image_file"
+    t.integer  "image_gallery_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "families", force: :cascade do |t|
     t.integer  "parent_id"

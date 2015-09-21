@@ -1,4 +1,6 @@
 class Topic < ActiveRecord::Base
+  include Bootsy::Container
+
   attr_accessor :major_update
   attr_accessor :create_cat_1
   attr_accessor :create_cat_2
@@ -138,6 +140,72 @@ class Topic < ActiveRecord::Base
     end
   end
 
+  def has_sub_cats?
+    self.kids.each do |t|
+      if t.category > 0
+        return TRUE
+      end
+    end
+  end
 
+  def peak
+    if self.category == 4
+      return self
+    else if self.category == 0
+        return t = self.kids.find_by(category: 4)
+    else if self.category > 0
+      self.parents.first.kids.find_by(category: 4)
+    end
+    end
+  end
+  end
+
+  def introduction
+    if self.category == 0
+      return self
+    else if self.category > 0
+      return t = self.parents.first
+    end
+    end
+  end
+
+  def cat1
+    if self.category == 1
+      return self
+      else if self.category == 0
+       return t = self.kids.find_by(category: 1)
+      else
+        self.parents.first.kids.find_by(category: 1)
+      end
+    end
+  end
+
+  def cat2
+    if self.category == 2
+      return self
+      else if self.category == 0
+       return t = self.kids.find_by(category: 2)
+      else
+        self.parents.first.kids.find_by(category: 2)
+      end
+    end
+  end
+
+  def cat3
+    if self.category == 3
+      return self
+      else if self.category == 0
+       return t = self.kids.find_by(category: 3)
+      else
+        self.parents.first.kids.find_by(category: 3)
+      end
+    end
+  end
+
+  def is_sub_cat?
+    if self.category && self.category > 0
+      return TRUE
+    end
+  end
 
 end

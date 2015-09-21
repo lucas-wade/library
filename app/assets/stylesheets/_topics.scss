@@ -1,9 +1,21 @@
-@import "variables";
+//@import "variables";
+.wysiwyg-color-blue {
+  color: #62d1ff;
+}
 
 .topic_show_window {
     max-width: 82em;
 }
 
+.main_content {
+  height:inherit;
+  width:100%;
+  u {
+    vertical-align: super;
+      font-size: smaller;
+      text-decoration: none;
+  }
+}
 .column_index {
   max-height:84%;
   overflow:auto;
@@ -15,10 +27,10 @@
 
 .content_window {
 
-  height: 100%;
+  // ** height: 100%;
   // margin: 2%;
   //margin-bottom: 10px;
-  bottom: 0;
+  // *** bottom: 0;
   padding-bottom: 0;
 
 }

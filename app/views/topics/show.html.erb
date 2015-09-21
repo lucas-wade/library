@@ -43,11 +43,14 @@
     <% end %>
 
     <%# *** now render the active topic %>
-    <div class="col-sm-8 inherit_h topic_show_window <%= the_anim_class%>" id="sub-topics-window-animated">
+    <div style="position:relative;height:inherit" class="col-sm-8 topic_show_window <%= the_anim_class%>" id="sub-topics-window-animated">
       <%= render 'sub_topics_menu' %>
-      <div class="inherit_h">
-        <%= render 'content_window' %>
-      </div>
+        <%# render partial: 'content_window_params', locals: {show_topic: @topic, show_pub: @show_pub} %>
+        <%# render partial: 'content_tabbing', locals: {show_topic: @topic, show_pub: @show_pub} %>
+        <%# render 'content_window' %>
+      <%# render partial: 'topics/content_window_params', locals: {show_topic: @topic.peak, show_pub: @show_pub} if @topic.peak %>
+      <%= render partial: 'topics/content_window_params', locals: {show_topic: @topic, show_pub: @show_pub} %>
+
     </div>
 
     <%# maybe render the other 2 colums on the right %>

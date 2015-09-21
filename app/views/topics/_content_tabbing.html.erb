@@ -1,0 +1,30 @@
+<%# if @topic.has_sub_cats? == TRUE || @topic.is_sub_cat? || edit_mode ==1 %>
+
+<div style="position:relative;height:inherit;" class="tight-top
+    <% if edit_mode == 1 %> clr4
+    <% end %>
+  ">
+
+  <%# debugger %>
+  <!-- Tab panes -->
+  <div style="position:relative;height:100%;" class="tab-content">
+    <div role="tabpanel" style="height:inherit" class=" tab-pane" id="peak"><%= render partial: 'topics/content_window_params', locals: {show_topic: @topic.peak, show_pub: @show_pub} if @topic.peak %></div>
+    <div role="tabpanel" style="height:inherit" class=" tab-pane active" id="intro"><%= render partial: 'topics/content_window_params', locals: {show_topic: @topic, show_pub: @show_pub} %></div>
+    <div role="tabpanel" style="height:inherit" class=" tab-pane" id="cat1"><%= render partial: 'topics/content_window_params', locals: {show_topic: @topic.cat1, show_pub: @show_pub} if @topic.cat1 %></div>
+    <div role="tabpanel" style="height:inherit" class=" tab-pane" id="cat2"><%= render partial: 'topics/content_window_params', locals: {show_topic: @topic.cat2, show_pub: @show_pub} if @topic.cat2 %></div>
+    <div role="tabpanel" style="height:inherit" class=" tab-pane" id="cat3"><%= render partial: 'topics/content_window_params', locals: {show_topic: @topic.cat3, show_pub: @show_pub} if @topic.cat3 %></div>
+  </div>
+
+
+<div style="position:relative"
+<!-- Nav tabs -->
+<ul class="nav nav-pills nav-tabs-custom" role="tablist">
+  <li role="presentation"><a href="#peak" aria-controls="peak" role="tab" data-toggle="tab"><%= image_tag("icon-tabs-cat-4.png") if @topic.peak %></a></li>
+  <li role="presentation" class="active"><a href="#intro" aria-controls="intro" role="tab" data-toggle="tab">Introduction</a></li>
+  <li role="presentation"><a href="#cat1" aria-controls="cat1" role="tab" data-toggle="tab"><%= image_tag("icon-tabs-cat-1.png") if @topic.cat1 %></a></li>
+  <li role="presentation"><a href="#cat2" aria-controls="cat3" role="tab" data-toggle="tab"><%= image_tag("icon-tabs-cat-2.png") if @topic.cat2 %></a></li>
+  <li role="presentation"><a href="#cat3" aria-controls="cat3" role="tab" data-toggle="tab"><%= image_tag("icon-tabs-cat-3.png") if @topic.cat3 %></a></li>
+</ul>
+</div>
+</div>
+<%# end %>

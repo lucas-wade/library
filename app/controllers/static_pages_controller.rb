@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+  #include TopicsHelper
 
     def home
       if logged_in?
@@ -47,6 +48,16 @@ class StaticPagesController < ApplicationController
 
 
     def about
+      @topic = Topic.find_by(id: 4)
+      #@topic = Topic.find(params[:id])
+      @topics = Topic.all
+
+      if params[:publication_id].present?
+        @show_pub = Pub.find(params[:publication_id])
+      end
+      if @topic.parents.present?
+        @temp_topic = @topic.parents.first.id
+      end
     end
 
     def admin

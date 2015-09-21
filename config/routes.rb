@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   scope '(:locale)', locale: /#{I18n.available_locales.join("|")}/ do
   #get 'password_resets/new'
 

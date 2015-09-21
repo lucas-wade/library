@@ -2,7 +2,7 @@
 
     <!-- Tab panes -->
     <div class="tab-content">
-      <div role="tabpanel" class="tab-pane active" id="home">this content</div>
+      <div role="tabpanel" class="tab-pane active" id="home"><%= render 'topics/content_window_params', locals: {show_topic: @topic} %></div>
       <div role="tabpanel" class="tab-pane" id="profile">that content</div>
       <div role="tabpanel" class="tab-pane" id="messages">...</div>
       <div role="tabpanel" class="tab-pane" id="settings">...</div>

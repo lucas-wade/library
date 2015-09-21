@@ -1,25 +1,3 @@
-/* CSS Framework */
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "font-awesome-sprockets";
-@import "font-awesome";
-/* CSS imports */
-@import "global";
-@import "fonts";
-
-@import "header";
-@import "video";
-
-@import "topics";
-
-@import "variables";
-@import "mixin";
-@import "buttons";
-
-/* variables */
-
-
-
 
 /* vv To be sorted CSS vv */
 .real-small {
@@ -202,7 +180,7 @@ textarea {
 }
 
 footer {
-  position:absolute;
+  position:fixed;
   bottom: -.2em;
   width:100%;
   //height:100px;
@@ -224,13 +202,14 @@ footer {
   }
   small {
     float: left;
+    margin-left: 1em;
   }
   ul {
     float: right;
     list-style: none;
     li {
       float: left;
-      margin-left: 15px;
+      margin-left: 1em;
       //font-size: xx-small;
     }
   }
@@ -368,6 +347,7 @@ input {
 .users {
   list-style: none;
   margin: 0;
+  max-height: 100%;
   li {
     overflow: auto;
     padding: 10px 0;
@@ -432,10 +412,10 @@ a {
 }
 
 .tab-cat0 {
-  vertical-align: top;
-  position: relative;
-  left: 0;
-  z-index: 0;
+  //vertical-align: top;
+  //position: relative;
+  //left: 0;
+  //z-index: 0;
 
   background: image_url("icon-tabs-cat-0.png") no-repeat;
   background-position: top 0;
@@ -446,7 +426,13 @@ a {
   padding: .618em;
   text-align: center;
 }
+.tab-div {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
 
+  z-index: 0;
+}
 .tab-div-4 {
   display: inline-block;
   vertical-align: top;
@@ -480,7 +466,7 @@ a {
   z-index: 0;
 }
 .tab-cat1 {
-
+  background: image_url("icon-tabs-cat-4.png") no-repeat center top;
   z-index: 0;
 }
 
@@ -493,18 +479,33 @@ a {
 }
 
 .tab-cat4 {
+  //background: image_url("icon-tabs-cat-4.png") no-repeat center top;
+  background-size: contain;
+  //width: 10em;
+  //height: 6em;
   z-index: 0;
 
 }
 
 .tab-active {
   z-index: 10;
-  background: image_url("icon-tabs-cat-active.png") no-repeat center top;
-  background-size: contain;
+  background: none; // image_url("icon-tabs-cat-active.png") no-repeat center top;
+  background-size: auto;
   overflow: visible;
-  padding: 0 24px 24px 24px;
-  margin: 0 -24px -24px -24px;
+  position: relative;
+  //padding: 0 24px 24px 24px;
+  //margin: 0 -24px -24px -24px;
 
+}
+.tab-active::before {
+   content: " ";
+   position: absolute;
+   left: -2em;
+   width: calc(100% + 6.5em);
+   height: calc(100% + 1em);
+   z-index: 0;
+   background: image_url("icon-tabs-cat-active.png") no-repeat center top;
+   background-size: 100% 95%;
 }
 
 .tab-greyed-out {
@@ -696,7 +697,7 @@ border-top-right-radius: 149px;
 
 
 .under-construction {
-  padding: 1em 2em 1em 2em;
+  padding: .6em 2em .6em 2em;
   //margin-top: 10em;
   //background-color: cornflowerblue;
   background-color: rgba(22, 242, 26, 1.0);

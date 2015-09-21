@@ -1,12 +1,14 @@
 source 'https://rubygems.org'
 
+#html editing
+gem 'bootsy', github: 'volmer/bootsy'
+
+# db stuff
 gem 'yaml_db'
 gem 'rack', '1.6.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 
 # encryption
 gem 'bcrypt', '3.1.7'
@@ -26,7 +28,7 @@ gem 'faker',                '1.4.2'
 
 # files
 gem 'fog', '~> 1.28.0'
-gem 'mini_magick', '~> 4.1.0'
+gem 'mini_magick', '~> 4.2.0'
 gem 'carrierwave', '~> 0.10.0'
 
 #pdf
@@ -66,7 +68,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# group :development, :test do
+group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -75,7 +77,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-# end
+
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+end
 group :production do
   gem 'mysql2', '~> 0.3.18'
 end

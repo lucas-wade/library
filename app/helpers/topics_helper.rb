@@ -13,10 +13,21 @@ module TopicsHelper
          the_class = 'tab-cat' + t.category.to_s
           end
      end
+  end
 
+  def tab_active2(t)
+     if t.main_content == nil || t.main_content == '' || t.placeholder == TRUE || t.growing == TRUE
+         the_class = ' ' + t.category.to_s + ' tab-greyed-out'
+     else if t.id == @topic.id
+            the_class = ' ' + t.category.to_s + ' tab-active'
+       else
+         the_class = ' ' + t.category.to_s
+          end
+     end
   end
 
   def rtl_checker(t = @topic.language)
+
     if t.to_s == 'ar'
       rtl_class = 'rtl'
     else
@@ -77,5 +88,36 @@ module TopicsHelper
     end
   end
 
+
+
+  def content_window_size_check(show_topic, show_pub)
+    if show_topic.pubs.present? && show_topic.has_sub_cats? == TRUE
+       if show_pub.present?
+        'content-window-size-4'
+       else
+        'content-window-size-1'
+       end
+     else if !show_topic.pubs.present? && show_topic.has_sub_cats? == TRUE
+       if show_pub.present?
+        'content-window-size-5'
+       else
+        'content-window-size-2'
+       end
+     else if show_topic.pubs.present? && show_topic.has_sub_cats? == FALSE
+       if show_pub.present?
+        'content-window-size-5'
+       else
+        'content-window-size-2'
+       end
+    else
+       if show_pub.present?
+        'content-window-size-6'
+       else
+        'content-window-size-3'
+       end
+     end
+     end
+     end
+  end
 
 end

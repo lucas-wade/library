@@ -1,4 +1,6 @@
 class TopicsController < ApplicationController
+  
+
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   before_filter :disable_xss_protection, only: [:edit, :update]
@@ -185,7 +187,8 @@ class TopicsController < ApplicationController
                                   :create_cat_1,
                                   :create_cat_2,
                                   :create_cat_3,
-                                  :create_cat_4)
+                                  :create_cat_4,
+                                  :bootsy_image_gallery_id)
 
   end
 

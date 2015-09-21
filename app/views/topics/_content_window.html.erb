@@ -28,7 +28,8 @@
 
 
 
-<%= link_to '<i class="fa fa-close fa-2x"></i>'.html_safe, topics_path, class: "btn-kill" %>
+
+
 <div id="content-window" class="content_window
                                             <%if @topic.pubs.present? && has_sub_cats == TRUE %>
                                               <% if @show_pub.present? %>
@@ -59,6 +60,7 @@
                                             <% end %>
                                             ">
 
+<%= link_to icon('fa fa-close fa-2x'), topics_path, class: "btn-kill", style: "color:#b04431" %>
 
   <% if @show_pub.present? %> <!-- maybe render a pub in dis here window -->
       <!-- <div class="col-md-8"> -->
@@ -89,7 +91,7 @@
   <% else %> <!-- render the topic -->
       <% there_is_a_topic_in_the_content_window = TRUE %>
       <div class="<%= rtl_checker %>">
-        <h3>
+        <h7>
           <% if edit_mode == 1 && @topic.parents.present? %>
               <%= link_to '<i class="fa fa-edit edit-color"></i>'.html_safe, edit_topic_path(@topic) %>
               <!-- new translations link NOT USING RIGHT NOW-->
@@ -114,7 +116,7 @@
           <%# if @topic.name != nil %>
           <%= tt.name %>
           <%# end %>
-        </h3>
+        </h7>
       </div>
 
       <% if edit_mode == 1 %>
@@ -255,7 +257,6 @@
 
 <!-- category window TABS -->
 <% if has_sub_cats == TRUE || edit_mode ==1 %>
-
     <div id="category-window"
          class="content_window tight-top
             <% if edit_mode == 1 %> clr4
@@ -305,7 +306,7 @@
             <% end %>
         <% end %>
         <% if edit_mode == 1 && peak == false %>
-            <%= link_to '<h3 class="edit-color center">PEAK <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics",
+            <%= link_to '<h7 class="edit-color center">PEAK <i class="fa fa-plus-square edit-color"></i></h7>'.html_safe, {:controller => "topics",
                                                                                                                            :action => "new",
                                                                                                                            :parent_id => sub_cats.id,
                                                                                                                            :language => @topic.language,
@@ -334,7 +335,7 @@
             <% end %>
         <% end %>
         <% if edit_mode == 1 && one == false %>
-            <%= link_to '<h3 class="edit-color center">I <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics", :action => "new", :parent_id => sub_cats.id, :language => @topic.language, :category => 1} %>
+            <%= link_to '<h7 class="edit-color center">I <i class="fa fa-plus-square edit-color"></i></h7>'.html_safe, {:controller => "topics", :action => "new", :parent_id => sub_cats.id, :language => @topic.language, :category => 1} %>
         <% end %>
       </div>
 
@@ -359,7 +360,7 @@
           <% end %>
       <% end %>
       <% if edit_mode == 1 && two == false %>
-          <%= link_to '<h3 class="edit-color center">II <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics", :action => "new", :parent_id => sub_cats.id, :language => @topic.language, :category => 2} %>
+          <%= link_to '<h7 class="edit-color center">II <i class="fa fa-plus-square edit-color"></i></h7>'.html_safe, {:controller => "topics", :action => "new", :parent_id => sub_cats.id, :language => @topic.language, :category => 2} %>
       <% end %>
       </div>
 
@@ -381,7 +382,7 @@
             <% end %>
         <% end %>
         <% if edit_mode == 1 && three == false %>
-            <%= link_to '<h3 class="edit-color center">III <i class="fa fa-plus-square edit-color"></i></h3>'.html_safe, {:controller => "topics", :action => "new", :parent_id => sub_cats.id, :language => @topic.language, :category => 3} %>
+            <%= link_to '<h7 class="edit-color center">III <i class="fa fa-plus-square edit-color"></i></h7>'.html_safe, {:controller => "topics", :action => "new", :parent_id => sub_cats.id, :language => @topic.language, :category => 3} %>
         <% end %>
       </div>
 

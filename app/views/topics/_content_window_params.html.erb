@@ -1,0 +1,283 @@
+<%# Setup to recieve var show_topic  and possibly show_pub%>
+<%# debugger %>
+
+<% sub_cats = show_topic %>
+
+
+<%# show_topic.has_sub_cats? determine if there is sub_cats %>
+<% if show_topic.is_sub_cat? %>
+    <% sub_cats = show_topic.parents.first %>
+    <% sub_cat_active = TRUE %>
+  <% end %>
+
+
+<% if show_topic.has_sub_cats? %>
+    <% if show_topic.parents.first.category == 0
+         intro_topic = show_topic.parents.first
+       else
+         intro_topic = show_topic.parents.first.parents.first || FALSE %>
+    <% end %>
+<% else %>
+    <% intro_topic = show_topic %>
+<% end %>
+
+<% rtl_class = rtl_checker(show_topic.language) %>
+
+<div style="height:inherit;max-height:inherit;"
+  <div class="btn-kill">
+  <%= link_to icon('fa fa-close fa-2x'), topics_path, class: "btn", style: "color:#b04431" %>
+  </div>
+
+<div id="content-window" class="content_window <%= content_window_size_check(show_topic, show_pub) %> ">
+
+  <% if @show_pub.present? %> <!-- maybe render a pub in dis here window -->
+      <!-- <div class="col-md-8"> -->
+        <% if @show_pub.media.content_type == "application/pdf" %>
+            <div class="full-content pdf-viewer">
+              <iframe src="<%= @show_pub.media.url %>" style="width: 100%; height: 100%;" frameborder="0"></iframe>
+            </div>
+        <% else
+             if @show_pub.media.content_type == 'video/mp4' || @show_pub.media.content_type == 'application/mp4' %>
+                <div class="video-viewer">
+                  <iframe src="<%= @show_pub.media.url %>" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+            <% else %>
+                <%= image_tag @show_pub.media.url %>
+            <% end %>
+        <% end %>
+      <!-- </div> -->
+
+      <!-- <div class="col-md-4"> -->
+        <%# render partial: 'shared/pub_link_to', locals: {t: @show_pub} %>
+
+        <%# if @show_pub.media.content_type == 'application/pdf' %>
+
+        <%# end %>
+        <%# number_to_human_size(@show_pub.media.size) %>
+      <!-- </div> -->
+
+  <% else %> <!-- render the topic -->
+      <% there_is_a_topic_in_the_content_window = TRUE %>
+      <div class="<%= rtl_checker %>">
+        <h7>
+          <% if edit_mode == 1 && show_topic.parents.present? %>
+              <%= link_to '<i class="fa fa-edit edit-color"></i>'.html_safe, edit_topic_path(show_topic) %>
+              <!-- new translations link NOT USING RIGHT NOW-->
+              <%# link_to '<i class="fa fa-language edit-color"></i>'.html_safe, new_topic_path(original_id: show_topic.id, :parent_id => show_topic.parents.first.id) %>
+          <% end %>
+
+          <!-- NAME -->
+          <% if show_topic.category.present? && show_topic.category > 0
+               tt = show_topic.parents.first
+               if !tt.name.present?
+                 tt.name =''
+               else
+                 tt.name = tt.name + ' ' + $available_categories[show_topic.category]
+               end
+             else
+               tt = show_topic
+             end
+          %>
+          <% if tt.icon.present? %>
+              <%= image_tag tt.icon.url, class: "img-icon" %>
+          <% end %>
+          <%# if show_topic.name != nil %>
+          <%= tt.name %>
+          <%# end %>
+        </h7>
+      </div>
+
+      <% if edit_mode == 1 %>
+          <!-- debuggin stuff
+          <h2><small>
+            Skill Level <strong><%= $available_skills[show_topic.skill] unless !show_topic.skill.present? %></strong>
+            Category <strong><%= $available_categories[show_topic.category] unless !show_topic.category.present? %></strong>
+            Language <strong><%= show_topic.language unless !show_topic.language.present? %></strong>
+            placeholder <strong><%= show_topic.placeholder %></strong>
+
+          </small></h2>
+          -->
+      <% end %>
+
+      <% if !show_topic.main_content.present?
+           show_topic.main_content = ''
+         end %>
+
+
+
+      <% if show_topic.placeholder == TRUE %>
+          <%= render 'shared/placeholder' %>
+      <% else
+           if show_topic.growing == TRUE %>
+              <%= render 'shared/growing' %>
+          <% else %>
+              <div class="main_content <%= rtl_class %>">
+                <%= sanitize show_topic.main_content %>
+              </div>
+          <% end %>
+      <% end %>
+
+
+  <% end %> <!-- end of controll for pub or content window -->
+
+</div> <!-- end of content-window -->
+
+
+<!-- translations available -->
+<div id="below-content-window">
+
+  <% if show_topic.translations.present? && there_is_a_topic_in_the_content_window %>
+      <% show_topic.translations.each do |trans|
+        if trans.name != nil %>
+              <%= link_to $av_langs_hash[trans.language], trans %>
+          <% end %>
+      <% end %>
+  <% else
+       if show_topic.originals.present? %>
+          <% show_topic.originals.each do |trans| %>
+              <%= link_to $av_langs_hash[trans.language], trans %>
+              <% if trans.translations.present? %>
+                  <% trans.translations.each do |trans2|
+                    if trans2.name != nil %>
+                          <% if trans2.id != show_topic.id %>
+                              <%= link_to $av_langs_hash[trans2.language], trans2 %>
+                          <% end %>
+                      <% end %>
+                  <% end %>
+              <% end %>
+          <% end %>
+      <% end %>
+  <% end %>
+
+  <% if @show_pub.present? && @show_pub.translations.present? %>
+
+  <% end %>
+
+
+
+  <div class="nav pull-right">
+    <% if @show_pub.present? %>
+        <%= link_to '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>'.html_safe, @show_pub.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, :colorbox_className => 'b0'} %>
+    <% else
+         if there_is_a_topic_in_the_content_window == TRUE && show_topic.growing == FALSE && show_topic.placeholder == FALSE %>
+            <%= link_to '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>'.html_safe, show_topic, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_html => show_topic.main_content} %>
+            <!-- BS MODAL --> <%# render 'shared/modal', button: '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>', title: '', body: show_topic.main_content %>
+        <% end %>
+    <% end %>
+  </div>
+</div> <!-- end of extra lang and fullscreen -->
+
+
+<!-- pubs supplimentary files -->
+<% if show_topic.pubs.count > 0 || edit_mode == 1 %>
+    <div id="supplimental-window" class="content_window">
+
+      <% if edit_mode == 1 %>
+          <!-- new suplimental files -->
+          <div>
+            <%= link_to '<i class="fa fa-plus-square fa-1x edit-color">Create New Supplemental File</i>'.html_safe, new_pub_path(parent_id: show_topic.id) %>
+          </div>
+      <% end %>
+
+
+      <div class="col-xs-4">
+        <p class="center"> <%= image_tag("icon_skills_1.png", size: "29") %> </p>
+
+        <div class="tight-list">
+          <% show_topic.pubs.each do |t| %>
+              <% if t.skill <= 1 %>
+                  <%= render partial: 'shared/pub_link_to', locals: {t: t} %>
+              <% end %>
+          <% end %>
+        </div>
+
+      </div>
+
+      <div class="col-xs-4 col-borders">
+        <p class="center"> <%= image_tag("icon_skills_2.png", size: "29") %> </p>
+
+        <div class="tight-list">
+          <% show_topic.pubs.each do |t| %>
+              <% if t.skill == 2 %>
+                  <%= render partial: 'shared/pub_link_to', locals: {t: t} %>
+              <% end %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="col-xs-4">
+        <p class="center"> <%= image_tag("icon_skills_3.png", size: "29") %> </p>
+
+        <div class="tight-list">
+          <% show_topic.pubs.each do |t| %>
+              <% if t.skill == 3 %>
+                  <%= render partial: 'shared/pub_link_to', locals: {t: t} %>
+              <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+<% end %>
+<!-- end of supplimental window -->
+
+<!-- category window TABS -->
+
+<div id="category-window"
+         class="content_window tight-top
+            <% if edit_mode == 1 %> clr4
+      <% end %>
+      ">
+<!-- create new tab -->
+      <% if edit_mode == 1 %>
+      <ul class="nav nav-pills ">
+          <li>
+            <%= link_to '<h7 class="edit-color center"> <i class="fa fa-plus-square edit-color"></i>Peak</h7>'.html_safe, {:controller => "topics",
+                                                                                                                         :action => "new",
+                                                                                                                         :parent_id => show_topic.introduction.id,
+                                                                                                                         :language => show_topic.language,
+                                                                                                                         :category => 4} if !show_topic.peak %>
+                                                                                                                         </li>
+
+          <li>
+            <%= link_to '<h7 class="edit-color center"> <i class="fa fa-plus-square edit-color"></i>Category 1</h7>'.html_safe, {:controller => "topics",
+                                                                                                                         :action => "new",
+                                                                                                                         :parent_id => show_topic.introduction.id,
+                                                                                                                         :language => show_topic.language,
+                                                                                                                         :category => 1} if !show_topic.cat1 %>
+                                                                                                                          </li>
+
+          <li><%= link_to '<h7 class="edit-color center"> <i class="fa fa-plus-square edit-color"></i>Category 2</h7>'.html_safe, {:controller => "topics",
+                                                                                                                         :action => "new",
+                                                                                                                         :parent_id => show_topic.introduction.id,
+                                                                                                                         :language => show_topic.language,
+                                                                                                                         :category => 2} if !show_topic.cat2 %>
+                                                                                                                       </li>
+
+          <li><%= link_to '<h7 class="edit-color center"> <i class="fa fa-plus-square edit-color"></i>Category 3</h7>'.html_safe, {:controller => "topics",
+                                                                                                                         :action => "new",
+                                                                                                                         :parent_id => show_topic.introduction.id,
+                                                                                                                         :language => show_topic.language,
+                                                                                                                         :category => 3} if !show_topic.cat1 %>
+                                                                                                                       </li>
+</ul>
+      <% end %>
+
+  <ul class="nav nav-pills nav-tabs-custom">
+    <% if show_topic.peak %>
+      <li class="<%= tab_active2(show_topic.peak) %> "><%= link_to image_tag("icon-tabs-cat-4.png"), show_topic.peak %><li>
+    <% end %>
+    <li class="<%= tab_active2(show_topic.introduction) %> "><%= link_to image_tag("icon-tabs-cat-1.png"), show_topic.introduction %><li>
+    <% if show_topic.cat1 %>
+      <li class="<%= tab_active2(show_topic.cat1) %> "><%= link_to image_tag("icon-tabs-cat-1.png"), show_topic.cat1 %><li>
+    <% end %>
+    <% if show_topic.cat2 %>
+      <li class="<%= tab_active2(show_topic.cat2) %> "><%= link_to image_tag("icon-tabs-cat-2.png"), show_topic.cat2 %><li>
+    <% end %>
+    <% if show_topic.cat3 %>
+      <li class="<%= tab_active2(show_topic.cat3) %> "><%= link_to image_tag("icon-tabs-cat-3.png"), show_topic.cat3 %><li>
+    <% end %>
+  </ul>
+
+</div> <!-- end of cat window -->
+
+</div>

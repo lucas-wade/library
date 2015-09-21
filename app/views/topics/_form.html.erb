@@ -1,5 +1,5 @@
 <div class="edit-form" id="edit-form">
-  <%= form_for(@topic, class: "form-inline", html: {multipart: true}) do |f| %>
+  <%= form_for(@topic, html: {multipart: true, class: "form-horizontal"}) do |f| %>
 
       <!-- errors -->
       <% if @topic.errors.any? %>
@@ -24,19 +24,12 @@
           <%= hidden_field_tag :original_id, @original_topic.id %>
       <% end %>
 
-
-
-
-
-
       <%
-
          if params[:category].present?
            the_cat = params[:category].to_i
          else
            the_cat = 0
          end
-
 
          if @topic.category.present?
            if @topic.category == 0
@@ -51,34 +44,32 @@
              topic = TRUE
            end
          end
-
-
       %>
 
       <% rtl_class = rtl_checker %>
 
       <% if topic == TRUE %>
-          <div class="field">
-            <%= f.label :name! %>
-            <%= f.text_area :name, class: rtl_class %>
+          <div class="form-group">
+            <%= f.label :name, "Name!:", class: "form-inline" %>
+            <%= f.text_field :name, class: rtl_class +' form-control' %>
           </div>
       <% end %>
 
-
-
           <div class="form-group checkbox-inline">
             <%= f.label :major_update do %>
-                <%= f.check_box :major_update %>
+                <%= f.check_box :major_update, class: 'form-control' %>
                 <strong>New Version?</strong> (Significant Edits)
             <% end %>
           </div>
 
-        <br>
 
-        <%= f.label :icon_image %>
-        <span class="picture">
-            <%= f.file_field :icon, accept: 'image/jpeg,image/gif,image/png,application/pdf' %>
-          </span>
+
+          <div class="form-group form-inline">
+            <%= f.label :icon_image %>
+            <span class="picture">
+              <%= f.file_field :icon, accept: 'image/jpeg,image/gif,image/png,application/pdf'  %>
+            </span>
+          </div>
 
       <div class="form-group checkbox-inline">
         <%= f.label :placeholder do %>
@@ -99,17 +90,17 @@
       <script type="text/javascript">
           $('#topic_icon').bind('change', function () {
               size_in_megabytes = this.files[0].size / 1024 / 1024;
-              if (size_in_megabytes > 5) {
-                  alert('Maximum file size is 5MB. Please choose a smaller file.');
+              if (size_in_megabytes > 10) {
+                  alert('Maximum file size is 10MB. Please choose a smaller file.');
               }
           });
       </script>
 
       <!-- main content -->
 
-      <div class="field">
+      <div class="form-group">
         <%= f.label $available_categories[0] %><br>
-        <%= f.text_area :main_content, size: "2x10", class: rtl_class %>
+        <%= f.bootsy_area :main_content, size: "2x10", class: rtl_class %>
       </div>
 
       <!--
@@ -139,7 +130,7 @@
     </div>
 
 -->
-      <div class="field">
+      <div class="form-group">
         <%= f.label :category %><br>
         <%# f.select(:category, [['Main',0],['Category 1',1],['Category 2',2]] ) %>
         <% count =0 %>
@@ -152,23 +143,15 @@
         <%# f.select(:category, hash, value: params[:category] ) %>
 
         <% if params[:category].present? %>
-            <%= f.select(:category, $available_categories_numbered, :selected => params[:category]) %>
+            <%= f.select(:category, $available_categories_numbered, class:'form-control', :selected => params[:category]) %>
         <% else %>
-            <%= f.select(:category, $available_categories_numbered) %>
+            <%= f.select(:category, $available_categories_numbered, class:'form-control') %>
         <% end %>
-
-      </div>
-
-
-      <div class="field">
-        <%# f.label :parent %><br>
-        <%# f.collection_select(:parents, Topic.all, :id, :name) %>
       </div>
 
       <div class="actions">
         <%= f.submit "SAVE!", class: "btn btn-danger" %>
       </div>
-
 
       <% if params[:language].present? %>
           <%= f.label :language %>
@@ -190,5 +173,3 @@
 
   </p>
 </div>
-
-
