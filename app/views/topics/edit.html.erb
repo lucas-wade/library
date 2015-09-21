@@ -7,7 +7,7 @@
 <% end %>
 
 <div class="offset-jimbo" style="background-image:none">
-  <div class="row big-row low-gutter edit-form">
+  <div class="row low-gutter edit-form">
 
   <%
     @temp_topic = @topic.col_finder - 1
@@ -15,7 +15,7 @@
   %>
 
 
-  <div class="col-sm-2">
+  <div class="col-md-2">
     <% if @topic.category.present? && @topic.category > 0 %>
         Tab "<%= $available_categories[@topic.category] || $available_categories[params[:category]] %>" of <%= link_to @topic.parents.first.name, edit_topic_path(@topic.parents.first) %>
     <% else if @topic.parents.present? %>
@@ -37,7 +37,7 @@
   <%= render 'topics/column' %>
   </div>
 
-  <div class="col-sm-5">
+  <div class="col-md-5">
 
     <%= render 'edit_translations' %>
     <%= render 'form' %>
@@ -45,7 +45,7 @@
     <%= link_to 'Destroy', @topic, class: "btn btn-danger" ,method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
 
-  <div class="col-sm-5 nice-butt">
+  <div class="col-md-5 nice-butt">
     <%# if @topic.name == nil
          if @topic.originals.present?
            name = 'Translation of ' + @topic.originals.first.name
