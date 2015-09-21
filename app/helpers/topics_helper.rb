@@ -17,11 +17,11 @@ module TopicsHelper
 
   def tab_active2(t)
      if t.main_content == nil || t.main_content == '' && t.placeholder == FALSE && t.growing == FALSE
-         the_class = 'tab-cat' + t.category.to_s + ' tab-greyed-out'
+         the_class = 'tab-all ' + 'tab-cat' + t.category.to_s + ' tab-greyed-out'
      else if t.id == @topic.id
             the_class = 'tab-cat' + t.category.to_s + ' tab-active'
        else
-         the_class = 'tab-cat' + t.category.to_s
+         the_class = 'tab-all ' + 'tab-cat' + t.category.to_s
           end
      end
   end
