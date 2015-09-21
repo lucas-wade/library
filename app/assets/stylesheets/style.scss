@@ -411,21 +411,7 @@ a {
   color: $primary-color;
 }
 
-.tab-cat0 {
-  //vertical-align: top;
-  //position: relative;
-  //left: 0;
-  //z-index: 0;
 
-  background: image_url("icon-tabs-cat-0.png") no-repeat;
-  background-position: top 0;
-  background-size: contain;
-  height: 100%;
-  overflow: visible;
-  color: $primary-color;
-  padding: .618em;
-  text-align: center;
-}
 .tab-div {
   display: inline-block;
   vertical-align: top;
@@ -465,27 +451,29 @@ a {
   //left: -140px;
   z-index: 0;
 }
+.tab-cat4 {
+  margin-right: -2.9em;
+  z-index: 0;
+}
+.tab-cat0 {
+  margin-right: -3.6em;
+  z-index: 0;
+}
 .tab-cat1 {
-  background: image_url("icon-tabs-cat-4.png") no-repeat center top;
+  margin-right: -4.3em;
   z-index: 0;
 }
 
 .tab-cat2 {
+  margin-right: -4.3em;
   z-index: 0;
 }
 
 .tab-cat3 {
+  //margin-right: -3em;
   z-index: 0;
 }
 
-.tab-cat4 {
-  //background: image_url("icon-tabs-cat-4.png") no-repeat center top;
-  background-size: contain;
-  //width: 10em;
-  //height: 6em;
-  z-index: 0;
-
-}
 
 .tab-active {
   z-index: 10;
@@ -500,12 +488,13 @@ a {
 .tab-active::before {
    content: " ";
    position: absolute;
-   left: -2em;
-   width: calc(100% + 6.5em);
+   left: -1.5em;
+   width: calc(100% + 2.0em);
    height: calc(100% + 1em);
    z-index: 0;
    background: image_url("icon-tabs-cat-active.png") no-repeat center top;
    background-size: 100% 95%;
+   pointer-events: none;
 }
 
 .tab-greyed-out {

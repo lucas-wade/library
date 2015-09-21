@@ -23,7 +23,7 @@
 
 <% rtl_class = rtl_checker(show_topic.language) %>
 
-<div style="height:inherit;max-height:inherit;"
+<div style="height:inherit;max-height:inherit;">
   <div class="btn-kill">
   <%= link_to icon('fa fa-close fa-2x'), topics_path, class: "btn", style: "color:#b04431" %>
   </div>
@@ -223,7 +223,7 @@
 <!-- category window TABS -->
 
 <div id="category-window"
-         class="content_window tight-top
+         class="content_window 
             <% if edit_mode == 1 %> clr4
       <% end %>
       ">
@@ -264,17 +264,17 @@
 
   <ul class="nav nav-pills nav-tabs-custom">
     <% if show_topic.peak %>
-      <li class="<%= tab_active2(show_topic.peak) %> "><%= link_to image_tag("icon-tabs-cat-4.png"), show_topic.peak %><li>
+      <li class="<%= tab_active2(show_topic.peak) %> "><%= link_to image_tag("tabui_4.png"), show_topic.peak %><li>
     <% end %>
-    <li class="<%= tab_active2(show_topic.introduction) %> "><%= link_to image_tag("icon-tabs-cat-1.png"), show_topic.introduction %><li>
+    <li class="<%= tab_active2(show_topic.introduction) %> "><%= link_to image_tag("tabui_0.png"), show_topic.introduction %><li>
     <% if show_topic.cat1 %>
-      <li class="<%= tab_active2(show_topic.cat1) %> "><%= link_to image_tag("icon-tabs-cat-1.png"), show_topic.cat1 %><li>
+      <li class="<%= tab_active2(show_topic.cat1) %> "><%= link_to image_tag("tabui_1.png"), show_topic.cat1 %><li>
     <% end %>
     <% if show_topic.cat2 %>
-      <li class="<%= tab_active2(show_topic.cat2) %> "><%= link_to image_tag("icon-tabs-cat-2.png"), show_topic.cat2 %><li>
+      <li class="<%= tab_active2(show_topic.cat2) %> "><%= link_to image_tag("tabui_2.png"), show_topic.cat2 %><li>
     <% end %>
     <% if show_topic.cat3 %>
-      <li class="<%= tab_active2(show_topic.cat3) %> "><%= link_to image_tag("icon-tabs-cat-3.png"), show_topic.cat3 %><li>
+      <li class="<%= tab_active2(show_topic.cat3) %> "><%= link_to image_tag("tabui_3.png"), show_topic.cat3 %><li>
     <% end %>
   </ul>
 

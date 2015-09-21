@@ -144,7 +144,7 @@
 #category-window {
 
   //background-color: #6c6c6c;
-  height: 7em;
+  //height: 7em;
   color: white;
   //padding-bottom: 0px;
   a {
@@ -152,6 +152,8 @@
   }
   //z-index: 0;
   position: relative;
+  margin-top: 0;
+  //  z-index:-1;
 }
 
 .tight-list {
