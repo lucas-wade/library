@@ -2,7 +2,26 @@
 .wysiwyg-color-blue {
   color: #62d1ff;
 }
+body .modal_dialog_topic {
+  /* new custom width */
+    width: 92%;
 
+
+    color: rgb(4,4,4);
+    a &:visited{
+      color: rgb(39,34,34);
+    }
+    //larger
+    @media (min-width: 767px) {
+      width: 80%;
+    }
+}
+.model_topic_iframe {
+    height: 70vh;
+    @media (min-width: 1600px) {
+      height: 90vh;
+    }
+}
 .topic_show_window {
     max-width: 82em;
 }
@@ -170,4 +189,103 @@
   border-left-style: solid;
   height: 99%;
 
+}
+
+
+.tab-div {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+
+  z-index: 0;
+}
+.tab-div-4 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  //left: 0;
+  z-index: 0;
+  .active {
+    z-index: 1;
+  }
+}
+.tab-div-1 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  //left: -42px;
+  z-index: 0;
+}
+.tab-div-2 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  //left: -80px;
+  z-index: 0;
+}
+.tab-div-3 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+
+  //left: -140px;
+  z-index: 0;
+}
+.tab-all {
+  opacity: .96;
+}
+.tab-cat4 {
+  margin-right: -3.1em;
+  z-index: 0;
+
+}
+.tab-cat0 {
+  margin-right: -3.6em;
+  z-index: 0;
+
+}
+.tab-cat1 {
+  margin-right: -4.3em;
+  z-index: 0;
+
+}
+
+.tab-cat2 {
+  margin-right: -4.3em;
+  z-index: 0;
+
+}
+
+.tab-cat3 {
+  //margin-right: -3em;
+  z-index: 0;
+
+}
+
+
+.tab-active {
+  z-index: 10;
+  background: none; // image_url("icon-tabs-cat-active.png") no-repeat center top;
+  background-size: auto;
+  overflow: visible;
+  position: relative;
+  opacity: 1;
+  //padding: 0 24px 24px 24px;
+  //margin: 0 -24px -24px -24px;
+
+}
+.tab-active::before {
+   content: " ";
+   position: absolute;
+   left: -1.0em;
+   width: calc(100% + 2.2em);
+   height: calc(100% + 1.2em);
+   z-index: 0;
+   background: image_url("icon-tabs-cat-active.png") no-repeat center top;
+   background-size: 100% 95%;
+   pointer-events: none;
+}
+
+.tab-greyed-out {
+  opacity: .4;
 }

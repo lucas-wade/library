@@ -1,0 +1,31 @@
+<!-- Button trigger modal -->
+<button type="button" class="<%= raw the_class %>" data-toggle="modal" data-target="#myModal-<%= count %>">
+  <%= raw button %>
+
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal-<%= count %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal_dialog_topic">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><%= title %></h4>
+      </div>
+      <div class="modal-body">
+        <% if body %>
+          <%= sanitize body %>
+          <% else if url %>
+            <div class="model_topic_iframe">
+              <iframe width="100%" height="100%" src="<%= url %>" frameborder="0"></iframe>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i></button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>

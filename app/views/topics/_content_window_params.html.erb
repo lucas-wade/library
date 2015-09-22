@@ -42,7 +42,9 @@
                   <iframe src="<%= @show_pub.media.url %>" width="100%" height="100%" frameborder="0"></iframe>
                 </div>
             <% else %>
+              <div class="image-viewer">
                 <%= image_tag @show_pub.media.url %>
+              </div>
             <% end %>
         <% end %>
       <!-- </div> -->
@@ -157,11 +159,12 @@
 
   <div class="nav pull-right">
     <% if @show_pub.present? %>
-        <%= link_to '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>'.html_safe, @show_pub.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, :colorbox_className => 'b0'} %>
+        <%# link_to '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>'.html_safe, @show_pub.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, :colorbox_className => 'b0'} %>
+        <%= render 'shared/modal_topic', button: icon('fa fa-expand'), title: @show_pub.name,body: nil, url: @show_pub.media.url, the_class: "btn_expand",count:rand(256) %>
     <% else
          if there_is_a_topic_in_the_content_window == TRUE && show_topic.growing == FALSE && show_topic.placeholder == FALSE %>
-            <%= link_to '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>'.html_safe, show_topic, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_html => show_topic.main_content} %>
-            <!-- BS MODAL --> <%# render 'shared/modal', button: '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>', title: '', body: show_topic.main_content %>
+            <%# link_to '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>'.html_safe, show_topic, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_html => show_topic.main_content} %>
+            <%= render 'shared/modal_topic', button: icon('fa fa-expand'), title: show_topic.name,url: nil, body: show_topic.main_content, the_class: "btn_expand",count:rand(256) %>
         <% end %>
     <% end %>
   </div>
@@ -223,7 +226,7 @@
 <!-- category window TABS -->
 
 <div id="category-window"
-         class="content_window 
+         class="content_window
             <% if edit_mode == 1 %> clr4
       <% end %>
       ">

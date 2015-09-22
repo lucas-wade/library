@@ -1,10 +1,7 @@
 <% provide(:title, 'Publication Viewer') %>
-
-<div class="row">
-
-
-  <div class="col-md-12">
-    <div class="content_window">
+<div class="row inherit_h">
+  <div class="col-md-12 inherit_h">
+    <div class="inherit_h">
     <h1>
       <% if edit_mode==1 %>
           <%= link_to '<i class="fa fa-edit edit-color"></i>'.html_safe, edit_pub_path(@pub) %>
@@ -16,13 +13,12 @@
 
           <% end %><%= @pub.name %>
     </h1>
-<small>
-        <!-- translations -->
-        <% if @pub.translations.present? %>
-
-            <% @pub.translations.each do |t| %>
-                <%= link_to t.name, t %>
-            <% end %>
+    <small>
+      <!-- translations -->
+      <% if @pub.translations.present? %>
+        <% @pub.translations.each do |t| %>
+          <%= link_to t.name, t %>
+        <% end %>
         <% else if @pub.originals.present? %>
                 <% @pub.originals.each do |t| %>
                     <%= link_to t.name, t %>
@@ -34,78 +30,60 @@
                         <% end %>
                     <% end %>
                 <% end %>
-
             <% end %>
         <% end %>
-</small>
+      </small>
 
       <p>
-      Skill Level <strong><%= $available_skills[@pub.skill] unless !@pub.skill.present?%></strong>
-
-This publication is linked to by
-<% @pub.topics.each do |t|%>
-<%= link_to t.name, t %>
-    <% end %>
-
+        Skill Level <strong><%= $available_skills[@pub.skill] unless !@pub.skill.present?%></strong>
+        This publication is linked to by
+        <% @pub.topics.each do |t|%>
+          <%= link_to t.name, t %>
+        <% end %>
       </p>
+      <%= link_to 'All Publications', pubs_path, class: 'btn btn-default' %>
 
+      <div id="pub-<%= @pub.id %>" style="position:relative;height:inherit">
+        <% if @pub.media.present? %>
+          The Attached file is a
+          <strong><%= @pub.media.content_type %></strong>
+          and is
+          <%= number_to_human_size(@pub.media.size) %>
 
-
-
-
-<div id="pub-<%= @pub.id %>">
-
-  <span class="content">
-
-
-    <% if @pub.media.present? %>
-        The Attached file is a
-        <strong><%= @pub.media.content_type %></strong>
-        and is
-        <%= number_to_human_size(@pub.media.size) %>
-        <% if @pub.media.content_type == "application/pdf" %>
+          <% if @pub.media.content_type == "application/pdf" %>
             <div class="pdf-viewer">
               <iframe src="<%= @pub.media.url %>" width="62%" height="100%"></iframe>
             </div>
-            <% else if @pub.media.content_type == 'video/mp4' || @pub.media.content_type == 'application/mp4' %>
-                <div class="pdf-viewer">
+          <% else if @pub.media.content_type == 'video/mp4' || @pub.media.content_type == 'application/mp4' %>
+              <div class="pdf-viewer">
                 <iframe src="<%= @pub.media.url %>" width="62%" height="100%"></iframe>
-                </div>
-        <% else %>
-            <%= image_tag @pub.media.url %>
-                <% end %>
+              </div>
+          <% else %>
+              <div class="image-viewer">
+                <%= image_tag @pub.media.url %>
+              </div>
+          <% end %>
+          <% end %>
         <% end %>
-    <% end %>
-  </span>
+      </div>
 
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(@pub.created_at) %> ago.
-  </span>
+      <span class="timestamp">
+        Posted <%= time_ago_in_words(@pub.created_at) %> ago.
+      </span>
 
-  <% if current_user && current_user.admin?%>
-      <% if edit_mode == 1 %>
-      <%= link_to "delete", @pub, method: :delete,
-                  data: { confirm: "You sure?" },
-      class: "btn btn-danger"%>
+      <% if current_user && current_user.admin?%>
+          <% if edit_mode == 1 %>
+            <%= link_to "delete", @pub, method: :delete,
+                      data: { confirm: "You sure?" },
+                      class: "btn btn-danger"%>
           <% end %>
       <% end %>
+    </div> <!-- inherit -->
+  </div> <!-- col-md-12 -->
 
-
-</div>
-
-    </div>
-
-    <%# reader = PDF::Reader.new(open('public/uploads/pub/media/21/Booklet_20_Final_RGB.pdf')) %>
-    <%# @pub.meta_data = "" %>
-    <%# reader.pages.each do |page| %>
-    <%# @pub.meta_data += page.text %>
-    <%# end %>
-
-<% if edit_mode == 1 %>
+  <% if edit_mode == 1 %>
     <div class="b0 edit-color">
       <%= @pub.meta_data %>
     </div>
-    <% end %>
-</div>
-
-</div>
+  <% end %>
+</div> <!-- row -->
