@@ -61,6 +61,7 @@
   <% else %> <!-- render the topic -->
       <% there_is_a_topic_in_the_content_window = TRUE %>
       <div class="<%= rtl_checker %>">
+
         <h7>
           <% if edit_mode == 1 && show_topic.parents.present? %>
               <%= link_to '<i class="fa fa-edit edit-color"></i>'.html_safe, edit_topic_path(show_topic) %>
@@ -89,37 +90,32 @@
         </h7>
       </div>
 
-      <% if edit_mode == 1 %>
-          <!-- debuggin stuff
-          <h2><small>
-            Skill Level <strong><%= $available_skills[show_topic.skill] unless !show_topic.skill.present? %></strong>
-            Category <strong><%= $available_categories[show_topic.category] unless !show_topic.category.present? %></strong>
-            Language <strong><%= show_topic.language unless !show_topic.language.present? %></strong>
-            placeholder <strong><%= show_topic.placeholder %></strong>
 
-          </small></h2>
-          -->
-      <% end %>
+      <% if session[:instructions] == nil %>
+        <div style="float:left">
+          <%= link_to icon('fa fa-close fa-2x'), url_for(params), style: "color:#b04431"  %>
+        </div>
+        <%= sanitize @topics.find_by(id: 1).main_content %>
+        <% session[:instructions] = 1 %>
+      <% else %>
 
-      <% if !show_topic.main_content.present?
-           show_topic.main_content = ''
-         end %>
+        <% if !show_topic.main_content.present?
+             show_topic.main_content = ''
+           end %>
 
+        <% if show_topic.placeholder == TRUE %>
+            <%= render 'shared/placeholder' %>
+        <% else
+             if show_topic.growing == TRUE %>
+                <%= render 'shared/growing' %>
+            <% else %>
+                <div class="main_content <%= rtl_class %>">
+                  <%= sanitize show_topic.main_content %>
+                </div>
+            <% end %>
+        <% end %>
 
-
-      <% if show_topic.placeholder == TRUE %>
-          <%= render 'shared/placeholder' %>
-      <% else
-           if show_topic.growing == TRUE %>
-              <%= render 'shared/growing' %>
-          <% else %>
-              <div class="main_content <%= rtl_class %>">
-                <%= sanitize show_topic.main_content %>
-              </div>
-          <% end %>
-      <% end %>
-
-
+      <% end #of More Info instructions %>
   <% end %> <!-- end of controll for pub or content window -->
 
 </div> <!-- end of content-window -->
@@ -160,11 +156,11 @@
   <div class="nav pull-right">
     <% if @show_pub.present? %>
         <%# link_to '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>'.html_safe, @show_pub.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, :colorbox_className => 'b0'} %>
-        <%= render 'shared/modal_topic', button: icon('fa fa-expand'), title: @show_pub.name,body: nil, url: @show_pub.media.url, the_class: "btn_expand",count:rand(256) %>
+        <%= render 'shared/modal_topic', button: icon('fa fa-expand'), title: @show_pub.name,body: nil, url: @show_pub.media.url, the_class: "btn_expand",count:rand(65536) %>
     <% else
          if there_is_a_topic_in_the_content_window == TRUE && show_topic.growing == FALSE && show_topic.placeholder == FALSE %>
             <%# link_to '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>'.html_safe, show_topic, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_html => show_topic.main_content} %>
-            <%= render 'shared/modal_topic', button: icon('fa fa-expand'), title: show_topic.name,url: nil, body: show_topic.main_content, the_class: "btn_expand",count:rand(256) %>
+            <%= render 'shared/modal_topic', button: icon('fa fa-expand'), title: show_topic.name,url: nil, body: show_topic.main_content, the_class: "btn_expand",count:rand(65536) %>
         <% end %>
     <% end %>
   </div>

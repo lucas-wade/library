@@ -1,0 +1,16 @@
+<div class="row offset-jimbo">
+  <div class="col-md-8 page">
+    <div style="text-align:right;float:right;font-size:smaller">
+      <%= link_to 'Edit | ', edit_page_path(@page) if current_admin %>
+      <%= link_to 'Back', pages_path %>
+    </div>
+
+      <h3><%= @page.name %></h3>
+      <%= sanitize @page.body_html %>
+
+
+
+  </div>
+  <div class="col-md-4">
+  </div>
+</div>

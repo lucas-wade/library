@@ -141,6 +141,9 @@ class Topic < ActiveRecord::Base
   end
 
   def has_sub_cats?
+    if self.id < 4
+      return FALSE
+    end
     self.kids.each do |t|
       if t.category > 0
         return TRUE

@@ -9,7 +9,11 @@
   <h5>
     <i class="fa fa-3x">
       <% if @temp_topic != 1 && @topics.count > 0 %>
-        <%= image_tag @topics[@temp_topic].icon.url, class: "trimmed-icon img-icon" %>
+        <% if @temp_topic == 0 %>
+            <%= link_to image_tag(@topics[@temp_topic].icon.url, class: "trimmed-icon img-icon"), topic_path(id: 1)  %>
+          <% else %>
+            <%= image_tag @topics[@temp_topic].icon.url, class: "trimmed-icon img-icon" %>
+          <% end %>
       <% end %>
     </i>
     <% if edit_mode ==1 %>
