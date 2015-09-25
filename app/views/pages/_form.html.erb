@@ -11,6 +11,10 @@
     </div>
   <% end %>
 
+  <div style="text-align:right;float:right;font-size:smaller">
+    <%= f.submit "Save", class: "btn btn-danger btn-sm" %>
+  </div>
+
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -19,7 +23,8 @@
     <%= f.label :body_html %><br>
     <%= f.bootsy_area :body_html, rows: 20 %>
   </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Save", class: "btn btn-danger" %>
   </div>
 <% end %>
