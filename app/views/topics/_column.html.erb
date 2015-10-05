@@ -26,11 +26,11 @@
     <!-- library -->
     <% if @temp_topic == 0 %>
         <!-- <div class="list-group-item btn-default btn-main-menu button b1"> -->
-        <% the_class = "list-group-item btn-default btn-main-menu button b1  " + rtl_checker(I18n.locale).to_s %>
-        <div class="<%= the_class %>">
-        <%= image_tag 'icon_library.png', class: 'topic-col-icon' %>
-              <%= link_to t('titles.library'), library_path, class: "button-text" %>
-            </div>
+        <% the_class = "list-group-item  btn-main-menu button b1  " + rtl_checker(I18n.locale).to_s %>
+        <a href="<%= library_path %>" class="<%= the_class %>">
+          <%= image_tag 'icon_library.png', class: 'topic-col-icon' %>
+          <div class="button-text"><%= t('titles.library') %></div>
+        </a>
         <!-- </div> -->
     <% end %>
 

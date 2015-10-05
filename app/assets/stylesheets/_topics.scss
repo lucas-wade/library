@@ -23,7 +23,14 @@ body .modal_dialog_topic {
     }
 }
 .topic_show_window {
-    max-width: 82em;
+
+max-width: 82em;
+  //smaller
+  @media (max-width: 766px) {
+    width: 100%;
+
+  }
+
 }
 
 .main_content {
@@ -284,7 +291,7 @@ body .modal_dialog_topic {
    width: calc(100% + 2.2em);
    height: calc(100% + 1.2em);
    z-index: 0;
-   background: image_url("icon-tabs-cat-active.png") no-repeat center top;
+   background: image_url("icon-tabs-cat-active-blue.png") no-repeat center top;
    background-size: 100% 95%;
    pointer-events: none;
 }

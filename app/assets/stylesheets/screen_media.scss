@@ -43,7 +43,7 @@
   }
 
   .big-row {
-    width: 110%;
+    //width: 110%;
   }
 
 }
@@ -60,7 +60,7 @@
   }
 
   #big_c {
-    display: block;
+    display: inline-block;
 
   }
   #small_c1 {
@@ -88,7 +88,7 @@
 
 }
 
-@media (max-width: 844px) {
+@media (max-width: 1053px) {
 
   #navbar-middle {
     display: none;
