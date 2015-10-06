@@ -2,20 +2,22 @@
   <div>
     <div class="navbar-header">
       <% header_title = header_title(yield(:logo)) %>
-      <%= link_to header_title, topics_path, id: "logo" %>
+      <%= link_to header_title, topics_path, id: "logo",style:"display:inline" %>
+
+      <div id="enter-button" style="display:inline-block">
+        <% if current_page?(controller: 'static_pages', action: 'home') || current_page?(controller: 'static_pages', action: 'movie_hd')  %>
+          <span class="center">
+           <%= link_to t('classroom_doors.btn_enter_site'), classroom_doors_path, class: "btn btn-lrg button-major-orange" %>
+          </span>
+        <% end %>
+      </div>
     </div>
 
     <div id="navbar-middle" class="navbar-header">
 
       <ul class="nav-list list-inline2">
 
-        <li id="enter-button">
-          <% if current_page?(controller: 'static_pages', action: 'home') || current_page?(controller: 'static_pages', action: 'movie_hd')  %>
-            <span class="center">
-             <%= link_to t('classroom_doors.btn_enter_site'), classroom_doors_path, class: "btn btn-lrg button-major-orange" %>
-            </span>
-          <% end %>
-        </li>
+
 
              <li class="top-menu-icon small-icon">
           <% if session[:current_collumn] == 1 && @topic.present? && $collumn_icon_1.kids.present? %>
