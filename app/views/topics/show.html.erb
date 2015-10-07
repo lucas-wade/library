@@ -39,7 +39,7 @@
         <div id="big_c" class="col-sm-4 inherit_h">
           <%= render 'column' %>
         </div>
-      
+
     <% end %>
 
     <%# *** now render the active topic %>
@@ -53,14 +53,12 @@
 
     </div>
 
-    <%# maybe render the other 2 colums on the right %>
-    <div id="big_c">
+    <%# maybe render the other 2 colums on the right %>  
       <% if @temp_topic == 1 || @temp_topic == 2 %>
-          <div class="col-sm-4 inherit_h">
+          <div id="big_c" class="col-sm-4 inherit_h">
             <%= render 'column' %>
           </div>
       <% end %>
-    </div>
 
 
     <%#  *** the small columns for the phone %>

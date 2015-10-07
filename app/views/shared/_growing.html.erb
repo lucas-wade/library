@@ -2,7 +2,7 @@
     <%= image_tag "growing_content.jpg", :width => "100%" %>
 <% else %>
 
-    <div class="container-placeholder">
+    <div class="container-placeholder" style="border-radius:.28em;">
       <%# video_tag "growing.mp4", :width => "100%", controls: true, autoplay: true %>
       <% source = '/' + I18n.locale.to_s + '/media/growing.mp4' %>
 
@@ -15,7 +15,13 @@
       <p class="growing-banner">
         <%= t('general.register_above') %>
         <br>
-        <%= link_to t('general.contribute'), request_funding_url, class: "btn button-major-orange" %>
+<%# link_to t('general.contribute'), request_funding_url, class: "btn-wrap button-major-orange" %>
       </p>
+      <ul class="list-group">
+        <li class="list-group-item button-major-orange">
+          <%= link_to t('general.contribute'), request_funding_url%>
+        </li>
+        <%# link_to t('general.contribute'), request_funding_url, class: "btn button-major-orange" %>
+      <%# link_to t('general.contribute'), request_funding_url, class: "btn btn-success" %>
     </div>
 <% end %>
