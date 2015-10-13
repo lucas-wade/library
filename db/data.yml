@@ -55,6 +55,471 @@ attachmentships:
     - 2015-05-21 22:16:08.000000000 Z
 
 ---
+bootsy_image_galleries:
+  columns:
+  - id
+  - bootsy_resource_id
+  - bootsy_resource_type
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 4
+    - Topic
+    - 2015-09-21 22:11:42.000000000 Z
+    - 2015-09-21 22:11:42.000000000 Z
+  - - 2
+    - 11
+    - Topic
+    - 2015-09-21 22:49:50.000000000 Z
+    - 2015-09-21 22:49:50.000000000 Z
+  - - 3
+    - 137
+    - Topic
+    - 2015-09-21 22:50:19.000000000 Z
+    - 2015-09-21 22:50:19.000000000 Z
+  - - 4
+    - 144
+    - Topic
+    - 2015-09-21 22:50:52.000000000 Z
+    - 2015-09-21 22:50:52.000000000 Z
+  - - 5
+    - 155
+    - Topic
+    - 2015-09-21 23:03:19.000000000 Z
+    - 2015-09-21 23:03:19.000000000 Z
+  - - 6
+    - 162
+    - Topic
+    - 2015-09-21 23:03:42.000000000 Z
+    - 2015-09-21 23:03:42.000000000 Z
+  - - 7
+    - 1
+    - Topic
+    - 2015-09-25 19:13:00.000000000 Z
+    - 2015-10-07 17:53:36.000000000 Z
+  - - 8
+    - 
+    - Page
+    - 2015-09-25 21:33:44.000000000 Z
+    - 2015-09-25 21:33:44.000000000 Z
+  - - 9
+    - 1
+    - Page
+    - 2015-09-25 21:36:32.000000000 Z
+    - 2015-09-25 23:26:41.000000000 Z
+  - - 10
+    - 197
+    - Topic
+    - 2015-09-27 09:09:21.000000000 Z
+    - 2015-09-27 09:09:21.000000000 Z
+  - - 11
+    - 198
+    - Topic
+    - 2015-09-27 09:09:29.000000000 Z
+    - 2015-09-27 09:09:29.000000000 Z
+  - - 12
+    - 199
+    - Topic
+    - 2015-09-27 09:10:55.000000000 Z
+    - 2015-09-27 09:10:55.000000000 Z
+  - - 13
+    - 200
+    - Topic
+    - 2015-09-27 09:11:25.000000000 Z
+    - 2015-09-27 09:11:25.000000000 Z
+  - - 14
+    - 201
+    - Topic
+    - 2015-09-27 09:12:14.000000000 Z
+    - 2015-09-27 09:12:14.000000000 Z
+  - - 15
+    - 202
+    - Topic
+    - 2015-09-27 09:12:29.000000000 Z
+    - 2015-09-27 09:12:29.000000000 Z
+  - - 16
+    - 203
+    - Topic
+    - 2015-09-27 09:12:45.000000000 Z
+    - 2015-09-27 09:12:45.000000000 Z
+  - - 17
+    - 143
+    - Topic
+    - 2015-09-27 09:44:25.000000000 Z
+    - 2015-09-27 09:44:25.000000000 Z
+  - - 18
+    - 138
+    - Topic
+    - 2015-09-27 09:45:35.000000000 Z
+    - 2015-09-27 09:45:35.000000000 Z
+  - - 19
+    - 148
+    - Topic
+    - 2015-09-27 09:46:28.000000000 Z
+    - 2015-09-27 09:46:28.000000000 Z
+  - - 20
+    - 159
+    - Topic
+    - 2015-09-27 09:47:07.000000000 Z
+    - 2015-09-27 09:47:07.000000000 Z
+  - - 21
+    - 169
+    - Topic
+    - 2015-09-27 09:47:54.000000000 Z
+    - 2015-09-27 09:47:54.000000000 Z
+  - - 22
+    - 173
+    - Topic
+    - 2015-09-27 09:48:32.000000000 Z
+    - 2015-09-27 09:48:32.000000000 Z
+  - - 23
+    - 141
+    - Topic
+    - 2015-09-27 09:49:45.000000000 Z
+    - 2015-09-27 09:49:45.000000000 Z
+  - - 24
+    - 139
+    - Topic
+    - 2015-09-27 09:53:01.000000000 Z
+    - 2015-09-27 09:53:01.000000000 Z
+  - - 25
+    - 140
+    - Topic
+    - 2015-09-27 09:54:26.000000000 Z
+    - 2015-09-27 09:54:26.000000000 Z
+  - - 26
+    - 142
+    - Topic
+    - 2015-09-27 09:55:38.000000000 Z
+    - 2015-09-27 09:55:38.000000000 Z
+  - - 27
+    - 150
+    - Topic
+    - 2015-09-27 10:01:07.000000000 Z
+    - 2015-09-27 10:01:07.000000000 Z
+  - - 28
+    - 145
+    - Topic
+    - 2015-09-27 10:01:16.000000000 Z
+    - 2015-09-27 10:01:16.000000000 Z
+  - - 29
+    - 146
+    - Topic
+    - 2015-09-27 10:05:01.000000000 Z
+    - 2015-09-27 10:05:01.000000000 Z
+  - - 30
+    - 147
+    - Topic
+    - 2015-09-27 10:05:17.000000000 Z
+    - 2015-09-27 10:05:17.000000000 Z
+  - - 31
+    - 149
+    - Topic
+    - 2015-09-27 10:06:01.000000000 Z
+    - 2015-09-27 10:06:01.000000000 Z
+  - - 32
+    - 161
+    - Topic
+    - 2015-09-27 10:06:45.000000000 Z
+    - 2015-09-27 10:06:45.000000000 Z
+  - - 33
+    - 156
+    - Topic
+    - 2015-09-27 10:07:03.000000000 Z
+    - 2015-09-27 10:07:03.000000000 Z
+  - - 34
+    - 163
+    - Topic
+    - 2015-09-27 10:07:10.000000000 Z
+    - 2015-09-27 10:07:10.000000000 Z
+  - - 35
+    - 164
+    - Topic
+    - 2015-09-27 10:07:48.000000000 Z
+    - 2015-09-27 10:07:48.000000000 Z
+  - - 36
+    - 165
+    - Topic
+    - 2015-09-27 10:08:13.000000000 Z
+    - 2015-09-27 10:08:13.000000000 Z
+  - - 37
+    - 166
+    - Topic
+    - 2015-09-27 10:08:51.000000000 Z
+    - 2015-09-27 10:08:51.000000000 Z
+  - - 38
+    - 167
+    - Topic
+    - 2015-09-27 10:09:09.000000000 Z
+    - 2015-09-27 10:09:09.000000000 Z
+  - - 39
+    - 168
+    - Topic
+    - 2015-09-27 10:09:34.000000000 Z
+    - 2015-09-27 10:09:34.000000000 Z
+  - - 40
+    - 175
+    - Topic
+    - 2015-09-27 10:10:07.000000000 Z
+    - 2015-09-27 10:10:07.000000000 Z
+  - - 41
+    - 170
+    - Topic
+    - 2015-09-27 10:10:18.000000000 Z
+    - 2015-09-27 10:10:18.000000000 Z
+  - - 42
+    - 171
+    - Topic
+    - 2015-09-27 10:11:32.000000000 Z
+    - 2015-09-27 10:11:32.000000000 Z
+  - - 43
+    - 172
+    - Topic
+    - 2015-09-27 10:12:03.000000000 Z
+    - 2015-09-27 10:12:03.000000000 Z
+  - - 44
+    - 174
+    - Topic
+    - 2015-09-27 10:13:27.000000000 Z
+    - 2015-09-27 10:13:27.000000000 Z
+  - - 45
+    - 10
+    - Topic
+    - 2015-09-27 10:29:11.000000000 Z
+    - 2015-09-27 10:29:11.000000000 Z
+  - - 46
+    - 204
+    - Topic
+    - 2015-09-29 01:03:09.000000000 Z
+    - 2015-09-29 01:03:09.000000000 Z
+  - - 47
+    - 218
+    - Topic
+    - 2015-09-29 01:05:13.000000000 Z
+    - 2015-09-29 01:05:13.000000000 Z
+  - - 48
+    - 225
+    - Topic
+    - 2015-09-29 01:07:11.000000000 Z
+    - 2015-09-29 01:07:11.000000000 Z
+  - - 49
+    - 232
+    - Topic
+    - 2015-09-29 01:07:48.000000000 Z
+    - 2015-09-29 01:07:48.000000000 Z
+  - - 50
+    - 239
+    - Topic
+    - 2015-09-29 01:09:06.000000000 Z
+    - 2015-09-29 01:09:06.000000000 Z
+  - - 51
+    - 246
+    - Topic
+    - 2015-09-29 01:10:58.000000000 Z
+    - 2015-09-29 01:10:58.000000000 Z
+  - - 52
+    - 253
+    - Topic
+    - 2015-09-29 01:11:32.000000000 Z
+    - 2015-09-29 01:11:32.000000000 Z
+  - - 53
+    - 176
+    - Topic
+    - 2015-09-29 01:16:42.000000000 Z
+    - 2015-09-29 01:16:42.000000000 Z
+  - - 54
+    - 183
+    - Topic
+    - 2015-09-29 01:17:01.000000000 Z
+    - 2015-09-29 01:17:01.000000000 Z
+  - - 55
+    - 88
+    - Topic
+    - 2015-09-29 01:35:28.000000000 Z
+    - 2015-09-29 01:35:28.000000000 Z
+  - - 56
+    - 498
+    - Topic
+    - 2015-09-29 01:35:44.000000000 Z
+    - 2015-09-29 01:35:44.000000000 Z
+  - - 57
+    - 505
+    - Topic
+    - 2015-09-29 01:35:58.000000000 Z
+    - 2015-09-29 01:35:58.000000000 Z
+  - - 58
+    - 93
+    - Topic
+    - 2015-09-29 02:08:38.000000000 Z
+    - 2015-09-29 02:08:38.000000000 Z
+  - - 59
+    - 89
+    - Topic
+    - 2015-09-29 02:09:07.000000000 Z
+    - 2015-09-29 02:09:07.000000000 Z
+  - - 60
+    - 90
+    - Topic
+    - 2015-09-29 02:10:11.000000000 Z
+    - 2015-09-29 02:10:11.000000000 Z
+  - - 61
+    - 91
+    - Topic
+    - 2015-09-29 02:10:34.000000000 Z
+    - 2015-09-29 02:10:34.000000000 Z
+  - - 62
+    - 92
+    - Topic
+    - 2015-09-29 02:11:13.000000000 Z
+    - 2015-09-29 02:11:13.000000000 Z
+  - - 63
+    - 94
+    - Topic
+    - 2015-09-29 02:11:57.000000000 Z
+    - 2015-09-29 02:11:57.000000000 Z
+  - - 64
+    - 195
+    - Topic
+    - 2015-09-29 02:24:06.000000000 Z
+    - 2015-09-29 02:24:06.000000000 Z
+  - - 65
+    - 190
+    - Topic
+    - 2015-09-29 02:24:12.000000000 Z
+    - 2015-09-29 02:24:12.000000000 Z
+  - - 66
+    - 260
+    - Topic
+    - 2015-09-29 02:25:36.000000000 Z
+    - 2015-09-29 02:25:36.000000000 Z
+  - - 67
+    - 267
+    - Topic
+    - 2015-09-29 02:26:18.000000000 Z
+    - 2015-09-29 02:26:18.000000000 Z
+  - - 68
+    - 274
+    - Topic
+    - 2015-09-29 02:28:54.000000000 Z
+    - 2015-09-29 02:28:54.000000000 Z
+  - - 69
+    - 281
+    - Topic
+    - 2015-09-29 02:31:02.000000000 Z
+    - 2015-09-29 02:31:02.000000000 Z
+  - - 70
+    - 288
+    - Topic
+    - 2015-09-29 02:31:28.000000000 Z
+    - 2015-09-29 02:31:28.000000000 Z
+  - - 71
+    - 295
+    - Topic
+    - 2015-09-29 02:32:27.000000000 Z
+    - 2015-09-29 02:32:27.000000000 Z
+  - - 72
+    - 
+    - Page
+    - 2015-10-01 22:04:28.000000000 Z
+    - 2015-10-01 22:04:28.000000000 Z
+  - - 73
+    - 102
+    - Topic
+    - 2015-10-06 03:34:50.000000000 Z
+    - 2015-10-06 03:34:50.000000000 Z
+  - - 74
+    - 123
+    - Topic
+    - 2015-10-06 04:23:55.000000000 Z
+    - 2015-10-06 04:23:55.000000000 Z
+
+---
+bootsy_images:
+  columns:
+  - id
+  - image_file
+  - image_gallery_id
+  - created_at
+  - updated_at
+  records: 
+  - - 5
+    - icon_information_active.png
+    - 7
+    - 2015-09-25 19:15:08.000000000 Z
+    - 2015-09-25 19:15:08.000000000 Z
+  - - 6
+    - button_anim_play.png
+    - 7
+    - 2015-09-25 19:15:37.000000000 Z
+    - 2015-09-25 19:15:37.000000000 Z
+  - - 7
+    - icon_skills_1.png
+    - 7
+    - 2015-09-25 19:15:50.000000000 Z
+    - 2015-09-25 19:15:50.000000000 Z
+  - - 8
+    - icon_skills_2.png
+    - 7
+    - 2015-09-25 19:16:04.000000000 Z
+    - 2015-09-25 19:16:04.000000000 Z
+  - - 9
+    - icon_skills_3.png
+    - 7
+    - 2015-09-25 19:16:16.000000000 Z
+    - 2015-09-25 19:16:16.000000000 Z
+  - - 10
+    - button_doc_zoom.png
+    - 7
+    - 2015-09-25 19:16:31.000000000 Z
+    - 2015-09-25 19:16:31.000000000 Z
+  - - 11
+    - icon_vidcam.png
+    - 7
+    - 2015-09-25 19:34:23.000000000 Z
+    - 2015-09-25 19:34:23.000000000 Z
+  - - 12
+    - icon_download.png
+    - 7
+    - 2015-09-25 19:35:21.000000000 Z
+    - 2015-09-25 19:35:21.000000000 Z
+  - - 13
+    - littlelake_valley_from_the_hills.jpg
+    - 9
+    - 2015-09-25 23:11:02.000000000 Z
+    - 2015-09-25 23:11:02.000000000 Z
+  - - 14
+    - Chaquitaclla.JPG
+    - 9
+    - 2015-09-25 23:26:41.000000000 Z
+    - 2015-09-25 23:26:41.000000000 Z
+  - - 16
+    - tabui_1.png
+    - 7
+    - 2015-10-07 17:53:15.000000000 Z
+    - 2015-10-07 17:53:15.000000000 Z
+  - - 17
+    - tabui_2.png
+    - 7
+    - 2015-10-07 17:53:20.000000000 Z
+    - 2015-10-07 17:53:20.000000000 Z
+  - - 18
+    - tabui_3.png
+    - 7
+    - 2015-10-07 17:53:24.000000000 Z
+    - 2015-10-07 17:53:24.000000000 Z
+  - - 19
+    - tabui_4.png
+    - 7
+    - 2015-10-07 17:53:27.000000000 Z
+    - 2015-10-07 17:53:27.000000000 Z
+  - - 20
+    - tabui_0.png
+    - 7
+    - 2015-10-07 17:53:36.000000000 Z
+    - 2015-10-07 17:53:36.000000000 Z
+
+---
 families:
   columns:
   - id
@@ -6330,6 +6795,30 @@ microposts:
     - 
 
 ---
+pages:
+  columns:
+  - id
+  - name
+  - body_html
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Example
+    - <h1>This is the first!<img alt="" src="/uploads/bootsy/image/13/medium_littlelake_valley_from_the_hills.jpg"
+      class="wysiwyg-float-right"></h1><h2>And now we have the second</h2><h3>and
+      in this fashion we continue with headings.<br></h3><p>The paragraph is as you
+      would expect.<br></p><p>The special gotcha is the<u>Underline&nbsp;</u>as it
+      is not so much of an underline, as it is a&nbsp;superscript for<u>&nbsp;foot
+      notes</u>.</p><h4><b>Save often.</b>&nbsp;</h4><h3>The icon above that looks
+      like a <b>pencil</b> will let you edit the html code.</h3> <p><i></i><i>Its
+      not that scar</i><i></i><i>y once you get into it</i><i></i></p>and it can really
+      help you understand how an html document is created.<br><div><img alt="" src="/uploads/bootsy/image/14/medium_Chaquitaclla.JPG"
+      class="wysiwyg-float-left"><br></div>
+    - 2015-09-25 21:36:23.000000000 Z
+    - 2015-09-29 00:54:42.000000000 Z
+
+---
 pub_translationships:
   columns:
   - id
@@ -12445,16 +12934,44 @@ topics:
   - - 1
     - Information
     - en
-    - ''
+    - "<p></p><p>Close when finished reading</p><h1>Classroom Instructions - Welcome.</h1>\r\n\r\n<h2>Here
+      you will have the opportunity to learn about the foundations of sustainable
+      living on our planet—beginning with the soil and the way we grow our food.</h2>&nbsp;<div>Navigate
+      through each window using the menu bars at the top and sides and the tabs below.</div><div><br></div><div><br></div><h3><b><span
+      class=\"wysiwyg-color-orange\">Knowing and Growing Deeper for Abundance:</span></b>&nbsp;</h3><p>Dig
+      deeper into each topic by progressing through the tabs at the bottom of each
+      window:<br></p><p><br></p><div><img alt=\"\" src=\"/uploads/bootsy/image/19/tabui_4.png\"
+      class=\"wysiwyg-float-left\"><b>Peak: </b>&nbsp;We have reached a state of peak
+      resources per person on the planet.  Select this tab whenever it appears to
+      learn what these peaks mean for all who share this planet and its resources.&nbsp;</div><div><br></div><div><img
+      alt=\"\" src=\"/uploads/bootsy/image/20/tabui_0.png\" class=\"wysiwyg-float-left\"><b>Topic
+      Introduction.</b></div><div><br></div><div><br></div><div><img alt=\"\" src=\"/uploads/bootsy/image/16/tabui_1.png\"
+      class=\"wysiwyg-float-left\"><b>What: &nbsp;</b>Learn facts related to the current
+      topic.</div><div><br></div><div><br></div><div><br></div><div><img alt=\"\"
+      src=\"/uploads/bootsy/image/17/tabui_2.png\" class=\"wysiwyg-float-left\"><b>Why:
+      &nbsp;</b>Discover the universal principles behind the facts.&nbsp;</div><div><br></div><div><br></div><div><br></div><div><br></div><div><img
+      alt=\"\" src=\"/uploads/bootsy/image/18/tabui_3.png\" class=\"wysiwyg-float-left\"><b>How:</b>&nbsp;
+      Learn the science behind the principles and find working examples of this science
+      in action. </div><div><br></div><div> </div><div><br></div><div><br></div><div>On
+      each tab you will find supporting videos <img alt=\"\" src=\"/uploads/bootsy/image/11/icon_vidcam.png\"
+      class=\"wysiwyg-float-inline\">, animations <img alt=\"\" src=\"/uploads/bootsy/image/6/button_anim_play.png\"
+      class=\"wysiwyg-float-inline\">, and documents \r\n\r\n<img alt=\"\" src=\"http://www.biointensive.net/uploads/bootsy/image/10/button_doc_zoom.png\"
+      class=\"wysiwyg-float-inline\">&nbsp;\r\n\r\nat the Beginner <img alt=\"\" src=\"/uploads/bootsy/image/7/icon_skills_1.png\"
+      class=\"wysiwyg-float-inline\">, \r\nIntermediate <img alt=\"\" src=\"/uploads/bootsy/image/8/icon_skills_2.png\"
+      class=\"wysiwyg-float-inline\">, and Advanced <img alt=\"\" src=\"/uploads/bootsy/image/9/icon_skills_3.png\"
+      class=\"wysiwyg-float-inline\">&nbsp;skill levels.&nbsp;<br></div><div><br></div><div>&nbsp;</div><div>Click
+      the column header icon <img alt=\"\" src=\"/uploads/bootsy/image/5/small_icon_information_active.png\"
+      class=\"wysiwyg-float-inline\">&nbsp;at any time to view these instructions
+      again.</div><br><p></p>"
     - 0
     - 2015-04-30 23:40:46.000000000 Z
-    - 2015-04-30 23:42:29.000000000 Z
+    - 2015-10-12 00:46:38.000000000 Z
     - false
     - 0
     - icon_information_active.png
     - false
     - false
-    - 0
+    - 1
   - - 2
     - Action
     - en
@@ -12484,15 +13001,15 @@ topics:
   - - 4
     - Basic Needs and GROW BIOINTENSIVE
     - en
-    - "<p>All human beings share basic needs that must be satisfied before we can
-      begin to make our lives more enriching, more enjoyable or more meaningful.  If
+    - "<h1>All human beings share basic needs that must be satisfied,&nbsp;</h1><h2>before
+      we can begin to make our lives more enriching, more enjoyable or more meaningful.&nbsp;</h2><p>&nbsp;If
       we wish to thrive, we must fit our human economy to the vastly more complex
       and more powerful economy of nature, and we can start with how we grow our food.
       \ <i>If we can be willing to learn from and to live more simply within nature's
-      limits</i>, then we will find that we can indeed be satisfied.</P>\r\n"
+      limits</i>,<i> then we will find that we can indeed be satisfied.</i></p>"
     - 0
     - 2015-05-01 20:34:31.000000000 Z
-    - 2015-08-17 21:22:07.000000000 Z
+    - 2015-10-09 02:01:26.000000000 Z
     - false
     - 0
     - 
@@ -12608,15 +13125,15 @@ topics:
   - - 11
     - 8 Components of GROW BIOINTENSIVE
     - en
-    - "<p>The GROW BIOINTENSIVE method is the result of quantifying food growing from
-      the viewpoint of <strong>total ecosystem health and indefinite sustainability.
-      </strong></p>\r\n\r\n<p><strong>In order for the GROW BIOINTENSIVE method of
-      food growing to be most effective and sustainable, its eight components must
-      be practiced together <span class=\"hot-words\">as a complete system.</span></strong></p>\r\n<br>\r\n<p>[button:
+    - "<h2>The GROW BIOINTENSIVE method is the result of quantifying food growing
+      from the viewpoint of <strong>total ecosystem health and indefinite sustainability.
+      </strong></h2>\r\n\r\n<h2><strong>In order for the GROW BIOINTENSIVE method
+      of food growing to be most effective and sustainable, its eight components must
+      be practiced together <span class=\"wysiwyg-color-blue\">as a complete system</span>.</strong></h2>\r\n<br>\r\n<p>[button:
       Why GROW BIOINTENSIVE?]</p>"
     - 0
     - 2015-05-01 20:35:20.000000000 Z
-    - 2015-05-06 16:42:22.000000000 Z
+    - 2015-09-29 17:02:50.000000000 Z
     - false
     - 0
     - 
@@ -13638,11 +14155,20 @@ topics:
   - - 88
     - Join Us!
     - en
-    - <iframe src="https://donatenow.networkforgood.org/ecologyaction" width="100%"
-      height="100%"></iframe>
+    - "<h5>\r\n\r\n<br>Yearly membership begins at $40 and includes Ecology Action's
+      triannual newsletter.\r\n\r\n<br></h5><p><br></p><h5>By becoming a member of
+      Ecology Action, you will help further our mission of <i><b></b>teaching people
+      worldwide to better feed themselves while building and preserving the soil and
+      conserving resources. &nbsp;</i>Memberships and contributions support programs
+      in education, training, and outreach, as well as our continuing research in
+      GROW BIOINTENSIVE<u>®</u>.</h5><p><br></p><h5>Your donation to Ecology Action
+      means you are part of a global network of people committed to replacing malnutrition
+      and environmental stress with sustainable health and environmental stewardship
+      worldwide.&nbsp;</h5><h5><br></h5><h5>&nbsp;All donations and contributions
+      to Ecology Action are fully tax-deductible.&nbsp;</h5><p><br></p>"
     - 0
     - 2015-05-01 21:08:23.000000000 Z
-    - 2015-05-21 19:43:37.000000000 Z
+    - 2015-10-12 01:22:47.000000000 Z
     - false
     - 0
     - 
@@ -13650,13 +14176,21 @@ topics:
     - false
     - 1
   - - 89
-    - "加入我们\r\n"
+    - "加入我们"
     - zh
-    - <iframe src="https://donatenow.networkforgood.org/ecologyaction" width="100%"
-      height="100%"></iframe>
+    - "<p>\r\n\r\n</p><h5><br></h5><h5>By becoming a member of Ecology Action, you
+      will help further our mission of <i><b></b>teaching people worldwide to better
+      feed themselves while building and preserving the soil and conserving resources.
+      &nbsp;</i>Memberships and contributions support programs in education training,
+      and outreach, as well as our continuing research in GROW BIOINTENSIVE® Sustainable
+      Mini-Farming.</h5><p><br></p><h5>Your donation to Ecology Action means you are
+      part of a global network of people working to replace hunger and environmental
+      challenges with sustainable health and abundance worldwide. </h5><h5><br></h5><h5>&nbsp;All
+      donations and contributions to Ecology Action are fully tax-deductible. </h5><p><br></p><h5>Yearly
+      membership begins at $40 and includes Ecology Action's triannual newsletter.</h5>\r\n\r\n<br><p></p>"
     - 0
     - 2015-05-01 21:08:23.000000000 Z
-    - 2015-05-21 22:39:04.000000000 Z
+    - 2015-09-29 02:12:59.000000000 Z
     - false
     - 0
     - 
@@ -13664,13 +14198,21 @@ topics:
     - false
     - 1
   - - 90
-    - "हमसे जुड़ें!\r\n"
+    - "हमसे जुड़ें!"
     - hi
-    - <iframe src="https://donatenow.networkforgood.org/ecologyaction" width="100%"
-      height="100%"></iframe>
+    - "<p>\r\n\r\n</p><h5><br></h5><h5>By becoming a member of Ecology Action, you
+      will help further our mission of <i><b></b>teaching people worldwide to better
+      feed themselves while building and preserving the soil and conserving resources.
+      &nbsp;</i>Memberships and contributions support programs in education training,
+      and outreach, as well as our continuing research in GROW BIOINTENSIVE® Sustainable
+      Mini-Farming.</h5><p><br></p><h5>Your donation to Ecology Action means you are
+      part of a global network of people working to replace hunger and environmental
+      challenges with sustainable health and abundance worldwide. </h5><h5><br></h5><h5>&nbsp;All
+      donations and contributions to Ecology Action are fully tax-deductible. </h5><p><br></p><h5>Yearly
+      membership begins at $40 and includes Ecology Action's triannual newsletter.</h5>\r\n\r\n<br><p></p>"
     - 0
     - 2015-05-01 21:08:23.000000000 Z
-    - 2015-08-20 17:22:15.000000000 Z
+    - 2015-09-29 02:13:11.000000000 Z
     - false
     - 0
     - 
@@ -13678,13 +14220,21 @@ topics:
     - false
     - 1
   - - 91
-    - "انضم إلينا\r\n"
+    - "انضم إلينا"
     - ar
-    - <iframe src="https://donatenow.networkforgood.org/ecologyaction" width="100%"
-      height="100%"></iframe>
+    - "<p>\r\n\r\n</p><h5><br></h5><h5>By becoming a member of Ecology Action, you
+      will help further our mission of <i><b></b>teaching people worldwide to better
+      feed themselves while building and preserving the soil and conserving resources.
+      &nbsp;</i>Memberships and contributions support programs in education training,
+      and outreach, as well as our continuing research in GROW BIOINTENSIVE® Sustainable
+      Mini-Farming.</h5><p><br></p><h5>Your donation to Ecology Action means you are
+      part of a global network of people working to replace hunger and environmental
+      challenges with sustainable health and abundance worldwide. </h5><h5><br></h5><h5>&nbsp;All
+      donations and contributions to Ecology Action are fully tax-deductible. </h5><p><br></p><h5>Yearly
+      membership begins at $40 and includes Ecology Action's triannual newsletter.</h5>\r\n\r\n<br><p></p>"
     - 0
     - 2015-05-01 21:08:23.000000000 Z
-    - 2015-05-21 22:39:36.000000000 Z
+    - 2015-09-29 02:13:24.000000000 Z
     - false
     - 0
     - 
@@ -13692,13 +14242,21 @@ topics:
     - false
     - 1
   - - 92
-    - "¡Únase a Nosotros!\r\n"
+    - "¡Únase a Nosotros!"
     - es
-    - <iframe src="https://donatenow.networkforgood.org/ecologyaction" width="100%"
-      height="100%"></iframe>
+    - "<p>\r\n\r\n</p><h5><br></h5><h5>By becoming a member of Ecology Action, you
+      will help further our mission of <i><b></b>teaching people worldwide to better
+      feed themselves while building and preserving the soil and conserving resources.
+      &nbsp;</i>Memberships and contributions support programs in education training,
+      and outreach, as well as our continuing research in GROW BIOINTENSIVE® Sustainable
+      Mini-Farming.</h5><p><br></p><h5>Your donation to Ecology Action means you are
+      part of a global network of people working to replace hunger and environmental
+      challenges with sustainable health and abundance worldwide. </h5><h5><br></h5><h5>&nbsp;All
+      donations and contributions to Ecology Action are fully tax-deductible. </h5><p><br></p><h5>Yearly
+      membership begins at $40 and includes Ecology Action's triannual newsletter.</h5>\r\n\r\n<br><p></p>"
     - 0
     - 2015-05-01 21:08:23.000000000 Z
-    - 2015-08-19 17:55:57.000000000 Z
+    - 2015-09-29 02:13:34.000000000 Z
     - false
     - 0
     - 
@@ -13706,13 +14264,21 @@ topics:
     - false
     - 1
   - - 93
-    - "Junte-se a nós!\r\n"
+    - Junte-se a nós!
     - pt
-    - <iframe src="https://donatenow.networkforgood.org/ecologyaction" width="100%"
-      height="100%"></iframe>
+    - "<p>\r\n\r\n</p><h5><br></h5><h5>By becoming a member of Ecology Action, you
+      will help further our mission of <i><b></b>teaching people worldwide to better
+      feed themselves while building and preserving the soil and conserving resources.
+      &nbsp;</i>Memberships and contributions support programs in education training,
+      and outreach, as well as our continuing research in GROW BIOINTENSIVE® Sustainable
+      Mini-Farming.</h5><p><br></p><h5>Your donation to Ecology Action means you are
+      part of a global network of people working to replace hunger and environmental
+      challenges with sustainable health and abundance worldwide. </h5><h5><br></h5><h5>&nbsp;All
+      donations and contributions to Ecology Action are fully tax-deductible. </h5><p><br></p><h5>Yearly
+      membership begins at $40 and includes Ecology Action's triannual newsletter.</h5>\r\n\r\n<br><p></p>"
     - 0
     - 2015-05-01 21:08:24.000000000 Z
-    - 2015-08-19 17:55:33.000000000 Z
+    - 2015-09-29 02:14:49.000000000 Z
     - false
     - 0
     - 
@@ -13720,13 +14286,21 @@ topics:
     - false
     - 1
   - - 94
-    - "আমাদের যোগ দিন\r\n"
+    - "আমাদের যোগ দিন"
     - bn
-    - <iframe src="https://donatenow.networkforgood.org/ecologyaction" width="100%"
-      height="100%"></iframe>
+    - "<p>\r\n\r\n</p><h5><br></h5><h5>By becoming a member of Ecology Action, you
+      will help further our mission of <i><b></b>teaching people worldwide to better
+      feed themselves while building and preserving the soil and conserving resources.
+      &nbsp;</i>Memberships and contributions support programs in education training,
+      and outreach, as well as our continuing research in GROW BIOINTENSIVE® Sustainable
+      Mini-Farming.</h5><p><br></p><h5>Your donation to Ecology Action means you are
+      part of a global network of people working to replace hunger and environmental
+      challenges with sustainable health and abundance worldwide. </h5><h5><br></h5><h5>&nbsp;All
+      donations and contributions to Ecology Action are fully tax-deductible. </h5><p><br></p><h5>Yearly
+      membership begins at $40 and includes Ecology Action's triannual newsletter.</h5>\r\n\r\n<br><p></p>"
     - 0
     - 2015-05-01 21:08:24.000000000 Z
-    - 2015-05-21 22:40:03.000000000 Z
+    - 2015-09-29 02:14:02.000000000 Z
     - false
     - 0
     - 
@@ -13827,14 +14401,19 @@ topics:
   - - 102
     - Volunteer / Translate
     - en
-    - ''
+    - "<h2><b></b><b></b>Are you a skilled translator interested in using your skills
+      to spread truly life-changing knowledge?</h2><h3>Ecology Action is currently
+      looking for committed volunteer translators in the following languages to help
+      us carry out our global mission:</h3><h3>Arabic<br>Bengali<br>Chinese (Mandarin)<br>German<br>Hindi<br>Japanese<br>Javanese
+      (Indonesian)<br>Korean<br>Portuguese (Brazilian)<br>Punjabi<br>Russian<br>Spanish
+      (Latin American) <br></h3>"
     - 0
     - 2015-05-01 22:11:20.000000000 Z
-    - 2015-05-01 22:11:20.000000000 Z
+    - 2015-10-09 02:34:20.000000000 Z
     - false
     - 0
     - 
-    - true
+    - false
     - false
     - 1
   - - 103
@@ -14100,14 +14679,17 @@ topics:
   - - 123
     - Kids Corner
     - en
-    - ''
+    - "<h1>Children are the Earth's rightful heirs and its future stewards.&nbsp;</h1><h3>We
+      plan on developing content specifically to captivate the child's interest with
+      the most fundamental workings of our unique home.</h3><p>For now, please find
+      a list of engaging children's gardening resources below.&nbsp;<br></p><p><br><br></p><p><b><br></b></p>"
     - 0
     - 2015-05-01 22:17:25.000000000 Z
-    - 2015-05-19 23:46:23.000000000 Z
+    - 2015-10-09 02:27:31.000000000 Z
     - false
     - 0
     - 
-    - true
+    - false
     - false
     - 1
   - - 124
@@ -14191,20 +14773,20 @@ topics:
   - - 137
     - 'Farmable Soil '
     - en
-    - "<p><span class=\"hot-words\">Living soil</span> is the basis of all terrestrial
-      life on Earth.</p>\r\n\r\n<p>Worldwide, conventional food-raising practices
-      are <span class=\"hot-words\">depleting</span> the soil at alarming rates<sup>1</sup>.</p>\r\n\r\n<p>The
-      GROW BIOINTENSIVE method is capable of <span class=\"hot-words\">building living
-      soil </span>while increasing crop yields<sup>2</sup>.</p>\r\n<br>\r\n<small>\r\n<p><u>Footnotes:</u></p>\r\n<p>1)
-      <a href=\"/en/topics/137?publication_id=4\"><i>Worldwide Loss of Soil and a
-      Possible Solution</i></a>, Ecology Action, 1996.\r\n<br>\r\n2) Using GROW BIOINTENSIVE
+    - "<h1><span class=\"wysiwyg-color-blue\">Living soil</span> is the basis of all
+      terrestrial life on Earth.</h1>\r\n\r\n<h2>Worldwide, conventional food-raising
+      practices are <span class=\"wysiwyg-color-blue\">depleting</span> the soil at
+      alarming rates<u>1</u>.</h2>\r\n\r\n<p>The GROW BIOINTENSIVE method is capable
+      of <span class=\"wysiwyg-color-blue\">building living soil </span>while increasing
+      crop yields<u>2</u>.</p>\r\n<br>\r\n<small>\r\n<p><u>Footnotes:</u></p>\r\n<p>1)
+      <a target=\"_blank\" rel=\"nofollow\"><i>Worldwide Loss of Soil and a Possible
+      Solution</i></a>, Ecology Action, 1996.\r\n<br>\r\n2) Using GROW BIOINTENSIVE
       techniques it is possible to build up to 20 units of healthy, living topsoil
-      for every unit of food produced<sup>1</sup> up to 60 times faster than happens
-      in nature<sup>3</sup>.\r\n<br>\r\n3)<a href=\"/en/topics/137?publication_id=13\"><i>
-      Journal of Sustainable Agriculture.<I></a>\r\n</p>\r\n</small>\r\n"
+      for every unit of food produced1 up to 60 times faster than happens in nature3.\r\n<br>\r\n3)<a
+      target=\"_blank\" rel=\"nofollow\"><i> Journal of Sustainable Agriculture.<i></i></i></a><i><i>\r\n</i></i></p><i><i>\r\n</i></i></small><i><i>\r\n</i></i>"
     - 0
     - 2015-05-01 22:46:06.000000000 Z
-    - 2015-05-21 17:59:13.000000000 Z
+    - 2015-09-27 09:45:30.000000000 Z
     - false
     - 0
     - 
@@ -14212,16 +14794,16 @@ topics:
     - false
     - 1
   - - 138
-    - "可种植的土壤\r\n"
+    - "可种植的土壤"
     - zh
-    - "<p><span class=\"hot-words\">有生命的土壤</span>是地球上所有地面生命的根本所在。</p>\r\n\r\n<p>在全球范围内，传统的生产食物的方法正以令人警惕的速度消耗土地<sup>1</sup>。</p>\r\n\r\n<p>GROW
-      BIOINTENSIVE所采用的方法能够在<span class=\"hot-words\">构建有生命的土壤</span>的同时提升作物的收成。<sup>2</sup></p>\r\n<br>\r\n<small>\r\n<p><u>脚注：</u></p>\r\n<p>1)
-      <a href=\"/en/topics/138?publication_id=21\"><i>世界范围内的土壤流失和可能的解决办法</i></a>，Ecology
-      Action, 1996.\r\n<br>\r\n2）使用GROW BIOINTENSIVE的技术有可能以快于自然界60倍的速度在每个单位生产的食物1的基础上构建多达20个单位的健康的、有生命的耕层土壤。<sup>3</sup>\r\n<br>\r\n3）<a
-      href=\"/en/topics/138?publication_id=13\"><i>Journal of Sustainable Agriculture</i></a>.</p>\r\n</small>"
+    - "<p><span class=\"wysiwyg-color-blue\">有生命的土壤</span>是地球上所有地面生命的根本所在。</p>\r\n\r\n<p>在全球范围内，传统的生产食物的方法正以令人警惕的速度消耗土地1。</p>\r\n\r\n<p>GROW
+      BIOINTENSIVE所采用的方法能够在<span class=\"wysiwyg-color-blue\">构建有生命的土壤</span>的同时提升作物的收成。2</p>\r\n<br>\r\n<small>\r\n<p><u>脚注：</u></p>\r\n<p>1)
+      <a target=\"_blank\" rel=\"nofollow\"><i>世界范围内的土壤流失和可能的解决办法</i></a>，Ecology
+      Action, 1996.\r\n<br>\r\n2）使用GROW BIOINTENSIVE的技术有可能以快于自然界60倍的速度在每个单位生产的食物1的基础上构建多达20个单位的健康的、有生命的耕层土壤。3\r\n<br>\r\n3）<a
+      target=\"_blank\" rel=\"nofollow\"><i>Journal of Sustainable Agriculture</i></a>.</p>\r\n</small>"
     - 0
     - 2015-05-01 22:46:06.000000000 Z
-    - 2015-05-21 22:26:13.000000000 Z
+    - 2015-09-27 09:51:42.000000000 Z
     - false
     - 0
     - 
@@ -14229,21 +14811,22 @@ topics:
     - false
     - 1
   - - 139
-    - "कृषि योग्य मिट्टी\r\n"
+    - "कृषि योग्य मिट्टी"
     - hi
-    - "<p><span class=\"hot-words\">उर्वर मिट्टी </span>पृथ्वी पर जीवन का आधार है</p>\r\n\r\n</p>विश्व
-      भर में, पारंपरिक रूप से अन्न उत्पादन के तरीके मिट्टी का खतरनाक दर<sup>1</sup>
-      पर <span class=\"hot-words\">दोहन </span>कर रहे हैं।</p>\r\n\r\n<p>GROW BIOINTENSIVE
-      प्रणाली फसल उत्पादन<sup>2</sup> को बढ़ाने के साथ ही<span class=\"hot-words\">
-      उर्वर मिट्टी निर्माण </span>में समर्थ है।</p>\r\n<br>\r\n<small>                             \r\n<p><u>तथ्य:</u></p>\r\n<p>1)
-      <a href=\"/en/topics/139?publication_id=20\"><i>वैश्विक रूप से मिट्टी का क्षरण
-      और एक सकारात्मक उपाय</i></a>, Ecology Action, 1996.\r\n<br>\r\n2) GROW BIOINTENSIVE
+    - "<p><span class=\"wysiwyg-color-blue\">उर्वर मिट्टी</span> पृथ्वी पर जीवन का
+      आधार है</p>\r\n\r\n<p></p>विश्व भर में, पारंपरिक रूप से अन्न उत्पादन के तरीके
+      मिट्टी का खतरनाक दर1 पर <span class=\"wysiwyg-color-blue\">दोहन</span> कर रहे
+      हैं।<p></p>\r\n\r\n<p>GROW BIOINTENSIVE प्रणाली फसल उत्पादन2 को बढ़ाने के साथ
+      ही <span class=\"wysiwyg-color-blue\">उर्वर मिट्टी निर्माण</span> में समर्थ
+      है।</p>\r\n<br>\r\n<small>                             \r\n<p><u>तथ्य:</u></p>\r\n<p>1)
+      <a target=\"_blank\" rel=\"nofollow\"><i>वैश्विक रूप से मिट्टी का क्षरण और एक
+      सकारात्मक उपाय</i></a>, Ecology Action, 1996.\r\n<br>\r\n2) GROW BIOINTENSIVE
       तकनीकों का प्रयोग से प्रति ईकाई अन्न उत्पादन के लिए 20 ईकाई स्वस्थ, उर्वर मिट्टी
-      का निर्माण प्रकृति<sup>3</sup> की तुलना में 60 गुना तेजी से होता है।\r\n<br>\r\n3)
-      <i><a href=\"/en/topics/139?publication_id=13\">Journal of Sustainable Agriculture</a>.</i>\r\n</p>\r\n</small>"
+      का निर्माण प्रकृति3 की तुलना में 60 गुना तेजी से होता है।\r\n<br>\r\n3) <i><a
+      target=\"_blank\" rel=\"nofollow\">Journal of Sustainable Agriculture</a>.</i>\r\n</p>\r\n</small>"
     - 0
     - 2015-05-01 22:46:06.000000000 Z
-    - 2015-05-21 22:27:08.000000000 Z
+    - 2015-09-27 09:54:16.000000000 Z
     - false
     - 0
     - 
@@ -14251,22 +14834,21 @@ topics:
     - false
     - 1
   - - 140
-    - "التربة القابلة للزراعة\r\n"
+    - "التربة القابلة للزراعة"
     - ar
-    - "<p>\r\n<span class=\"hot-words\">\r\nالتربة الحية\r\n</span>\r\nهي أساس جميع
-      الحياة الأرضية على الأرض.\r\nفحول العالم،\r\n<span class=\"hot-words\">\r\n
-      تستنفذ\r\n</span>\r\n ممارسات زراعة الأغذية التقليدية التربة بمُعدلات تُنذر
-      بالخطر.\r\n<sup>1</sup></p>\r\n<p>\r\nطريقة GROW BIOINTENSIVE قادرة على بناء
-      التربة الحية مع زيادة \r\n<span class=\"hot-words\">\r\nغلة المحصول\r\n</span>\r\n<sup>2</sup>.\r\n</p>\r\n<br>\r\n<small>\r\n<u><p>\r\nالحواشي
-      السفلية:\r\n</p></u>\r\n<p>\r\n1)\r\n<a href=\"/en/topics/140?publication_id=15\">\r\n
-      خسارة التربة في جميع أنحاء العالم، والحل المحتمل\r\n</a>\r\n، Ecology Action،
-      1996\r\n.\r\n\r\n<br>\r\n2) باستخدام تقنيات GROW BIOINTENSIVE، من الممكن بناء
-      حتى 20 وحدة من التربة الفوقية الصحية والحية لكل وحدة من الغذاء الذي يتم إنتاجه1
-      حتى 60 مرة أسرع مما يحدث في الطبيعة\r\n<sup>3</sup>.\r\n<br>\r\n3)\r\n<a href=\"/en/topics/140?publication_id=13\">\r\n<i>\r\n
-      Journal of Sustainable Agriculture\r\n</i>\r\n</a>\r\n<p></small/>"
+    - "<p>\r\n\r\n<span class=\"wysiwyg-color-blue\">التربة الحية</span>\r\n\r\nهي
+      أساس جميع الحياة الأرضية على الأرض.\r\nفحول العالم،\r\n\r\n <span class=\"wysiwyg-color-blue\">تستنفذ</span>\r\n\r\n
+      ممارسات زراعة الأغذية التقليدية التربة بمُعدلات تُنذر بالخطر.\r\n1</p>\r\n<p>\r\nطريقة
+      GROW BIOINTENSIVE قادرة على بناء التربة الحية مع زيادة \r\n\r\n<span class=\"wysiwyg-color-blue\">غلة
+      المحصول\r\n</span>\r\n2.\r\n</p>\r\n<br>\r\n<small>\r\n<u><p>\r\nالحواشي السفلية:\r\n</p></u>\r\n<p>\r\n1)\r\n<a
+      target=\"_blank\" rel=\"nofollow\">\r\n خسارة التربة في جميع أنحاء العالم، والحل
+      المحتمل\r\n</a>\r\n، Ecology Action، 1996\r\n.\r\n\r\n<br>\r\n2) باستخدام تقنيات
+      GROW BIOINTENSIVE، من الممكن بناء حتى 20 وحدة من التربة الفوقية الصحية والحية
+      لكل وحدة من الغذاء الذي يتم إنتاجه1 حتى 60 مرة أسرع مما يحدث في الطبيعة\r\n3.\r\n<br>\r\n3)\r\n<a
+      target=\"_blank\" rel=\"nofollow\">\r\n<i>\r\n Journal of Sustainable Agriculture\r\n</i>\r\n</a>\r\n</p></small><p><small></small></p>"
     - 0
     - 2015-05-01 22:46:06.000000000 Z
-    - 2015-05-21 22:34:59.000000000 Z
+    - 2015-09-27 09:55:31.000000000 Z
     - false
     - 0
     - 
@@ -14276,22 +14858,22 @@ topics:
   - - 141
     - Suelo Cultivable
     - es
-    - "<p>El <span class=\"hot-words\">suelo viviente</span> es la base de  la vida
-      terreste en el Planeta.</p> \r\n\r\n<p>A nivel mundial las prácticas convencionales
-      de producción de alimentos están <span class=\"hot-words\">agotando</span> los
-      suelos a un ritmo alarmante<sup>1</sup>.</p>\r\n\r\n<p>El método CULTIVE BIOINTENSIVAMENTE
-      puede <span class=\"hot-words\">fomentar un suelo vivo</span> e incrementar
-      el rendimiento de los cultivos<sup>2</sup>.</p>\r\n<br>\r\n<small>\r\n<p><u>Notas
-      al pie:</u></p>\r\n1) <a href=\"/en/topics/141?publication_id=24\"><I>PÉRDIDA
-      MUNDIAL DEL SUELO Y UNA SOLUCIÓN POSIBLE</i></a>, Ecology Action, 1996.\r\n<br>\r\n2)
-      Con el uso de las técnicas de CULTIVE BIOINTENSIVAMENTE es posible desarrollar
-      hasta 20 unidades de capa fértil de suelo saludable por cada unidad de alimentos
-      producida1 hasta 60 veces más rápido de lo que ocurre en la naturaleza<sup>3</sup>.\r\n<br>\r\n3)
-      <a href=\"/en/topics/141?publication_id=13\"><I>Journal of Sustainable Agriculture</a>.</i>\r\n</p>
+    - "<p>El <span class=\"wysiwyg-color-blue\">suelo viviente</span> es la base de
+      \ la vida terreste en el Planeta.</p> \r\n\r\n<p>A nivel mundial las prácticas
+      convencionales de producción de alimentos están <span class=\"wysiwyg-color-blue\">agotando</span>
+      los suelos a un ritmo alarmante1.</p>\r\n\r\n<p>El método CULTIVE BIOINTENSIVAMENTE
+      puede <span class=\"wysiwyg-color-blue\">fomentar un suelo vivo</span> e incrementar
+      el rendimiento de los cultivos2.</p>\r\n<br>\r\n<small>\r\n<p><u>Notas al pie:</u></p>\r\n1)
+      <a target=\"_blank\" rel=\"nofollow\"><i>PÉRDIDA MUNDIAL DEL SUELO Y UNA SOLUCIÓN
+      POSIBLE</i></a>, Ecology Action, 1996.\r\n<br>\r\n2) Con el uso de las técnicas
+      de CULTIVE BIOINTENSIVAMENTE es posible desarrollar hasta 20 unidades de capa
+      fértil de suelo saludable por cada unidad de alimentos producida1 hasta 60 veces
+      más rápido de lo que ocurre en la naturaleza3.\r\n<br>\r\n3) <a target=\"_blank\"
+      rel=\"nofollow\"><i>Journal of Sustainable Agriculture</i></a><i>.</i>\r\n<p></p>
       \r\n</small>"
     - 0
     - 2015-05-01 22:46:06.000000000 Z
-    - 2015-05-21 22:34:38.000000000 Z
+    - 2015-09-27 09:50:43.000000000 Z
     - false
     - 0
     - 
@@ -14299,22 +14881,22 @@ topics:
     - false
     - 1
   - - 142
-    - "Solo cultivável\r\n"
+    - Solo cultivável
     - pt
-    - "<p><span class=\"hot-words\">Um solo vivo</span> é a base de toda a vida na
-      Terra.</p>\r\n\r\n<p>No mundo todo, práticas de agricultura convencionais estão
-      <span class=\"hot-words\">esgotando</span> o solo a números alarmantes<sup>1</sup>.</p>\r\n\r\n<p>O
-      método GROW BIOINTENSIVE é capaz de <span class=\"hot-words\">produzir um solo
-      vivo</span> enquanto aumenta o rendimento da colheita<sup>2</sup>.</p>\r\n<br>\r\n<small>\r\n<p><u>Notas
-      de rodapé:</u></p>\r\n1) <a href=\"/en/topics/142?publication_id=23\"><i>A perda
-      mundial de solo e uma possível solução</i></a>, Ecology Action, 1996.\r\n<br>\r\n2)
+    - "<p><span class=\"wysiwyg-color-blue\">Um solo vivo</span> é a base de toda
+      a vida na Terra.</p>\r\n\r\n<p>No mundo todo, práticas de agricultura convencionais
+      estão <span class=\"wysiwyg-color-blue\">esgotando </span>o solo a números alarmantes1.</p>\r\n\r\n<p>O
+      método GROW BIOINTENSIVE é capaz de <span class=\"wysiwyg-color-blue\">produzir
+      um solo vivo</span> enquanto aumenta o rendimento da colheita2.</p>\r\n<br>\r\n<small>\r\n<p><u>Notas
+      de rodapé:</u></p>\r\n1) <a target=\"_blank\" rel=\"nofollow\"><i>A perda mundial
+      de solo e uma possível solução</i></a>, Ecology Action, 1996.\r\n<br>\r\n2)
       Com o uso da técnica GROW BIOINTENSIVE é possível construir até 20 unidades
-      de solo de camada superficial saudável para cada unidade de alimento produzida<sup>1</sup>
-      até 60 vezes mais rápido do que acontece na natureza<sup>3</sup>.\r\n<br>\r\n3)
-      <a href=\"/en/topics/142?publication_id=13\"><i>Journal of Sustainable Agriculture</a>.</i>\r\n</p>\r\n</small>"
+      de solo de camada superficial saudável para cada unidade de alimento produzida1
+      até 60 vezes mais rápido do que acontece na natureza3.\r\n<br>\r\n3) <a target=\"_blank\"
+      rel=\"nofollow\"><i>Journal of Sustainable Agriculture</i></a><i>.</i>\r\n<p></p>\r\n</small>"
     - 0
     - 2015-05-01 22:46:06.000000000 Z
-    - 2015-05-21 22:35:58.000000000 Z
+    - 2015-09-27 10:00:10.000000000 Z
     - false
     - 0
     - 
@@ -14322,22 +14904,22 @@ topics:
     - false
     - 1
   - - 143
-    - "চাষযোগ্য ভূমি\r\n"
+    - "চাষযোগ্য ভূমি"
     - bn
-    - "<p><span class=\"hot-words\">জীবন্ত মৃত্তিকা </span>পৃথিবীর সকল পার্থিব জীবনের
-      ভিত্তি।</p>\r\n<p>বিশ্বব্যাপী প্রচলিত খাদ্য বৃদ্ধিকারী চর্চা আশঙ্কাজনক হারে
-      মাটি <span class=\"hot-words\">ক্ষয় করছে</span>।<sup>1</sup></p>\r\n<p>দি GROW
-      BIOINTENSIVE পদ্ধতি <span class=\"hot-words\">জীবন্ত মাটি তৈরীর </span>সাথে
-      সাথে শষ্য ফলনের বৃদ্ধিতেও সমর্থ।<sup>2</sup></p>\r\n<br>\r\n<small>\r\n<p><u>পাদ
-      টিকাঃ</u></p>\r\n1) <a href=\"/en/topics/143?publication_id=25\"><i>বিশ্বব্যাপী
-      মৃত্তিকার ক্ষয় এবং একটি সম্ভাব্য সমাধান</i></a>, Ecology Action, 1996.\r\n<br>\r\n2)
-      GROW BIOINTENSIVE পদ্ধতি ব্যবহার করে প্রত্যেক ইউনিট খাদ্য উৎপাদনের জন্য 20 ইউনিট
-      পর্যন্ত স্বাস্থ্যকর, জীবন্ত উচ্চ মৃত্তিকা, প্রাকৃতিক ভাবে উৎপাদনের থেকে 60 গুণ
-      দ্রুত উৎপাদন সম্ভব হয়।<sup>3</sup>\r\n<br>\r\n3) <a href=\"/en/topics/143?publication_id=13\"><i>Journal
-      of Sustainable Agriculture</i></a>.</p>\r\n</small>"
+    - "<p><span class=\"wysiwyg-color-blue\">জীবন্ত মৃত্তিকা </span>পৃথিবীর সকল পার্থিব
+      জীবনের ভিত্তি।</p>\r\n<p>বিশ্বব্যাপী প্রচলিত খাদ্য বৃদ্ধিকারী চর্চা আশঙ্কাজনক
+      হারে মাটি <span class=\"wysiwyg-color-blue\">ক্ষয় করছে</span>।1</p>\r\n<p>দি
+      GROW BIOINTENSIVE পদ্ধতি <span class=\"wysiwyg-color-blue\">জীবন্ত মাটি তৈরীর</span>
+      সাথে সাথে শষ্য ফলনের বৃদ্ধিতেও সমর্থ।2</p>\r\n<br>\r\n<small>\r\n<p><u>পাদ টিকাঃ</u></p>\r\n1)
+      <a target=\"_blank\" rel=\"nofollow\"><i>বিশ্বব্যাপী মৃত্তিকার ক্ষয় এবং একটি
+      সম্ভাব্য সমাধান</i></a>, Ecology Action, 1996.\r\n<br>\r\n2) GROW BIOINTENSIVE
+      পদ্ধতি ব্যবহার করে প্রত্যেক ইউনিট খাদ্য উৎপাদনের জন্য 20 ইউনিট পর্যন্ত স্বাস্থ্যকর,
+      জীবন্ত উচ্চ মৃত্তিকা, প্রাকৃতিক ভাবে উৎপাদনের থেকে 60 গুণ দ্রুত উৎপাদন সম্ভব
+      হয়।3\r\n<br>\r\n3) <a target=\"_blank\" rel=\"nofollow\"><i>Journal of Sustainable
+      Agriculture</i></a>.<p></p>\r\n</small>"
     - 0
     - 2015-05-01 22:46:06.000000000 Z
-    - 2015-05-21 22:36:40.000000000 Z
+    - 2015-09-27 10:01:01.000000000 Z
     - false
     - 0
     - 
@@ -14347,16 +14929,17 @@ topics:
   - - 144
     - Water
     - en
-    - "<p>Water is the lifeblood of the planet. </p> \r\n\r\n<p>70% of the world's
-      <span class=\"hot-words\">fresh water</span> is used to grow food crops<sup>1</sup>.</p>\r\n\r\n<p>The
-      GROW BIOINTENSIVE method reduces water used to grow food crops by up to 75%
-      <sup>2</sup>.</p> \r\n<br>\r\n<small>\r\n<p><u>Footnotes:</u></p>\r\n<p>1) www.fao.org\r\n<br>\r\n2)
-      Water reductions under GROW BIOINTENSIVE techniques may be as much as 88% for
-      vegetables and as much as 67% for grains<sup>3</sup>.\r\n<br>\r\n3) <a href=\"/en/topics/144?publication_id=13\"><i>Journal
-      of Sustainable Agriculture</a></I>.</p>\r\n</small>\r\n"
+    - "<h1>Water is the lifeblood of the planet. </h1> \r\n\r\n<h2>70% of the world's
+      <span class=\"wysiwyg-color-blue\">fresh water</span> is used to grow food crops<u>1</u>.</h2>\r\n\r\n<p>The
+      GROW BIOINTENSIVE method reduces water used to grow food crops by up to 75%<u>2</u>.</p>
+      \r\n<br>\r\n<small>\r\n<p><u>Footnotes:</u></p>\r\n<p>1) <a target=\"_blank\"
+      rel=\"nofollow\" href=\"http://www.fao.org\">www.fao.org</a>\r\n<br>\r\n2) Water
+      reductions under GROW BIOINTENSIVE techniques may be as much as 88% for vegetables
+      and as much as 67% for grains3.\r\n<br>\r\n3) <a target=\"_blank\" rel=\"nofollow\"><i>Journal
+      of Sustainable Agriculture</i></a>.</p>\r\n</small>"
     - 0
     - 2015-05-01 23:19:30.000000000 Z
-    - 2015-05-21 18:10:06.000000000 Z
+    - 2015-09-27 09:46:46.000000000 Z
     - false
     - 0
     - 
@@ -14364,15 +14947,16 @@ topics:
     - false
     - 1
   - - 145
-    - "水\r\n"
+    - "水"
     - zh
-    - "<p>水是这个星球的命脉。</p>\r\n\r\n<p>全世界70%的<span class=\"hot-words\">淡水</span>被用来种植粮食作物<sup>1</sup>。</p>\r\n\r\n<p>GROW
-      BIOINTENSIVE所采用的方法能将用于种植粮食作物的淡水用水量减少75%<sup>2</sup>。</p>\r\n<br>\r\n<small>\r\n<p><u>脚注：</u></p>\r\n<p>1）www.fao.org\r\n<br>\r\n2)
-      GROW BIOINTENSIVE技术的节水效果，在种植蔬菜方面，可能节约88%的用水；在种植谷物方面，可能节约67%的用水<sup>3</sup>。\r\n<br>\r\n3）<a
-      href=\"/en/topics/145?publication_id=13\"><i>Journal of Sustainable Agriculture</i></a>.</p>\r\n</small>"
+    - "<p>水是这个星球的命脉。</p>\r\n\r\n<p>全世界70%的<span class=\"wysiwyg-color-blue\">淡水</span>被用来种植粮食作物1。</p>\r\n\r\n<p>GROW
+      BIOINTENSIVE所采用的方法能将用于种植粮食作物的淡水用水量减少75%2。</p>\r\n<br>\r\n<small>\r\n<p><u>脚注：</u></p>\r\n<p>1）<a
+      target=\"_blank\" rel=\"nofollow\" href=\"http://www.fao.org\">www.fao.org</a>\r\n<br>\r\n2)
+      GROW BIOINTENSIVE技术的节水效果，在种植蔬菜方面，可能节约88%的用水；在种植谷物方面，可能节约67%的用水3。\r\n<br>\r\n3）<a
+      target=\"_blank\" rel=\"nofollow\"><i>Journal of Sustainable Agriculture</i></a>.</p>\r\n</small>"
     - 0
     - 2015-05-01 23:19:30.000000000 Z
-    - 2015-05-21 18:10:27.000000000 Z
+    - 2015-09-27 10:04:52.000000000 Z
     - false
     - 0
     - 
@@ -14380,18 +14964,19 @@ topics:
     - false
     - 1
   - - 146
-    - "पानी\r\n"
+    - "पानी"
     - hi
-    - "<p>पानी धरती पर जीवन का आधार है। </p> \r\n<p>विश्व का 70% <span class=\"hot-words\">साफ
-      पानी </span>का प्रयोग खाद्य फसलों<sup>1</sup> के उत्पादन में होता है।</p>\r\n<p>GROW
-      BIOINTENSIVE प्रणाली खाद्य फ़सलों के उत्पादन में प्रयुक्त पानी की मात्रा को
-      75% तक कम करता है <sup>2</sup>। </p>\r\n<br>\r\n<small>\r\n<p><u>तथ्य:</p></u>\r\n<p>1)
-      www.fao.org\r\n<br>\r\n2) GROW BIOINTENSIVE तकनीकों के अंर्तगत होने वाली पानी
-      बचत सब्जियों के लिए अधिकतम 88% और खाद्य फसलों<sup>3</sup> के लिए 67% है।\r\n<br>\r\n3)
-      <a href=\"/en/topics/146?publication_id=13\"><i>Journal of Sustainable Agriculture</i></a>.</p>\r\n</small>"
+    - "<p>पानी धरती पर जीवन का आधार है। </p> \r\n<p>विश्व का 70% <span class=\"wysiwyg-color-blue\">साफ
+      पानी </span>का प्रयोग खाद्य फसलों1 के उत्पादन में होता है।</p>\r\n<p>GROW BIOINTENSIVE
+      प्रणाली खाद्य फ़सलों के उत्पादन में प्रयुक्त पानी की मात्रा को 75% तक कम करता
+      है 2। </p>\r\n<br>\r\n<small>\r\n<p><u>तथ्य:</u></p>\r\n<p>1) <a target=\"_blank\"
+      rel=\"nofollow\" href=\"http://www.fao.org\">www.fao.org</a>\r\n<br>\r\n2) GROW
+      BIOINTENSIVE तकनीकों के अंर्तगत होने वाली पानी बचत सब्जियों के लिए अधिकतम 88%
+      और खाद्य फसलों3 के लिए 67% है।\r\n<br>\r\n3) <a target=\"_blank\" rel=\"nofollow\"><i>Journal
+      of Sustainable Agriculture</i></a>.</p>\r\n</small>"
     - 0
     - 2015-05-01 23:19:30.000000000 Z
-    - 2015-05-21 18:10:49.000000000 Z
+    - 2015-09-27 10:05:13.000000000 Z
     - false
     - 0
     - 
@@ -14399,18 +14984,19 @@ topics:
     - false
     - 1
   - - 147
-    - "الماء\r\n"
+    - "الماء"
     - ar
-    - "<p>\r\nالماء هو شريان الحياة للنبات.\r\n</p>\r\n<p>\r\n70% من\r\n<span class=\"hot-words\">\r\n
-      الماء العذب \r\n</span>\r\nيستخدم لزراعة محاصيل الأغذية.\r\n<sup>1</sup>\r\n\r\n</p>\r\n<p>\r\nتُخفض
-      طريقة GROW BIOINTENSIVE من الماء المستخدم لتنمية محاصيل الأغذية حتى 75%.\r\n<sup>2</sup>\r\n<p/>\r\n<br>\r\n<small>\r\n<p><u>\r\nالحواشي
-      السفلية:\r\n<p></u/>\r\n1) www.fao.org\r\n<br>\r\n2) قد يصل تخفيض المياه بتقنيات
-      GROW BIOINTENSIVE إلى 88% للخضراوات وحتى 67% للحبوب.\r\n<sup>3</sup>\r\n<br>\r\n3)\r\n<a
-      href=\"/en/topics/147?publication_id=13\">\r\n<i>\r\n.Journal of Sustainable
-      Agriculture\r\n</i>\r\n</a>\r\n</p>\r\n</small>"
+    - "<p>\r\nالماء هو شريان الحياة للنبات.\r\n</p>\r\n<p>\r\n70% من\r\n\r\n <span
+      class=\"wysiwyg-color-blue\">الماء العذب</span> \r\n\r\nيستخدم لزراعة محاصيل
+      الأغذية.\r\n1\r\n\r\n</p>\r\n<p>\r\nتُخفض طريقة GROW BIOINTENSIVE من الماء المستخدم
+      لتنمية محاصيل الأغذية حتى 75%.\r\n2\r\n</p><p>\r\n<br>\r\n<small>\r\n</small></p><p><small><u>\r\nالحواشي
+      السفلية:\r\n</u></small></p><p><small>\r\n1) <a target=\"_blank\" rel=\"nofollow\"
+      href=\"http://www.fao.org\">www.fao.org</a>\r\n<br>\r\n2) قد يصل تخفيض المياه
+      بتقنيات GROW BIOINTENSIVE إلى 88% للخضراوات وحتى 67% للحبوب.\r\n3\r\n<br>\r\n3)\r\n<a
+      target=\"_blank\" rel=\"nofollow\">\r\n<i>\r\n.Journal of Sustainable Agriculture\r\n</i>\r\n</a>\r\n</small></p><small>\r\n</small>"
     - 0
     - 2015-05-01 23:19:30.000000000 Z
-    - 2015-05-21 18:11:22.000000000 Z
+    - 2015-09-27 10:05:41.000000000 Z
     - false
     - 0
     - 
@@ -14418,19 +15004,20 @@ topics:
     - false
     - 1
   - - 148
-    - "Agua\r\n"
+    - Agua
     - es
     - "<p>El Agua es la sangre de vida del planeta.</p>\r\n\r\n<p>El 70% del <span
-      class=\"hot-words\">agua dulce</span> del mundo se usa para cultivos alimenticios<sup>1<sup>.
-      </p>\r\n\r\n<p>El método CULTIVE BIOINTENSIVAMENTE reduce el consumo de agua
-      hasta en un 75% <sup>2</sup>. </p>\r\n<br>\r\n<small>\r\n<p><u>Notas al pie:</u></p>\r\n<p>1)
-      www.fao.org\r\n<br>\r\n2) Cuando se usan las técnicas del método CULTIVE BIOINTENSIVAMENTE
-      se puede reducir el consumo de agua hasta en un 88% en la producción de hortalizas
-      y hasta un 67% en la producción de granos<sup>3</sup>.\r\n<br>\r\n3) <a href=\"/en/topics/148?publication_id=13\"><i>Journal
-      of Sustainable Agriculture</i></a>.</p>\r\n</small>\r\n"
+      class=\"wysiwyg-color-blue\">agua dulce</span> del mundo se usa para cultivos
+      alimenticios1. </p>\r\n\r\n<p>El método CULTIVE BIOINTENSIVAMENTE reduce el
+      consumo de agua hasta en un 75% 2. </p>\r\n<br>\r\n<small>\r\n<p><u>Notas al
+      pie:</u></p>\r\n<p>1) <a target=\"_blank\" rel=\"nofollow\" href=\"http://www.fao.org\">www.fao.org</a>\r\n<br>\r\n2)
+      Cuando se usan las técnicas del método CULTIVE BIOINTENSIVAMENTE se puede reducir
+      el consumo de agua hasta en un 88% en la producción de hortalizas y hasta un
+      67% en la producción de granos3.\r\n<br>\r\n3) <a target=\"_blank\" rel=\"nofollow\"><i>Journal
+      of Sustainable Agriculture</i></a>.</p>\r\n</small>"
     - 0
     - 2015-05-01 23:19:30.000000000 Z
-    - 2015-05-21 18:11:53.000000000 Z
+    - 2015-09-27 10:05:57.000000000 Z
     - false
     - 0
     - 
@@ -14438,18 +15025,19 @@ topics:
     - false
     - 1
   - - 149
-    - "Água\r\n"
+    - "Água"
     - pt
-    - "<p>A água é a fonte de vida do planeta.  \r\n70% da <span class=\"hot-words\">água
-      potável</span> do mundo é usada para cultivo de alimentos<sup>1</sup>.</p>\r\n<p>O
-      método GROW BIOINTENSIVE reduz a água utilizada para o cultivo de alimentos
-      em até 75% <sup>2</sup>.</p>\r\n<br>\r\n<small>\r\n<p><u>Notas de rodapé:</u></p>\r\n<p>1)
-      www.fao.org\r\n<br>\r\n2) A redução de água sob a técnica GROW BIOINTENSIVE
-      pode ser de até 88% para vegetais e de até 67% para grãos<sup>3</sup>.\r\n<br>\r\n3)
-      <a href=\"/en/topics/149?publication_id=13\"><i>Journal of Sustainable Agriculture</i></a>.</p>\r\n</small>"
+    - "<p>A água é a fonte de vida do planeta.  \r\n70% da <span class=\"wysiwyg-color-blue\">água
+      potável </span>do mundo é usada para cultivo de alimentos1.</p>\r\n<p>O método
+      GROW BIOINTENSIVE reduz a água utilizada para o cultivo de alimentos em até
+      75% 2.</p>\r\n<br>\r\n<small>\r\n<p><u>Notas de rodapé:</u></p>\r\n<p>1) <a
+      target=\"_blank\" rel=\"nofollow\" href=\"http://www.fao.org\">www.fao.org</a>\r\n<br>\r\n2)
+      A redução de água sob a técnica GROW BIOINTENSIVE pode ser de até 88% para vegetais
+      e de até 67% para grãos3.\r\n<br>\r\n3) <a target=\"_blank\" rel=\"nofollow\"><i>Journal
+      of Sustainable Agriculture</i></a>.</p>\r\n</small>"
     - 0
     - 2015-05-01 23:19:30.000000000 Z
-    - 2015-05-21 18:12:44.000000000 Z
+    - 2015-09-27 10:06:14.000000000 Z
     - false
     - 0
     - 
@@ -14457,18 +15045,19 @@ topics:
     - false
     - 1
   - - 150
-    - "জল\r\n"
+    - "জল"
     - bn
     - "<p>জল হল গ্রহের প্রাণ।  </p>\r\n                    \r\n<p>পৃথিবীর 70% <span
-      class=\"hot-words\">বিশুদ্ধ জল </span>তাজা শষ্যের উৎপাদনে ব্যবহৃত হয়।<sup>1</sup></p>\r\n\r\n<p>দি
+      class=\"wysiwyg-color-blue\">বিশুদ্ধ জল</span> তাজা শষ্যের উৎপাদনে ব্যবহৃত হয়।1</p>\r\n\r\n<p>দি
       GROW BIOINTENSIVE পদ্ধতি শষ্যের উৎপাদনে জলের ব্যবহার 75% পর্যন্ত হ্রাস করে।
-      <sup>2</sup></p>\r\n<br>\r\n<small>\r\n<p><u>পাদ টিকাঃ</u></p>   \r\n<p>1)  www.fao.org\r\n<br>
-      \                 \r\n2)  GROW BIOINTENSIVE প্রযুক্তিতে জল হ্রাস সব্জীর জন্য
-      সর্বাপেক্ষা 88% এবং শষ্যের জন্য সর্বাপেক্ষা 67% হতে পারে।<sup>3</sup>\r\n<br>\r\n3)
-      <a href=\"/en/topics/137?publication_id=13\"><i>Journal of Sustainable Agriculture</i></a>.</p>\r\n</small>"
+      2</p>\r\n<br>\r\n<small>\r\n<p><u>পাদ টিকাঃ</u></p>   \r\n<p>1)  <a target=\"_blank\"
+      rel=\"nofollow\" href=\"http://www.fao.org\">www.fao.org</a>\r\n<br>                  \r\n2)
+      \ GROW BIOINTENSIVE প্রযুক্তিতে জল হ্রাস সব্জীর জন্য সর্বাপেক্ষা 88% এবং শষ্যের
+      জন্য সর্বাপেক্ষা 67% হতে পারে।3\r\n<br>\r\n3) <a target=\"_blank\" rel=\"nofollow\"><i>Journal
+      of Sustainable Agriculture</i></a>.</p>\r\n</small>"
     - 0
     - 2015-05-01 23:19:30.000000000 Z
-    - 2015-05-21 18:13:10.000000000 Z
+    - 2015-09-27 10:06:39.000000000 Z
     - false
     - 0
     - 
@@ -14478,12 +15067,12 @@ topics:
   - - 155
     - Atmosphere
     - en
-    - "<p>Human life depends upon limiting atmospheric carbon dioxide.</p>\r\n\r\n<p>The
+    - "<h1>Human life depends upon limiting atmospheric carbon dioxide.</h1>\r\n\r\n<h2>The
       GROW BIOINTENSIVE method removes significant carbon from the atmosphere, turning
-      it into living soil.</p>\r\n\r\n"
+      it into living soil.</h2>"
     - 0
     - 2015-05-03 17:57:26.000000000 Z
-    - 2015-05-06 13:09:03.000000000 Z
+    - 2015-09-21 23:03:37.000000000 Z
     - false
     - 0
     - 
@@ -14581,14 +15170,14 @@ topics:
   - - 162
     - Energy
     - en
-    - "<p>Life requires energy.</p>\r\n\r\n<p>The GROW BIOINTENSIVE method reduces
-      <span class=\"hot-words\">the energy required to grow food crops</span> by as
-      much as 94% compared with conventional practices.<sup>1</sup></p>\r\n<br>\r\n<small>\r\n<p><u>Footnotes:</u></p>\r\n<p>1)
+    - "<h1>Life requires energy.</h1>\r\n\r\n<h2>The GROW BIOINTENSIVE method reduces
+      the <span class=\"wysiwyg-color-blue\">energy required to grow food</span> crops
+      by as much as 94% compared with conventional practices.<u>1</u></h2>\r\n<br>\r\n<small>\r\n<p><u>Footnotes:</u></p>\r\n<p>1)
       Steve Moore; <i>Energy Use in Biointensive Food Production</i>, 2013, Ecology
       Action.</p>\r\n</small>"
     - 0
     - 2015-05-03 18:15:37.000000000 Z
-    - 2015-05-06 13:10:02.000000000 Z
+    - 2015-09-27 09:47:43.000000000 Z
     - false
     - 0
     - 
@@ -14596,13 +15185,13 @@ topics:
     - false
     - 1
   - - 163
-    - "能量\r\n"
+    - "能量"
     - zh
-    - "<p>生命需要能量。</p>\r\n\r\n<p>同传统种植方法相比，GROW BIOINTENSIVE所采用的方法能将<span class=\"hot-words\">种植粮食作物所需的能量</span>减少94%。<sup>1</sup></p>\r\n<br>\r\n<small>\r\n<p><u>脚注：</u></p>\r\n<p>1）Steve
+    - "<p>生命需要能量。</p>\r\n\r\n<p>同传统种植方法相比，GROW BIOINTENSIVE所采用的方法能将<span class=\"wysiwyg-color-blue\">种植粮食作物所需的能量</span>减少94%。1</p>\r\n<br>\r\n<small>\r\n<p><u>脚注：</u></p>\r\n<p>1）Steve
       Moore ; <i>Energy Use in Biointensive Food Production</i>，2013，Ecology Action.</p>\r\n</small>"
     - 0
     - 2015-05-03 18:15:37.000000000 Z
-    - 2015-05-07 17:18:36.000000000 Z
+    - 2015-09-27 10:07:45.000000000 Z
     - false
     - 0
     - 
@@ -14610,16 +15199,16 @@ topics:
     - false
     - 1
   - - 164
-    - "उर्जा\r\n"
+    - "उर्जा"
     - hi
     - "<p>जीवन के लिए ऊर्जा की आवश्यकता है।</p>\r\n<p>GROW BIOINTENSIVE प्रणाली पारंपरिक
-      तरीकों की तुलना में <span class=\"hot-words\">खाद्य फसलों के उत्पादन में आवश्यक
-      ऊर्जा </span>की मात्रा में 94% तक की कटौती करती है। <sup>1</sup></p>\r\n<br>\r\n<small>\r\n<p><u>तथ्य:</u></p>\r\n<p>1)
+      तरीकों की तुलना में <span class=\"wysiwyg-color-blue\">खाद्य फसलों के उत्पादन
+      में आवश्यक ऊर्जा</span> की मात्रा में 94% तक की कटौती करती है। 1</p>\r\n<br>\r\n<small>\r\n<p><u>तथ्य:</u></p>\r\n<p>1)
       Steve Moore; <i>Energy Use in Biointensive Food Production</i>, 2013, Ecology
       Action</p>\r\n</small>"
     - 0
     - 2015-05-03 18:15:37.000000000 Z
-    - 2015-05-06 23:34:52.000000000 Z
+    - 2015-09-27 10:08:08.000000000 Z
     - false
     - 0
     - 
@@ -14627,16 +15216,16 @@ topics:
     - false
     - 1
   - - 165
-    - "الطاقة\r\n"
+    - "الطاقة"
     - ar
-    - "<p>\r\nالحياة تتطلب الطاقة.\r\n</p>\r\n<p>\r\nتخفض طريقة GROW BIOINTENSIVE
-      \r\n<span class=\"hot-words\">\r\nمن الطاقة المطلوبة لتنمية المحاصيل\r\n</span>\r\n
+    - "<p>\r\nالحياة تتطلب الطاقة.\r\n</p>\r\n<p>\r\nتخفض طريقة GROW BIOINTENSIVE<span
+      class=\"wysiwyg-color-blue\"> \r\n\r\nمن الطاقة المطلوبة لتنمية المحاصيل\r\n</span>\r\n
       الزراعية بمقدار 94% مقارنة بالممارسات التقليدية1.\r\n</p>\r\n<p><u><small>\r\nالحواشي
-      السفلية:\r\n</p><u/>\r\n1)Steve Moore; Energy Use in Biointensive Food Production,
-      2013، Ecology Action\r\n</p>\r\n</small>"
+      السفلية:\r\n</small></u></p><u><small><u>\r\n1)Steve Moore; Energy Use in Biointensive
+      Food Production, 2013، Ecology Action\r\n<p></p>\r\n</u></small></u>"
     - 0
     - 2015-05-03 18:15:37.000000000 Z
-    - 2015-05-11 06:14:56.000000000 Z
+    - 2015-09-27 10:08:45.000000000 Z
     - false
     - 0
     - 
@@ -14644,16 +15233,16 @@ topics:
     - false
     - 1
   - - 166
-    - "Energía\r\n"
+    - Energía
     - es
     - "<p>La vida requiere energía.</p>\r\n\r\n<p>El método CULTIVE BIOINTENSIVAMENTE
-      puede reducir <span class=\"hot-words\">el uso de energía  para producir alimentos</span>
-      hasta en un 94%, si se compara con las prácticas de agricultura convencional.<sup>1</sup></p>\r\n<br>\r\n<small>\r\n<p><u>Notas
-      al pie:</u></p>\r\n1) Steve Moore; <i>Energy Use in Biointensive Food Production</i>,
-      2013, Ecology Action.</p>\r\n</small>\r\n"
+      puede reducir <span class=\"wysiwyg-color-blue\">el uso de energía  para producir
+      alimentos</span> hasta en un 94%, si se compara con las prácticas de agricultura
+      convencional.1</p>\r\n<br>\r\n<small>\r\n<p><u>Notas al pie:</u></p>\r\n1) Steve
+      Moore; <i>Energy Use in Biointensive Food Production</i>, 2013, Ecology Action.<p></p>\r\n</small>"
     - 0
     - 2015-05-03 18:15:38.000000000 Z
-    - 2015-05-15 01:18:01.000000000 Z
+    - 2015-09-27 10:09:06.000000000 Z
     - false
     - 0
     - 
@@ -14661,16 +15250,16 @@ topics:
     - false
     - 1
   - - 167
-    - "Energia\r\n"
+    - Energia
     - pt
     - "<p>A vida requer energia.</p>\r\n\r\n<p>O método GROW BIOINTENSIVE reduz a
-      <span class=\"hot-words\">energia necessária para o crescimento da plantação</span>
-      em até 94% comparado com práticas convencionais.<sup>1</sup></p>\r\n<br>\r\n<small>\r\n<p><u>Notas
+      <span class=\"wysiwyg-color-blue\">energia necessária para o crescimento da
+      plantação </span>em até 94% comparado com práticas convencionais.1</p>\r\n<br>\r\n<small>\r\n<p><u>Notas
       de rodapé:</u></p>\r\n<p>1) Steve Moore; <i>Energy Use in Biointensive Food
-      Production</i>, 2013, Ecology Action.</p>\r\n</small>\r\n"
+      Production</i>, 2013, Ecology Action.</p>\r\n</small>"
     - 0
     - 2015-05-03 18:15:38.000000000 Z
-    - 2015-05-11 21:53:48.000000000 Z
+    - 2015-09-27 10:09:30.000000000 Z
     - false
     - 0
     - 
@@ -14678,16 +15267,16 @@ topics:
     - false
     - 1
   - - 168
-    - "শক্তি\r\n"
+    - "শক্তি"
     - bn
     - "<p>জীবনে শক্তির প্রয়োজন।</p>\r\n\r\n<p>দি গ্রো GROW BIOINTENSIVE পদ্ধতি গতানুগতিক
-      প্রথাগুলির তুলনায় <span class=\"hot-words\">খাদ্য শষ্য উৎপাদনে শক্তির প্রয়োজনীয়তা
-      </span>সর্বাপেক্ষা 94% পর্যন্ত হ্রাস করে।<sup>1</sup></p> \r\n<br>\r\n<small>\r\n<p><u>পাদটিকাঃ</u></p>\r\n<p>1)
+      প্রথাগুলির তুলনায় <span class=\"wysiwyg-color-blue\">খাদ্য শষ্য উৎপাদনে শক্তির
+      প্রয়োজনীয়তা </span>সর্বাপেক্ষা 94% পর্যন্ত হ্রাস করে।1</p> \r\n<br>\r\n<small>\r\n<p><u>পাদটিকাঃ</u></p>\r\n<p>1)
       Steve Moore, <i>Energy Use in Biointensive Food Production</i>, 2013, Ecology
       Action.</p>\r\n</small>"
     - 0
     - 2015-05-03 18:15:38.000000000 Z
-    - 2015-05-08 01:17:03.000000000 Z
+    - 2015-09-27 10:10:02.000000000 Z
     - false
     - 0
     - 
@@ -14697,15 +15286,15 @@ topics:
   - - 169
     - Food & Nutrient
     - en
-    - "<p>Growing food is a privilege that depends upon our care of all of the previous
-      resources.</p>\r\n\r\n<p>The GROW BIOINTENSIVE method, <span class=\"hot-words\">when
-      used as a complete system</span>, has the potential to increase yields by 200%
-      to 600% per unit of area over conventional practices while conserving the resources
-      needed to extend this most fundamental of privileges to future generations—all
-      by combining eight simple principles.</p>"
+    - "<h1>Growing food is a privilege that depends upon our care of all of the previous
+      resources.</h1>\r\n\r\n<h2>The GROW BIOINTENSIVE method, <span class=\"wysiwyg-color-blue\"><b>when
+      used as a complete system</b></span>, has the potential to increase yields by
+      200% to 600% per unit of area over conventional practices while conserving the
+      resources needed to extend this most fundamental of privileges to future generations—all
+      by combining eight simple principles.</h2>"
     - 0
     - 2015-05-03 18:22:30.000000000 Z
-    - 2015-05-06 13:14:47.000000000 Z
+    - 2015-09-29 01:16:30.000000000 Z
     - false
     - 0
     - 
@@ -14713,12 +15302,12 @@ topics:
     - false
     - 1
   - - 170
-    - "食物和营养\r\n"
+    - "食物和营养"
     - zh
-    - "<p>种植食物是在我们珍惜所有宝贵资源基础上的一项权利。</p>\r\n\r\n<p>当将GROW BIOINTENSIVE所采用的方法<span class=\"hot-words\">作为一个系统使用时</span>，相比传统方法，它有可能将每个单位的产量提升200%倒600%；同时，它还能够保护资源，使其能将这种最基本的权利传递到后代——而做到这一切只需将8项简单的原则结合起来。</p>"
+    - "<p>种植食物是在我们珍惜所有宝贵资源基础上的一项权利。</p>\r\n\r\n<p>当将GROW BIOINTENSIVE所采用的方法<span class=\"wysiwyg-color-blue\"><b>作为一个系统使用时</b></span>，相比传统方法，它有可能将每个单位的产量提升200%倒600%；同时，它还能够保护资源，使其能将这种最基本的权利传递到后代——而做到这一切只需将8项简单的原则结合起来。</p>"
     - 0
     - 2015-05-03 18:22:30.000000000 Z
-    - 2015-05-07 16:51:57.000000000 Z
+    - 2015-09-27 10:11:22.000000000 Z
     - false
     - 0
     - 
@@ -14726,18 +15315,18 @@ topics:
     - false
     - 1
   - - 171
-    - "अन्न और पोषण\r\n"
+    - "अन्न और पोषण"
     - hi
     - "<p>अन्न उत्पादन एक सौभाग्य है जो सभी पूर्ववर्ती संसाधनों की रक्षा पर निर्भर
-      करता है।</p>\r\n\r\n<p>GROW BIOINTENSIVE प्रणाली को<span class=\"hot-words\">
-      जब एक पूर्ण सिस्टम के रूप प्रयोग किया जाता है </span>तो यह पारंपरिक तरीकों की
-      तुलना में प्रति ईकाई क्षेत्र उत्पादन में 200% से 600% तक वृद्धि की क्षमता रखता
-      है उसी समय में भविष्य की पीढ़ियों के लिए इस मूलभूत आवश्यकता के सौभाग्य के लिए
-      संसाधनों का संरक्षण करते हैं--ये सब 8 सिद्धांतों के साथ प्रयोग से होता है।:
-      </p>"
+      करता है।</p>\r\n\r\n<p>GROW BIOINTENSIVE प्रणाली को <span class=\"wysiwyg-color-blue\"><b>जब
+      एक पूर्ण सिस्टम के रूप प्रयोग किया जाता है</b></span> तो यह पारंपरिक तरीकों
+      की तुलना में प्रति ईकाई क्षेत्र उत्पादन में 200% से 600% तक वृद्धि की क्षमता
+      रखता है उसी समय में भविष्य की पीढ़ियों के लिए इस मूलभूत आवश्यकता के सौभाग्य
+      के लिए संसाधनों का संरक्षण करते हैं--ये सब 8 सिद्धांतों के साथ प्रयोग से होता
+      है।: </p>"
     - 0
     - 2015-05-03 18:22:30.000000000 Z
-    - 2015-05-06 23:37:56.000000000 Z
+    - 2015-09-27 10:11:58.000000000 Z
     - false
     - 0
     - 
@@ -14745,16 +15334,16 @@ topics:
     - false
     - 1
   - - 172
-    - "الغذاء والمأكولات\r\n"
+    - "الغذاء والمأكولات"
     - ar
     - "<p>\r\nزارعة الغذاء هي امتياز يعتمد على رعايتنا لجميع الموارد السابقة.\r\n</p>\r\n<p>\r\n\r\nعند
-      استخدام طريقة GROW BIOINTENSIVE \r\n<span class=\"hot-words\">\r\nكنظام كامل\r\n</span>\r\n
-      تنطوي على إمكانية زيادة العوائد بمقدار 200%  حتى 600% لكل وحدة في المنطقة عن
-      الممارسات التقليدية مع الحفاظ على الموارد المطلوبة لتمديد هذه الامتيازات الرئيسية
-      للأجيال المستقبلية - كل ذلك بجمع ثمانية مبادئ بسيطة:\r\n</p>"
+      استخدام طريقة GROW BIOINTENSIVE \r\n\r\n<span class=\"wysiwyg-color-blue\"><b>كنظام
+      كامل\r\n</b></span>\r\n تنطوي على إمكانية زيادة العوائد بمقدار 200%  حتى 600%
+      لكل وحدة في المنطقة عن الممارسات التقليدية مع الحفاظ على الموارد المطلوبة لتمديد
+      هذه الامتيازات الرئيسية للأجيال المستقبلية - كل ذلك بجمع ثمانية مبادئ بسيطة:\r\n</p>"
     - 0
     - 2015-05-03 18:22:30.000000000 Z
-    - 2015-05-11 06:15:50.000000000 Z
+    - 2015-09-27 10:12:25.000000000 Z
     - false
     - 0
     - 
@@ -14762,19 +15351,20 @@ topics:
     - false
     - 1
   - - 173
-    - "Alimentos y nutrientes\r\n"
+    - Alimentos y nutrientes
     - es
     - "<p>La producción de alimentos es un privilegio que depende del cuidado que
       le demos a los recursos existentes.</p>\r\n\r\n<p>El método CULTIVE BIOINTENSIVAMENTE,
-      <span class=\"hot-words\">cuando se usa como un sistema integral</span>, tiene
-      el potencial de incrementar los rendimientos entre un 200% a un 600% por unidad
-      de área, si se compara con los rendimientos de las prácticas de agricultura
+      <span class=\"wysiwyg-color-blue\"><b></b></span><b><span class=\"wysiwyg-color-blue\">cuando
+      se usa como un sistema integral</span></b><span class=\"wysiwyg-color-blue\"><b></b></span>,
+      tiene el potencial de incrementar los rendimientos entre un 200% a un 600% por
+      unidad de área, si se compara con los rendimientos de las prácticas de agricultura
       convencional. Al mismo tiempo que preserva los recursos necesarios para prolongar
       este privilegio fundamental para las futuras generaciones. Todo ésto se logra
       combiando ocho principios simples.</p>"
     - 0
     - 2015-05-03 18:22:30.000000000 Z
-    - 2015-05-15 01:20:06.000000000 Z
+    - 2015-09-27 10:13:23.000000000 Z
     - false
     - 0
     - 
@@ -14782,17 +15372,17 @@ topics:
     - false
     - 1
   - - 174
-    - "Alimentos e nutrientes\r\n"
+    - Alimentos e nutrientes
     - pt
     - "<p>A produção de alimentos é um privilégio que depende do nosso cuidado com
-      os recursos prévios.</p>\r\n\r\n<p>O método GROW BIOINTENSIVE <span class=\"hot-words\">quando
-      usado como um sistema completo</span> tem o potencial de aumentar o rendimento
+      os recursos prévios.</p>\r\n\r\n<p>O método GROW BIOINTENSIVE <span class=\"wysiwyg-color-blue\"><b>quando
+      usado como um sistema completo </b></span>tem o potencial de aumentar o rendimento
       de 200% a 600% por unidade de área em relação a práticas convencionais enquanto
       conserva os recursos necessários para estender esse privilégio tão fundamental
       para as futuras gerações—tudo isso combinando oito princípios simples.</p>"
     - 0
     - 2015-05-03 18:22:30.000000000 Z
-    - 2015-05-11 21:53:57.000000000 Z
+    - 2015-09-27 10:13:49.000000000 Z
     - false
     - 0
     - 
@@ -14800,17 +15390,17 @@ topics:
     - false
     - 1
   - - 175
-    - "খাদ্য এবং পুষ্টি\r\n"
+    - "খাদ্য এবং পুষ্টি"
     - bn
     - "<p>খাদ্য উৎপাদন একটি বিশেষ অধিকার যা আমাদের সকল পুর্ববর্তী সম্পদের যত্নের উপর
-      নির্ভর করে।</p>\r\n\r\n<p>দি GROW BIOINTENSIVE পদ্ধতি <span class=\"hot-words\">যখন
-      একটি সম্পূর্ণ পদ্ধতি হিসাবে ব্যবহৃত হয় </span>যখন সম্পদের সংরক্ষন ভবিষ্যৎ প্রজন্মের
-      মৌলিক অধিকারের প্রয়োজনের জন্য বিস্তার করা প্রয়োজন-আটটি সহজ সকল ধারনার সংমিশ্রনের
-      দ্বারাঃ গতানুগতিক পদ্ধতির তুলনায় প্রতি একক অঞ্চলে 200% থেকে 600% পর্যন্ত উৎপাদন
-      বৃদ্ধির সম্ভাবনা থাকে।</p>"
+      নির্ভর করে।</p>\r\n\r\n<p>দি GROW BIOINTENSIVE পদ্ধতি <span class=\"wysiwyg-color-blue\"><b>যখন
+      একটি সম্পূর্ণ পদ্ধতি হিসাবে ব্যবহৃত হয় </b></span>যখন সম্পদের সংরক্ষন ভবিষ্যৎ
+      প্রজন্মের মৌলিক অধিকারের প্রয়োজনের জন্য বিস্তার করা প্রয়োজন-আটটি সহজ সকল ধারনার
+      সংমিশ্রনের দ্বারাঃ গতানুগতিক পদ্ধতির তুলনায় প্রতি একক অঞ্চলে 200% থেকে 600%
+      পর্যন্ত উৎপাদন বৃদ্ধির সম্ভাবনা থাকে।</p>"
     - 0
     - 2015-05-03 18:22:30.000000000 Z
-    - 2015-05-08 01:19:19.000000000 Z
+    - 2015-09-27 10:14:19.000000000 Z
     - false
     - 0
     - 
@@ -14820,11 +15410,11 @@ topics:
   - - 176
     - Wild Space
     - en
-    - "<p>In order for us all to live well we need a diversity of plants and animals
-      in the Earth's ecosystems.</p>"
+    - "<h1>In order for us all to live well we need a diversity of plants and animals
+      in the Earth's ecosystems.</h1>"
     - 0
     - 2015-05-03 18:48:18.000000000 Z
-    - 2015-05-03 18:48:18.000000000 Z
+    - 2015-09-29 01:16:55.000000000 Z
     - false
     - 0
     - 
@@ -14917,15 +15507,15 @@ topics:
   - - 183
     - Peace
     - en
-    - "<p>Peace depends upon the satisfaction of all of our most basic needs, and
+    - "<h1>Peace depends upon the satisfaction of all of our most basic needs, and
       these most basic needs require our stewardship of our planet's most precious
-      resources.  If we can change our perspective to one that values our role as
-      stewards of our planet, then we will begin to be satisfied with that which nature
-      offers to us, and we can have hope of passing on a more peaceful world to future
-      generations.</p>"
+      finite resources.&nbsp;</h1><h2>&nbsp;If we can change our perspective to one
+      that values our role as stewards of our planet, then we will begin to be satisfied
+      with that which nature offers to us, and we can have hope of passing on a more
+      peaceful world to future generations.</h2>"
     - 0
     - 2015-05-03 18:49:04.000000000 Z
-    - 2015-05-03 18:49:04.000000000 Z
+    - 2015-09-29 01:18:32.000000000 Z
     - false
     - 0
     - 
@@ -15035,16 +15625,16 @@ topics:
   - - 190
     - English
     - en
-    - "<p>We have been depleting soil faster than it is built in nature.  </p>\r\n\r\n<p>As
-      little as 29 years of farmable soil remains globally.<sup>1</sup></p>     \r\n<iframe
-      src=\"http://biointensive.net/en/media/webinars/Intro2_Week_Farmers_Course-SD.mp4\"
-      frameborder=0 height=\"200px\"></iframe>\r\n<small>\r\n<p><u>Footnotes:</u></p>\r\n<p>1)
-      <a href=\"/en/topics/190?publication_id=11\"><i>Food-Growing Areas for One Person's
+    - "<h1>Current farming methods have been depleting soil faster than it is built
+      in nature.  </h1>\r\n\r\n<h2>As little as 29 years of farmable soil remains
+      globally.<u>1</u></h2>     \r\n<iframe frameborder=\"0\" allowfullscreen=\"1\"
+      height=\"200\" src=\"http://biointensive.net/en/media/webinars/Intro2_Week_Farmers_Course-SD.mp4\"></iframe>\r\n<small>\r\n<p><u>Footnotes:</u></p>\r\n<p>1)
+      <a target=\"_blank\" rel=\"nofollow\"><i>Food-Growing Areas for One Person's
       Annual Diet Using Different Agricultural Techniques</i></a>, Footnote 4, Ecology
       Action, 2007.</p>\r\n</small>"
     - 0
     - 2015-05-03 18:56:50.000000000 Z
-    - 2015-05-27 20:11:47.000000000 Z
+    - 2015-09-29 16:56:12.000000000 Z
     - false
     - 4
     - 
@@ -15157,20 +15747,19 @@ topics:
   - - 197
     - Deep Soil Preparation
     - en
-    - "<p>Looking at GROW BIOINTENSIVE as a three-legged stool, deep soil preparation
-      is one of the three legs. Deep soil preparation builds soil and soil structure
-      by loosening the soil to a depth of 24 inches (60 cm).</p>\r\n\r\n<p>Ideal soil
+    - "<h1>Deep soil preparation builds soil and soil structure,&nbsp;</h1><h2>by
+      loosening the soil to a depth of 24 inches (60 cm).</h2>\r\n\r\n<h3>Ideal soil
       structure has both sufficient pore space for air and water to move freely and
       soil particles that hold together well enough to support this pore space.  Air
       supports plant roots and soil organisms that give life to the soil and enhance
       nutrient availability for the plants. Aerated soil holds water better than compacted
       soil, requiring less watering. It also facilitates root penetration, supporting
-      healthy plants and minimizing erosion.</p> \r\n\r\n<p>We can breath life-promoting
-      air back into our compacted soils 24-inches (60 cm) deep—and grow more life-giving
-      food.</p>"
+      healthy plants and minimizing erosion.</h3> \r\n\r\n<p>With GROW BIOINTENSIVE
+      we can breath life-promoting air back into our compacted soils 24-inches (60
+      cm) deep—and grow more life-giving food.</p>"
     - 0
     - 2015-05-03 19:16:15.000000000 Z
-    - 2015-05-06 16:53:15.000000000 Z
+    - 2015-10-07 19:39:27.000000000 Z
     - false
     - 0
     - 
@@ -15178,12 +15767,12 @@ topics:
     - false
     - 1
   - - 198
-    - "深度土壤准备\r\n"
+    - "深度土壤准备"
     - zh
-    - "<p>将GROW BIOINTENSIVE视作三条腿的凳子，深度整地是三条腿中的一条。深度整地通过松动土壤，使其达到24英寸（60厘米）的深度来打造土壤以及土壤结构。</p>\r\n\r\n<p>理想的土壤结果是其能保证足够的空隙，使空气和水能自由移动，土壤颗粒有足够的空间能结合在一起。空气支撑着植物根部，而且土壤有机物也赋予土壤生命，加强营养物供给植物的能力。暴露于空气中得土壤相比于压紧的土壤而言更节约水，因为浇水少。当然其也有利于根系穿透，保证植物健康同时减少侵蚀。</p>\r\n\r\n<p>我们可以让促进生命的空气重新回到我们的地面以下24英尺的压缩土壤中，然后种植更多孕育生命的粮食。</p>"
+    - "<p>深度整地通过松动土壤，使其达到24英寸（60厘米）的深度来打造土壤以及土壤结构。</p>\r\n\r\n<p>理想的土壤结果是其能保证足够的空隙，使空气和水能自由移动，土壤颗粒有足够的空间能结合在一起。空气支撑着植物根部，而且土壤有机物也赋予土壤生命，加强营养物供给植物的能力。暴露于空气中得土壤相比于压紧的土壤而言更节约水，因为浇水少。当然其也有利于根系穿透，保证植物健康同时减少侵蚀。</p>\r\n\r\n<p>我们可以让促进生命的空气重新回到我们的地面以下24英尺的压缩土壤中，然后种植更多孕育生命的粮食。</p>"
     - 0
     - 2015-05-03 19:16:15.000000000 Z
-    - 2015-05-07 17:48:25.000000000 Z
+    - 2015-09-27 09:10:51.000000000 Z
     - false
     - 0
     - 
@@ -15191,23 +15780,21 @@ topics:
     - false
     - 1
   - - 199
-    - "गहराई से मिट्टी की तैयारी\r\n"
+    - "गहराई से मिट्टी की तैयारी"
     - hi
-    - "<p>GROW BIOINTENSIVE को एक तीन पैर वाले मेज के रूप में देखें, मिट्टी की गहराई
-      से तैयारी तीन पैरों में से एक है। मिट्टी की गहराई से तैयारी मिट्टी को 24 इंच
-      की गहरई (60 सेमी) में भुरभुरा करने के द्वारा मिट्टी और मिट्टी के ढ़ांचे का निर्माण
-      करता है।</p>\r\n\r\n<p>मिट्टी के आदर्श ढ़ांचे में हवा और पानी के स्वतंत्र रूप
-      से प्रसारित होने के लिए पर्यार्त छिद्र होतो हैं और एक साथ जुड़े मिट्टी के कणों
-      से इस छिद्रों को पर्याप्त सहायता मिलती है। हवा पौधे की जड़ों ओर मिट्टी के तंत्रों
-      की सहायता करता है जो मिट्टी को जीवन और पौधों के लिए पोषण की उपलब्धता को बढ़ाता
-      है। हवायुक्त मिट्टी कड़ी मिट्टी की तुलना पानी को बेहतर ढंग से रोकता है जिससे
-      कम पानी की आवश्यकता होती है। यह जड़ के प्रसार के लिए भी सहायक होता है, स्वस्थ
-      पौधों के लिए सहायक और क्षरण को कम करता है। </p>\r\n\r\n<p>हम हमारे तैयार मिट्टी
-      के 24 इंच की गहराई में जीवनदायी हवा फिर से भर सकते हैं--और अधिक जीवनदायी अन्न
-      उगा सकते हैं।</p>"
+    - "<p>मिट्टी की गहराई से तैयारी मिट्टी को 24 इंच की गहरई (60 सेमी) में भुरभुरा
+      करने के द्वारा मिट्टी और मिट्टी के ढ़ांचे का निर्माण करता है।</p>\r\n\r\n<p>मिट्टी
+      के आदर्श ढ़ांचे में हवा और पानी के स्वतंत्र रूप से प्रसारित होने के लिए पर्यार्त
+      छिद्र होतो हैं और एक साथ जुड़े मिट्टी के कणों से इस छिद्रों को पर्याप्त सहायता
+      मिलती है। हवा पौधे की जड़ों ओर मिट्टी के तंत्रों की सहायता करता है जो मिट्टी
+      को जीवन और पौधों के लिए पोषण की उपलब्धता को बढ़ाता है। हवायुक्त मिट्टी कड़ी
+      मिट्टी की तुलना पानी को बेहतर ढंग से रोकता है जिससे कम पानी की आवश्यकता होती
+      है। यह जड़ के प्रसार के लिए भी सहायक होता है, स्वस्थ पौधों के लिए सहायक और क्षरण
+      को कम करता है। </p>\r\n\r\n<p>हम हमारे तैयार मिट्टी के 24 इंच की गहराई में जीवनदायी
+      हवा फिर से भर सकते हैं--और अधिक जीवनदायी अन्न उगा सकते हैं।</p>"
     - 0
     - 2015-05-03 19:16:15.000000000 Z
-    - 2015-05-07 00:46:10.000000000 Z
+    - 2015-09-27 09:11:21.000000000 Z
     - false
     - 0
     - 
@@ -15215,21 +15802,20 @@ topics:
     - false
     - 1
   - - 200
-    - "الإعداد العميق للتربة\r\n"
+    - "الإعداد العميق للتربة"
     - ar
-    - "<p>\r\nبالنظر إلى طريقة GROW BIOINTENSIVE كأداة ذات ثلاثة ركائز، فالإعداد العميق
-      للتربة هو أحد الركائز الثلاثة. الإعداد العميق للتربة يبني التربة وهيكل التربة
-      بتفكيك التربة حتى عمق 24 بوصة (60 سم).\r\n</p>\r\n<p>\r\nلهيكل التربة المثالي
-      مساحة مسام كافية للهواء والماء للحركة بحرية وجسيمات التربة التي تجتمع معاً على
-      النحو الكافي لدعم هذه المسام. يدعم الهواء جذور النبات والكائنات الحية بالتربة
-      التي تعطي الحياة للتربة وتُحسن من إتاحة مواد التغذية للنباتات. \r\nتحتفظ التربة
-      ذات التهوية بالمياه أفضل من التربة المضغوطة، مما يتطلب مياه أقل. كما تُسهل أيضاً
-      من اختراق الجذور، ودعم صحة النباتات، وتخفيض التآكل.\r\n</p>\r\n<p>\r\nيُمكننا
-      إعادة هواء الحياة إلى تربتنا المدكوكة بعمق 24  بوصة (60 سم) - وزراعة المزيد
-      من الأغذية المُساعدة على الحياة.\r\n</p>"
+    - "<p>الإعداد العميق للتربة يبني التربة وهيكل التربة بتفكيك التربة حتى عمق 24
+      بوصة (60 سم).\r\n</p>\r\n<p>\r\nلهيكل التربة المثالي مساحة مسام كافية للهواء
+      والماء للحركة بحرية وجسيمات التربة التي تجتمع معاً على النحو الكافي لدعم هذه
+      المسام. يدعم الهواء جذور النبات والكائنات الحية بالتربة التي تعطي الحياة للتربة
+      وتُحسن من إتاحة مواد التغذية للنباتات. \r\nتحتفظ التربة ذات التهوية بالمياه
+      أفضل من التربة المضغوطة، مما يتطلب مياه أقل. كما تُسهل أيضاً من اختراق الجذور،
+      ودعم صحة النباتات، وتخفيض التآكل.\r\n</p>\r\n<p>\r\nيُمكننا إعادة هواء الحياة
+      إلى تربتنا المدكوكة بعمق 24  بوصة (60 سم) - وزراعة المزيد من الأغذية المُساعدة
+      على الحياة.\r\n</p>"
     - 0
     - 2015-05-03 19:16:15.000000000 Z
-    - 2015-05-11 06:23:44.000000000 Z
+    - 2015-09-27 09:12:10.000000000 Z
     - false
     - 0
     - 
@@ -15237,24 +15823,22 @@ topics:
     - false
     - 1
   - - 201
-    - "Preparación Profunda del Suelo\r\n\r\n"
+    - Preparación Profunda del Suelo
     - es
-    - "<p>Si observamos al método CULTIVE BIOINTENSIVAMENTE como un banco de tres
-      patas, la preparación profunda del suelo es una de las tres patas. La preparación
-      profunda del suelo edifica el suelo y su estructura al aflojar la tierra hasta
-      una profundidad de 24 pulgadas (60 cm).</p>\r\n\r\n<p>Una estructura ideal del
-      suelo tiene suficiente espacio poroso para que el aire y el agua se muevan libremente,
-      y para que las partículas del suelo se mantengan juntas para dar lugar a ese
-      espacio poroso.   El aire es el sustento de las raíces de las plantas y de los
-      organismos del suelo que dan vida al suelo y aumentan la disponibilidad de nutrientes
-      para las plantas. Un suelo aireado retiene mejor el agua que un suelo compacto,
-      y requiere menos riego. También facilita la penetración de las raíces, y da
-      sustento a las plantas y minimiza la erosión. </p>\r\n\r\n<p>Podemos volver
-      a insuflar aire de vida a nuestros suelos compactados de 60 cm, y cultivar más
-      alimentos vivificantes.</p>"
+    - "<p>La preparación profunda del suelo edifica el suelo y su estructura al aflojar
+      la tierra hasta una profundidad de 24 pulgadas (60 cm).</p>\r\n\r\n<p>Una estructura
+      ideal del suelo tiene suficiente espacio poroso para que el aire y el agua se
+      muevan libremente, y para que las partículas del suelo se mantengan juntas para
+      dar lugar a ese espacio poroso.   El aire es el sustento de las raíces de las
+      plantas y de los organismos del suelo que dan vida al suelo y aumentan la disponibilidad
+      de nutrientes para las plantas. Un suelo aireado retiene mejor el agua que un
+      suelo compacto, y requiere menos riego. También facilita la penetración de las
+      raíces, y da sustento a las plantas y minimiza la erosión. </p>\r\n\r\n<p>Podemos
+      volver a insuflar aire de vida a nuestros suelos compactados de 60 cm, y cultivar
+      más alimentos vivificantes.</p>"
     - 0
     - 2015-05-03 19:16:15.000000000 Z
-    - 2015-05-15 02:13:05.000000000 Z
+    - 2015-09-27 09:12:25.000000000 Z
     - false
     - 0
     - 
@@ -15262,11 +15846,10 @@ topics:
     - false
     - 1
   - - 202
-    - "Preparação profunda do solo\r\n"
+    - Preparação profunda do solo
     - pt
-    - "<p>Ao olhar o GROW BIOINTENSIVE como um sistema de três etapas, a preparação
-      é uma delas. A preparação profunda do solo constrói a estrutura do solo revolvendo
-      o solo a uma profundidade de 60 cm (24 pol.).</p>\r\n\r\n<p>A estrutura de solo
+    - "<p>A preparação profunda do solo constrói a estrutura do solo revolvendo o
+      solo a uma profundidade de 60 cm (24 pol.).</p>\r\n\r\n<p>A estrutura de solo
       ideal é poroso suficiente para que o ar e água se moverem livremente, e as partículas
       de solo se agregam o suficiente para suportar esse espaço poroso.  O ar dá suporte
       às raízes das plantas e organismos do solo que fornecem vida ao solo e melhoram
@@ -15277,7 +15860,7 @@ topics:
       cm de profundidade, e assim produzir mais alimentos que promovam a vida.</p>"
     - 0
     - 2015-05-03 19:16:15.000000000 Z
-    - 2015-05-15 15:05:00.000000000 Z
+    - 2015-09-27 09:12:39.000000000 Z
     - false
     - 0
     - 
@@ -15285,21 +15868,20 @@ topics:
     - false
     - 1
   - - 203
-    - "গভীর ভূমি প্রস্তুতি\r\n"
+    - "গভীর ভূমি প্রস্তুতি"
     - bn
-    - "<p>GROW BIOINTENSIVE র দিকে একটি তেপায়া টুলের মত দেখুন, গভীর মাটি তৈরী তিনটি
-      পায়ের একটি।গভীর মাটি তৈরী 24 ইঞ্চি ( 60 সেমি) গভীরতা পর্যন্ত মাটি আলগা করে মাটি
-      এবং মাটির গঠন বানায়।</p>\r\n\r\n<p>আদর্শ মাটির গঠনে বায়ু এবং জলের প্রবেশের এবং
-      চলাচলের যথেষ্ট জায়গা থাকে এবং এই প্রবেশের জায়গাকে বজায় রেখে ধরে রাখার জন্য যথেষ্ট
-      মাটির কণা থাকে। বাতাস গাছের শিকড় এবং মাটির জৈবকে সহায়তা করে যা মাটিকে জীবনদান
-      করে এবং গাছেদের পুষ্টির উপলদ্ধতা বৃদ্ধি করে। আলগা মাটি দৃঢ় মাটির থেকে বেশী জল
-      ধারণ করে, কম সিক্ততার প্রয়োজন হয়। এটি শিকড়ের প্রবেশেকে সাহায্য করে, গাছকে স্বাস্থ্যকর
+    - "<p>গভীর মাটি তৈরী 24 ইঞ্চি ( 60 সেমি) গভীরতা পর্যন্ত মাটি আলগা করে মাটি এবং
+      মাটির গঠন বানায়।</p>\r\n\r\n<p>আদর্শ মাটির গঠনে বায়ু এবং জলের প্রবেশের এবং চলাচলের
+      যথেষ্ট জায়গা থাকে এবং এই প্রবেশের জায়গাকে বজায় রেখে ধরে রাখার জন্য যথেষ্ট মাটির
+      কণা থাকে। বাতাস গাছের শিকড় এবং মাটির জৈবকে সহায়তা করে যা মাটিকে জীবনদান করে
+      এবং গাছেদের পুষ্টির উপলদ্ধতা বৃদ্ধি করে। আলগা মাটি দৃঢ় মাটির থেকে বেশী জল ধারণ
+      করে, কম সিক্ততার প্রয়োজন হয়। এটি শিকড়ের প্রবেশেকে সাহায্য করে, গাছকে স্বাস্থ্যকর
       হতে সাহায্য করে এবং ভূমিক্ষয় হ্রাস করে।  </p>\r\n\r\n<p>আমরা শ্বাস নিতে পারি-পুরু
       মাটির 24-ইঞ্চি ( 60 সেমি) গভীরতা পর্যন্ত বাতাস ভরতে পারি-এবং আরো জীবনদায়ী খাদ্য
-      উৎপাদন করতে পারি। </p>\r\n"
+      উৎপাদন করতে পারি। </p>"
     - 0
     - 2015-05-03 19:16:15.000000000 Z
-    - 2015-05-08 01:30:33.000000000 Z
+    - 2015-09-27 09:13:24.000000000 Z
     - false
     - 0
     - 
@@ -15309,15 +15891,15 @@ topics:
   - - 204
     - Composting
     - en
-    - "<p>Compost is: a pantry of nutrients, a water-holding sponge, and a pharmacy
-      of disease-eliminating, anti-biotic producing microbes.  A plant made healthy
-      by a healthy, living soil does not attract pests.</p>\r\n\r\n<p>In the GROW
-      BIOINTENSIVE method, soil health is maintained and increased by compost made
-      from the residues of the food crops grown.</p>\r\n<iframe src=\"http://biointensive.net/en/media/webinars/Compost_with_John_Jeavons-SD.mp4\"
-      frameborder=0 width=\"420px\" height=\"300px\" allowfullscreen></iframe>"
+    - "<h1>Compost is: a pantry of nutrients, a water-holding sponge, and a pharmacy
+      of disease-eliminating, anti-biotic producing microbes.&nbsp;</h1><h2>&nbsp;A
+      plant made healthy by a healthy, living soil does not attract pests.</h2>\r\n\r\n<p>In
+      the GROW BIOINTENSIVE method, soil health is maintained and increased by compost
+      made from the residues of the food crops grown.</p>\r\n<iframe frameborder=\"0\"
+      allowfullscreen=\"1\" width=\"420\" height=\"300\" src=\"http://biointensive.net/en/media/webinars/Compost_with_John_Jeavons-SD.mp4\"></iframe>"
     - 0
     - 2015-05-03 19:27:14.000000000 Z
-    - 2015-05-27 20:15:44.000000000 Z
+    - 2015-09-29 01:25:58.000000000 Z
     - false
     - 0
     - 
@@ -15423,13 +16005,15 @@ topics:
   - - 218
     - Close Plant Spacing
     - en
-    - "<p>It is possible to create a \"living mulch\" using plants and reduce the
-      water needed to grow plants by up to 63%—without taking mulch material from
-      another soil system.</p>\r\n\r\n<p>Plants are spaced so that their mature leaves
-      touch, creating a mini-climate preserving water and recycling carbon dioxide.</p>"
+    - "<h1>It is possible to create a \"living mulch\" using plants,</h1><h2>&nbsp;and
+      reduce the water needed to grow plants by up to 63%—without taking mulch material
+      from another soil system.</h2>\r\n\r\n<h3>Close plant spacing is made possible
+      by deep soil preparation.</h3><p>In the GROW BIOINTENSIVE method plants are
+      spaced so that their mature leaves touch, creating a mini-climate preserving
+      water and recycling carbon dioxide.</p><p><br></p>"
     - 0
     - 2015-05-03 19:34:54.000000000 Z
-    - 2015-05-05 23:12:44.000000000 Z
+    - 2015-10-01 17:44:25.000000000 Z
     - false
     - 0
     - 
@@ -15536,12 +16120,13 @@ topics:
   - - 225
     - Companion Planting
     - en
-    - "<p>Insect and disease control and improved soil and plant health are achieved
-      through maximizing beneficial relationships among plants.</p>\r\n\r\n<p>Placing
-      certain plants together stimulates their health & yields and repels pests naturally.</p>"
+    - "<h1>Insect and disease control and improved soil and plant health are achieved
+      through maximizing beneficial relationships among plants.</h1>\r\n\r\n<h2>Placing
+      certain plants together stimulates their health &amp; yields and repels pests
+      naturally.</h2>"
     - 0
     - 2015-05-03 21:01:39.000000000 Z
-    - 2015-05-05 23:15:14.000000000 Z
+    - 2015-09-29 01:22:05.000000000 Z
     - false
     - 0
     - 
@@ -15643,15 +16228,15 @@ topics:
   - - 232
     - Carbon-Efficient Crops
     - en
-    - "<p>Grow sustainable soil fertility by planting 50% to 70% of your growing area
-      in crops that produce both significant calories for people and also significant
-      compost material to replenish and build up the soil: mainly cold- and hot-weather
-      seed and grain crops.</p>\r\n\r\n<p>By planting 50% to 70% of the growing area
-      in carbon-efficient crops, a sustainable amount of compost may be produced for
-      the entire growing area.</p>"
+    - "<h1>Sustainable soil fertility may be grown,</h1><h2>&nbsp;by planting 50%
+      to 70% of your growing area in crops that produce both significant calories
+      for people and also significant compost material to replenish and build up the
+      soil:  mainly cold- and hot-weather seed and grain crops.</h2>\r\n\r\n<h3>By
+      planting 50% to 70% of the growing area in carbon-efficient crops, a sustainable
+      amount of compost may be produced for the entire growing area.</h3>"
     - 0
     - 2015-05-03 21:22:33.000000000 Z
-    - 2015-05-05 23:17:18.000000000 Z
+    - 2015-10-07 19:35:37.000000000 Z
     - false
     - 0
     - 
@@ -15763,15 +16348,15 @@ topics:
   - - 239
     - Calorie-Efficient Crops
     - en
-    - "<p>Grow all of your food in the smallest area when you plant 20% to 40% of
-      your growing area in high-calorie-producing special root crops which produce
-      up to 20 times the calories per unit of area and time compared with seed and
-      grain crops and even more compared with animal product diets.</p>\r\n\r\n<p>By
+    - "<h1>Grow your food in the smallest area,&nbsp;</h1><h2>when you plant 20% to
+      40% of your growing area in high-calorie-producing special root crops, which
+      produce up to 20 times the calories per unit of area and time compared with
+      seed and grain crops and even more compared with animal product diets.</h2>\r\n\r\n<h3>By
       planting 20% to 40% of the growing area in calorie-dense root crops, a complete
-      diet may be grown with minimal space, water, time, and inputs.</p>"
+      diet may be grown with minimal space, water, time, and inputs.</h3>"
     - 0
     - 2015-05-03 21:26:45.000000000 Z
-    - 2015-05-05 23:21:28.000000000 Z
+    - 2015-10-07 19:37:12.000000000 Z
     - false
     - 0
     - 
@@ -15888,13 +16473,13 @@ topics:
   - - 246
     - Open-Pollinated Seeds
     - en
-    - "<p>Grow high yields using a fraction of the resources with heritage, open-pollinated
-      seeds that have stood the test of time and that offer the opportunity to save
-      your own seeds that are suited to your soil and climate and preserve genetic
-      diversity.</p>"
+    - "<h1>Grow high yields using a fraction of the resources with heritage, open-pollinated
+      seeds,&nbsp;</h1><h2>that have stood the test of time and that offer the opportunity
+      to save your own seeds that are suited to your soil and climate and preserve
+      genetic diversity.</h2>"
     - 0
     - 2015-05-03 21:30:57.000000000 Z
-    - 2015-05-03 21:32:00.000000000 Z
+    - 2015-10-07 19:42:13.000000000 Z
     - false
     - 0
     - 
@@ -15994,13 +16579,13 @@ topics:
   - - 253
     - A Whole System
     - en
-    - <p>The GROW BIOINTENSIVE food-growing method, <strong><span class="hot-words">when
+    - <h4>The GROW BIOINTENSIVE food-growing method, <strong><span class="wysiwyg-color-blue">when
       practiced as a complete system</span></strong>, makes possible high yields while
       using a fraction of the water, nutrient, and energy per pound of food produced
-      compared with conventional practices and improving soil quality. </p>
+      compared with conventional practices and improving soil quality. </h4>
     - 0
     - 2015-05-03 21:36:16.000000000 Z
-    - 2015-05-05 23:40:08.000000000 Z
+    - 2015-09-29 01:15:00.000000000 Z
     - false
     - 0
     - 
@@ -16106,14 +16691,14 @@ topics:
   - - 260
     - English
     - en
-    - "<p>In 2012, the United Nations Food and Agriculture Organization observed that
-      up to 75% of of world's people by the year 2025 (approximately 5.5 billion people)
-      will be at risk due to insufficient water to grow sufficient food.<sup>1</sup></p>\r\n<br>\r\n<small>\r\n<p><u>Footnotes:</u></p>\r\n<p>1)
-      UN FAO, <I>FAO Water Reports #38</i>, Food and Agriculture Organization of the
+    - "<h2>In 2012, the United Nations Food and Agriculture Organization observed
+      that up to 75% of of world's people by the year 2025 (approximately 5.5 billion
+      people) will be at risk due to insufficient water to grow sufficient food.<u>1</u></h2>\r\n<br>\r\n<small>\r\n<p><u>Footnotes:</u></p>\r\n<p>1)
+      UN FAO, <i>FAO Water Reports #38</i>, Food and Agriculture Organization of the
       United Nations, Rome, 2012, ISSN 1020-1203.</p>\r\n</small>"
     - 0
     - 2015-05-05 17:53:18.000000000 Z
-    - 2015-05-05 18:10:28.000000000 Z
+    - 2015-09-29 02:40:28.000000000 Z
     - false
     - 4
     - 
@@ -16226,19 +16811,20 @@ topics:
   - - 267
     - English
     - en
-    - "<p>In March of 2015, monthly average atmospheric carbon dioxide levels reached
-      401.5 ppm<sup>1</sup>, far exceeding the level of 350 ppm determined by a NASA
-      climate scientist to be the maximum level to avoid long-term climate change.</p>\r\n\r\n<p>The
-      GROW BIOINTENSIVE method of food growing, if adopted world-wide in farming,
-      has the potential to sequester enough carbon—through increased plant population
-      per units of area and time and also due to increased soil organic matter—to
-      stabilize climate change.<sup>2</sup></p> \r\n<br>\r\n<small>\r\n<p><u>Footnotes:</u></p>\r\n<p>1)
-      <I>Monthly Carbon Dioxide</I>, Scripps Institute of Oceanography, http://scrippsco2.ucsd.edu/data/mlo.\r\n<br>\r\n2)
-      <i>Climate Change and GROW BIOINTENSIVE<sup>®</sup></i>, Ecology Action, 2010.
-      \ Based upon data provided by Dr. James Hansen.</p>\r\n</small>"
+    - "<h1>In March of 2015, monthly average atmospheric carbon dioxide levels reached
+      401.5 ppm<u>1</u>,&nbsp;</h1><h2>far exceeding the level of 350 ppm determined
+      by a NASA climate scientist to be the maximum level to avoid long-term climate
+      change.</h2>\r\n\r\n<h3>The GROW BIOINTENSIVE method of food growing, if adopted
+      world-wide in farming, has the potential to sequester enough carbon—through
+      increased plant population per units of area and time and also due to increased
+      soil organic matter—to stabilize climate change.<u>2</u></h3> \r\n<br>\r\n<small>\r\n<p><u>Footnotes:</u></p>\r\n<p>1)
+      <i>Monthly Carbon Dioxide</i>, Scripps Institute of Oceanography, <a target=\"_blank\"
+      rel=\"nofollow\" href=\"http://scrippsco2.ucsd.edu/data/mlo\">http://scrippsco2.ucsd.edu/data/mlo</a>.\r\n<br>\r\n2)
+      <i>Climate Change and GROW BIOINTENSIVE®</i>, Ecology Action, 2010.  Based upon
+      data provided by Dr. James Hansen.</p>\r\n</small>"
     - 0
     - 2015-05-05 18:14:42.000000000 Z
-    - 2015-05-06 13:33:05.000000000 Z
+    - 2015-09-29 02:28:27.000000000 Z
     - false
     - 4
     - 
@@ -16379,12 +16965,13 @@ topics:
   - - 274
     - 
     - en
-    - "<p>While it is a fact that the world is currently experiencing peak fossil
-      fuel energy, the real 'Energy Crisis' is not in a barrel of oil but within ourselves.
-      \ We and the positive actions that we take are the solution.</p>"
+    - "<h3><br></h3><h3>While it is a fact that the world is currently experiencing
+      peak fossil fuel energy,</h3><h2>the real 'Energy Crisis' is not in a barrel
+      of oil but within ourselves.&nbsp;</h2><h1>&nbsp;We and the positive actions
+      that we take are the solution.</h1>"
     - 0
     - 2015-05-05 18:27:24.000000000 Z
-    - 2015-05-05 18:27:24.000000000 Z
+    - 2015-09-29 02:38:43.000000000 Z
     - false
     - 4
     - 
@@ -16484,12 +17071,12 @@ topics:
   - - 281
     - 
     - en
-    - "<p>Due to concurrent peaks of both water and farmable soil (and, increasingly,
-      the effects of climate change due to peak levels of atmospheric carbon dioxide),
-      the world as a whole finds itself in a situation of peak food.</p>"
+    - "<h2>Due to concurrent peaks of both water and farmable soil (and, increasingly,
+      the effects of climate change due to peak levels of atmospheric carbon dioxide),&nbsp;</h2><h1>the
+      world as a whole finds itself in a situation of peak food.</h1>"
     - 0
     - 2015-05-05 18:28:24.000000000 Z
-    - 2015-05-05 18:28:24.000000000 Z
+    - 2015-09-29 02:35:43.000000000 Z
     - false
     - 4
     - 
@@ -16589,14 +17176,14 @@ topics:
   - - 288
     - English
     - en
-    - "<p>Approximately 4% of the Earth's surface is farmable.  At least 50% of the
-      Earth's farmable surface (arable land and permanent crop land) needs to be left
-      in a wild state in order to preserve plant and animal diversity—to make a thriving,
-      livable, and sustainable planet<sup>1</sup>.</p>\r\n<br>\r\n<small>\r\n<p><u>Footnotes:</u></p>\r\n<p>1)
+    - "<h1>Approximately 4% of the Earth's surface is farmable.&nbsp;</h1><h2>&nbsp;At
+      least 50% of the Earth's farmable surface (arable land and permanent crop land)
+      needs to be left in a wild state in order to preserve plant and animal diversity—to
+      make a thriving, livable, and sustainable planet<u>1</u>.</h2>\r\n<br>\r\n<small>\r\n<p><u>Footnotes:</u></p>\r\n<p>1)
       Alan Chadwick and John Jeavons.</p>\r\n</small>"
     - 0
     - 2015-05-05 18:29:41.000000000 Z
-    - 2015-05-05 18:36:50.000000000 Z
+    - 2015-09-29 02:32:12.000000000 Z
     - false
     - 4
     - 
@@ -16699,15 +17286,15 @@ topics:
   - - 295
     - English
     - en
-    - "<p>The Earth is at a point of peak peace due to the concurrent peaks of: soil,
-      water, atmospheric carbon dioxide, energy, food, and the need for wild space
-      that have been brought about by our failure to properly care for these resources.
-      \ We can reverse this trend by cooperating with the Earth's highly productive,
-      resource-conserving life forces that were designed to sustain us indefinitely
-      upon the planet—and grow peace.</p>"
+    - "<h1>The Earth is at a point of peak peace,</h1><h2>&nbsp;due to the concurrent
+      peaks of: soil, water, atmospheric carbon dioxide, energy, food, and the need
+      for wild space that have been brought about by our failure to properly care
+      for these resources.&nbsp;</h2><h3>&nbsp;We can reverse this trend by cooperating
+      with the Earth's highly productive, resource-conserving life forces that were
+      designed to sustain us indefinitely upon the planet—and grow peace.</h3>"
     - 0
     - 2015-05-05 18:37:49.000000000 Z
-    - 2015-05-05 18:38:32.000000000 Z
+    - 2015-09-29 02:33:14.000000000 Z
     - false
     - 4
     - 
@@ -19365,16 +19952,16 @@ topics:
     - false
     - 0
   - - 505
-    - Become a Member
+    - Donate or Become a Member
     - en
-    - ''
+    - <iframe frameborder="0" allowfullscreen="1" width="100" height="800" src="https://donatenow.networkforgood.org/ecologyaction"></iframe>
     - 0
     - 2015-05-05 18:56:48.000000000 Z
-    - 2015-05-21 17:46:45.000000000 Z
+    - 2015-10-09 02:15:48.000000000 Z
     - false
     - 0
     - 
-    - true
+    - false
     - false
     - 1
   - - 506
@@ -29391,29 +29978,29 @@ users:
   - activated_at
   - reset_digest
   - reset_sent_at
-  - language
   - last_login
+  - language
   records: 
   - - 1
     - luke allen
     - lukeallen@gmail.com
     - 2015-04-30 23:40:45.000000000 Z
-    - 2015-08-27 20:21:34.000000000 Z
+    - 2015-10-10 18:23:18.000000000 Z
     - "$2a$10$zosFNSsaQfGyRq4D/n0V.et/71LcMac8ejtP1Cieoxkn8XHbsxiau"
-    - 
+    - "$2a$10$k20KAJPGU6nyCg7NMMS.2OLAwOIq89Wr5rVv3hjE/t1sf1mgE00Hi"
     - true
     - "$2a$10$.9ChfOl37gMlzAqOoizk1ubBeGxFXfbnrb4jQMQugoeJ/Wz9ySyWK"
     - true
     - 2015-04-30 23:40:45.000000000 Z
     - 
     - 
-    - 
-    - 2015-08-27 20:21:34.000000000 Z
+    - 2015-10-10 18:23:18.000000000 Z
+    - en
   - - 2
     - Jason
     - jasonmcnabb@growbiointensive.org
     - 2015-04-30 23:40:45.000000000 Z
-    - 2015-08-20 17:22:21.000000000 Z
+    - 2015-10-12 01:26:11.000000000 Z
     - "$2a$10$.MEqtJDFj7fW0YeVwht1ueMxMHjd8mh8XhmLYpibozVcViDUfcbbi"
     - 
     - true
@@ -29422,8 +30009,8 @@ users:
     - 2015-04-30 23:40:45.000000000 Z
     - 
     - 
-    - 
-    - 2015-08-20 17:22:21.000000000 Z
+    - 2015-10-12 01:26:11.000000000 Z
+    - en
   - - 3
     - Jonathan
     - jonathan.stroh@gmail.com
@@ -29437,8 +30024,8 @@ users:
     - 2015-04-30 23:40:45.000000000 Z
     - 
     - 
-    - 
     - 2015-05-28 03:08:31.000000000 Z
+    - en
   - - 4
     - GB Reviewer - Juan
     - jmecopol@aol.com
@@ -29452,8 +30039,8 @@ users:
     - 2015-05-06 14:23:46.000000000 Z
     - 
     - 
-    - 
     - 2015-05-06 14:24:19.000000000 Z
+    - en
   - - 6
     - John Jeavons
     - johnjeavons@growbiointensive.org
@@ -29467,8 +30054,8 @@ users:
     - 2015-05-06 03:20:45.000000000 Z
     - 
     - 
-    - 
     - 2015-05-06 03:22:14.000000000 Z
+    - en
   - - 7
     - GB Reviewer
     - contact@growbiointensive.org
@@ -29482,8 +30069,8 @@ users:
     - 2015-05-06 18:38:25.000000000 Z
     - 
     - 
-    - 
     - 2015-05-26 19:17:17.000000000 Z
+    - en
   - - 8
     - Sarah Moore
     - smoore25@elon.edu
@@ -29497,8 +30084,8 @@ users:
     - 2015-05-06 15:21:09.000000000 Z
     - 
     - 
-    - 
     - 2015-05-06 15:28:15.000000000 Z
+    - en
   - - 9
     - Bountiful Gardens
     - bountiful@sonic.net
@@ -29512,8 +30099,8 @@ users:
     - 2015-05-07 16:44:47.000000000 Z
     - "$2a$10$nTUf0hq1NUANbSBsW3/lrut/TTBPolWX4qAU9VBWeFmkJ/CEMXyFS"
     - 2015-05-07 16:54:38.000000000 Z
-    - 
     - 2015-05-07 21:02:41.000000000 Z
+    - en
   - - 10
     - Matt
     - me@mattslab.net
@@ -29527,8 +30114,8 @@ users:
     - 2015-05-08 22:16:43.000000000 Z
     - "$2a$10$UniYG9bJV2iScvfLedJn5uxfOQl4DTgacGVi/uMAiPyjJ7F9YLuYO"
     - 2015-05-16 00:41:05.000000000 Z
-    - 
     - 2015-05-27 19:34:03.000000000 Z
+    - en
   - - 11
     - Jen Hammerstrom
     - jhammerstrom@donorpro.com
@@ -29542,8 +30129,8 @@ users:
     - 2015-05-12 12:13:51.000000000 Z
     - "$2a$10$O35ApnnbycR0IyQyhvg/9OMV6VqzkOZUB3aZBJLZBk.tdfsIqkjMi"
     - 2015-07-08 15:40:09.000000000 Z
-    - 
     - 2015-05-12 12:14:47.000000000 Z
+    - en
   - - 12
     - Jose Agustin Medina Macias
     - jagusm@hotmail.com
@@ -29557,8 +30144,8 @@ users:
     - 2015-05-12 15:04:11.000000000 Z
     - 
     - 
-    - 
     - 2015-05-12 15:16:05.000000000 Z
+    - en
   - - 13
     - Carol Vesecky
     - cbvesecky@gmail.com
@@ -29572,8 +30159,8 @@ users:
     - 2015-05-12 21:21:20.000000000 Z
     - 
     - 
-    - 
     - 2015-05-12 21:22:15.000000000 Z
+    - en
   - - 14
     - Matt
     - mc.fallenyouth@gmail.com
@@ -29587,23 +30174,23 @@ users:
     - 2015-05-16 00:41:43.000000000 Z
     - 
     - 
-    - 
     - 2015-05-29 17:40:20.000000000 Z
+    - en
   - - 15
     - Calvin Bey
     - cfbey1936@cox.net
     - 2015-05-21 01:45:11.000000000 Z
-    - 2015-05-21 03:30:09.000000000 Z
+    - 2015-09-13 03:35:53.000000000 Z
     - "$2a$10$8UZv4/I/yWOPPNgV1UN8HuqpCIjJ16paj16SHwAHoildtw7MyvgFe"
-    - "$2a$10$sljdVYmkxBqQTefB6lg2i.tmBsf5qe.AgJEa4lIxAqIdJv7NGmQ/K"
+    - 
     - false
     - "$2a$10$RLb9X5qOuVbHVmXdxmJqEOlJgUsodrJlanXAkEdx7zQ1tCK4ud2u."
     - true
     - 2015-05-21 02:20:31.000000000 Z
     - 
     - 
-    - 
-    - 2015-05-21 03:30:09.000000000 Z
+    - 2015-09-13 03:35:53.000000000 Z
+    - en
   - - 16
     - John Jeavons
     - johnjeavons@mac.com
@@ -29617,8 +30204,8 @@ users:
     - 2015-05-28 15:30:17.000000000 Z
     - 
     - 
-    - 
     - 2015-05-29 02:20:25.000000000 Z
+    - en
   - - 17
     - Paul Higgins
     - paul@commongroundgarden.org
@@ -29632,8 +30219,8 @@ users:
     - 2015-05-29 04:58:27.000000000 Z
     - 
     - 
-    - 
     - 2015-05-29 05:01:33.000000000 Z
+    - en
   - - 18
     - 'Christina McCoy '
     - mccoych3@gmail.com
@@ -29647,8 +30234,8 @@ users:
     - 2015-05-29 18:50:32.000000000 Z
     - 
     - 
-    - 
     - 2015-05-29 18:50:32.000000000 Z
+    - en
   - - 19
     - Melanie
     - melanie@csfund.org
@@ -29662,8 +30249,8 @@ users:
     - 2015-06-01 16:49:57.000000000 Z
     - 
     - 
-    - 
     - 2015-06-01 16:53:09.000000000 Z
+    - en
   - - 20
     - betsy
     - betsybruneau@yahoo.com
@@ -29677,8 +30264,8 @@ users:
     - 2015-06-04 16:27:09.000000000 Z
     - 
     - 
-    - 
     - 2015-06-04 17:43:07.000000000 Z
+    - en
   - - 21
     - luke test
     - luke@vectorclaw.com
@@ -29692,8 +30279,8 @@ users:
     - 2015-07-02 18:38:18.000000000 Z
     - 
     - 
-    - 
     - 2015-07-02 18:39:28.000000000 Z
+    - en
   - - 22
     - Jen Hammerstrom with DonorPro
     - jhammerstrom@towercare.com
@@ -29707,8 +30294,8 @@ users:
     - 2015-07-08 15:41:41.000000000 Z
     - 
     - 
-    - 
     - 2015-07-20 20:13:38.000000000 Z
+    - en
   - - 23
     - Rachel Britten
     - rachellouise.britten@gmail.com
@@ -29722,8 +30309,8 @@ users:
     - 2015-07-12 17:57:46.000000000 Z
     - 
     - 
-    - 
     - 2015-07-14 15:48:59.000000000 Z
+    - en
   - - 24
     - Steve Moore
     - harmonyessentials@gmail.com
@@ -29737,8 +30324,8 @@ users:
     - 2015-07-21 20:09:39.000000000 Z
     - 
     - 
-    - 
     - 2015-07-21 20:09:39.000000000 Z
+    - en
   - - 25
     - vnswamy
     - vnswamy@yahoo.com
@@ -29752,8 +30339,8 @@ users:
     - 2015-08-07 10:32:08.000000000 Z
     - 
     - 
-    - 
     - 2015-08-08 00:31:04.000000000 Z
+    - en
   - - 26
     - k8y
     - k8ydit@yahoo.com
@@ -29767,8 +30354,8 @@ users:
     - 2015-08-25 19:47:36.000000000 Z
     - 
     - 
-    - 
     - 2015-08-25 20:22:37.000000000 Z
+    - en
   - - 27
     - Larkin Stentz
     - larkinstentz@mac.com
@@ -29782,5 +30369,110 @@ users:
     - 2015-08-28 17:58:14.000000000 Z
     - 
     - 
-    - 
     - 2015-08-28 18:02:49.000000000 Z
+    - en
+  - - 28
+    - Mary Zellachild
+    - maryzel@willitsonline.com
+    - 2015-09-11 00:06:24.000000000 Z
+    - 2015-09-11 03:37:12.000000000 Z
+    - "$2a$10$e1mWHHesTHW9vrn5EMW/2uL/5bGzM42Y4ZM.XIsr0D5.LM6iOEKia"
+    - 
+    - false
+    - "$2a$10$gT2MQ/i7JkgeFBfkA9Dyu.2AxrN9IHbt4xQPSj3GqCP77aF9bTMi2"
+    - true
+    - 2015-09-11 03:37:12.000000000 Z
+    - 
+    - 
+    - 2015-09-11 03:37:12.000000000 Z
+    - en
+  - - 29
+    - William Ray
+    - wjray@sonic.net
+    - 2015-09-14 00:04:50.000000000 Z
+    - 2015-09-14 01:02:01.000000000 Z
+    - "$2a$10$d9Dwr8fabumNzI/5Xu6LQey1x7POP6OgjkovFG34LFJ31EIKHaUsO"
+    - "$2a$10$IQpOSq.s7/U0UvoBSQY8mOPPb02POI7sEZOPlqsdJQCvmbGBwNgda"
+    - false
+    - "$2a$10$VoYaT.SwymjCeFT7ToasMOuTLYPxYreNYCaQiC2RDgxEl4to5w7Um"
+    - true
+    - 2015-09-14 00:59:34.000000000 Z
+    - 
+    - 
+    - 2015-09-14 01:02:01.000000000 Z
+    - en
+  - - 30
+    - Pedro Almoguera Sánchez
+    - paecograin@gmail.com
+    - 2015-09-14 07:56:45.000000000 Z
+    - 2015-10-11 18:47:42.000000000 Z
+    - "$2a$10$nWe.0iNHb5PQmgYIBA/rV.JCIFPN5ZzBbBHm28kwbXYXRN9Oki7x2"
+    - 
+    - false
+    - "$2a$10$zh/yVGgFPj.IjH2Br2xn7uYkSrbeuWwxfORNb4KcaNbFvwg.hEGBK"
+    - true
+    - 2015-09-14 07:57:55.000000000 Z
+    - 
+    - 
+    - 2015-10-11 18:47:42.000000000 Z
+    - en
+  - - 31
+    - Lamine Diawara
+    - mldiawara1@orange.sn
+    - 2015-09-14 14:29:07.000000000 Z
+    - 2015-09-14 14:29:45.000000000 Z
+    - "$2a$10$MDx2J6SzYxyTQqqY3/XI9uqxpXh1P9.AsEJvN2/D6WT3FOnMHc0d2"
+    - 
+    - false
+    - "$2a$10$lBiQZkDO9r6DgJbIP2FB1eGllo21GsYtw/evw6IT8wrGeTsZuCJmS"
+    - true
+    - 2015-09-14 14:29:44.000000000 Z
+    - 
+    - 
+    - 2015-09-14 14:29:45.000000000 Z
+    - en
+  - - 32
+    - Peter Scott Norris
+    - petersnrris@gmail.com
+    - 2015-09-14 20:08:09.000000000 Z
+    - 2015-09-14 20:08:09.000000000 Z
+    - "$2a$10$rVvRM9TsyUyBS/CrFFNSLemNFizJIc848apdkCDleVIR8jMujbDU6"
+    - 
+    - false
+    - "$2a$10$X8yHOpgjnsGrup/9ORlBh.OuXzPCN1BLJXdtkv7.AmCj.S08HzPwG"
+    - false
+    - 
+    - 
+    - 
+    - 
+    - en
+  - - 33
+    - dorothygayle haas
+    - ukiahdgh@yahoo.com
+    - 2015-09-22 20:32:02.000000000 Z
+    - 2015-09-22 20:33:47.000000000 Z
+    - "$2a$10$dk6hB1y3TT1obtpAIYxUG.wi7V9IyygMSjAQwKFE9FmJtTa8GiFRq"
+    - 
+    - false
+    - "$2a$10$0yAOEU3oX6VzoC/LqGnaLur3Fon9Qi/fcOHDuROVxv/zeoU8nZdW6"
+    - true
+    - 2015-09-22 20:33:47.000000000 Z
+    - 
+    - 
+    - 2015-09-22 20:33:47.000000000 Z
+    - en
+  - - 34
+    - judy mcnabb
+    - jamcnabb@centurytel.net
+    - 2015-10-12 00:49:21.000000000 Z
+    - 2015-10-12 00:49:21.000000000 Z
+    - "$2a$10$sFSL9rYb8APa/npnUNNCzeF6XKnc6dmJYlFiTA.jTCpsjCZq8km0i"
+    - 
+    - false
+    - "$2a$10$gyW0Bu2k8oL.b/MF2BkY4.nDtDus0Z0x/aLOBunduHOHaOyvQgJwi"
+    - false
+    - 
+    - 
+    - 
+    - 
+    - en

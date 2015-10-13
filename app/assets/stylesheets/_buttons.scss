@@ -155,10 +155,13 @@
 
   &:hover {
     box-shadow: 0px 0px 10px 5px #fff;
-    //background: rgba(141, 219, 255,1);
+    //background-color: rgba(141, 219, 255,1);
+    background:none !important;
+    background-color: rgba(141, 219, 255, 1) !important;
+    border-radius: .5em;
     color: lighten($site_orange,10%);
-
   }
+
 
 }
 

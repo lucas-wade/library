@@ -67,8 +67,8 @@ textarea {
 
 .table-bb {
   border-color: black;
-
 }
+
 
 .edit-form {
   background-color: $secondary_color;
@@ -133,8 +133,7 @@ textarea {
   padding-left: 0;
   float: right;
   padding-right: 2em;
-
-}
+  }
 
 .nav-list {
   list-style-type: none;
@@ -503,58 +502,8 @@ border-top-right-radius: 149px;
 
 
 
-// COLORS
 
-
-.b0 {
-  background-color: $primary-bg-color;
-}
-
-.b1 {
-  background-color: darken($btn1, 1%);
-}
-
-.b2 {
-  background-color: darken($btn2, 0%);
-}
-
-.b3 {
-  background-color: darken($btn3, 1%);
-}
-
-.b4 {
-  background-color: $clr4;
-}
-.b5 {
-  background-color: darken($primary-bg-color, 50%);
-}
-
-.c1 {
-  color: darken($btn1, 20%);
-}
-
-.c2 {
-  color: darken($btn2, 20%);
-}
-
-.c3 {
-  color: darken($btn3, 20%);
-}
-
-.c4 {
-  color: $clr4;
-}
-
-.c5 {
-  color: darken($primary-bg-color, 50%);
-}
-
-.c-red {
-  color: red;
-}
-
-
-// SPECIAL BUTTON COLORS
+// SPECIAL COLUMN BUTTON COLORS
 
 .kids-corner-button-style {
 
@@ -601,6 +550,8 @@ border-top-right-radius: 149px;
 
 
 .under-construction {
+  font-size: .78em;
+  font-weight: 700;
   padding: .6em 2em .6em 2em;
   //margin-top: 10em;
   //background-color: cornflowerblue;

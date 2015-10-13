@@ -4,10 +4,12 @@
       <% header_title = header_title(yield(:logo)) %>
       <%= link_to header_title, topics_path, id: "logo" %>
 
+
       <div id="enter-button" style="display:inline-block;float:left">
-        <% if current_page?(controller: 'static_pages', action: 'home') || current_page?(controller: 'static_pages', action: 'movie_hd')  %>
+        <% if current_page?(controller: 'static_pages', action: 'home') || current_page?(controller: 'static_pages', action: 'movie_hd') || action_name == 'home' %>
           <span class="center">
-           <%= link_to t('classroom_doors.btn_enter_site'), classroom_doors_path, class: "btn btn-lrg button-major-orange" %>
+           <%# link_to t('classroom_doors.btn_enter_site'), classroom_doors_path, class: "btn btn-lrg button-major-orange" %>
+           <%= link_to t('classroom_doors.btn_enter_site'), topics_path, class: "btn btn-lrg button-major-orange" %>
           </span>
         <% end %>
       </div>
@@ -16,9 +18,6 @@
     <div id="navbar-middle" class="navbar-header">
 
       <ul class="nav-list list-inline2">
-
-
-
              <li class="top-menu-icon small-icon">
           <% if session[:current_collumn] == 1 && @topic.present? && $collumn_icon_1.kids.present? %>
               <%= link_to image_tag($collumn_icon_1.icon.url, class: 'small-icon'), topic_path($collumn_icon_1.kids.first) %>
@@ -73,7 +72,7 @@
         <% if params[:action] != "language_select" %>
             <% if params[:action] != "home" && params[:action] != "classroom_doors" %>
             <li>
-            <%= link_to t('general.watch_movie'), movie_path, class: "btn button-orange-text" %>
+            <%= link_to t('general.watch_movie'), movie_path, class: " button-orange-text" %>
                 <%# render 'shared/modal', button: t('general.watch_movie') , title: t('titles.title'), body: temp, the_class: "btn fat-text-button",count: 100 %>
             </li>
             <% end %>
@@ -92,12 +91,13 @@
             </li>
         <% end %>
 
-        <% if logged_in? %>
+
             <li><%= link_to '', topics_path, class: 'fa fa-home fa-2x' %></li>
 
             <li>
               <%= link_to image_tag('icon_library.png'), library_path, class: 'icon-library' %>
             </li>
+            <% if logged_in? %>
             <%= render 'admin/dropdown' %>
 
             <li class="dropdown">
@@ -119,7 +119,7 @@
       </ul>
 
     </div>
-    <!--/.navbar-right -->
+    <!--/navbar-right -->
   </div>
   <!-- container -->
 </div>

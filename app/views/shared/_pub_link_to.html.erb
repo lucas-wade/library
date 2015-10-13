@@ -7,8 +7,9 @@
 
     <% else
          if t.pub_type == 5 %> <!-- movie -->
-            <%= link_to '<i class="fa fa-video-camera"></i>'.html_safe, t.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, } %>
-            <%= link_to '<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>'.html_safe, t.media.url, :target => "_blank" %>
+            <%# link_to '<i class="fa fa-video-camera"></i>'.html_safe, t.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, } %>
+            <%= '<i class="fa fa-video-camera"></i>'.html_safe %>
+            <%# link_to '<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>'.html_safe, t.media.url, :target => "_blank" %>
 
         <% else %>
 
@@ -18,7 +19,12 @@
     <% end %>
 <% end %>
 
-<%= render 'shared/modal_link', button: icon('file-text-o') + t.name, title: t.name, body: nil, url: t.media.url, the_class: 'btn_expand',count: t.id %>
+<% if t.media.present? %>
+  <%= render 'shared/modal_link', button: icon('file-text-o') + t.name, title: t.name, body: nil, url: t.media.url, the_class: 'btn_expand',count: t.id %>
+  <% else if t.url.present? %>
+    <%= render 'shared/modal_link', button: icon('file-text-o') + t.name, title: t.name, body: nil, url: t.url, the_class: 'btn_expand',count: t.id %>
+  <% end %>
+<% end %>
 
 <%#
  if t.topics.present?

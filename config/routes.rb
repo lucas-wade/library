@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
  # get 'password_resets/edit'
 
-  root             'static_pages#language_select'
+  #root             'static_pages#language_select'
 
   get     'language_select' =>  'static_pages#language_select'
   get     'home'    => 'static_pages#home'
@@ -48,7 +48,8 @@ Rails.application.routes.draw do
   resources :topic_translationships,       only: [:create, :edit, :destroy]
   resources :pub_translationships,       only: [:create, :edit, :destroy]
   resources :admin
-  #root 'static_pages#home', as: 'home', via: :all
+
+  root 'static_pages#home'
 
   end
 

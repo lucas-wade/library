@@ -1,0 +1,13 @@
+Bootsy
+A possible workaround would be a separate css file to be loaded only by the editor. You would not link it to your page to avoid conflicts, and would pass it to the editor with javascript. Take a look at these docs: https://github.com/bootstrap-wysiwyg/bootstrap3-wysiwyg#stylesheets
+@volmer
+Owner
+volmer commented 15 hours ago
+In your sample app, try this:
+
+Copy whatever css you want to include in the editor to app/assets/stylesheets/pages.scss.
+In config/initializers/assets.rb, add the following to enable isolate precompilation to that asset:
+Rails.application.config.assets.precompile += %w(pages.css)
+In app/assets/stylesheets/pages.coffee include the file in the stylesheets that will be sent to the editor:
+Bootsy.options.stylesheets.push('/assets/pages.css')
+Let me know if it works.

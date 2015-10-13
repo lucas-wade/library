@@ -10,21 +10,31 @@ class StaticPagesController < ApplicationController
     end
 
     def library
+      @topics = Topic.all.where("language like ?", I18n.locale.to_s).order(:name)
+      @pubs = Pub.all.where("language like ?", I18n.locale.to_s).order(:name)
+
+      # remove empty topics from list
+      @topics = @topics.where.not(main_content: '')
+
+      #search
       if params[:search]
         #@topics = Topic.search_name(params[:search]).order("created_at DESC")
-        @topics = Topic.search_name(params[:search]).order(:name)
+        #@topics = Topic.search_name(params[:search]).order(:name)
+        topics = @topics.search_name(params[:search]).order(:name)
 
         #@topics += Topic.search_main_content(params[:search]).order("created_at DESC")
-        @topics += Topic.search_main_content(params[:search]).order(:name)
+        #@topics += Topic.search_main_content(params[:search]).order(:name)
+        topics += @topics.search_main_content(params[:search]).order(:name)
+        @topics = topics
 
+        #@pubs = Pub.search_name(params[:search]).order("created_at DESC")
+        #@pubs += Pub.search_meta_data(params[:search])
 
-        @pubs = Pub.search_name(params[:search]).order("created_at DESC")
-        #@pubs += Pub.search_main_content(params[:search]).order("created_at DESC")
-        @pubs += Pub.search_meta_data(params[:search])
+        pubs = @pubs.search_name(params[:search]).order("created_at DESC")
+        pubs += @pubs.search_meta_data(params[:search])
+        @pubs = pubs
 
-      else
-        @topics = Topic.all.where("language like ?", I18n.locale.to_s).order(:name)
-        @pubs = Pub.all.where("language like ?", I18n.locale.to_s).order(:name)
+      #else
         #.order('created_at DESC')
       end
     end
