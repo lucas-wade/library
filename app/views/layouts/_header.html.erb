@@ -9,7 +9,7 @@
         <% if current_page?(controller: 'static_pages', action: 'home') || current_page?(controller: 'static_pages', action: 'movie_hd') || action_name == 'home' %>
           <span class="center">
            <%# link_to t('classroom_doors.btn_enter_site'), classroom_doors_path, class: "btn btn-lrg button-major-orange" %>
-           <%= link_to t('classroom_doors.btn_enter_site'), topics_path, class: "btn btn-lrg button-major-orange" %>
+           <%= link_to t('classroom_doors.btn_enter_site'), topics_path, class: "btn btn-lrg button-major-orange animated pulse infinite" %>
           </span>
         <% end %>
       </div>
@@ -66,38 +66,41 @@
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <% if params[:action] == "home" || params[:action] == "movie" %>
-          <li><%= link_to 'Watch the Movie in High Definition', movie_hd_path, class: 'btn button-orange-text'  %></li>
-        <% end %>
-        <% if params[:action] != "language_select" %>
-            <% if params[:action] != "home" && params[:action] != "classroom_doors" %>
-            <li>
-            <%= link_to t('general.watch_movie'), movie_path, class: " button-orange-text" %>
-                <%# render 'shared/modal', button: t('general.watch_movie') , title: t('titles.title'), body: temp, the_class: "btn fat-text-button",count: 100 %>
-            </li>
-            <% end %>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-top:-.3em;">
-                <% key = I18n.locale.to_s %>
-                <%# $av_langs_hash[key] %>
-                <%= icon('fa fa-globe fa-2x') %>
-                <span class="fa fa-caret-down"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <% $av_langs_hash.each do |k, v| %>
-                    <li><%= link_to v, topics_path(locale: k) if k != 'na' %></li>
-                <% end %>
-              </ul>
-            </li>
-        <% end %>
+        <% if params[:action] == "home" %>
+          <li style="font-size:.92em;"><%= link_to 'Watch in High Definition', movie_hd_path, class: 'btn-sm button-orange-text'  %></li>
 
 
-            <li><%= link_to '', topics_path, class: 'fa fa-home fa-2x' %></li>
+        <% else %>
+          <% if params[:action] == "movie" %>
+            <li style="font-size:.92em;"><%= link_to 'Watch in High Definition', movie_hd_path, class: 'btn-sm button-orange-text'  %></li>
+          <% else %>
+            <li><%= link_to t('general.watch_movie'), movie_path, class: " button-orange-text" %></li>
+          <% end %>
 
-            <li>
-              <%= link_to image_tag('icon_library.png'), library_path, class: 'icon-library' %>
-            </li>
-            <% if logged_in? %>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-top:-.3em;">
+              <% key = I18n.locale.to_s %>
+              <%# $av_langs_hash[key] %>
+              <%= icon('fa fa-globe fa-2x') %>
+              <span class="fa fa-caret-down"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <% $av_langs_hash.each do |k, v| %>
+                  <li><%= link_to v, topics_path(locale: k) if k != 'na' %></li>
+              <% end %>
+            </ul>
+          </li>
+
+          <li><%= link_to '', topics_path, class: 'fa fa-home fa-2x' %></li>
+
+          <li>
+            <%= link_to image_tag('icon_library.png'), library_path, class: 'icon-library' %>
+          </li>
+
+          <li><%= link_to '', classroom_doors_path, class: 'fa fa-question fa-2x', style: "color:rgba(5,5,5,.6)" %></li>
+
+          <% if logged_in? %>
             <%= render 'admin/dropdown' %>
 
             <li class="dropdown">
@@ -111,10 +114,9 @@
                 <li> <%= link_to t('sessions.log_out'), logout_path, method: "delete" %> </li>
               </ul>
             </li>
-
-        <% else %>
+          <% else %>
             <li><%= link_to t('sessions.log_in'), login_path %></li>
-            <%# link_to t('sessions.register'), signup_path, class: " button-major-orange" %>
+          <% end %>
         <% end %>
       </ul>
 

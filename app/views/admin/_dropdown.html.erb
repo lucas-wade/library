@@ -1,13 +1,17 @@
 <% if current_admin == TRUE %>
 
     <% if edit_mode == 1 %>
-        <% editcolor = 'edit-color' %>
+        <% editcolor = 'edit-color'
+          editcolorbg = 'edit-color-bg'
+        %>
+
         <% else %>
         <% editcolor = '' %>
+        <% editcolorbg = '' %>
         <% end %>
 
     <li>
-      <%= link_to icon('fa fa-edit'), admin_edit_toggle_path, :method => :post, :class => editcolor %>
+      <%= link_to icon("fa fa-edit #{editcolorbg}"), admin_edit_toggle_path, :method => :post, :class => editcolor %>
     </li>
 
     <li class="dropdown">

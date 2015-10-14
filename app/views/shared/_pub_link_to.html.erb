@@ -1,3 +1,4 @@
+<div class="" style="text-align:center;padding-right:.8em;padding-left:.8em;">
 <% if t.pub_type == 7 %> <!-- photo -->
     <%= link_to '<i class="fa fa-photo"></i>'.html_safe, t.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, } %>
     <%= link_to '<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>'.html_safe, t.media.url, :target => "_blank" %>
@@ -19,13 +20,14 @@
     <% end %>
 <% end %>
 
+
 <% if t.media.present? %>
   <%= render 'shared/modal_link', button: icon('file-text-o') + t.name, title: t.name, body: nil, url: t.media.url, the_class: 'btn_expand',count: t.id %>
   <% else if t.url.present? %>
     <%= render 'shared/modal_link', button: icon('file-text-o') + t.name, title: t.name, body: nil, url: t.url, the_class: 'btn_expand',count: t.id %>
   <% end %>
 <% end %>
-
+</div>
 <%#
  if t.topics.present?
      link_to icon('file-text-o') + t.name, topic_path(t.topics.first, publication_id: t.id)

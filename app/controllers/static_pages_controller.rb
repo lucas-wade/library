@@ -5,7 +5,9 @@ class StaticPagesController < ApplicationController
       if logged_in?
         @micropost = current_user.microposts.build if logged_in?
         @feed_items = current_user.feed.paginate(page: params[:page])
-
+        redirect_to topics_url
+      else
+        #redirect_to gb_intro
       end
     end
 

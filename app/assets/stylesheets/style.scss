@@ -85,6 +85,18 @@ textarea {
 
 .edit-color {
   color: rgb(135, 27, 68);
+
+}
+
+.edit-color-bg {
+  font-size: 1.1em;
+  //padding-bottom: 0;
+  //margin-bottom:0;
+  //padding-left: 1em;
+  background-color: rgba(255, 161, 1, 1);
+  border-radius: .2em;
+  padding: .3em;
+  box-shadow: 0px 0px 10px 5px rgb(255, 161, 1);
 }
 
 .img-icon {
@@ -216,6 +228,9 @@ footer {
       margin-left: 1em;
       //font-size: xx-small;
     }
+  }
+  @media (max-width: 766px) {
+    visibility: hidden;
   }
 }
 
@@ -507,10 +522,10 @@ border-top-right-radius: 149px;
 
 .kids-corner-button-style {
 
-  background-color: #ad82ef;
+  background-color: #ad82ef !important;
   .button-text {
-    font-size: 1.618em;
-    padding: .518em;
+    font-size: 1.618em !important;
+    padding: .518em !important;
   }
 }
 
@@ -521,14 +536,14 @@ border-top-right-radius: 149px;
     //color: $primary-color;
     //margin-bottom: -.118em;
 
-    font-size: 1.618em;
+    font-size: 1.618em !important;
   }
 
   .button-text-small {
     //font: $font-stack;
     //color: $primary-color;
     //padding: 1em;
-    font-size: 1.0em;
+    font-size: 1.0em !important;
     //line-height: .99em;
   }
 

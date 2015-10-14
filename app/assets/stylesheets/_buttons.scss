@@ -133,9 +133,7 @@
   }
 }
 
-.button-major-orange a:hover {
-  color: black;
-}
+
 .button-major-orange-active {
   //background-color: rgba(256,256,256,.93);
   background-color: rgba(lighten($primary-bg-color,0),.43);
@@ -145,6 +143,34 @@
     color: $primary-color;
   }
 }
+
+.button-major-blue {
+
+  font-size: 1.18em;
+  border-color: white;
+
+  background-color: rgb(141, 219, 255);
+  font-weight: 600;
+  //padding: .3em .5em .1em .5em;
+  //color: rgba(68, 52, 23, .8);
+  //max-width: 100%;
+  text-align: center;
+  box-shadow: 0 0 6px 2px white;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  &:hover {
+    text-decoration: none;
+    background-color: rgb(141, 219, 255);
+    color: white;
+    box-shadow: 0px 0px 10px 5px #fff;
+
+  }
+}
+
+
+
 
 .button-orange-text {
   max-width: 100%;
@@ -156,8 +182,8 @@
   &:hover {
     box-shadow: 0px 0px 10px 5px #fff;
     //background-color: rgba(141, 219, 255,1);
-    background:none !important;
-    background-color: rgba(141, 219, 255, 1) !important;
+    //background:none !important;
+    background-color: rgba(255, 255, 255, .3) !important;
     border-radius: .5em;
     color: lighten($site_orange,10%);
   }
