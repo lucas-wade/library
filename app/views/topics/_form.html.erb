@@ -48,6 +48,10 @@
 
       <% rtl_class = rtl_checker %>
 
+      <div class="actions">
+        <%= f.submit "SAVE!", class: "btn btn-danger" %>
+      </div>
+
       <% if topic == TRUE %>
           <div class="form-group">
             <%= f.label :name, "Name!:", class: "form-inline" %>
