@@ -13,9 +13,7 @@
   .navbar-header:after {
     clear: none;
   }
-  #navbar-middle {
-    display: none;
-  }
+
   body {
     padding-top: 50px;
   }
@@ -87,10 +85,16 @@
   }
 
 }
-
-@media (max-width: 1053px) {
-
-  #navbar-middle {
+#navbar-middle {
+  padding-top: .5em;
+  @media (max-width: 1108px) {
+    padding-top:1em;
+    font-size: .69em;
+    //display: none;
+  }
+  @media (max-width: 1024px) {
+    //padding-top:2em;
+    //font-size: .8em;
     display: none;
   }
 }

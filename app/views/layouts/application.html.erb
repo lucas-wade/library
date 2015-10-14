@@ -11,7 +11,7 @@
 
 <%= render 'layouts/header' %>
 
-<div class="container-fluid <%=  "main-container" if edit_mode != 1 %>">
+<div class="container-fluid <%= "main-container" if edit_mode != 1 %>">
   <% flash.each do |message_type, message| %>
       <div class="alert alert-<%= message_type %>"><%= message %></div>
   <% end %>
@@ -29,14 +29,16 @@
       <%# render 'admin/console' %>
   <% end %>
 
-<%= render 'layouts/footer' %>
+
 </div> <!-- /container -->
-<div class="green-strip">
-  You can help us reach everyone with the knowledge of health and sustainability.
-  Please ￼share￼ this site widely and then Join Us! in making possible its completion.
-</div>
+<% if edit_mode != 1 %>
+  <div class="green-strip">
+    You can help us reach everyone with the knowledge of health and sustainability.
+    Please ￼share￼ this site widely and then Join Us! in making possible its completion.
+  </div>
+<% end %>
 
-
+<%= render 'layouts/footer' %>
 </body> <!-- /body -->
 
 </html>
