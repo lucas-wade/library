@@ -94,3 +94,12 @@
     display: none;
   }
 }
+
+
+.hide_sm {
+  //font-size: .8em;
+  visibility: hidden;
+  @media (min-width: 900px) {
+    visibility: visible;
+  }
+}

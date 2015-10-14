@@ -1,13 +1,63 @@
 <div class="bottom">
 <footer class="footer">
-  <small>
-    <%= t('layouts.a_project') %>
-  </small>
+  <div style="float:left;margin-top:0">
+    <%# t('layouts.a_project') %>
+    <a href="" type="button" class="btn_expand" data-toggle="modal" data-target="#about-popup">
+      About Ecology Action
+    </a>
+  </div>
   <nav>
     <ul>
-      <li><%= link_to "About Ecology Action",   'http://growbiointensive.org', target: "_new" %></li>
+      <li>
+        <%# link_to "About Ecology Action",   'http://growbiointensive.org', target: "_new" %>
+        <%# render 'shared/modal_topic', button: "About Ecology Action", title: "About Ecology Action", body: nil, url: "http://www.google.com", the_class: "btn_expand",count:911314 %>
+        <%# render 'shared/modal_link', button: "About Ecology Action", title: "About Ecology Action", body: "billy", url: nil, the_class: 'btn_expand',count: 'about' %>
+
+      </li>
       <li><a href="http://vectorclaw.com/" target="_new" class="tiny">Made with <i class="fa fa-heart c-red"></i> in willits.</a></li>
     </ul>
   </nav>
 </footer>
+</div>
+
+
+<!-- Button trigger modal -->
+<% backuptext = "How is it possible for every person on the planet to live well while passing the same opportunity on to the next generation?
+In 1972, Ecology Action set out to answer this question by addressing the root of human health and sustainability: the soil and how we grow our food.
+Humble Beginnings By focusing on growing their own soil fertility as they grew their food, Ecology Action’s founders transformed a plot of inhospitable soil in downtown Palo Alto, California into a thriving mini-farm growing two people’s complete annual diets.
+11 years and many tons of farm-grown soil later, the process was repeated on a rocky hillside classified as ‘unsuitable for agriculture’. [PA & CG before & after photos]
+Since then, from what is now one of the oldest long-term sustainable agriculture projects in the world, Ecology Action has been has helping millions of people locally and globally empower themselves to solutions of health, nutrition, and resource conservation through teaching and researching how to grow food sustainably—growing living soil while conserving and preserving our most precious resources.
+We are ready to reach the world with over 43 years of the most practical knowledge, and your support today will make this possible. By becoming a member today and then sharing this site widely, you will help us to fill this site with educational content that will enable people everywhere to empower themselves to better health while passing on a healthier, sustainable world to the next generation.
+Please Join Us! in bringing about a WORLD OF DIFFERENCE." %>
+<%
+  if body = Page.find_by(name: "About Ecology Action")
+    body = body.body_html
+  else
+    body = backuptext
+  end %>
+<% url  = nil # "/pages/1" %>
+<!-- Modal -->
+<div class="modal fade" id="about-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal_dialog_topic">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">About Ecology Action</h4>
+      </div>
+      <div class="modal-body">
+        <% if body %>
+          <%= sanitize body %>
+          <% else if url %>
+            <div class="model_topic_iframe">
+              <iframe width="100%" height="100%" src="<%= url %>" frameborder="0"></iframe>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i></button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
 </div>

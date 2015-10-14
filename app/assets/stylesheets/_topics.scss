@@ -43,7 +43,9 @@ max-width: 82em;
   }
 }
 .column_index {
-  max-height:86%;
+
+  //max-height:86%;
+  max-height:calc( 100% - 6em);
   overflow:hidden;
   &:hover {
     overflow:auto;
@@ -89,7 +91,7 @@ max-width: 82em;
 
   //height: 4em;
   height: 4.9em;
-  overflow-y: scroll;
+  overflow-y: auto;
   //max-height: 100%;
   @media (min-width: 1025px) {
     padding-top: 1em;

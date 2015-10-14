@@ -21,7 +21,7 @@
     <%= yield %>
   </div>
 
-  <%= render 'layouts/footer' %>
+  <%# render 'layouts/footer' %>
 
   <%# debug(params) if Rails.env.development? %>
 
@@ -29,8 +29,14 @@
       <%# render 'admin/console' %>
   <% end %>
 
-
+<%= render 'layouts/footer' %>
 </div> <!-- /container -->
+<div class="green-strip">
+  You can help us reach everyone with the knowledge of health and sustainability.
+  Please ￼share￼ this site widely and then Join Us! in making possible its completion.
+</div>
+
+
 </body> <!-- /body -->
 
 </html>

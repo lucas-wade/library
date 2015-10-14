@@ -206,7 +206,7 @@ footer {
   padding-top: 5px;
   margin-bottom: 0;
   padding-bottom: 0;
-
+  z-index: 100;
   //border-top: 1px solid #eaeaea;
 
   color: #e3e3e3;
@@ -230,7 +230,7 @@ footer {
     }
   }
   @media (max-width: 766px) {
-    visibility: hidden;
+    //visibility: hidden;
   }
 }
 
@@ -579,6 +579,24 @@ border-top-right-radius: 149px;
   left: 0;
   right: 0;
   z-index: 10;
+}
+
+.green-strip {
+  font-size: 1.15em;
+  font-weight: 700;
+  padding: .6em 3.3em .6em 3.3em;
+  //margin-top: 10em;
+  //background-color: cornflowerblue;
+  background-color: rgba(22, 242, 26, .8);
+  //border-radius: 1em 1em 0em 0em;
+  max-width: 100%;
+  position: fixed;
+  height: 5em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  //z-index: 10;
 }
 
 
