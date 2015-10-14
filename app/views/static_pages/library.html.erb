@@ -3,8 +3,14 @@
 <div class="under-construction">
   <p>
     <%= t('library.disclaimer') %>
+    <p>
+    <p style="text-align:center;">
+    <%= link_to t('library.btn_help_develop'), request_funding_url, class: "btn button-major-orange" %>
   </p>
-  <%= link_to t('library.btn_help_develop'), request_funding_url, class: "btn button-major-orange" %>
+  <span style="text-align:center;">
+
+</span>
+
 </div>
 
 
@@ -42,11 +48,11 @@
           <% if @pubs.present? %>
               <% @pubs.each do |t| %>
               <tr>
-                    <td>
+                    <td >
                       <%# link_to '<i class="fa fa-zoom fa-1x"></i>'.html_safe, t.media.url, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true } %>
                       <%# link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url, :target => "_blank" %>
                       <%# link_to t.name, t %>
-                      <%= render partial: 'shared/pub_link_to', locals: {t: t} %>
+                      <span class="btn btn-default"><%= render partial: 'shared/pub_link_to', locals: {t: t} %></span>
                     </td>
                     <td><%= link_to t.topics.first.parents.first.name, t.topics.first.parents.first if t.topics.present?%></td>
                     <td><%= link_to t.topics.first.name || t.topics.first.parents.first.name, t.topics.first if t.topics.present? %></td>

@@ -1,22 +1,19 @@
 <div class="bottom">
-<footer class="footer">
-  <div style="float:left;padding-left:2em;margin-top:0">
+<footer class="footer footer-left">
+  <div style="padding-left:2em;margin-bottom:1em;">
     <%# t('layouts.a_project') %>
     <a href="" type="button" class="btn_expand" data-toggle="modal" data-target="#about-popup">
       About Ecology Action
     </a>
   </div>
-  <nav>
-    <ul>
-      <li>
+</footer>
+<footer class="footer footer-right">
+  <div style="padding-right:2em;margin-bottom:1em">
+    <a href="http://vectorclaw.com/" target="_new" class="tiny">Made with <i class="fa fa-heart c-red"></i> in willits.</a>
         <%# link_to "About Ecology Action",   'http://growbiointensive.org', target: "_new" %>
         <%# render 'shared/modal_topic', button: "About Ecology Action", title: "About Ecology Action", body: nil, url: "http://www.google.com", the_class: "btn_expand",count:911314 %>
         <%# render 'shared/modal_link', button: "About Ecology Action", title: "About Ecology Action", body: "billy", url: nil, the_class: 'btn_expand',count: 'about' %>
-
-      </li>
-      <li><a href="http://vectorclaw.com/" target="_new" class="tiny">Made with <i class="fa fa-heart c-red"></i> in willits.</a></li>
-    </ul>
-  </nav>
+  </div>
 </footer>
 </div>
 

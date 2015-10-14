@@ -21,7 +21,11 @@
 }
 
 .library_table {
+  border-color: black;
   a {
     color: rgb(10,10,10);
+    &:hover {
+      text-decoration: none;
+    }
   }
 }

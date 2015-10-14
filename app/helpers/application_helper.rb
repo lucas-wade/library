@@ -31,4 +31,15 @@ module ApplicationHelper
     end
   end
 
+
+ def fullscreen_mode?
+   if edit_mode == 1
+     return false
+   end
+   if params[:controller] != 'topics'
+     return false
+   end
+   return true
+ end
+ 
 end
