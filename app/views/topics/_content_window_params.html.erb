@@ -124,33 +124,37 @@
 <!-- translations available -->
 <div id="below-content-window">
 
+
   <% if show_topic.translations.present? && there_is_a_topic_in_the_content_window %>
-      <% show_topic.translations.each do |trans|
-        if trans.name != nil %>
+      <% show_topic.translations.each do |trans| %>
+        <%#if trans.name != nil %>
               <%= link_to $av_langs_hash[trans.language], trans %>
-          <% end %>
+
+
+        <%# end %>
       <% end %>
-  <% else
-       if show_topic.originals.present? %>
+  <% else if show_topic.originals.present? %>
           <% show_topic.originals.each do |trans| %>
               <%= link_to $av_langs_hash[trans.language], trans %>
               <% if trans.translations.present? %>
-                  <% trans.translations.each do |trans2|
-                    if trans2.name != nil %>
+                  <% trans.translations.each do |trans2| %>
+                    <%# if trans2.name != nil %>
                           <% if trans2.id != show_topic.id %>
                               <%= link_to $av_langs_hash[trans2.language], trans2 %>
                           <% end %>
-                      <% end %>
+                      <%# end %>
                   <% end %>
               <% end %>
           <% end %>
       <% end %>
   <% end %>
 
+
   <% if @show_pub.present? && @show_pub.translations.present? %>
 
   <% end %>
 
+<%# render 'edit_translations' %>
 
 
   <div class="nav pull-right">

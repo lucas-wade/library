@@ -34,13 +34,13 @@
       <h3><%= params[:search] %></h3>
     -->
         <table class="table table-bordered library_table">
-          <tr>
+          <tr style="background-color:rgba(31,25,25,.3);">
             <th>Title</th>
             <th>Category</th>
             <th>Sub-Category</th>
             <th>Depth</th>
             <th>Skill Level</th>
-            <th>Type</th>
+
             <th>Language</th>
           </tr>
 
@@ -57,8 +57,8 @@
                     <td><%= link_to t.topics.first.parents.first.name, t.topics.first.parents.first if t.topics.present?%></td>
                     <td><%= link_to t.topics.first.name || t.topics.first.parents.first.name, t.topics.first if t.topics.present? %></td>
                     <td><%= $available_categories[t.topics.first.category] if t.topics.present? %></td>
-                    <td><%= $available_skills[t.skill]%></td>
-                    <td><%= t.media.content_type %></td>
+                    <td><%= image_tag "icon_skills_" + t.skill.to_s + '.png' %></td>
+
                     <td><%= $av_langs_hash[t.language] %></td>
                     <% if edit_mode == 1 %>
                         <td> <%= link_to 'Edit', edit_topic_path(t), class: "btn btn-info" %> </td>
@@ -84,7 +84,7 @@
               <td><%= link_to t.parents.first.name, t.parents.first if t.parents.first.present? %></td>
               <td><%= $available_categories[t.category]%></td>
               <td><%= $available_skills[t.skill] if t.skill.present? %></td>
-              <td>Topic</td>
+
               <td><%= $av_langs_hash[t.language] %></td>
               <% if edit_mode == 1 %>
                   <td><%= link_to 'Edit', edit_topic_path(t), class: "btn btn-info" %></td>

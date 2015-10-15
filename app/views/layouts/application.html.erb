@@ -31,21 +31,8 @@
 
 
 </div> <!-- /container -->
-<% if edit_mode != 1 && params[:action] != "library"%>
 
-  <div class="green-strip">
-    <div style="z-index:200">
-    You can help us reach everyone with the knowledge of health and sustainability.
-    Please ￼
-    <i class="fa fa-facebook-square fa-lg"></i>
-    <i class="fa fa-twitter-square fa-lg"></i>
-    <i class="fa fa-google-plus-square fa-lg"></i>
-    share￼ this site widely and then
-    <a href="https://secure.growbiointensive.org" class="btn button-major-orange">Join Us!</a>
-    in making possible its completion.
-  </div>
-  </div>
-<% end %>
+<%= render 'layouts/green_strip' %>
 
 <%= render 'layouts/footer' %>
 </body> <!-- /body -->

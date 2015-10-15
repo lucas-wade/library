@@ -48,9 +48,7 @@
 
       <% rtl_class = rtl_checker %>
 
-      <div class="actions">
-        <%= f.submit "SAVE!", class: "btn btn-danger" %>
-      </div>
+
 
       <% if topic == TRUE %>
           <div class="form-group">
@@ -66,8 +64,6 @@
             <% end %>
           </div>
 
-
-
           <div class="form-group form-inline">
             <%= f.label :icon_image %>
             <span class="picture">
@@ -81,7 +77,7 @@
             <span><strong>Placeholder:</strong> greyed out with "Not Yet Grown Content" message</span>
         <% end %>
       </div>
-      <br>
+
 
       <div class="form-group checkbox-inline">
         <%= f.label :growing do %>
@@ -100,10 +96,12 @@
           });
       </script>
 
-      <!-- main content -->
-
       <div class="form-group">
-        <%= f.label $available_categories[0] %><br>
+        <%= f.submit "SAVE!", class: "btn btn-danger" %>
+      </div>
+      <!-- main content -->
+      <div class="form-group">
+        <%= f.label $available_categories[0] %>
         <%= f.bootsy_area :main_content, cols: 60, rows: 30, class: rtl_class %>
       </div>
 

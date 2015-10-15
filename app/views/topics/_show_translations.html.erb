@@ -1,0 +1,26 @@
+
+
+<% if @topic.translations.present? %> <!-- its the original -->
+    <strong class="edit-color"><%= $av_langs_hash_english[@topic.language] %></strong><small> V <%= @topic.version %> </small>
+    <% $av_langs_hash_english.each do |k,v| unless k == 'na' || k == @topic.language %>
+            <%= link_to v, edit_topic_path( @topic.translations.find_by_language(k) ) %>
+            <small>v<%= @topic.translations.find_by_language(k).version %></small>
+        <% end %>
+    <% end %>
+<% else if @topic.originals.present? %>
+    <% original_topic = @topic.originals.first %>
+        <%= link_to $av_langs_hash_english[original_topic.language], edit_topic_path( original_topic ) %> <small> v <%= original_topic.version %> </small>
+        <% $av_langs_hash_english.each do |k,v| unless k == 'na' || k == original_topic.language %>
+                <% if k == @topic.language %>
+                    <strong class="edit-color"> <%= v %> </strong>
+                    <small>v<%= original_topic.translations.find_by_language(k).version %></small>
+                <% else %>
+                <%= link_to v, edit_topic_path( original_topic.translations.find_by_language(k) ) %>
+                    <small>v<%= original_topic.translations.find_by_language(k).version %></small>
+                <% end %>
+            <% end %>
+        <% end %>
+    <% end %>
+<% end %>
+
+

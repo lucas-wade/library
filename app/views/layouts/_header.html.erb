@@ -86,7 +86,11 @@
             </a>
             <ul class="dropdown-menu">
               <% $av_langs_hash.each do |k, v| %>
+                <% if params[:action] == "library" %>
+                  <li><%= link_to v, library_path(locale: k) if k != 'na' %></li>
+                <% else %>
                   <li><%= link_to v, topics_path(locale: k) if k != 'na' %></li>
+                <% end %>
               <% end %>
             </ul>
           </li>

@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   #include TopicsHelper
+  #before_action :set_locale, :home
 
     def home
       if logged_in?
@@ -7,13 +8,13 @@ class StaticPagesController < ApplicationController
         @feed_items = current_user.feed.paginate(page: params[:page])
         redirect_to topics_url
       else
-        #redirect_to gb_intro
+        #redirect_to gb_intro_url
       end
     end
 
     def library
       @topics = Topic.all.where("language like ?", I18n.locale.to_s).order(:name)
-      @pubs = Pub.all.where("language like ?", I18n.locale.to_s).order(:name)
+      @pubs = Pub.all.where("language like ? or language like ?", I18n.locale.to_s, "na").order(:name)
 
       # remove empty topics from list
       @topics = @topics.where.not(main_content: '')
