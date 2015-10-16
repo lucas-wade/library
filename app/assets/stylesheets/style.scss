@@ -199,13 +199,18 @@ textarea {
 .footer-left {
   position:absolute;
   left: 0;
+  padding-left: 2em;
+  //margin-bottom:.7em;
 }
 .footer-right {
   position:absolute;
   right: 0;
+  padding-right:0em;
+  //margin-bottom:.7em;
 }
 
 .footer {
+
   position:fixed;
   bottom: 0;
 
@@ -216,7 +221,7 @@ textarea {
   //margin-top: 45px;
   //padding-top: 5px;
   margin-bottom: 0;
-  padding-bottom: 0;
+  padding-bottom: .5em;
   z-index: 200;
   //border-top: 1px solid #eaeaea;
 
