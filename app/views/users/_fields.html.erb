@@ -20,7 +20,7 @@
   <%= f.label(t('sessions.password'), :class => 'input-group-addon') do  %>
       <i class="fa fa-key fa-fw"></i>
   <%end%>
-  <%= f.text_field :password, :class => 'form-control', :type => 'text', :placeholder => 'Password' %>
+  <%= f.password_field :password, :class => 'form-control'  %>
 </div>
 
 <h3 style="margin-bottom: 0"><%= t('sessions.confirm_password') %>:</h3>
@@ -28,5 +28,5 @@
   <%= f.label(t('sessions.confirm_password'), :class => 'input-group-addon') do  %>
       <i class="fa fa-check fa-fw"></i>
   <%end%>
-  <%= f.text_field :password_confirmation, :class => 'form-control', :type => 'text', :placeholder => 'Confirm Password' %>
+  <%= f.password_field :password_confirmation, :class => 'form-control' %>
 </div>

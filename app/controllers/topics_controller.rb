@@ -1,9 +1,10 @@
 class TopicsController < ApplicationController
-  
+
 
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   before_filter :disable_xss_protection, only: [:edit, :update]
+  before_action :logged_in_user, only: [:new, :destroy, :update, :create, :edit]
   before_action :admin?,     only: [:new, :destroy, :update, :create, :edit]
 
 
@@ -188,7 +189,8 @@ class TopicsController < ApplicationController
                                   :create_cat_2,
                                   :create_cat_3,
                                   :create_cat_4,
-                                  :bootsy_image_gallery_id)
+                                  :bootsy_image_gallery_id,
+                                  :order)
 
   end
 

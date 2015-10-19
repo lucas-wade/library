@@ -1,0 +1,25 @@
+<div class=" library_card" style="position:relative;maximum-width:10em;">
+    <div style="font-size:1.8em;font-weight:400;">
+      <%= render partial: 'shared/pub_link_to', locals: {t: pub}, class: "btn btn-default", style: "color:black;" %> </h2>
+    </div>
+
+    <% if pub.topics.present? %>
+      <div style="position:relative;font-size:1.2em;font-weight:800;">
+        <%= image_tag "icon_skills_" + pub.skill.to_s + '.png' %>
+        <%# $available_categories[pub.topics.first.category] %>
+        <%= pub.topics.first.parents.first.name %></h3>
+        <%# link_to pub.topics.first.name, pub.topics.first if pub.topics.first.name.present? %>
+        <%= " : " + pub.topics.first.name if pub.topics.first.name.present? %>
+      </div>
+    <% end %>
+
+<!--
+    <div style="position:absolute;bottom:1em;right:1em;">
+      <%# $av_langs_hash[pub.language] %>
+    </div>
+-->
+    <% if edit_mode == 1 %>
+       <%= link_to 'Edit', edit_topic_path(t), class: "btn btn-info" %>
+       <%= link_to 'Destroy', t,class: "btn btn-danger" ,method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+</div>

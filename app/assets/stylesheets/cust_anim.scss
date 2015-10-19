@@ -1,0 +1,24 @@
+@keyframes slow_throb {
+  0% {
+
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+
+    transform: scale3d(1.15, 1.15, 1.15);
+  }
+
+  100% {
+
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.slow-throb {
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-name: slow_throb;
+}

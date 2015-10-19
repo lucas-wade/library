@@ -105,15 +105,15 @@
 
         <% if show_topic.placeholder == TRUE %>
             <%= render 'shared/placeholder' %>
-        <% else
-             if show_topic.growing == TRUE %>
+        <% else %>
+            <div class="main_content <%= rtl_class %>">
+              <%= raw show_topic.main_content %>
+            </div>
+            <% if show_topic.growing == TRUE %>
                 <%= render 'shared/growing' %>
-            <% else %>
-                <div class="main_content <%= rtl_class %>">
-                  <%= raw show_topic.main_content %>
-                </div>
             <% end %>
-        <% end %>
+          <% end %>
+        <%# end %>
 
       <% end #of More Info instructions %>
   <% end %> <!-- end of controll for pub or content window -->
@@ -264,17 +264,17 @@
 
   <ul class="nav nav-pills nav-tabs-custom">
     <% if show_topic.peak %>
-      <li class="<%= tab_active2(show_topic.peak) %> "><%= link_to image_tag("tabui_4.png"), show_topic.peak %><li>
+      <li class="<%= tab_active2(show_topic.peak) %>" style="z-index:6"><%= link_to image_tag("tabui_4.png"), show_topic.peak %><li>
     <% end %>
-    <li class="<%= tab_active2(show_topic.introduction) %> "><%= link_to image_tag("tabui_0.png"), show_topic.introduction %><li>
+    <li class="<%= tab_active2(show_topic.introduction) %> " style="z-index:5"><%= link_to image_tag("tabui_0.png"), show_topic.introduction %><li>
     <% if show_topic.cat1 %>
-      <li class="<%= tab_active2(show_topic.cat1) %> "><%= link_to image_tag("tabui_1.png"), show_topic.cat1 %><li>
+      <li class="<%= tab_active2(show_topic.cat1) %> " style="z-index:4"><%= link_to image_tag("tabui_1.png"), show_topic.cat1 %><li>
     <% end %>
     <% if show_topic.cat2 %>
-      <li class="<%= tab_active2(show_topic.cat2) %> "><%= link_to image_tag("tabui_2.png"), show_topic.cat2 %><li>
+      <li class="<%= tab_active2(show_topic.cat2) %> " style="z-index:3"><%= link_to image_tag("tabui_2.png"), show_topic.cat2 %><li>
     <% end %>
     <% if show_topic.cat3 %>
-      <li class="<%= tab_active2(show_topic.cat3) %> "><%= link_to image_tag("tabui_3.png"), show_topic.cat3 %><li>
+      <li class="<%= tab_active2(show_topic.cat3) %> " style="z-index:2"><%= link_to image_tag("tabui_3.png"), show_topic.cat3 %><li>
     <% end %>
   </ul>
 

@@ -24,9 +24,9 @@
 
 
 <% if t.media.present? %>
-  <%= render 'shared/modal_link', button: t.name, title: t.name, body: nil, url: t.media.url, the_class: 'btn_expand',count: t.id %>
+  <%= render 'shared/modal_link', button: t.name, title: t.name, body: nil, url: t.media.url, the_class: '',count: t.id %>
   <% else if t.url.present? %>
-    <%= render 'shared/modal_link', button: t.name, title: t.name, body: nil, url: t.url, the_class: 'btn_expand',count: t.id %>
+    <%= render 'shared/modal_link', button: t.name, title: t.name, body: nil, url: t.url, the_class: '',count: t.id %>
   <% end %>
 <% end %>
 </div>

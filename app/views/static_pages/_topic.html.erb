@@ -1,0 +1,33 @@
+<div class=" library_card" style="position:relative;maximum-width:10em;">
+    <div style="font-size:1.8em;font-weight:400;">
+      <% title = topic.name || topic.parents.first.name
+      if $available_categories[topic.category].present? && topic.category > 0
+        title = title + ' ' + $available_categories[topic.category]
+      end
+      %>
+      <%= link_to title, topic %>
+    </div>
+
+    <div style="position:relative;font-size:1.2em;font-weight:700;">
+      <% if topic.skill.present? && topic.skill > 0 %>
+        <%= image_tag "icon_skills_" + topic.skill.to_s + '.png' %>
+      <% end %>
+
+      <% if !topic.name.present? %>
+        <% if topic.parents.first.parents.present? %>
+          <%= topic.parents.first.parents.first.name %>
+          <br>
+        <% end %>
+      <% end %>
+      <span style="font-size:.85em;font-weight:900;"><%=topic.parents.first.name if topic.parents.present? %></span>
+
+    </div>
+<%= $av_langs_hash[topic.language] %>
+    <%# $available_skills[topic.skill] if topic.skill.present? %>
+
+    <% if edit_mode == 1 %>
+        <%= link_to 'Edit', edit_topic_path(topic), class: "btn btn-info" %>
+        <%= link_to 'Destroy', topic,class: "btn btn-danger" ,method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+
+</div>

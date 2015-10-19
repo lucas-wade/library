@@ -7,13 +7,10 @@
     <p style="text-align:center;">
     <%= link_to t('library.btn_help_develop'), request_funding_url, class: "btn button-major-orange" %>
   </p>
-  <span style="text-align:center;">
-
-</span>
-
+  <span style="text-align:center;"></span>
 </div>
 
-
+<%# *** search %>
 <div class="row row_fullwidth library_bg_color" style="">
   <div id="library" class="col-xs-12">
     <%= form_tag(library_path, :method => "get", id: "search-form") do %>
@@ -30,71 +27,21 @@
         </div>
     <% end %>
 
-    <!--
-      <h3><%= params[:search] %></h3>
-    -->
-        <table class="table table-bordered library_table">
-          <tr style="background-color:rgba(31,25,25,.3);">
-            <th>Title</th>
-            <th>Category</th>
-            <th>Sub-Category</th>
-            <th>Depth</th>
-            <th>Skill Level</th>
 
-            <th>Language</th>
-          </tr>
+    <% if @pubs.present? %>
+      <% @pubs.each do |pub| %>
+        <%= render 'static_pages/pub', pub: pub %>
+        <% end %>
+    <% end %>
 
-          <!-- pubs -->
-          <% if @pubs.present? %>
-              <% @pubs.each do |t| %>
-              <tr>
-                    <td >
-                      <%# link_to '<i class="fa fa-zoom fa-1x"></i>'.html_safe, t.media.url, :data => { :colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true } %>
-                      <%# link_to '<i class="fa fa-download fa-1x"></i>'.html_safe, t.media.url, :target => "_blank" %>
-                      <%# link_to t.name, t %>
-                      <span class="btn btn-default"><%= render partial: 'shared/pub_link_to', locals: {t: t} %></span>
-                    </td>
-                    <td><%= link_to t.topics.first.parents.first.name, t.topics.first.parents.first if t.topics.present?%></td>
-                    <td><%= link_to t.topics.first.name || t.topics.first.parents.first.name, t.topics.first if t.topics.present? %></td>
-                    <td><%= $available_categories[t.topics.first.category] if t.topics.present? %></td>
-                    <td><%= image_tag "icon_skills_" + t.skill.to_s + '.png' %></td>
 
-                    <td><%= $av_langs_hash[t.language] %></td>
-                    <% if edit_mode == 1 %>
-                        <td> <%= link_to 'Edit', edit_topic_path(t), class: "btn btn-info" %> </td>
-                        <td> <%= link_to 'Destroy', t,class: "btn btn-danger" ,method: :delete, data: { confirm: 'Are you sure?' } %> </td>
-                  <% end %>
-              </tr>
-              <% end %>
-          <% end %>
+    <% if @topics.present? %>
+      <% @topics.each do |topic| %>
+        <%= render 'static_pages/topic', topic: topic %>
+        <% end %>
+    <% end %>
 
-          <!-- TOPICS -->
-          <% if @topics.present? %>
-          <% @topics.each do |t| %>
-          <tr>
-              <td><%= link_to t.name || t.parents.first.name, t %></td>
-              <td><% if t.parents.first.present? %>
-                  <% if t.parents.first.parents.present? %>
-                    <%= link_to t.parents.first.parents.first.name , t.parents.first.parents.first %>
-                  <% else %>
-                    <%= link_to t.parents.first.name, t.parents.first if t.parents.first.present? %>
-                  <% end %>
-                <% end %>
-              </td>
-              <td><%= link_to t.parents.first.name, t.parents.first if t.parents.first.present? %></td>
-              <td><%= $available_categories[t.category]%></td>
-              <td><%= $available_skills[t.skill] if t.skill.present? %></td>
 
-              <td><%= $av_langs_hash[t.language] %></td>
-              <% if edit_mode == 1 %>
-                  <td><%= link_to 'Edit', edit_topic_path(t), class: "btn btn-info" %></td>
-                  <td><%= link_to 'Destroy', t,class: "btn btn-danger" ,method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              <% end %>
-          </tr>
-          <% end %>
-          <% end %>
-
-        </table>
 
   </div>
 </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150925171834) do
+ActiveRecord::Schema.define(version: 20151019172627) do
 
   create_table "attachmentships", force: :cascade do |t|
     t.integer  "pub_id"
@@ -132,6 +132,7 @@ ActiveRecord::Schema.define(version: 20150925171834) do
     t.boolean  "placeholder",  default: false
     t.boolean  "growing",      default: false
     t.integer  "version",      default: 0
+    t.integer  "order",        default: 0
   end
 
   add_index "topics", ["translation"], name: "index_topics_on_translation"

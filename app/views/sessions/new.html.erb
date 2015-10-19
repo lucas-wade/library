@@ -5,7 +5,9 @@
 <div id="login" class="row">
   <div class="col-md-6 col-md-offset-3">
     <div class="filled-container-padded ">
-    <h1><%= t('sessions.log_in') %></h1>
+
+      <h3><%= t('sessions.new_user') %> <%= link_to t('sessions.register'), signup_path, class: "btn btn-lg button-major-blue animated pulse infinite" %></h3>
+    <h2><%= t('sessions.log_in') %></h2>
     <%= form_for(:session, url: login_path) do |f| %>
 
         <%= f.label( t('sessions.email') ) %>
@@ -23,7 +25,7 @@
         <%= f.submit t('sessions.log_in'), class: "btn btn-primary" %>
     <% end %>
 <br>
-    <p><%= t('sessions.new_user') %> <%= link_to t('sessions.register'), signup_path, class: "btn btn-lg button-major-blue animated pulse infinite" %></p>
+
     </div>
   </div>
 </div>

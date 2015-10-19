@@ -31,13 +31,14 @@ class MediaUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-  version :tile do
+
+  version :tile, if: :image? do
      process :resize_to_fit => [512, 512]
   end
-  version :thumb do
+  version :thumb, if: :image? do
      process :resize_to_fit => [128, 128]
   end
-  version :tiny do
+  version :tiny, if: :image? do
      process :resize_to_fit => [64, 64]
   end
 
@@ -52,5 +53,8 @@ class MediaUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
-
+  protected
+  def image?(new_file)
+    new_file.content_type.start_with? 'image'
+  end
 end

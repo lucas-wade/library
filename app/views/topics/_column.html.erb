@@ -38,7 +38,7 @@
     <!-- main loop for the column -->
     <!-- still need to implement ordering. -->
 
-    <% @topics[@temp_topic].kids.each do |t| %>
+    <% @topics[@temp_topic].kids.order(:order).each do |t| %>
         <%# cache ['topic_entry', t] do %>
         <!-- current lang? -->
         <% if t.language == 0 || t.language == I18n.locale.to_s %>
@@ -86,7 +86,7 @@
                         %>
 
                 <a href="<%= topic_path(t) %>" class="list-group-item btn-default btn-main-menu button <%= color_class %> <%= the_class %> <%= rtl_checker(t.language) %> ">
-                  <div class="button-text"> <%= t.name %> </div>
+                  <div class="button-text"> <%= t.name %></div>
                   <div class="button-text-small">
                     <% t.kids.each do |tt| %>
                         <% if tt.category == 0 %>
