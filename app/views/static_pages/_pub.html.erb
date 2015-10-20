@@ -19,7 +19,7 @@
     </div>
 -->
     <% if edit_mode == 1 %>
-       <%= link_to 'Edit', edit_topic_path(t), class: "btn btn-info" %>
-       <%= link_to 'Destroy', t,class: "btn btn-danger" ,method: :delete, data: { confirm: 'Are you sure?' } %>
+       <%= link_to 'Edit', edit_topic_path(pub), class: "btn btn-info" %>
+       <%= link_to 'Destroy', pub, class: "btn btn-danger" ,method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
 </div>
