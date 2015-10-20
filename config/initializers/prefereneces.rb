@@ -6,6 +6,6 @@ $available_skills = '-', 'Basic', 'Intermediate', 'Advanced'
 $available_categories = 'Introduction', 'I', 'II', 'III', 'Peak'
 $available_categories_numbered = [ ['Introduction / main content',0], ['I',1], ['II',2], ['III',3], ['Peak',4] ]
 
-$available_pub_types = 'Book', 'Booklet', 'Information Sheet', 'Compilation', 'FAQ', 'Movie', 'Animation', 'Photograph'
+$available_pub_types = 'Book', 'Booklet', 'Information Sheet', 'Compilation', 'FAQ', 'Movie', 'Animation', 'Photograph', 'Remote Hosted Video'
 
 $index_column_colors ='b1', 'b2', 'b3'

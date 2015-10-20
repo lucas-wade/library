@@ -6,7 +6,7 @@
      if t.pub_type == 6 %> <!-- animation -->
         <%= link_to image_tag('button_anim_play.png'), t.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, } %>
     <% else
-         if t.pub_type == 5 %> <!-- movie -->
+         if t.pub_type == 5 || t.pub_type == 8 %> <!-- movie -->
             <%# link_to '<i class="fa fa-video-camera"></i>'.html_safe, t.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, } %>
             <%= '<i class="fa fa-video-camera fa-lg"></i>'.html_safe %>
             <%# link_to '<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>'.html_safe, t.media.url, :target => "_blank" %>
