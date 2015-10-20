@@ -16,6 +16,7 @@ body .modal_dialog_topic {
       width: 80%;
     }
 }
+
 .model_topic_iframe {
     //height: 70vh;
     //height: 540px;
@@ -25,9 +26,9 @@ body .modal_dialog_topic {
       //height: 100%;
   //  }
 }
-.topic_show_window {
 
-max-width: 82em;
+.topic_show_window {
+  max-width: 82em;
   //smaller
   @media (max-width: 766px) {
     width: 100%;
