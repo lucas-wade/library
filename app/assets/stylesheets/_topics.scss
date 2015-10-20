@@ -207,13 +207,16 @@ max-width: 82em;
 }
 
 .tight-list {
+  height: calc(100% - 1.5em);
   padding-left: -1em;
   padding-right: -1em;
   margin-left: -1em;
   margin-right: -1em;
   margin-top: -1em;
   line-height: .9em;
-  overflow-x: auto;
+  margin-bottom: -1em;
+  padding-bottom: 1em;
+  overflow-y: auto;
 }
 
 .col-borders {

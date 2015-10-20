@@ -182,14 +182,16 @@
           </div>
       <% end %>
 <!-- skill 1 -->
-      <div class="col-xs-4">
+      <div class="col-xs-4 inherit_h">
         <p class="center"> <%= image_tag("icon_skills_1.png", size: "22") %> </p>
         <div class="tight-list">
+
           <% show_topic.pubs.each do |t| %>
               <% if t.skill <= 1 %>
                   <%= render partial: 'shared/pub_link_to', locals: {t: t} %>
               <% end %>
           <% end %>
+
         </div>
       </div>
 <!-- skill 2 -->
