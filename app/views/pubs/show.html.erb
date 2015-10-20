@@ -52,11 +52,11 @@
 
           <% if @pub.media.content_type == "application/pdf" %>
             <div class="pdf-viewer">
-              <iframe src="<%= @pub.media.url %>" width="62%" height="100%"></iframe>
+              <iframe src="<%= @pub.media.url %>" width="62%" height="2048" style="max-height:calc(100% - 26em)"></iframe>
             </div>
           <% else if @pub.media.content_type == 'video/mp4' || @pub.media.content_type == 'application/mp4' %>
               <div class="pdf-viewer">
-                <iframe src="<%= @pub.media.url %>" width="62%" height="100%"></iframe>
+                <iframe src="<%= @pub.media.url %>" width="62%" height="720" style="max-height:calc(100% - 26em)"></iframe>
               </div>
           <% else %>
               <div class="image-viewer">
