@@ -17,10 +17,13 @@ body .modal_dialog_topic {
     }
 }
 .model_topic_iframe {
-    height: 70vh;
-    @media (min-width: 1600px) {
-      height: 90vh;
-    }
+    //height: 70vh;
+    height: 540px;
+    max-height: 100%;
+    //@media (min-width: 1600px) {
+      //height: 90vh;
+      //height: 100%;
+  //  }
 }
 .topic_show_window {
 

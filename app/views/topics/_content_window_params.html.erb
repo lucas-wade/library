@@ -160,11 +160,11 @@
   <div class="nav pull-right">
     <% if @show_pub.present? %>
         <%# link_to '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>'.html_safe, @show_pub.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, :colorbox_className => 'b0'} %>
-        <%= render 'shared/modal_topic', button: icon('fa fa-expand'), title: @show_pub.name,body: nil, url: @show_pub.media.url, the_class: "btn_expand",count:@show_pub.id %>
+        <%= render 'shared/modal_topic', button: icon('fa fa-expand'), title: @show_pub.name,body: nil, url: @show_pub.media.url, the_class: "btn_expand",count:'filler-content' + @show_pub.id_to_s %>
     <% else
          if there_is_a_topic_in_the_content_window == TRUE && show_topic.growing == FALSE && show_topic.placeholder == FALSE %>
             <%# link_to '<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>'.html_safe, show_topic, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_html => show_topic.main_content} %>
-            <%= render 'shared/modal_topic', button: icon('fa fa-expand'), title: show_topic.name,url: nil, body: show_topic.main_content, the_class: "btn_expand",count:965 %>
+            <%= render 'shared/modal_topic', button: icon('fa fa-expand'), title: show_topic.name,url: nil, body: show_topic.main_content, the_class: "btn_expand",count:'donkey' + show_topic.id.to_s %>
         <% end %>
     <% end %>
   </div>

@@ -1,12 +1,10 @@
 <div class="" style="text-align:center;padding-right:.8em;padding-left:.8em;">
 <% if t.pub_type == 7 %> <!-- photo -->
-    <%= link_to '<i class="fa fa-photo fa-lg"></i>'.html_safe, t.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, } %>
     <%= link_to icon("cloud-download fa-lg"), t.media.url, :target => "_blank" %>
-
+    <%= icon('fa-photo fa-lg') %>
 <% else
      if t.pub_type == 6 %> <!-- animation -->
         <%= link_to image_tag('button_anim_play.png'), t.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, } %>
-
     <% else
          if t.pub_type == 5 %> <!-- movie -->
             <%# link_to '<i class="fa fa-video-camera"></i>'.html_safe, t.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, } %>
@@ -24,9 +22,9 @@
 
 
 <% if t.media.present? %>
-  <%= render 'shared/modal_link', button: t.name, title: t.name, body: nil, url: t.media.url, the_class: '',count: t.id %>
+  <%= render 'shared/modal_link', button: t.name, title: t.name, body: t.media.url,type: t.pub_type, url: nil, the_class: '',count: 'thedonkeysarehere' + t.id_to_s %>
   <% else if t.url.present? %>
-    <%= render 'shared/modal_link', button: t.name, title: t.name, body: nil, url: t.url, the_class: '',count: t.id %>
+      <%= render 'shared/modal_link', button: t.name, title: t.name, body: nil,type: t.pub_type, url: t.url, the_class: '',count: 'allyourbasearebe' + t.id.to_s %>
   <% end %>
 <% end %>
 </div>
