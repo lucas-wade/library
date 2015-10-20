@@ -110,6 +110,7 @@ class TopicsController < ApplicationController
   def edit
     @topic = Topic.find(params[:id])
     @topics = Topic.all
+    #@attachmentship = @topic.pub_attachmentships.build
     #if @topic.name == nil
      # @topic.name = $av_langs_hash_english[@topic.language]
     #end

@@ -26,8 +26,7 @@ class Pub < ActiveRecord::Base
 
   mount_uploader :media, MediaUploader
 
-
-
+  accepts_nested_attributes_for :topics
 
   # Become child of topic.
   def make_parent(parent_topic)
@@ -76,6 +75,3 @@ class Pub < ActiveRecord::Base
   end
 
 end
-
-
-

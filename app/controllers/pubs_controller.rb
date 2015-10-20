@@ -48,6 +48,11 @@ class PubsController < ApplicationController
         end
       end
 
+      if pub_params[:topics].present? && pub_params[:topics].to_i > 0
+        @parent_topic = Topic.find(pub_params[:topics])
+        @pub.make_parent(@parent_topic)
+      end
+      
       if @pub.media.present? && @pub.media.content_type == "application/pdf"
         if @pub.pdf_to_meta_data == TRUE
           flash[:info] = "New Publication Saved & pdf indexed."
@@ -68,9 +73,13 @@ class PubsController < ApplicationController
   def edit
     @pub = Pub.find(params[:id])
     @pubs = Pub.all
+    #@parent_topic =
+
+
   end
 
   def update
+
     @pub = Pub.find(params[:id])
     if params[:parent_id].present?
       @parent_topic = Topic.find(params[:parent_id])
@@ -78,6 +87,14 @@ class PubsController < ApplicationController
     if params[:original_id].present?
       @original_pub = Pub.find(params[:original_id])
     end
+
+    if pub_params[:topics].present? && pub_params[:topics].to_i > 0
+      @parent_topic = Topic.find(pub_params[:topics])
+      @pub.make_parent(@parent_topic)
+    end
+
+    params[:pub].delete :topics
+
     if @pub.update_attributes(pub_params)
       flash[:success] = "Publication updated"
       redirect_to @pub
@@ -106,6 +123,7 @@ class PubsController < ApplicationController
                                 :pub_type,
                                 :meta_data,
                                 :topic_id,
+                                :topics,
                                 :original_id,
                                 :translation_id)
   end

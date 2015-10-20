@@ -22,7 +22,7 @@
 
 
 <% if t.media.present? %>
-  <%= render 'shared/modal_link', button: t.name, title: t.name, body: t.media.url,type: t.pub_type, url: nil, the_class: '',count: 'thedonkeysarehere' + t.id.to_s %>
+  <%= render 'shared/modal_link', button: t.name, title: t.name, body: nil, type: t.pub_type, url: t.media.url, the_class: '',count: 'thedonkeysarehere' + t.id.to_s %>
   <% else if t.url.present? %>
       <%= render 'shared/modal_link', button: t.name, title: t.name, body: nil,type: t.pub_type, url: t.url, the_class: '',count: 'allyourbasearebe' + t.id.to_s %>
   <% end %>

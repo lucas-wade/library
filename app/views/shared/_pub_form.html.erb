@@ -17,6 +17,9 @@ placeholder: "Compose new micropost..."
     <% if @parent_topic %>
         <h3>Create Supplimental Publication of <strong><%= @parent_topic.name %></strong></h3>
         <%= hidden_field_tag :parent_id, @parent_topic.id %>
+    <% else %>
+        <%# f.select(:topics, Topic.order(:name), :include_blank => true, :prompt => 'Add to another Department' ) %>
+        <%# f.collection_select(:topics, Topic.all, :id, :name, :include_blank => true, :prompt => 'Add to another Department' ) %>
     <% end %>
 
     <!-- #translation hidden field stuff -->
