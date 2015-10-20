@@ -188,7 +188,9 @@
 
           <% show_topic.pubs.each do |t| %>
               <% if t.skill <= 1 %>
-                  <%= render partial: 'shared/pub_link_to', locals: {t: t} %>
+                  <div class="item">
+                    <%= render partial: 'shared/pub_link_to', locals: {t: t} %>
+                  </div>
               <% end %>
           <% end %>
 

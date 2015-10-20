@@ -213,11 +213,16 @@ max-width: 82em;
   margin-left: -1em;
   margin-right: -1em;
   margin-top: -1em;
-  line-height: .9em;
+  line-height: 1em;
   margin-bottom: -1em;
-  padding-bottom: 1em;
+  padding-bottom: 2em;
   padding-top: .2em;
   overflow-y: auto;
+
+  .item {
+    padding:.1em;
+    padding-bottom: .2em;
+  }
 }
 
 .col-borders {
