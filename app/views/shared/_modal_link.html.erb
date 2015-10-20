@@ -21,9 +21,9 @@
               <% if type == 7 %> <!-- photo -->
                 <%= image_tag url %>
               <% else if type == 6 %> <!-- animation -->
-                <video width="100%" height="92%" controls="true" src="<%= url %>" ></video>
+                <video width="100%" height="540" controls="true" src="<%= url %>" ></video>
               <% else if type == 5 %> <!-- movie -->
-                <video width="100%" height="92%" controls="true" src="<%= url %>" ></video>
+                <video width="100%" height="540" controls="true" src="<%= url %>" ></video>
               <% else if type == 8 %> <!-- remote video -->
                 <iframe autoplay=false width="100%" height="540" src="<%= url %>" frameborder="0"></iframe>
               <% else %>
