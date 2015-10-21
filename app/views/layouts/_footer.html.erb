@@ -32,13 +32,14 @@ Humble Beginnings By focusing on growing their own soil fertility as they gre
 Since then, from what is now one of the oldest long-term sustainable agriculture projects in the world, Ecology Action has been has helping millions of people locally and globally empower themselves to solutions of health, nutrition, and resource conservation through teaching and researching how to grow food sustainably—growing living soil while conserving and preserving our most precious resources.
 We are ready to reach the world with over 43 years of the most practical knowledge, and your support today will make this possible. By becoming a member today and then sharing this site widely, you will help us to fill this site with educational content that will enable people everywhere to empower themselves to better health while passing on a healthier, sustainable world to the next generation.
 Please Join Us! in bringing about a WORLD OF DIFFERENCE." %>
+
 <%
   if body = Page.find_by(name: "About Ecology Action")
     body = body.body_html
   else
     body = backuptext
   end %>
-<% url  = nil # "/pages/1" %>
+
 <!-- Modal -->
 <div class="modal fade" id="about-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal_dialog_topic">
@@ -48,14 +49,7 @@ Please Join Us! in bringing about a WORLD OF DIFFERENCE." %>
         <h4 class="modal-title" id="myModalLabel">About Ecology Action</h4>
       </div>
       <div class="modal-body">
-        <% if body %>
           <%= sanitize body %>
-          <% else if url %>
-            <div class="model_topic_iframe">
-              <iframe width="100%" src="<%= url %>" frameborder="0"></iframe>
-            </div>
-          <% end %>
-        <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i></button>

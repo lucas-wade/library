@@ -4,18 +4,18 @@
     <%= icon('photo') %>
 <% else
      if t.pub_type == 6 %> <!-- animation -->
-        <%= link_to image_tag('button_anim_play.png'), t.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, } %>
+        <%= image_tag('button_anim_play.png') %>
     <% else
          if t.pub_type == 5 || t.pub_type == 8 %> <!-- movie -->
-            <%# link_to '<i class="fa fa-video-camera"></i>'.html_safe, t.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, } %>
+
             <%= '<i class="fa fa-video-camera fa-lg"></i>'.html_safe %>
-            <%# link_to '<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>'.html_safe, t.media.url, :target => "_blank" %>
+
 
         <% else %>
             <%= link_to icon("cloud-download fa-lg"), t.media.url, :target => "_blank", style: 'inline-block' %>
             <%= icon('file-text-o fa-lg') %>
             <%# link_to '<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>'.html_safe, t.media.url, :target => "_blank", style: 'inline-block' %>
-            <%# link_to icon('file-text-o'), t.media.url, :data => {:colorbox => true, :colorbox_height => '90%', :colorbox_width => '90%', :colorbox_iframe => true, } %>
+
         <% end %>
     <% end %>
 <% end %>
@@ -24,10 +24,13 @@
 <% if t.media.present? %>
   <%= render 'shared/modal_link', button: t.name, title: t.name, body: nil, type: t.pub_type, url: t.media.url, the_class: '',count: 'thedonkeysarehere' + t.id.to_s %>
   <% else if t.url.present? %>
-      <%= render 'shared/modal_link', button: t.name, title: t.name, body: nil,type: t.pub_type, url: t.url, the_class: '',count: 'allyourbasearebe' + t.id.to_s %>
+      <%= render 'shared/modal_link', button: t.name, title: t.name, body: nil,type: t.pub_type, url: t.url, the_class: '',count: 'thedonkeysarehere' + t.id.to_s %>
   <% end %>
 <% end %>
 </div>
+<script>
+$('<%= '#myModal-' + 'thedonkeysarehere' + t.id.to_s %>').appendTo("body")
+</script>
 <%#
  if t.topics.present?
      link_to icon('file-text-o') + t.name, topic_path(t.topics.first, publication_id: t.id)

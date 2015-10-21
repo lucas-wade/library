@@ -16,7 +16,7 @@
 
 //= require bootstrap-sprockets
 //= require turbolinks
-//= require colorbox-rails
+
 
 //= require_tree .
 
@@ -28,4 +28,3 @@ $(document).ready(function() {
         //trigger: 'hover'
     });
 });
-
