@@ -107,3 +107,10 @@
     visibility: visible;
   }
 }
+.hide_xs {
+  //font-size: .8em;
+  visibility: hidden;
+  @media (min-width: 415px) {
+    visibility: visible;
+  }
+}
