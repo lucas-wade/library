@@ -30,3 +30,9 @@
 @import "library";
 @import "screen_media";
 @import "cust_anim";
+
+.modal-body {
+  img {
+    max-width: 100%;
+  }
+}
