@@ -1,15 +1,19 @@
 <% provide(:logo, 'clear' ) %>
 
 <div class="offset-jimbo">
-<div class="col-md-8 col-md-offset-2">
-<div class="request-funding <%= rtl_checker(I18n.locale).to_s %>">
-
-<%= t('general.funding_request_html') %>
-  <div class="center">
-  <%= link_to 'Contact Ecology Action Regarding Funding',
-                                                  'https://donatenow.networkforgood.org/ecologyaction',
-                                                  class: "btn btn-lrg button-major-orange"  %>
+  <div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+    <div class="request-funding <%= rtl_checker(I18n.locale).to_s %>">
+      <%= t('general.funding_request_html') %>
+      <div class="center">
+        <%= link_to 'Donate or Become a Member',
+                    'http://secure.growbiointensive.org',
+                    class: "btn btn-lrg button-major-orange"  %>
+        <br>
+        <br>
+        <%= link_to 'Contact Ecology Action Regarding Funding',
+                    'http://secure.growbiointensive.org/contact',
+                    class: "btn btn-lrg button-major-blue"  %>
+      </div>
+    </div>
   </div>
-</div>
-</div>
 </div>

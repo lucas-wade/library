@@ -201,7 +201,9 @@ textarea {
 .footer-left {
   position:absolute;
   left: 0;
-  padding-left: 2em;
+  padding-left: 1em;
+
+  color: black;
   //margin-bottom:.7em;
 }
 .footer-right {
@@ -645,6 +647,7 @@ border-top-right-radius: 149px;
 
   border-radius: 4em;
   -webkit-hyphens: manual;
+  padding-bottom: 10em;
 
 }
 
