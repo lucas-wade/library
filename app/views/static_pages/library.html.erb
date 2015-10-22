@@ -27,21 +27,24 @@
         </div>
     <% end %>
 
-
+<%= will_paginate @topics  %>
+<% will_paginate @pubs %>
+<br>
     <% if @pubs.present? %>
       <% @pubs.each do |pub| %>
         <%= render 'static_pages/pub', pub: pub %>
         <% end %>
     <% end %>
-
+<br>
 
     <% if @topics.present? %>
       <% @topics.each do |topic| %>
         <%= render 'static_pages/topic', topic: topic %>
         <% end %>
     <% end %>
-
-
+<br>
+<% will_paginate @pubs %>
+<%= will_paginate @topics %>
 
   </div>
 </div>

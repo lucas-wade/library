@@ -13,11 +13,20 @@ class StaticPagesController < ApplicationController
     end
 
     def library
+      # *** topics all your language name ordered
+      #@topics = Topic.all.where("language like ?", I18n.locale.to_s).order(:name)
       @topics = Topic.all.where("language like ?", I18n.locale.to_s).order(:name)
-      @pubs = Pub.all.where("language like ? or language like ?", I18n.locale.to_s, "na").order(:name)
+      @pubs = Pub.all.where("language like ? or language like ?", I18n.locale.to_s, "na").order(:name).paginate(page: params[:page], per_page: 5)
 
       # remove empty topics from list
-      @topics = @topics.where.not(main_content: '')
+      @topics = @topics.where.not(main_content: '').paginate(page: params[:page], per_page: 5)
+
+      #
+      #current_page = params[:page] ||= 1
+
+      #@topics = WillPaginate::Collection.create(current_page, 5, @topics.length) do |pager|
+    #    pager.replace @topics
+    #  end
 
       #search
       if params[:search]
@@ -39,6 +48,9 @@ class StaticPagesController < ApplicationController
 
       #else
         #.order('created_at DESC')
+
+        @pubs = @pubs.paginate(page: params[:page], per_page: 5)
+        @topics = @topics.paginate(page: params[:page], per_page: 5)
       end
     end
 
