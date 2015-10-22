@@ -33,3 +33,16 @@ $('.close').click(function () {
 	$('#stop-vid').hide();
 	$('#stop-vid iframe').attr("src", jQuery("#stop-vid iframe").attr("src"));
 });
+
+// *** bootsy parser
+$('#page_body_html').wysihtml5('deepExtend', {
+  parserRules: {
+    classes: {
+      "responsive": 1
+    },
+    tags: {
+      strong: {},
+      em: {}
+    }
+  }
+});
