@@ -28,3 +28,8 @@ $(document).ready(function() {
         //trigger: 'hover'
     });
 });
+
+$('.close').click(function () {
+	$('#stop-vid').hide();
+	$('#stop-vid iframe').attr("src", jQuery("#stop-vid iframe").attr("src"));
+});

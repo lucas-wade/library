@@ -54,6 +54,9 @@ body .modal_dialog_topic {
   &:hover {
     overflow:auto;
   }
+  &:focus {
+    overflow:auto;
+  }
 }
 
 .content-window-bg-color {
