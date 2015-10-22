@@ -55,7 +55,10 @@ body .modal_dialog_topic {
     overflow:auto;
   }
   &:focus {
-    overflow:auto;
+    overflow:scroll;
+  }
+  &:active {
+    overflow:scroll;
   }
 }
 
