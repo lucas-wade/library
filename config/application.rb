@@ -29,5 +29,7 @@ module Library
     config.action_view.embed_authenticity_token_in_remote_forms = true
 
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+
+    #config.assets.js_compressor = :uglifier
   end
 end
