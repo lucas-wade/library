@@ -18,12 +18,10 @@
 
 #uploads
 public/uploads
+#media
+public/media
 
 .idea
 # test
 
 /db/seeds.rb
-
-#media
-public/*
-public
