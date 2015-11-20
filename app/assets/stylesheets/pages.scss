@@ -4,10 +4,12 @@
 .page {
   padding: 4em;
   padding-bottom: 8em;
-  //margin: 2em;
+  margin-bottom: 4em;
   max-width: 70em;
   background-color: rgba(190,186,182,.95);
+  background-color: $primary-bg-color;
   border-radius: .3em;
+  height: 100%;
 
   u {
     vertical-align: super;

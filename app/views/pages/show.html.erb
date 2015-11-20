@@ -1,12 +1,14 @@
 <div class="row offset-jimbo">
-  <div class="col-sm-8 col-sm-offset-2 page">
-    <% if current_admin == true %>
-      <div style="text-align:right;float:right;font-size:smaller">
-        <%= link_to 'Edit | ', edit_page_path(@page) if current_admin %>
-        <%= link_to 'Back', pages_path %>
-      </div>
-    <% end %>
+  <div class="col-sm-8 col-sm-offset-2">
+    <div class="page">
+      <% if current_admin == true %>
+        <div style="text-align:right;float:right;font-size:smaller">
+          <%= link_to 'Edit | ', edit_page_path(@page) if current_admin %>
+          <%= link_to 'Back', pages_path %>
+        </div>
+      <% end %>
       <h3><%= @page.name %></h3>
       <%= sanitize @page.body_html %>
+    </div>
   </div>
 </div>
