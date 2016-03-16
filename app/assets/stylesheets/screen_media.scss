@@ -110,8 +110,10 @@
 .hide_xs {
   //font-size: .8em;
   visibility: hidden;
+  position: absolute;
   @media (min-width: 415px) {
     visibility: visible;
+    position:relative;
   }
 }
 .collapsed-menu {

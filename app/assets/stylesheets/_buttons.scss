@@ -270,3 +270,15 @@
   }
 }
 }
+
+.paypal-input-button {
+  width:6.0em;
+  height:auto;
+  margin-top:-2em;
+  position:relative;
+  top:2.65em;
+  z-index: 2024;
+  @media (min-width: 767px) {
+    top:1.55em;
+  }
+}
