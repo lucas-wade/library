@@ -44,8 +44,6 @@ class Topic < ActiveRecord::Base
   has_many :pubs, through: :pub_attachmentships
 
 
-
-
   accepts_nested_attributes_for :kids
   accepts_nested_attributes_for :parents
   accepts_nested_attributes_for :parent_families

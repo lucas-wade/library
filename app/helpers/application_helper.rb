@@ -19,15 +19,13 @@ module ApplicationHelper
 
   def header_title(mode = '')
     base_title = t('titles.title_html')
-
     if mode.empty?
-      "#{base_title} #{t('titles.classroom')}".html_safe
-    else if mode == 'library'
+      # "#{base_title} #{t('titles.classroom')}".html_safe
+      "#{base_title}".html_safe
+    elsif mode == 'library'
       "#{base_title}  #{t('titles.library')}".html_safe
-         else if mode == 'clear'
-           base_title
-    end
-    end
+    elsif mode == 'clear'
+      base_title
     end
   end
 
@@ -41,5 +39,5 @@ module ApplicationHelper
    end
    return true
  end
- 
+
 end

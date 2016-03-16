@@ -54,20 +54,15 @@
 
               <% end %>
           <% end %>
-
         </li>
-
       </ul>
-
     </div>
     <!--/.nav-middle -->
-
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <% if params[:action] == "home" %>
           <li style="font-size:.92em;"><%= link_to 'Watch in High Definition', movie_hd_path, class: 'btn-sm button-orange-text'  %></li>
-
 
         <% else %>
           <% if params[:action] == "movie" %>
@@ -95,11 +90,11 @@
             </ul>
           </li>
 
-          <li><%= link_to '', topics_path, class: 'fa fa-home fa-2x' %></li>
-
-          <li>
-            <%= link_to image_tag('icon_library.png'), library_path, class: 'icon-library' %>
-          </li>
+          <% if params[:action] == "library" %>
+            <li><%= link_to '', topics_path, class: 'fa fa-home fa-2x' %></li>
+          <% else %>
+            <li><%= link_to image_tag('icon_library.png'), library_path, class: 'icon-library' %></li>
+          <% end %>
 
           <li><%= link_to '', classroom_doors_path, class: 'fa fa-question fa-2x', style: "color:rgba(5,5,5,.6)" %></li>
 
@@ -124,10 +119,61 @@
             </li>
           <% end %>
         <% end %>
+
+
       </ul>
 
     </div>
     <!--/navbar-right -->
+
+      <ul class="collapsed-menu nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-list fa-lg"></i>
+            <i class="fa fa-caret-down"></i>
+          </a>
+            <ul class="dropdown-menu nav" id="small-dropdown">
+              <li >
+                <span style="display:inline-block">
+                <%= link_to '', topics_path, class: 'fa fa-home fa-2x', style: "padding-right: .5em;" %>
+                <%= link_to image_tag('icon_library.png', style: "width:2.6em;"), library_path, class: '', style: "width:1em;padding-right:1em;" %>
+                <%= link_to '', classroom_doors_path, class: 'fa fa-question fa-2x', style: "color:rgba(5,5,5,.9);padding-right:1em;" %>
+
+
+
+              <% if logged_in? %>
+                <% if current_admin == TRUE %>
+                  <%
+                  if edit_mode == 1
+                    editcolor = 'edit-color'
+                    editcolorbg = 'edit-color-bg'
+                  else
+                    editcolor = ''
+                    editcolorbg = ''
+                  end
+                  %>
+                  <%= link_to icon("fa fa-edit fa-lg #{editcolorbg}"), admin_edit_toggle_path, :method => :post, :class => editcolor %>
+                  
+              <% end %>
+              <%= link_to t('users.settings'), edit_user_path(current_user) %> |
+              <%= link_to t('sessions.log_out'), logout_path, method: "delete" %>
+              <% else %>
+                <%= link_to icon('user fa-2x'), login_path %>
+              <% end %>
+              </span>
+              </li>
+              <li class="divider"></li>
+              <% key = I18n.locale.to_s %>
+              <% $av_langs_hash.each do |k, v| %>
+                <% if params[:action] == "library" %>
+                  <li><%= link_to v, library_path(locale: k) if k != 'na' %></li>
+                <% else %>
+                  <li><%= link_to v, topics_path(locale: k) if k != 'na' %></li>
+                <% end %>
+              <% end %>
+        </li>
+      </ul>
+
   </div>
   <!-- container -->
 </div>

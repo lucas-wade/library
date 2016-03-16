@@ -11,14 +11,14 @@
             window.location.href="<%= edit_topic_path %>"
         </script>
     <% end %>
-<% else%>
+
+<% else %>
   <%# **** Normal mode. NOT edit_mode%>
   <div class="row low-gutter tight-butt inherit_h">
     <%
        @temp_topic = @topic.col_finder - 1
        session[:current_collumn] = @temp_topic
     %>
-
     <%# *** test to see if we have already animated in the sub stopic view %>
     <%
        if session[:anim_in_done_it_once] == 0
@@ -35,15 +35,15 @@
 
     <%# *** maybe render the first menu column %>
     <% if @temp_topic == 0 %>
-
         <div id="big_c" class="col-sm-4 inherit_h">
+          <% @jumper = 0 %>
           <%= render 'column' %>
         </div>
 
     <% end %>
 
     <%# *** now render the active topic %>
-    <div style="position:relative;height:inherit;display:inline-block;" class="col-sm-8 topic_show_window <%= the_anim_class %>" id="sub-topics-window-animated">
+    <div style="height:inherit;display:inline-block;" class="col-sm-8 topic_show_window <%= the_anim_class %>" id="sub-topics-window-animated">
       <%= render 'sub_topics_menu' %>
       <%= render partial: 'topics/content_window_params', locals: {show_topic: @topic, show_pub: @show_pub} %>
     </div>
@@ -51,6 +51,7 @@
     <%# maybe render the other 2 colums on the right %>
       <% if @temp_topic == 1 || @temp_topic == 2 %>
           <div id="big_c" class="col-sm-4 inherit_h">
+            <% @jumper = 0 %>
             <%= render 'column' %>
           </div>
       <% end %>
@@ -59,19 +60,29 @@
     <%#  *** the small columns for the phone %>
     <div id="small_c1">
       <div class="col-sm-4">
-        <% @temp_topic =0 %>
+        <%
+        @temp_topic = 0
+        @jumper = 1
+        %>
+        <%= render 'column' %>
+
+      </div>
+    </div>
+    <div id="small_c3">
+      <div class="col-sm-4">
+        <%
+        @temp_topic =1
+
+        %>
         <%= render 'column' %>
       </div>
     </div>
     <div id="small_c3">
       <div class="col-sm-4">
-        <% @temp_topic =1 %>
-        <%= render 'column' %>
-      </div>
-    </div>
-    <div id="small_c3">
-      <div class="col-sm-4">
-        <% @temp_topic =2 %>
+        <%
+        @temp_topic =2
+
+        %>
         <%= render 'column' %>
       </div>
     </div>

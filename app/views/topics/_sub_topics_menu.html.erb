@@ -19,7 +19,7 @@
                        end
 
                     %>
-                    <%= link_to tt.name, tt, class: the_class unless tt.name == nil %>
+                    <%= link_to tt.name, topic_path(tt, anchor: top_topic(tt).name), class: the_class unless tt.name == nil %>
                 <% end %>
             <% end %>
         <% end %>
@@ -44,12 +44,11 @@
                            end
 
                         %>
-                        <%= link_to tt.name, tt, class: the_class %>
+                        <%= link_to tt.name, topic_path(tt, anchor: top_topic(tt).name), class: the_class %>
                     <% end %>
                 <% end %>
             <% end %>
         <% end %>
-
 
     <% if @topic.category > 0 && @topic.parents.first.parents.first.id < 3 %>
         <% @topic.parents.first.kids.each do |tt|
@@ -69,12 +68,12 @@
                                end
 
                             %>
-                    <%= link_to tt.name, tt, class: the_class %>
+                    <%= link_to tt.name, topic_path(tt, anchor: top_topic(tt).name), class: the_class %>
                 <% end %>
             <% end %>
         <% end %>
     <%# end %>
-    <% else if @topic.category > 0%>
+    <% else if @topic.category > 0 %>
         <% @topic.parents.first.parents.first.kids.each do |tt|
           if tt.category < 1 && tt.language == I18n.locale.to_s %>
                 <% if tt.icon.present? %>
@@ -92,7 +91,7 @@
                        end
 
                     %>
-                    <%= link_to tt.name, tt, class: the_class %>
+                    <%= link_to tt.name, topic_path(tt, anchor: top_topic(tt).name), class: the_class %>
                 <% end %>
             <% end %>
         <% end %>

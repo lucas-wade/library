@@ -114,3 +114,20 @@
     visibility: visible;
   }
 }
+.collapsed-menu {
+  visibility: visible;
+  position: absolute;
+  z-index: 1050;
+  top: 0.2em;
+  right: 0.21em;
+  @media (min-width: 415px) {
+    visibility: hidden;
+  }
+}
+
+#small-dropdown {
+  position: absolute;
+  left: -13em;
+  right: 1em;
+  padding: 1.25em;
+}

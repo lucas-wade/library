@@ -65,7 +65,8 @@ div {
   //max-height: 100%;
   overflow: hidden;
   @media (max-width: 766px) {
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
 }

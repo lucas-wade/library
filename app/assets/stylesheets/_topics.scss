@@ -29,17 +29,41 @@ body .modal_dialog_topic {
 
 .topic_show_window {
   max-width: 82em;
+  position:relative;
+  //width: 100%;
   //smaller
   @media (max-width: 766px) {
-    width: 100%;
-
+    position: absolute;
+    height: 0;
+    width: 0;
+    visibility: hidden;
   }
+}
+.topic_show_window_small {
+  width: 122%;
+  position:relative;
+  left: -2.1em;
+  //right: ;
 
+  overflow-y: visible;
+  overflow-x:visible;
+  visibility: visible;
+  @media (min-width: 370px) {
+    width: 115%;
+  }
+  @media (min-width: 420px) {
+    width: 105%;
+  }
+  @media (min-width: 766px) {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+  }
 }
 
 .main_content {
   height:inherit;
-  width:100%;
+  width:inherit;
   u {
     vertical-align: super;
       font-size: smaller;
@@ -49,15 +73,19 @@ body .modal_dialog_topic {
 .column_index {
   //max-height:86%;
   max-height:calc( 100% - 6em);
-  overflow:hidden;
-  &:hover {
-    overflow:auto;
-  }
-  &:focus {
-    overflow:scroll;
-  }
-  &:active {
-    overflow:scroll;
+  //overflow: hidden;
+  overflow-x:visible;
+  @media (min-width: 767px) {
+    overflow:hidden;
+    &:hover {
+      overflow:auto;
+    }
+    &:focus {
+      overflow:scroll;
+    }
+    &:active {
+      overflow:scroll;
+    }
   }
 }
 
@@ -92,16 +120,33 @@ body .modal_dialog_topic {
   position: relative;
   padding-top: .5em;
 
-  padding-left: .5em;
-  padding-right: .5em;
+  padding-left: .1em;
+  padding-right: .1em;
 
   margin: 0 0 0em;
 
 
   //height: 4em;
-  height: 4.9em;
+
   overflow-y: auto;
-  //max-height: 100%;
+  overflow-x: visible;
+  a {
+    margin: .2em;
+    margin-left: .12em;
+    margin-right: .12em;
+    font-size: .5em;
+    font-weight: 700;
+  }
+  @media (min-width: 767px) {
+    padding-left: .5em;
+    padding-right: .5em;
+    height: 4.9em;
+    a {
+      margin: 0.1em;
+      font-weight: 500;
+      font-size: .58em;
+    }
+  }
   @media (min-width: 1025px) {
     padding-top: 1em;
     height: auto;
@@ -113,7 +158,7 @@ body .modal_dialog_topic {
   background-color: rgba($content_bg_color, .93);
   margin: .618em 0 0;
   overflow-y: auto;
-  overflow-x: hidden;
+  //overflow-x: hidden; ***
   border-radius: .3em .3em 0 0;
   padding: 1em 1em .1em;
   p {
@@ -127,12 +172,25 @@ body .modal_dialog_topic {
     //text-decoration: underline;
     color: #d5f3ff;
   }
-  @media (max-width: 766px) {
+  @media (max-width: 511px) {
+    font-size: .4em;
+    h1 {
+
+    }
+  }
+  @media (min-width: 512px) {
     font-size: .8em;
     h1 {
 
     }
   }
+  @media (min-width: 1278px) {
+    font-size: 1em;
+    h1 {
+
+    }
+  }
+
 }
 
 .content-window-size-1 {
@@ -203,7 +261,10 @@ body .modal_dialog_topic {
 }
 
 #category-window {
-  min-width: 36em;
+  width: 100%;
+  @media (min-width: 767px) {
+    min-width: 36em;
+  }
   color: white;
   position: relative;
   margin-top: 0;
@@ -279,8 +340,17 @@ body .modal_dialog_topic {
   //left: -140px;
   z-index: 0;
 }
+.tab-global {
+  //max-width: 25%;
+  @media (max-width: 767px) {
+  img {
+    width: 7em;
+  }
+ }
+}
 .tab-all {
   opacity: .96;
+
 }
 .tab-cat4 {
   margin-right: -3.1em;
@@ -291,10 +361,12 @@ body .modal_dialog_topic {
   margin-right: -3.6em;
   z-index: 0;
 
+
 }
 .tab-cat1 {
   margin-right: -4.3em;
   z-index: 0;
+
 
 }
 
@@ -302,11 +374,13 @@ body .modal_dialog_topic {
   margin-right: -4.3em;
   z-index: 0;
 
+
 }
 
 .tab-cat3 {
   //margin-right: -3em;
   z-index: 0;
+
 
 }
 
@@ -318,10 +392,8 @@ body .modal_dialog_topic {
   overflow: visible;
   position: relative;
   opacity: 1;
-  //padding: 0 24px 24px 24px;
-  //margin: 0 -24px -24px -24px;
-
 }
+
 .tab-active::before {
    content: " ";
    position: absolute;
@@ -332,8 +404,10 @@ body .modal_dialog_topic {
    background: image_url("icon-tabs-cat-active-blue.png") no-repeat center top;
    background-size: 100% 95%;
    pointer-events: none;
+
 }
 
 .tab-greyed-out {
   opacity: .4;
+
 }
