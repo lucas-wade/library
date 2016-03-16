@@ -202,7 +202,7 @@ textarea {
   position:absolute;
   left: 0;
   padding-left: 1em;
-  
+
 
   color: black;
   //margin-bottom:.7em;
@@ -619,6 +619,7 @@ border-top-right-radius: 149px;
   left: 0;
   right: 0;
   text-align: center;
+
   @media (max-width: 767px) {
     text-align: left;
     height:4.8em;
@@ -627,7 +628,7 @@ border-top-right-radius: 149px;
   }
   @media (max-width: 414px) {
     text-align: left;
-    height:4em;
+    height:6em;
     font-size: .7em;
     padding: .3em .7em .6em .7em;
   }

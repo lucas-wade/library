@@ -108,6 +108,9 @@ body .modal_dialog_topic {
   height: 100%;//inherit;
   //height: inherit;
   //max-width: inherit;
+  @media (max-width: 767px) {
+    height: auto;
+  }
 }
 
 .height_media {
