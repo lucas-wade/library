@@ -27,7 +27,9 @@
         </div>
     <% end %>
 
+<span class="hide_xs">
 <%= will_paginate @topics  %>
+</span>
 <% will_paginate @pubs %>
 <br>
     <% if @pubs.present? %>

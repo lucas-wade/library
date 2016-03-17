@@ -79,10 +79,17 @@ div {
 }
 
 .row_fullwidth {
-    margin-left: -13% !important;
-    padding-left: 3em !important;
-    margin-right: -2% !important;
-    padding-right: 2em !important;
+    margin-left: -17% !important;
+    padding-left: .1em !important;
+    margin-right: -6% !important;
+    padding-right: .1em !important;
+    @media (min-width: 766px) {
+      margin-left: -13% !important;
+      padding-left: 3em !important;
+      margin-right: -2% !important;
+      padding-right: 2em !important;
+
+    }
 }
 .offset-jimbo {
   margin-left: -11%;
