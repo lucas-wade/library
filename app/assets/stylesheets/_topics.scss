@@ -27,6 +27,7 @@ body .modal_dialog_topic {
   //  }
 }
 
+
 .topic_show_window {
   max-width: 82em;
   position:relative;
@@ -255,11 +256,15 @@ body .modal_dialog_topic {
   margin: 0;
   overflow-y: hidden;
   overflow-x: hidden;
+  font-size: .6em;
   a {
     color: #F7F7F7;
   }
   p {
     margin-bottom: 1em;
+  }
+  @media (min-width: 512px) {
+    font-size: 1em;
   }
 }
 

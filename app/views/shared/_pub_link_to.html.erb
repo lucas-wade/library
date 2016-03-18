@@ -1,30 +1,24 @@
+<% button_icon = nil %>
 <div class="" style="padding-right:.8em;padding-left:.8em;">
 <% if t.pub_type == 7 %> <!-- photo -->
-    <%= link_to icon("cloud-download fa-lg"), t.media.url, :target => "_blank" %>
-    <%= icon('photo') %>
-<% else
-     if t.pub_type == 6 %> <!-- animation -->
-        <%= image_tag('button_anim_play.png') %>
-    <% else
-         if t.pub_type == 5 || t.pub_type == 8 %> <!-- movie -->
-
-            <%= '<i class="fa fa-video-camera fa-lg"></i>'.html_safe %>
-
-
-        <% else %>
-            <%= link_to icon("cloud-download fa-lg"), t.media.url, :target => "_blank", style: 'inline-block' %>
-            <%= icon('file-text-o fa-lg') %>
-            <%# link_to '<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>'.html_safe, t.media.url, :target => "_blank", style: 'inline-block' %>
-
-        <% end %>
-    <% end %>
+  <%= link_to icon("cloud-download fa-lg"), t.media.url, :target => "_blank" %>
+  <% button_icon = icon('photo') %>
+<% elsif t.pub_type == 6 %> <!-- animation -->
+  <%= button_icon = image_tag('button_anim_play.png').to_s %>
+<% elsif t.pub_type == 5 || t.pub_type == 8 %> <!-- movie -->
+  <%# button_icon = '<i class="fa fa-video-camera fa-lg"></i>'.html_safe %>
+  
+  <% button_icon = icon('video-camera fa-lg').to_s %>
+<% else %>
+  <%= link_to icon("cloud-download fa-lg"), t.media.url, :target => "_blank", style: 'inline-block' %>
+  <% button_icon = icon('file-text-o fa-lg') %>
 <% end %>
 
 
 <% if t.media.present? %>
-  <%= render 'shared/modal_link', button: t.name, title: t.name, body: nil, type: t.pub_type, url: t.media.url, the_class: '',count: 'thedonkeysarehere' + t.id.to_s %>
+  <%= render 'shared/modal_link', button: button_icon + ' ' + t.name, title: t.name, body: nil, type: t.pub_type, url: t.media.url, the_class: '',count: 'thedonkeysarehere' + t.id.to_s %>
   <% else if t.url.present? %>
-      <%= render 'shared/modal_link', button: t.name, title: t.name, body: nil,type: t.pub_type, url: t.url, the_class: '',count: 'thedonkeysarehere' + t.id.to_s %>
+      <%= render 'shared/modal_link', button: button_icon + ' ' + t.name, title: t.name, body: nil,type: t.pub_type, url: t.url, the_class: '',count: 'thedonkeysarehere' + t.id.to_s %>
   <% end %>
 <% end %>
 </div>

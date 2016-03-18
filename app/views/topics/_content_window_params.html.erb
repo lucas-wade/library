@@ -24,7 +24,7 @@
 <% rtl_class = rtl_checker(show_topic.language) %>
 
 <div style="height:inherit;max-height:inherit;">
-  <div class="btn-kill">
+  <div class="btn-kill hide_xs_visible">
   <%= link_to icon('fa fa-close fa-2x'), topics_path, class: "btn", style: "color:#b04431" %>
   </div>
 
@@ -70,12 +70,14 @@
           <% end %>
 
           <!-- NAME -->
+          
           <% if show_topic.category.present? && show_topic.category > 0
                tt = show_topic.parents.first
                if !tt.name.present?
                  tt.name =''
                else
-                 tt.name = tt.name + ' ' + $available_categories[show_topic.category]
+                 #tt.name = tt.name + ' ' + $available_categories[show_topic.category]
+                 tt.name = tt.name
                end
              else
                tt = show_topic
@@ -85,7 +87,7 @@
               <%= image_tag tt.icon.url, class: "img-icon" %>
           <% end %>
           <%# if show_topic.name != nil %>
-          <%= tt.name %>
+          <%= tt.name + ' ' + $available_categories[show_topic.category] %>
           <%# end %>
         </h7>
       </div>
@@ -159,13 +161,9 @@
 
   <div class="nav pull-right">
     <% if @show_pub.present? %>
-
-        <%= render 'shared/modal_topic', button: icon('fa fa-expand'), title: @show_pub.name,body: nil, url: @show_pub.media.url, the_class: "btn_expand",count:'filler-content' + @show_pub.id.to_s %>
-    <% else
-         if there_is_a_topic_in_the_content_window == TRUE && show_topic.growing == FALSE && show_topic.placeholder == FALSE %>
-
-            <%= render 'shared/modal_topic', button: icon('fa fa-expand'), title: show_topic.name,url: nil, body: show_topic.main_content, the_class: "btn_expand",count:'donkey' + show_topic.id.to_s %>
-        <% end %>
+      <%= render 'shared/modal_topic', button: icon('fa fa-expand'), title: @show_pub.name,body: nil, url: @show_pub.media.url, the_class: "btn_expand",count:'filler-content' + @show_pub.id.to_s %>
+    <% elsif there_is_a_topic_in_the_content_window == TRUE && show_topic.growing == FALSE && show_topic.placeholder == FALSE %>
+      <%# render 'shared/modal_topic', button: icon('fa fa-expand'), title: show_topic.name,url: nil, body: show_topic.main_content, the_class: "btn_expand",count:'donkey' + show_topic.id.to_s %>
     <% end %>
   </div>
 </div> <!-- end of extra lang and fullscreen -->

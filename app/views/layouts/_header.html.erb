@@ -6,7 +6,7 @@
 
 
       <div id="enter-button" style="display:inline-block;float:left">
-        <% if current_page?(controller: 'static_pages', action: 'home') || current_page?(controller: 'static_pages', action: 'movie_hd') || action_name == 'home' %>
+        <% if current_page?(controller: 'static_pages', action: 'home') || current_page?(controller: 'static_pages', action: 'movie_hd') || action_name == 'home' || action_name == 'movie' %>
           <span class="center">
            <%# link_to t('classroom_doors.btn_enter_site'), classroom_doors_path, class: "btn btn-lrg button-major-orange" %>
            <%= link_to t('classroom_doors.btn_enter_site'), topics_path, class: "btn btn-lrg button-major-orange animated pulse infinite" %>
@@ -153,7 +153,7 @@
                   end
                   %>
                   <%= link_to icon("fa fa-edit fa-lg #{editcolorbg}"), admin_edit_toggle_path, :method => :post, :class => editcolor %>
-                  
+
               <% end %>
               <%= link_to t('users.settings'), edit_user_path(current_user) %> |
               <%= link_to t('sessions.log_out'), logout_path, method: "delete" %>

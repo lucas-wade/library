@@ -128,15 +128,8 @@ div {
 
 .container-placeholder {
   position: relative;
-  //top: 0;
-  //left: 0;
-  //right:0;
-  //bottom:0;
   padding: 2em;
   margin: 2em;
-  //margin-top: 2em;
-
-
   background: image_url("growing_content.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -146,6 +139,10 @@ div {
   color: black;
   a {
     color: black;
+  }
+  font-size: 1.25em;
+  @media (min-width: 767px) {
+    font-size: 1em;
   }
 
 }
@@ -199,7 +196,7 @@ h3 {
 }
 
 h7 {
-  font-size: 1.4em;
+  font-size: 1.9em;
   //letter-spacing: -1px;
   margin-top: 0;
   //margin-bottom: 2%;
@@ -207,6 +204,9 @@ h7 {
   //text-align: center;
   font-weight: 700;
   //color: #777;
+  @media (min-width: 767px) {
+    font-size: 1.4em;
+  }
 }
 
 h4 {
@@ -235,7 +235,19 @@ h6 {
 }
 
 p {
-  font-size: 1.1em;
+  font-size: 1.9em;
   line-height: 1.4em;
   margin-bottom: .6em;
+  @media (min-width: 767px) {
+    font-size: 1.1em;
+  }
+}
+
+.modal-title {
+
+    font-size: 1.6em !important;
+    @media (min-width: 767px) {
+      font-size: 2em !important;
+    }
+
 }

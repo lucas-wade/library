@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   delete  'logout'  => 'sessions#destroy'
   post    'admin/edit_toggle' =>'admin#edit_toggle'
 
+  get     'classroom' => 'topics#index'
 
 
   resources :users do

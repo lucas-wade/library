@@ -113,7 +113,13 @@
   position: absolute;
   @media (min-width: 415px) {
     visibility: visible;
-    position:relative;
+    position: relative;
+  }
+}
+.hide_xs_visible {
+  visibility: hidden;
+  @media (min-width: 415px) {
+    visibility: visible;
   }
 }
 .collapsed-menu {
