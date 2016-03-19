@@ -7,7 +7,7 @@
   <%= button_icon = image_tag('button_anim_play.png').to_s %>
 <% elsif t.pub_type == 5 || t.pub_type == 8 %> <!-- movie -->
   <%# button_icon = '<i class="fa fa-video-camera fa-lg"></i>'.html_safe %>
-  
+
   <% button_icon = icon('video-camera fa-lg').to_s %>
 <% else %>
   <%= link_to icon("cloud-download fa-lg"), t.media.url, :target => "_blank", style: 'inline-block' %>
@@ -16,7 +16,8 @@
 
 
 <% if t.media.present? %>
-  <%= render 'shared/modal_link', button: button_icon + ' ' + t.name, title: t.name, body: nil, type: t.pub_type, url: t.media.url, the_class: '',count: 'thedonkeysarehere' + t.id.to_s %>
+  <%= render 'shared/modal_link', button: button_icon + ' ' + t.name, title: t.name, body: nil, type: t.pub_type, url: t.media.url, the_class: 'hide_xs',count: 'thedonkeysarehere' + t.id.to_s %>
+  <%= link_to button_icon + ' ' + t.name, t.media.url, target: "_blank", class: 'hide_tablet_up' %>
   <% else if t.url.present? %>
       <%= render 'shared/modal_link', button: button_icon + ' ' + t.name, title: t.name, body: nil,type: t.pub_type, url: t.url, the_class: '',count: 'thedonkeysarehere' + t.id.to_s %>
   <% end %>

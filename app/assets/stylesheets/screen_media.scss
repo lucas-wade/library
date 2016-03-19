@@ -122,6 +122,13 @@
     visibility: visible;
   }
 }
+.hide_tablet_up {
+  visibility: visible;
+  @media (min-width: 415px) {
+    visibility: hidden;
+  }
+}
+
 .collapsed-menu {
   visibility: visible;
   position: absolute;
