@@ -124,7 +124,7 @@
 }
 .hide_tablet_up {
   visibility: visible;
-  @media (min-width: 415px) {
+  @media (min-width: 420px) {
     visibility: hidden;
   }
 }
