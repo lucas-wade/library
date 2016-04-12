@@ -203,9 +203,12 @@ textarea {
   left: 0;
   padding-left: 1em;
 
-
+  font-size:.56em;
   color: black;
   //margin-bottom:.7em;
+  @media (min-width: 767px) {
+    font-size: 1em;
+  }
 }
 .footer-right {
   position:absolute;
@@ -252,7 +255,8 @@ textarea {
       //font-size: xx-small;
     }
   }
-  @media (max-width: 766px) {
+  @media (max-width: 767px) {
+    padding-bottom: .1em;
     //visibility: hidden;
   }
 }
@@ -618,7 +622,7 @@ border-top-right-radius: 149px;
   //border-radius: 1em 1em 0em 0em;
   max-width: 100%;
   position: fixed;
-  height: 5em;
+  height: 4em;
   bottom: 0;
   left: 0;
   right: 0;
@@ -626,15 +630,15 @@ border-top-right-radius: 149px;
 
 
   @media (max-width: 767px) {
-    text-align: left;
-    height:4.7em;
+    //text-align: center;
+    height:6.0em;
     font-size: .85em;
     padding: .6em 1.0em .6em 1.0em;
   }
   @media (max-width: 414px) {
-    text-align: left;
-    height:6em;
-    font-size: .6em;
+    //text-align: center;
+    height:8.0em;
+    font-size: .55em;
     padding: .3em .7em .6em .7em;
   }
 }

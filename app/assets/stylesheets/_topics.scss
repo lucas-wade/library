@@ -134,6 +134,12 @@ body .modal_dialog_topic {
 
   overflow-y: auto;
   overflow-x: visible;
+  h3 {
+    font-size: 1.5em;
+    @media (min-width: 767px) {
+      font-size: 1.4em;
+    }
+  }
   a {
     margin: .2em;
     margin-left: .12em;
@@ -269,7 +275,7 @@ body .modal_dialog_topic {
 }
 
 #category-window {
-  width: 100%;
+  width: 110%;
   @media (min-width: 767px) {
     min-width: 36em;
   }

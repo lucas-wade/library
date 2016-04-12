@@ -70,7 +70,7 @@
           <% end %>
 
           <!-- NAME -->
-          
+
           <% if show_topic.category.present? && show_topic.category > 0
                tt = show_topic.parents.first
                if !tt.name.present?
@@ -268,15 +268,43 @@
     <% if show_topic.peak %>
       <li class="tab-global <%= tab_active2(show_topic.peak) %>" style="z-index:6"><%= link_to image_tag("tabui_4.png"), topic_path(show_topic.peak, anchor: top_topic(show_topic.peak).name) %><li>
     <% end %>
-    <li class="tab-global <%= tab_active2(show_topic.introduction) %> " style="z-index:5"><%= link_to image_tag("tabui_0.png"), topic_path(show_topic.introduction, anchor: top_topic(show_topic.introduction).name) %><li>
+    <li class="tab-global <%= tab_active2(show_topic.introduction) %> "
+      style="<% if show_topic.cat1 == @topic %>
+              z-index:8;
+              <% elsif show_topic.cat2 == @topic %>
+              z-index:7;
+              <% else %>
+              z-index:5;
+              <% end %>"><%= link_to image_tag("tabui_0.png"), topic_path(show_topic.introduction, anchor: top_topic(show_topic.introduction).name) %><li>
     <% if show_topic.cat1 %>
-      <li class="tab-global <%= tab_active2(show_topic.cat1) %> " style="z-index:4"><%= link_to image_tag("tabui_1.png"), topic_path(show_topic.cat1, anchor: top_topic(show_topic.cat1).name) %><li>
+      <li class="tab-global <%= tab_active2(show_topic.cat1) %> "
+        style="<% if show_topic.cat2 == @topic || show_topic.introduction == @topic %>
+                z-index:8;
+                <% else %>
+                z-index:4;
+                <% end %>">
+        <%= link_to image_tag("tabui_1.png"), topic_path(show_topic.cat1, anchor: top_topic(show_topic.cat1).name) %>
+      <li>
     <% end %>
     <% if show_topic.cat2 %>
-      <li class="tab-global <%= tab_active2(show_topic.cat2) %> " style="z-index:3"><%= link_to image_tag("tabui_2.png"), topic_path(show_topic.cat2, anchor: top_topic(show_topic.cat2).name) %><li>
+      <li class="tab-global <%= tab_active2(show_topic.cat2) %> "
+        style="<% if show_topic.cat3 == @topic || show_topic.cat1 == @topic %>
+                z-index:8;
+                <% else %>
+                z-index:4;
+                <% end %>">
+        <%= link_to image_tag("tabui_2.png"), topic_path(show_topic.cat2, anchor: top_topic(show_topic.cat2).name) %>
+      <li>
     <% end %>
     <% if show_topic.cat3 %>
-      <li class="tab-global <%= tab_active2(show_topic.cat3) %> " style="z-index:2"><%= link_to image_tag("tabui_3.png"), topic_path(show_topic.cat3, anchor: top_topic(show_topic.cat3).name) %><li>
+      <li class="tab-global <%= tab_active2(show_topic.cat3) %> "
+        style="<% if show_topic.cat2 == @topic %>
+                z-index:8;
+                <% else %>
+                z-index:4;
+                <% end %>">
+        <%= link_to image_tag("tabui_3.png"), topic_path(show_topic.cat3, anchor: top_topic(show_topic.cat3).name) %>
+      <li>
     <% end %>
   </ul>
 
