@@ -108,6 +108,9 @@ class TopicsController < ApplicationController
 
 
   def edit
+    if session[:edit_mode].blank? || session[:edit_mode]!=1
+      redirect_to @topic
+    end
     @topic = Topic.find(params[:id])
     @topics = Topic.all
     #@attachmentship = @topic.pub_attachmentships.build

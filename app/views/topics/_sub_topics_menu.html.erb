@@ -1,5 +1,7 @@
 <div id="sub-topics-window" class="">
+
   <h3>
+    <%= link_to icon('fa fa-close fa-2x'), topics_path, class: "", style: "font-size:0.8em;display:inline-block;color:#b04431;vertical-align:middle;" %>
     <% if @topic.kids.present? %>
         <% @topic.kids.each do |tt|
           if tt.category < 1 && tt.language == I18n.locale.to_s %>

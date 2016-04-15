@@ -15,7 +15,7 @@ class AdminController < ApplicationController
 
   def edit_toggle
     if current_admin == TRUE
-      if session[:edit_mode] && session[:edit_mode]==1
+      if session[:edit_mode].present? && session[:edit_mode]==1
         session[:edit_mode]=0
       else
         session[:edit_mode]=1

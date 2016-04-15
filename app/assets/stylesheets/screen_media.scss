@@ -5,6 +5,7 @@
     //padding: 3.618em;
     //padding-top: 1.618em;
     padding-bottom: 24em;
+    font-size: 1.0em;
   }
 
   .navbar-right {
@@ -55,6 +56,7 @@
     //padding-right: 6em;
     //padding-top: 1.618em;
     padding-bottom: 14em;
+    font-size: 1.3em;
   }
 
   #big_c {
@@ -103,8 +105,10 @@
 .hide_sm {
   //font-size: .8em;
   visibility: hidden;
-  @media (min-width: 900px) {
+  //position:absolute;
+  @media (min-width: 800px) {
     visibility: visible;
+    //position:relative;
   }
 }
 .hide_xs {
@@ -124,18 +128,25 @@
 }
 .hide_tablet_up {
   visibility: visible;
-  @media (min-width: 420px) {
+  @media (min-width: 768px) {
     visibility: hidden;
   }
 }
-
+.hide_tablet_down {
+  visibility: hidden;
+  position: absolute;
+  @media (min-width: 768px) {
+    visibility: visible;
+    position: relative;
+  }
+}
 .collapsed-menu {
   visibility: visible;
   position: absolute;
   z-index: 1050;
   top: 0.2em;
   right: 0.21em;
-  @media (min-width: 415px) {
+  @media (min-width: 768px) {
     visibility: hidden;
   }
 }
