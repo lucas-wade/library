@@ -130,19 +130,20 @@
   <% if show_topic.translations.present? && there_is_a_topic_in_the_content_window %>
       <% show_topic.translations.each do |trans| %>
         <%#if trans.name != nil %>
-              <%= link_to $av_langs_hash[trans.language], trans %>
+
+              <%= link_to $av_langs_hash[trans.language], topic_path(trans, locale: trans.language, anchor: top_topic(trans).id) %>
 
 
         <%# end %>
       <% end %>
   <% else if show_topic.originals.present? %>
           <% show_topic.originals.each do |trans| %>
-              <%= link_to $av_langs_hash[trans.language], trans %>
+              <%= link_to $av_langs_hash[trans.language], topic_path(trans, locale: trans.language, anchor: top_topic(trans).id) %>
               <% if trans.translations.present? %>
                   <% trans.translations.each do |trans2| %>
                     <%# if trans2.name != nil %>
                           <% if trans2.id != show_topic.id %>
-                              <%= link_to $av_langs_hash[trans2.language], trans2 %>
+                              <%= link_to $av_langs_hash[trans2.language], topic_path(trans2, locale: trans2.language, anchor: top_topic(trans2).id) %>
                           <% end %>
                       <%# end %>
                   <% end %>
@@ -266,7 +267,7 @@
 
   <ul class="nav nav-pills nav-tabs-custom">
     <% if show_topic.peak %>
-      <li class="tab-global <%= tab_active2(show_topic.peak) %>" style="z-index:6"><%= link_to image_tag("tabui_4.png"), topic_path(show_topic.peak, anchor: top_topic(show_topic.peak).name) %><li>
+      <li class="tab-global <%= tab_active2(show_topic.peak) %>" style="z-index:6"><%= link_to image_tag("tabui_4.png"), topic_path(show_topic.peak, anchor: top_topic(show_topic.peak).id) %><li>
     <% end %>
     <li class="tab-global <%= tab_active2(show_topic.introduction) %> "
       style="<% if show_topic.cat1 == @topic %>
@@ -275,7 +276,7 @@
               z-index:7;
               <% else %>
               z-index:5;
-              <% end %>"><%= link_to image_tag("tabui_0.png"), topic_path(show_topic.introduction, anchor: top_topic(show_topic.introduction).name) %><li>
+              <% end %>"><%= link_to image_tag("tabui_0.png"), topic_path(show_topic.introduction, anchor: top_topic(show_topic.introduction).id) %><li>
     <% if show_topic.cat1 %>
       <li class="tab-global <%= tab_active2(show_topic.cat1) %> "
         style="<% if show_topic.cat2 == @topic || show_topic.introduction == @topic %>
@@ -283,7 +284,7 @@
                 <% else %>
                 z-index:4;
                 <% end %>">
-        <%= link_to image_tag("tabui_1.png"), topic_path(show_topic.cat1, anchor: top_topic(show_topic.cat1).name) %>
+        <%= link_to image_tag("tabui_1.png"), topic_path(show_topic.cat1, anchor: top_topic(show_topic.cat1).id) %>
       <li>
     <% end %>
     <% if show_topic.cat2 %>
@@ -293,7 +294,7 @@
                 <% else %>
                 z-index:4;
                 <% end %>">
-        <%= link_to image_tag("tabui_2.png"), topic_path(show_topic.cat2, anchor: top_topic(show_topic.cat2).name) %>
+        <%= link_to image_tag("tabui_2.png"), topic_path(show_topic.cat2, anchor: top_topic(show_topic.cat2).id) %>
       <li>
     <% end %>
     <% if show_topic.cat3 %>
@@ -303,7 +304,7 @@
                 <% else %>
                 z-index:4;
                 <% end %>">
-        <%= link_to image_tag("tabui_3.png"), topic_path(show_topic.cat3, anchor: top_topic(show_topic.cat3).name) %>
+        <%= link_to image_tag("tabui_3.png"), topic_path(show_topic.cat3, anchor: top_topic(show_topic.cat3).id) %>
       <li>
     <% end %>
   </ul>

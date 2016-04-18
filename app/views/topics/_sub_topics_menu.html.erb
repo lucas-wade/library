@@ -21,7 +21,7 @@
                        end
 
                     %>
-                    <%= link_to tt.name, topic_path(tt, anchor: top_topic(tt).name), class: the_class unless tt.name == nil %>
+                    <%= link_to tt.name, topic_path(tt, anchor: top_topic(tt).id), class: the_class unless tt.name == nil %>
                 <% end %>
             <% end %>
         <% end %>
@@ -46,7 +46,7 @@
                            end
 
                         %>
-                        <%= link_to tt.name, topic_path(tt, anchor: top_topic(tt).name), class: the_class %>
+                        <%= link_to tt.name, topic_path(tt, anchor: top_topic(tt).id), class: the_class %>
                     <% end %>
                 <% end %>
             <% end %>
@@ -70,7 +70,7 @@
                                end
 
                             %>
-                    <%= link_to tt.name, topic_path(tt, anchor: top_topic(tt).name), class: the_class %>
+                    <%= link_to tt.name, topic_path(tt, anchor: top_topic(tt).id), class: the_class %>
                 <% end %>
             <% end %>
         <% end %>
@@ -93,7 +93,7 @@
                        end
 
                     %>
-                    <%= link_to tt.name, topic_path(tt, anchor: top_topic(tt).name), class: the_class %>
+                    <%= link_to tt.name, topic_path(tt, anchor: top_topic(tt).id), class: the_class %>
                 <% end %>
             <% end %>
         <% end %>
