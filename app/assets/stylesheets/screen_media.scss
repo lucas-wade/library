@@ -130,6 +130,7 @@
   visibility: visible;
   @media (min-width: 768px) {
     visibility: hidden;
+    display: none;
   }
 }
 .hide_tablet_down {

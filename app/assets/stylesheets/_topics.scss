@@ -205,7 +205,7 @@ body .modal_dialog_topic {
 
 .content-window-size-1 {
   height: auto;
-  max-height: calc(100% - 20em);
+  max-height: calc(100% - 22em);
 }
 
 .content-window-size-2 {
@@ -215,7 +215,7 @@ body .modal_dialog_topic {
 
 .content-window-size-3 {
   height: auto;
-  max-height: calc(100% - 12em);
+  max-height: calc(100% - 19em);
 }
 
 .content-window-size-4 {
@@ -255,14 +255,14 @@ body .modal_dialog_topic {
   position: relative;
   background-color: lighten($content_bg_color, 2%);
   //background-color: #3c3c3c;
-  height: 7em;
+  height: auto;//17em;
   color: white;
   //overflow: scroll;
   padding: .1em;
   margin: 0;
-  overflow-y: hidden;
+  overflow-y: hidden;//auto;
   overflow-x: hidden;
-  font-size: .6em;
+  font-size: .5em;
   a {
     color: #F7F7F7;
   }
@@ -271,6 +271,7 @@ body .modal_dialog_topic {
   }
   @media (min-width: 512px) {
     font-size: 1em;
+    height: 7em;
   }
 }
 

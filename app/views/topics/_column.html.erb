@@ -6,11 +6,12 @@
 %>
 
 <div class="inherit_h" id="<% if @temp_topic == 1 %>action-column<% end %>">
-  <h5>
+  <h8>
     <i class="fa fa-3x">
       <% if @temp_topic != 1 && @topics.count > 0 %>
         <% if @temp_topic == 0 %>
-            <%= link_to image_tag(@topics[@temp_topic].icon.url, class: "trimmed-icon img-icon"), topic_path(id: 1)  %>
+            <%# link_to image_tag(@topics[@temp_topic].icon.url, class: "trimmed-icon img-icon"), topic_path(id: 1), anchor: 1  %>
+            <a href="<%= topic_path(id: 1) %>#1" class=""><%= image_tag(@topics[@temp_topic].icon.url, class: "trimmed-icon img-icon") %></a>
           <% else %>
             <%= image_tag @topics[@temp_topic].icon.url, class: "trimmed-icon img-icon" %>
           <% end %>
@@ -19,7 +20,7 @@
     <% if edit_mode ==1 %>
       <%= link_to '<i class="fa fa-plus-square edit-color"></i>'.html_safe, {:controller => "topics", :action => "new", :parent_id => @topics[@temp_topic].id, :language => 'en' }%>
     <% end %>
-  </h5>
+  </h8>
 
 
   <div class="list-group main-menu column_index">
@@ -85,8 +86,8 @@
                            end
                         %>
 
-                <a href="<%= topic_path(t) %>#<%= t.id %>" class="list-group-item btn-default btn-main-menu button <%= color_class %> <%= the_class %> <%= rtl_checker(t.language) %> ">
-                  <div class="button-text"> <%= t.name %></div>
+                <a href="<%= topic_path(t) %>#<%= t.id %>" id="list<%= t.id %>" class="list-group-item btn-default btn-main-menu button <%= color_class %> <%= the_class %> <%= rtl_checker(t.language) %> ">
+                  <div  class="button-text"> <%= t.name %></div>
                   <div class="button-text-small">
                     <% t.kids.each do |tt| %>
                         <% if tt.category == 0 %>
@@ -96,6 +97,7 @@
                   <% end %>
                   </div>
                 </a>
+
                 <% if @topic.present? && top_topic(@topic) == t %>
                   <div id="<%= t.id if @jumper == 1 %>" style="height:inherit;display:inline-block;" class="col-sm-8 topic_show_window_small">
                     <%= render 'sub_topics_menu' %>

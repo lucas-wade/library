@@ -19,9 +19,9 @@
 <% if t.media.url.present? %>
   <%= render 'shared/modal_link', button: button_icon + ' ' + t.name, title: t.name, body: nil, type: t.pub_type, url: t.media.url, the_class: 'hide_tablet_down',count: 'thedonkeysarehere' + t.id.to_s %>
   <%= link_to button_icon + ' ' + t.name, t.media.url, target: "_blank", class: 'hide_tablet_up' %>
-  <% else if t.url.present? %>
-      <%= render 'shared/modal_link', button: button_icon + ' ' + t.name, title: t.name, body: nil,type: t.pub_type, url: t.url, the_class: 'hide_tablet_down',count: 'thedonkeysarehere' + t.id.to_s %>
-  <% end %>
+<% elsif t.url.present? %>
+  <%= render 'shared/modal_link', button: button_icon + ' ' + t.name, title: t.name, body: nil, type: t.pub_type, url: t.url, the_class: 'hide_tablet_down',count: 'thedonkeysarehere' + t.id.to_s %>
+  <%= link_to button_icon + ' ' + t.name, t.url, target: "_blank", class: 'hide_tablet_up' %>
 <% end %>
 </div>
 <script>

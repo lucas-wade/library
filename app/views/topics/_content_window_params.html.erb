@@ -267,7 +267,14 @@
 
   <ul class="nav nav-pills nav-tabs-custom">
     <% if show_topic.peak %>
-      <li class="tab-global <%= tab_active2(show_topic.peak) %>" style="z-index:6"><%= link_to image_tag("tabui_4.png"), topic_path(show_topic.peak, anchor: top_topic(show_topic.peak).id) %><li>
+      <li class="tab-global <%= tab_active2(show_topic.peak) %>"
+        style="
+        <% if show_topic.peak == @topic %>
+        z-index:6;
+        <% else %>
+        z-index:2;
+        <% end %>">
+        <%= link_to image_tag("tabui_4.png"), topic_path(show_topic.peak, anchor: top_topic(show_topic.peak).id) %><li>
     <% end %>
     <li class="tab-global <%= tab_active2(show_topic.introduction) %> "
       style="<% if show_topic.cat1 == @topic %>
@@ -292,7 +299,7 @@
         style="<% if show_topic.cat3 == @topic || show_topic.cat1 == @topic %>
                 z-index:8;
                 <% else %>
-                z-index:4;
+                z-index:3;
                 <% end %>">
         <%= link_to image_tag("tabui_2.png"), topic_path(show_topic.cat2, anchor: top_topic(show_topic.cat2).id) %>
       <li>
@@ -302,7 +309,7 @@
         style="<% if show_topic.cat2 == @topic %>
                 z-index:8;
                 <% else %>
-                z-index:4;
+                z-index:2;
                 <% end %>">
         <%= link_to image_tag("tabui_3.png"), topic_path(show_topic.cat3, anchor: top_topic(show_topic.cat3).id) %>
       <li>
