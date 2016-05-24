@@ -224,7 +224,7 @@ h4 {
 }
 
 h5 {
-  font-size: 3em;
+  font-size: 2em;
   //letter-spacing: -1px;
   margin-bottom: 2%;
   text-align: center;
@@ -232,15 +232,23 @@ h5 {
   @media (min-width: 767px) {
     font-size: 2em;
   }
+  .icon {
+  //letter-spacing: -1px;
+  margin-bottom: 2%;
+  text-align: center;
+  font-weight: normal;
+    font-size: 2em;
+  }
 }
-h8  {
-//letter-spacing: -1px;
-margin-bottom: 2%;
-text-align: center;
-font-weight: normal;
-
+.icon-topper {
   font-size: 2em;
-
+  //letter-spacing: -1px;
+  margin-bottom: 2%;
+  text-align: center;
+  font-weight: normal;
+  //margin-left: auto;
+  //margin-right: auto;
+  width: 100%;
 }
 h6 {
   font-size: 2.1em;
