@@ -8,7 +8,7 @@ class StaticPagesController < ApplicationController
         @feed_items = current_user.feed.paginate(page: params[:page])
         redirect_to topics_url
       else
-        #redirect_to gb_intro_url
+        session[:instructions] = nil
       end
     end
 

@@ -22,6 +22,7 @@ class TopicsController < ApplicationController
   end
 
   def show
+    session[:instructions] = 1 if session[:instructions] == 0
     @topic = Topic.find(params[:id])
     @topics = Topic.all
 

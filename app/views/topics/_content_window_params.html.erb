@@ -93,12 +93,12 @@
       </div>
 
 
-      <% if session[:instructions] == nil %>
+      <% if session[:instructions].blank? || session[:instructions] == 0 %>
         <div style="float:left">
-          <%= link_to icon('fa fa-close fa-2x'), url_for(params), style: "color:#b04431"  %>
+          <%= link_to icon('fa fa-close fa-2x'), url_for(params), onclick: "location.reload();", style: "color:#b04431"  %>
         </div>
         <%= sanitize @topics.find_by(id: 1).main_content %>
-        <% session[:instructions] = 1 %>
+        <% session[:instructions] = 0 %>
       <% else %>
 
         <% if !show_topic.main_content.present?
