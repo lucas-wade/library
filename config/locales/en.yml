@@ -108,21 +108,22 @@ en:
                    Tomorrow depends on the positive actions you and I take today. Please join us and millions around the world in making a World of Difference.
                  </p>"
      btn_why_grow: "Why GROW BIOINTENSIVE?"
-     btn_enter_site: "Enter Classroom"
+     btn_enter_site: "Enter Site"
      why_grow_html: "<p>
                     The name GROW BIOINTENSIVE® was registered in order to formally codify and quanitify the sustainability of a method of Biologically-Intensive agricuture that has been developed and refined by Ecology Action since 1972 and that is built upon Eight Components.
                     </p>
                     <p>
                     While individual components of Biologically-Intensive agriculture have been used in various combinations less sustainably, the results of both Ecology Action's research since 1972 and also the research of others have demonstrated that there are beneficial synergies that occur when certain components are practiced together that do not occur when the same components are practiced independently of one another.  More importantly: we have found that, because of the strong interrelations between the Eight Components of the GROW BIOINTENSIVE method, it is possible, if all components are not practiced together <span class='orange'>AS A COMPLETE SYSTEM</span>, to deplete soil even more rapidly than under conventional practices.  One reason for this is the higher yeilds (2 to 4 times that of conventional agriculture on average) attainable under Biologically-Intensive practices.
-                    When practiced <span class='orange'>AS A COMPLETE SYSTEM</span> of Eight Components, the GROW BIOINTENSIVE method has the capacity to <span class='orange'>BUILD SOIL</span> up to 60 times faster
+                    <span class='orange'>When practiced AS A COMPLETE SYSTEM of Eight Components</span>, the GROW BIOINTENSIVE method has the capacity to <span class='orange'>BUILD SOIL</span> up to 60 times faster
                     than happens in nature<sup>1</sup>, preserving the basis of life while greatly reducing the resources needed to grow food.
                     </p>
 
                     <br>
                     Footnote:
-                    1) Journal of Sustainable Agriculture
+                    <br>
+                    1) \"BIOINTENSIVE Mini Farming\", Journal of Sustainable Agriculture, Vol 19(2), 2001.
                     "
-     nature_note_button: "A Note About Working with Nature"
+     nature_note_button: "A Note About Working with Nature:"
      nature_note_html: "Enzymes and humates are two substances that are naturally present in a healthy soil containing a sufficient amount of organic matter.  These substances aid in the dissolving of soil minerals into forms (nutrients) that plants are able to use to grow and to stay healthy.
 
                         One way to quickly increase the nutrient levels in soils is to import and apply additional enzymes and humates as products to the soil.  While this strategy might appear to benefit the plants at first, the long-term effect is that soil minerals are made available too quickly and in quantities too great for plants to make full use of.  The unused nutrients are then leached out of the soil during water events and are, therefore, wasted.  When nutrients are wasted, the nutrient \"storage bin\" available to future plants is diminished.

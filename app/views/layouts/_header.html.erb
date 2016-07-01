@@ -7,7 +7,7 @@
 
       <div id="enter-button" style="display:inline-block;float:left">
         <% if current_page?(controller: 'static_pages', action: 'home') || current_page?(controller: 'static_pages', action: 'movie_hd') || action_name == 'home' || action_name == 'movie' %>
-          <span class="center">
+          <span class="center" style="">
            <%# link_to t('classroom_doors.btn_enter_site'), classroom_doors_path, class: "btn btn-lrg button-major-orange" %>
            <%= link_to t('classroom_doors.btn_enter_site'), topics_path, class: "btn btn-lrg button-major-orange animated pulse infinite" %>
           </span>
@@ -68,7 +68,13 @@
           <% if params[:action] == "movie" %>
             <li style="font-size:.92em;"><%= link_to 'Watch in High Definition', movie_hd_path, class: 'btn-sm button-orange-text'  %></li>
           <% else %>
-            <li><%= link_to t('general.watch_movie'), movie_path, class: " button-orange-text" %></li>
+            <li>
+              <%# link_to t('general.watch_movie'), movie_path, class: " button-orange-text" %>
+              <%= link_to image_tag('button_anim_play.png'), movie_path, class: " button-orange-text" %>
+            </li>
+            <li>
+              <%= link_to 'Instructions', topic_path(1) %>
+            </li>
           <% end %>
 
 
@@ -95,8 +101,11 @@
           <% else %>
             <li><%= link_to image_tag('icon_library.png'), library_path, class: 'icon-library' %></li>
           <% end %>
-
+          <% if params[:action] == "classroom_doors" %>
+            <li><%= link_to '', topics_path, class: 'fa fa-home fa-2x' %></li>
+          <% else %>
           <li><%= link_to '', classroom_doors_path, class: 'fa fa-question fa-2x', style: "color:rgba(5,5,5,.6)" %></li>
+          <% end %>
 
           <% if logged_in? %>
             <%= render 'admin/dropdown' %>
@@ -161,6 +170,10 @@
                 <%= link_to icon('user fa-2x'), login_path %>
               <% end %>
               </span>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to 'Instructions', topic_path(1) %>
               </li>
               <li class="divider"></li>
               <% key = I18n.locale.to_s %>
