@@ -9,7 +9,7 @@
         <% if current_page?(controller: 'static_pages', action: 'home') || current_page?(controller: 'static_pages', action: 'movie_hd') || action_name == 'home' || action_name == 'movie' %>
           <span class="center" style="">
            <%# link_to t('classroom_doors.btn_enter_site'), classroom_doors_path, class: "btn btn-lrg button-major-orange" %>
-           <%= link_to t('classroom_doors.btn_enter_site'), topics_path, class: "btn btn-lrg button-major-orange animated pulse infinite" %>
+           <%= link_to t('classroom_doors.btn_enter_site'), topics_path, class: "btn btn-lrg button-major-orange animated pulse infinite btn-animated-2s" %>
           </span>
         <% end %>
       </div>
@@ -70,7 +70,7 @@
           <% else %>
             <li>
               <%# link_to t('general.watch_movie'), movie_path, class: " button-orange-text" %>
-              <%= link_to image_tag('button_anim_play.png'), movie_path, class: " button-orange-text" %>
+              <%= link_to image_tag('button_anim_play.png'), movie_path, class: " button-orange-text", style: "margin-top:-.33em;" %>
             </li>
             <li>
               <%= link_to 'Instructions', topic_path(1) %>
