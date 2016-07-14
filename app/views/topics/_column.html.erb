@@ -97,8 +97,17 @@
                   </div>
                 </a>
 
-                <% if @topic.present? && top_topic(@topic) == t %>
-                  <div id="<%= t.id if @jumper == 1 %>" style="height:inherit;display:inline-block;" class="col-sm-8 topic_show_window_small">
+                <% if @topic.present? && top_topic(@topic) == t || @topic.present? && @topic.id == 1 %>
+                  <%
+                  #if @topic.id == 1
+                  #  tid = "instructions"
+                  if @jumper == 1
+                    tid = t.id
+                  else
+                    tid = 0
+                  end %>
+
+                  <div id="<%= tid %>" style="height:inherit;display:inline-block;" class="col-sm-8 topic_show_window_small">
                     <%= render 'sub_topics_menu' %>
                     <%= render partial: 'topics/content_window_params', locals: {show_topic: @topic, show_pub: @show_pub} %>
                   </div>

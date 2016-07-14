@@ -148,8 +148,6 @@
                 <%= link_to image_tag('icon_library.png', style: "width:2.6em;"), library_path, class: '', style: "width:1em;padding-right:1em;" %>
                 <%= link_to '', classroom_doors_path, class: 'fa fa-question fa-2x', style: "color:rgba(5,5,5,.9);padding-right:1em;" %>
 
-
-
               <% if logged_in? %>
                 <% if current_admin == TRUE %>
                   <%
@@ -173,7 +171,7 @@
               </li>
               <li class="divider"></li>
               <li>
-                <%= link_to 'Instructions', topic_path(1) %>
+                <%= link_to 'Instructions', topic_path(1) + "#1" %>                
               </li>
               <li class="divider"></li>
               <% key = I18n.locale.to_s %>
