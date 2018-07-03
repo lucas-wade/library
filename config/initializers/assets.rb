@@ -11,3 +11,4 @@ Rails.application.config.assets.compress = true
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w(assets/NotInclude_bootsy_topic.css)
+Rails.application.config.assets.precompile += %w( bootsy/gallery-loader.gif )

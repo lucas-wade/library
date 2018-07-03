@@ -4,14 +4,14 @@ gem 'net-ssh'
 gem 'xmlrpc'
 
 #html editing
-gem 'bootsy', github: 'volmer/bootsy'
+gem 'bootsy', '2.1.0' # github: 'volmer/bootsy'
 
 # db stuff
 gem 'yaml_db'
 gem 'rack', '1.6.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.8'
+gem 'rails', '4.2.10'
 
 # encryption
 gem 'bcrypt', '3.1.7'
@@ -47,7 +47,7 @@ gem 'bootstrap-will_paginate', '0.0.10'
 #gem 'fancybox2-rails', '~> 0.2'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier' #, '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -60,7 +60,8 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+# gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'sdoc', group: :doc
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
