@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'net-ssh'
+gem 'xmlrpc'
+
 #html editing
 gem 'bootsy', github: 'volmer/bootsy'
 
@@ -8,7 +11,7 @@ gem 'yaml_db'
 gem 'rack', '1.6.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.0'
+gem 'rails', '4.2.8'
 
 # encryption
 gem 'bcrypt', '3.1.7'
@@ -28,8 +31,8 @@ gem 'faker',                '1.4.2'
 
 # files
 gem 'fog', '~> 1.28.0'
-gem 'mini_magick', '~> 4.2.0'
-gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick' #, '~> 4.2.0'
+gem 'carrierwave' #, '~> 0.10.0'
 
 #pdf
 gem 'pdf-reader', '~> 1.3.3'

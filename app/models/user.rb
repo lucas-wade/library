@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+=begin
   has_many :microposts, dependent: :destroy
 
   has_many :active_relationships, class_name:  "Relationship",
@@ -7,6 +8,8 @@ class User < ActiveRecord::Base
   has_many :passive_relationships, class_name:  "Relationship",
            foreign_key: "followed_id",
            dependent:   :destroy
+
+=end
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
 
